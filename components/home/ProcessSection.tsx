@@ -1,98 +1,280 @@
 'use client';
 
-import React from 'react';
+import {
+  MessageSquare,
+  Lightbulb,
+  Code,
+  Rocket,
+  RefreshCw,
+} from 'lucide-react';
+
 import { motion } from 'framer-motion';
-import { MessageSquare, Lightbulb, Code, Rocket, RefreshCw } from 'lucide-react';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 
 const steps = [
   {
     icon: MessageSquare,
-    title: 'Discovery',
-    description: 'We start by understanding your business, goals, and requirements through detailed consultations.',
-    color: 'from-[#7B4F2C] to-[#A47148]'
+    title: 'Discovery & Consultation',
+    description:
+      'We analyze your business goals and requirements to define the project scope.',
   },
   {
     icon: Lightbulb,
-    title: 'Strategy',
-    description: 'Our team crafts a comprehensive strategy and roadmap tailored to your specific needs.',
-    color: 'from-[#A47148] to-[#D4A373]'
+    title: 'Strategy & Planning',
+    description:
+      'A detailed roadmap and technology strategy is prepared for successful execution.',
   },
   {
     icon: Code,
-    title: 'Development',
-    description: 'We bring your vision to life using the latest technologies and best practices.',
-    color: 'from-[#D4A373] to-[#7B4F2C]'
+    title: 'Design & Development',
+    description:
+      'Our team develops scalable and future-ready digital solutions.',
   },
   {
     icon: Rocket,
-    title: 'Launch',
-    description: 'After thorough testing, we deploy your solution and ensure a smooth launch.',
-    color: 'from-[#7B4F2C] to-[#A47148]'
+    title: 'Testing & Deployment',
+    description:
+      'Quality assurance and deployment ensure a smooth launch experience.',
   },
   {
     icon: RefreshCw,
-    title: 'Support',
-    description: 'We provide ongoing support, maintenance, and optimization to ensure continued success.',
-    color: 'from-[#A47148] to-[#D4A373]'
+    title: 'Support & Growth',
+    description:
+      'Continuous support, optimization and upgrades help your business scale.',
   },
 ];
 
 export default function ProcessSection() {
   return (
-    <section className="section-padding bg-dark relative overflow-hidden">
+    <section className="relative overflow-hidden py-24">
+
+      {/* Background */}
+
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
+
+        <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[140px]" />
+
+        <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-600/5 blur-[140px]" />
+
       </div>
 
-      <div className="container-custom relative z-10">
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block text-primary text-sm font-medium uppercase tracking-wider mb-4">
-            Our Process
-          </span>
-          <h2 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            How We Bring Your{' '}
-            <span className="text-gradient">Ideas to Life</span>
-          </h2>
-          <p className="text-muted max-w-2xl mx-auto text-lg">
-            Our proven development process ensures we deliver exceptional results
-            on time and within budget.
-          </p>
+      <div className="relative z-10 mx-auto max-w-[1280px] px-5 lg:px-8">
+
+        {/* Header */}
+
+        <AnimatedSection>
+
+          <div className="mx-auto max-w-4xl text-center">
+
+            <span
+              className="
+                inline-flex
+                rounded-full
+                border
+                border-cyan-500/20
+                bg-white/[0.03]
+                px-5
+                py-2
+                text-sm
+                text-cyan-300
+              "
+            >
+              Our Development Process
+            </span>
+
+            <h2
+              className="
+                mt-6
+                text-4xl
+                font-bold
+                text-white
+                md:text-5xl
+                xl:text-6xl
+              "
+            >
+              How We Transform
+
+              <span
+                className="
+                  block
+                  bg-gradient-to-r
+                  from-[#0E4DB7]
+                  via-[#3CC8F5]
+                  to-[#12C7B5]
+                  bg-clip-text
+                  text-transparent
+                "
+              >
+                Ideas Into Reality
+              </span>
+
+            </h2>
+
+            <p
+              className="
+                mx-auto
+                mt-6
+                max-w-3xl
+                text-lg
+                text-white/60
+              "
+            >
+              A proven workflow designed to deliver
+              quality software solutions efficiently
+              and successfully.
+            </p>
+
+          </div>
+
         </AnimatedSection>
 
-        <div className="relative">
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        {/* Timeline */}
 
-          <div className="grid md:grid-cols-5 gap-8">
-            {steps.map((step, index) => (
-              <AnimatedSection key={step.title} delay={index * 0.15}>
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  className="relative text-center"
+        <div className="relative mt-20">
+
+          {/* Center Line */}
+
+          <div
+            className="
+              absolute
+              left-1/2
+              hidden
+              h-full
+              w-px
+              -translate-x-1/2
+              bg-gradient-to-b
+              from-transparent
+              via-cyan-500/30
+              to-transparent
+              lg:block
+            "
+          />
+
+          <div className="space-y-12">
+
+            {steps.map((step, index) => {
+              const Icon = step.icon;
+
+              return (
+                <AnimatedSection
+                  key={step.title}
+                  delay={index * 0.1}
                 >
-                  <div className="relative inline-flex mb-6">
+
+                  <div
+                    className={`
+                      relative
+                      flex
+                      items-center
+                      ${
+                        index % 2 === 0
+                          ? 'lg:justify-start'
+                          : 'lg:justify-end'
+                      }
+                    `}
+                  >
+
                     <motion.div
-                      whileHover={{ scale: 1.1 }}
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-glow`}
+                      whileHover={{
+                        y: -5,
+                      }}
+                      className="
+                        w-full
+                        lg:w-[46%]
+                        rounded-[32px]
+                        border
+                        border-cyan-500/10
+                        bg-[#0B1220]
+                        p-8
+                        backdrop-blur-xl
+                        transition-all
+                        duration-300
+                        hover:border-cyan-500/20
+                        hover:shadow-[0_25px_80px_rgba(60,200,245,0.12)]
+                      "
                     >
-                      <step.icon className="w-7 h-7 text-white" />
+
+                      <div
+                        className="
+                          mb-6
+                          flex
+                          h-16
+                          w-16
+                          items-center
+                          justify-center
+                          rounded-2xl
+                          bg-gradient-to-br
+                          from-[#0E4DB7]
+                          via-[#3CC8F5]
+                          to-[#12C7B5]
+                        "
+                      >
+                        <Icon className="h-8 w-8 text-white" />
+                      </div>
+
+                      <span
+                        className="
+                          text-sm
+                          font-medium
+                          text-cyan-300
+                        "
+                      >
+                        Step {index + 1}
+                      </span>
+
+                      <h3
+                        className="
+                          mt-2
+                          text-2xl
+                          font-bold
+                          text-white
+                        "
+                      >
+                        {step.title}
+                      </h3>
+
+                      <p
+                        className="
+                          mt-4
+                          leading-relaxed
+                          text-white/60
+                        "
+                      >
+                        {step.description}
+                      </p>
+
                     </motion.div>
-                    <span className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-dark-light border border-primary flex items-center justify-center text-xs text-accent font-bold">
-                      {index + 1}
-                    </span>
+
+                    {/* Timeline Circle */}
+
+                    <div
+                      className="
+                        absolute
+                        left-1/2
+                        hidden
+                        h-6
+                        w-6
+                        -translate-x-1/2
+                        rounded-full
+                        border-4
+                        border-[#080c14]
+                        bg-cyan-400
+                        lg:block
+                      "
+                    />
+
                   </div>
-                  <h3 className="font-poppins font-semibold text-white text-lg mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted text-sm">
-                    {step.description}
-                  </p>
-                </motion.div>
-              </AnimatedSection>
-            ))}
+
+                </AnimatedSection>
+              );
+            })}
+
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 }

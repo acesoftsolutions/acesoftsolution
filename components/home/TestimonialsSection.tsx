@@ -1,113 +1,348 @@
 'use client';
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
-import { testimonials } from '@/data/testimonials';
+import {
+  Quote,
+  Star,
+} from 'lucide-react';
+
+import { motion } from 'framer-motion';
+
 import AnimatedSection from '@/components/shared/AnimatedSection';
+import { testimonials } from '@/data/testimonials';
 
 export default function TestimonialsSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  const featured = testimonials[0];
+  const others = testimonials.slice(1, 5);
 
   return (
-    <section className="section-padding bg-dark relative overflow-hidden">
+    <section className="relative overflow-hidden py-24">
+
+      {/* Background */}
+
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[150px]" />
+
+        <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[140px]" />
+
+        <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-600/5 blur-[140px]" />
+
       </div>
 
-      <div className="container-custom relative z-10">
-        <AnimatedSection className="text-center mb-16">
-          <span className="inline-block text-primary text-sm font-medium uppercase tracking-wider mb-4">
-            Testimonials
-          </span>
-          <h2 className="font-poppins text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            What Our <span className="text-gradient">Clients Say</span>
-          </h2>
-          <p className="text-muted max-w-2xl mx-auto text-lg">
-            Don&apos;t just take our word for it. Here&apos;s what our valued clients
-            have to say about working with us.
-          </p>
+      <div className="relative z-10 mx-auto max-w-[1280px] px-5 lg:px-8">
+
+        {/* Header */}
+
+        <AnimatedSection>
+
+          <div className="mx-auto max-w-4xl text-center">
+
+            <span
+              className="
+                inline-flex
+                rounded-full
+                border
+                border-cyan-500/20
+                bg-white/[0.03]
+                px-5
+                py-2
+                text-sm
+                text-cyan-300
+              "
+            >
+              Client Testimonials
+            </span>
+
+            <h2
+              className="
+                mt-6
+                text-4xl
+                font-bold
+                text-white
+                md:text-5xl
+                xl:text-6xl
+              "
+            >
+              What Our
+
+              <span
+                className="
+                  block
+                  bg-gradient-to-r
+                  from-[#0E4DB7]
+                  via-[#3CC8F5]
+                  to-[#12C7B5]
+                  bg-clip-text
+                  text-transparent
+                "
+              >
+                Clients Say
+              </span>
+
+            </h2>
+
+            <p
+              className="
+                mx-auto
+                mt-6
+                max-w-3xl
+                text-lg
+                text-white/60
+              "
+            >
+              Trusted by startups, SMEs and
+              enterprises worldwide.
+            </p>
+
+          </div>
+
         </AnimatedSection>
 
-        <div className="relative max-w-4xl mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-              className="glass rounded-3xl p-8 md:p-12 text-center"
-            >
-              <Quote className="w-12 h-12 text-accent/30 mx-auto mb-6" />
+        {/* Testimonials Grid */}
 
-              <p className="text-white text-lg md:text-xl leading-relaxed mb-8">
-                &ldquo;{testimonials[currentIndex].content}&rdquo;
-              </p>
+        <div className="mt-20 grid gap-8 lg:grid-cols-3">
 
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <img
-                  src={testimonials[currentIndex].image}
-                  alt={testimonials[currentIndex].name}
-                  className="w-16 h-16 rounded-full object-cover ring-2 ring-primary"
-                />
-                <div className="text-left">
-                  <p className="font-poppins font-semibold text-white">
-                    {testimonials[currentIndex].name}
+          {/* Left Column */}
+
+          <div className="space-y-6">
+
+            {others.slice(0, 2).map(
+              (item, index) => (
+                <motion.div
+                  key={item._id}
+                  whileHover={{
+                    y: -5,
+                  }}
+                  className="
+                    rounded-[28px]
+                    border
+                    border-cyan-500/10
+                    bg-[#0B1220]
+                    p-6
+                  "
+                >
+
+                  <Quote className="h-8 w-8 text-cyan-400/40" />
+
+                  <p className="mt-4 text-white/70">
+                    {item.content}
                   </p>
-                  <p className="text-muted text-sm">
-                    {testimonials[currentIndex].position} at {testimonials[currentIndex].company}
-                  </p>
-                </div>
-              </div>
 
-              <div className="flex justify-center gap-1">
-                {Array.from({ length: testimonials[currentIndex].rating }).map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-accent fill-accent" />
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
+                  <div className="mt-5 flex gap-1">
 
-          <div className="flex justify-center items-center gap-4 mt-8">
-            <button
-              onClick={prevTestimonial}
-              className="w-12 h-12 rounded-full glass flex items-center justify-center text-white hover:text-accent transition-colors"
+                    {Array.from({
+                      length: item.rating,
+                    }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className="
+                          h-4
+                          w-4
+                          fill-cyan-400
+                          text-cyan-400
+                        "
+                      />
+                    ))}
+
+                  </div>
+
+                  <div className="mt-6 flex items-center gap-3">
+
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="
+                        h-12
+                        w-12
+                        rounded-full
+                        object-cover
+                      "
+                    />
+
+                    <div>
+
+                      <h4 className="font-semibold text-white">
+                        {item.name}
+                      </h4>
+
+                      <p className="text-sm text-white/50">
+                        {item.company}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </motion.div>
+              )
+            )}
+
+          </div>
+
+          {/* Featured Testimonial */}
+
+          <motion.div
+            whileHover={{
+              y: -8,
+            }}
+            className="
+              rounded-[36px]
+              border
+              border-cyan-500/20
+              bg-gradient-to-br
+              from-[#0E4DB7]/15
+              via-[#3CC8F5]/10
+              to-[#12C7B5]/15
+              p-10
+            "
+          >
+
+            <Quote className="h-14 w-14 text-cyan-300" />
+
+            <p
+              className="
+                mt-8
+                text-xl
+                leading-relaxed
+                text-white
+              "
             >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
+              "{featured.content}"
+            </p>
 
-            <div className="flex gap-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all ${
-                    index === currentIndex
-                      ? 'bg-accent w-8'
-                      : 'bg-white/20 hover:bg-white/40'
-                  }`}
+            <div className="mt-8 flex gap-1">
+
+              {Array.from({
+                length: featured.rating,
+              }).map((_, i) => (
+                <Star
+                  key={i}
+                  className="
+                    h-5
+                    w-5
+                    fill-cyan-400
+                    text-cyan-400
+                  "
                 />
               ))}
+
             </div>
 
-            <button
-              onClick={nextTestimonial}
-              className="w-12 h-12 rounded-full glass flex items-center justify-center text-white hover:text-accent transition-colors"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
+            <div className="mt-10 flex items-center gap-4">
+
+              <img
+                src={featured.image}
+                alt={featured.name}
+                className="
+                  h-16
+                  w-16
+                  rounded-full
+                  object-cover
+                  ring-2
+                  ring-cyan-400/30
+                "
+              />
+
+              <div>
+
+                <h4 className="text-lg font-bold text-white">
+                  {featured.name}
+                </h4>
+
+                <p className="text-white/60">
+                  {featured.position}
+                </p>
+
+                <p className="text-cyan-300">
+                  {featured.company}
+                </p>
+
+              </div>
+
+            </div>
+
+          </motion.div>
+
+          {/* Right Column */}
+
+          <div className="space-y-6">
+
+            {others.slice(2, 4).map(
+              (item) => (
+                <motion.div
+                  key={item._id}
+                  whileHover={{
+                    y: -5,
+                  }}
+                  className="
+                    rounded-[28px]
+                    border
+                    border-cyan-500/10
+                    bg-[#0B1220]
+                    p-6
+                  "
+                >
+
+                  <Quote className="h-8 w-8 text-cyan-400/40" />
+
+                  <p className="mt-4 text-white/70">
+                    {item.content}
+                  </p>
+
+                  <div className="mt-5 flex gap-1">
+
+                    {Array.from({
+                      length: item.rating,
+                    }).map((_, i) => (
+                      <Star
+                        key={i}
+                        className="
+                          h-4
+                          w-4
+                          fill-cyan-400
+                          text-cyan-400
+                        "
+                      />
+                    ))}
+
+                  </div>
+
+                  <div className="mt-6 flex items-center gap-3">
+
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="
+                        h-12
+                        w-12
+                        rounded-full
+                        object-cover
+                      "
+                    />
+
+                    <div>
+
+                      <h4 className="font-semibold text-white">
+                        {item.name}
+                      </h4>
+
+                      <p className="text-sm text-white/50">
+                        {item.company}
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                </motion.div>
+              )
+            )}
+
           </div>
+
         </div>
+
+
       </div>
+
     </section>
   );
 }

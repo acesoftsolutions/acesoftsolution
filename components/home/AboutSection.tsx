@@ -1,127 +1,437 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Users, Award, Target } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle2,
+  Users,
+  Award,
+  Globe,
+  Target,
+} from 'lucide-react';
+
 import AnimatedSection from '@/components/shared/AnimatedSection';
 
-const stats = [
-  { icon: Users, value: '150+', label: 'Happy Clients' },
-  { icon: Award, value: '500+', label: 'Projects Completed' },
-  { icon: Target, value: '99%', label: 'Success Rate' },
+const features = [
+  'Custom Software Development',
+  'Enterprise ERP Solutions',
+  'AI & Automation Integration',
+  'Cloud Infrastructure Services',
+  'Dedicated Support & Maintenance',
+  'Agile Development Methodology',
 ];
 
-const features = [
-  'Customized solutions tailored to your needs',
-  'Expert team with diverse technical skills',
-  'Agile development methodology',
-  '24/7 dedicated support & maintenance',
+const stats = [
+  {
+    value: '500+',
+    label: 'Projects Delivered',
+  },
+  {
+    value: '150+',
+    label: 'Happy Clients',
+  },
+  {
+    value: '98%',
+    label: 'Success Rate',
+  },
+  {
+    value: '8+',
+    label: 'Countries Served',
+  },
 ];
 
 export default function AboutSection() {
   return (
-    <section className="section-padding bg-dark-light">
-      <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <AnimatedSection direction="left" className="relative">
-            <div className="relative">
-              <motion.div
-                initial={{ scale: 0.9, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                className="relative z-10"
-              >
-                <img
-                  src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  alt="Team working"
-                  className="rounded-2xl shadow-premium w-full"
-                />
-              </motion.div>
+    <section className="relative overflow-hidden py-24">
 
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="absolute -bottom-8 -right-8 glass rounded-2xl p-6 z-20"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-gradient-brown flex items-center justify-center">
-                    <Award className="w-7 h-7 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-white">10+</p>
-                    <p className="text-muted text-sm">Years Experience</p>
-                  </div>
-                </div>
-              </motion.div>
+      {/* Background */}
 
-              <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary/20 rounded-full blur-2xl" />
-            </div>
-          </AnimatedSection>
+      <div className="absolute inset-0">
 
-          <AnimatedSection direction="right">
-            <span className="inline-block text-primary text-sm font-medium uppercase tracking-wider mb-4">
-              About Us
+        <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[140px]" />
+
+        <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-600/5 blur-[140px]" />
+
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-[1280px] px-5 lg:px-8">
+
+        {/* Header */}
+
+        <AnimatedSection>
+
+          <div className="mx-auto max-w-4xl text-center">
+
+            <span
+              className="
+                inline-flex
+                items-center
+                rounded-full
+                border
+                border-cyan-500/20
+                bg-white/[0.03]
+                px-5
+                py-2
+                text-sm
+                font-medium
+                text-cyan-300
+              "
+            >
+              About ACE SOFT SOLUTION
             </span>
-            <h2 className="font-poppins text-3xl md:text-4xl font-bold text-white mb-6">
-              We Build Digital Solutions That{' '}
-              <span className="text-gradient">Drive Success</span>
+
+            <h2
+              className="
+                mt-6
+                font-poppins
+                text-4xl
+                font-bold
+                leading-tight
+                text-white
+                md:text-5xl
+                xl:text-6xl
+              "
+            >
+              Driving Innovation Through
+
+              <span
+                className="
+                  block
+                  bg-gradient-to-r
+                  from-[#0E4DB7]
+                  via-[#3CC8F5]
+                  to-[#12C7B5]
+                  bg-clip-text
+                  text-transparent
+                "
+              >
+                Technology & Creativity
+              </span>
+
             </h2>
-            <p className="text-muted mb-6 text-lg">
-              Ace Soft Solution is a premier IT services company specializing in creating
-              innovative digital experiences. We combine cutting-edge technology with creative
-              excellence to deliver solutions that transform businesses.
-            </p>
-            <p className="text-muted mb-8">
-              Our team of experts brings together diverse skills in web development, mobile apps,
-              AI solutions, and digital marketing to provide comprehensive services that meet
-              your unique business needs.
+
+            <p
+              className="
+                mx-auto
+                mt-6
+                max-w-3xl
+                text-lg
+                leading-relaxed
+                text-white/60
+              "
+            >
+              We empower startups, SMEs and enterprises
+              with innovative software solutions, AI
+              automation, ERP systems and digital
+              transformation services that accelerate
+              business growth.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <CheckCircle2 className="w-5 h-5 text-accent shrink-0" />
-                  <span className="text-white">{feature}</span>
-                </motion.div>
-              ))}
-            </div>
+          </div>
 
-            <div className="flex flex-wrap items-center gap-6">
-              <Link href="/about" className="btn-primary flex items-center gap-2">
+        </AnimatedSection>
+
+        {/* Main Content */}
+
+        <div
+          className="
+            mt-20
+            grid
+            gap-8
+            lg:grid-cols-2
+            items-stretch
+          "
+        >
+
+          {/* Left Card */}
+
+          <AnimatedSection direction="left">
+
+            <motion.div
+              whileHover={{
+                y: -6,
+              }}
+              className="
+                h-full
+                rounded-[32px]
+                border
+                border-cyan-500/10
+                bg-[#0B1220]
+                p-8
+                backdrop-blur-xl
+                transition-all
+                duration-300
+                hover:border-cyan-500/20
+                hover:shadow-[0_25px_80px_rgba(60,200,245,0.12)]
+              "
+            >
+
+              <h3 className="text-3xl font-bold text-white">
+                Who We Are
+              </h3>
+
+              <p
+                className="
+                  mt-5
+                  leading-relaxed
+                  text-white/60
+                "
+              >
+                ACE SOFT SOLUTION is a trusted
+                technology partner helping businesses
+                build scalable websites, mobile apps,
+                ERP systems, AI-powered solutions and
+                digital products that drive measurable
+                growth.
+              </p>
+
+              <p
+                className="
+                  mt-5
+                  leading-relaxed
+                  text-white/60
+                "
+              >
+                Our team combines innovation,
+                technical expertise and business
+                strategy to create future-ready
+                solutions tailored to each client.
+              </p>
+
+              <div className="mt-8 space-y-4">
+
+                {features.map((feature, index) => (
+
+                  <motion.div
+                    key={feature}
+                    initial={{
+                      opacity: 0,
+                      x: -20,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      x: 0,
+                    }}
+                    viewport={{
+                      once: true,
+                    }}
+                    transition={{
+                      delay: index * 0.08,
+                    }}
+                    className="
+                      flex
+                      items-center
+                      gap-3
+                      rounded-xl
+                      border
+                      border-cyan-500/10
+                      bg-white/[0.03]
+                      p-4
+                    "
+                  >
+
+                    <CheckCircle2 className="h-5 w-5 text-cyan-400" />
+
+                    <span className="text-white">
+                      {feature}
+                    </span>
+
+                  </motion.div>
+
+                ))}
+
+              </div>
+
+              <Link
+                href="/about"
+                className="
+                  mt-8
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-2xl
+                  bg-gradient-to-r
+                  from-[#0E4DB7]
+                  via-[#3CC8F5]
+                  to-[#12C7B5]
+                  px-8
+                  py-4
+                  font-semibold
+                  text-white
+                  shadow-[0_15px_40px_rgba(60,200,245,0.25)]
+                  transition-all
+                  duration-300
+                  hover:scale-105
+                "
+              >
                 Learn More About Us
-                <ArrowRight className="w-5 h-5" />
+
+                <ArrowRight className="h-5 w-5" />
+
               </Link>
 
-              <div className="flex gap-6">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                    className="text-center"
-                  >
-                    <p className="text-2xl font-bold text-white">{stat.value}</p>
-                    <p className="text-muted text-sm">{stat.label}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+            </motion.div>
+
           </AnimatedSection>
+
+          {/* Right Card */}
+
+          <AnimatedSection direction="right">
+
+            <motion.div
+              whileHover={{
+                y: -6,
+              }}
+              className="
+                h-full
+                rounded-[32px]
+                border
+                border-cyan-500/10
+                bg-[#0B1220]
+                p-8
+                backdrop-blur-xl
+                transition-all
+                duration-300
+                hover:border-cyan-500/20
+                hover:shadow-[0_25px_80px_rgba(60,200,245,0.12)]
+              "
+            >
+
+              <h3 className="text-3xl font-bold text-white">
+                Why Businesses Trust Us
+              </h3>
+
+              {/* Stats Grid */}
+
+              <div className="mt-8 grid grid-cols-2 gap-5">
+
+                {stats.map((item) => (
+
+                  <div
+                    key={item.label}
+                    className="
+                      rounded-2xl
+                      border
+                      border-cyan-500/10
+                      bg-white/[0.03]
+                      p-5
+                      text-center
+                    "
+                  >
+
+                    <h4 className="text-4xl font-bold text-white">
+                      {item.value}
+                    </h4>
+
+                    <p className="mt-2 text-white/60">
+                      {item.label}
+                    </p>
+
+                  </div>
+
+                ))}
+
+              </div>
+
+              {/* Experience Card */}
+
+              <div
+                className="
+                  mt-8
+                  rounded-3xl
+                  border
+                  border-cyan-500/10
+                  bg-gradient-to-br
+                  from-[#0E4DB7]/20
+                  via-[#3CC8F5]/10
+                  to-[#12C7B5]/20
+                  p-8
+                "
+              >
+
+                <div className="flex items-center gap-4">
+
+                  <div
+                    className="
+                      flex
+                      h-16
+                      w-16
+                      items-center
+                      justify-center
+                      rounded-2xl
+                      bg-gradient-to-br
+                      from-[#0E4DB7]
+                      via-[#3CC8F5]
+                      to-[#12C7B5]
+                    "
+                  >
+                    <Award className="h-8 w-8 text-white" />
+                  </div>
+
+                  <div>
+
+                    <h4 className="text-3xl font-bold text-white">
+                      10+ Years
+                    </h4>
+
+                    <p className="text-white/70">
+                      Industry Experience
+                    </p>
+
+                  </div>
+
+                </div>
+
+                <p
+                  className="
+                    mt-5
+                    leading-relaxed
+                    text-white/70
+                  "
+                >
+                  Delivering successful software,
+                  ERP, AI and digital transformation
+                  projects across multiple industries
+                  worldwide.
+                </p>
+
+              </div>
+
+              {/* Bottom Badge */}
+
+              <div
+                className="
+                  mt-6
+                  rounded-2xl
+                  border
+                  border-cyan-500/10
+                  bg-white/[0.03]
+                  p-5
+                  text-center
+                "
+              >
+
+                <h4 className="text-xl font-semibold text-white">
+                  Your Long-Term Technology Partner
+                </h4>
+
+                <p className="mt-2 text-white/60">
+                  From idea to deployment and beyond,
+                  we help businesses scale through
+                  innovative technology solutions.
+                </p>
+
+              </div>
+
+            </motion.div>
+
+          </AnimatedSection>
+
         </div>
+
       </div>
+
     </section>
   );
 }

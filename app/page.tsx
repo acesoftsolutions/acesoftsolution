@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <ScrollProgress />
       <Navbar />
-      <main>
+      <main className="overflow-hidden">
         <HeroSection />
         <TrustedCompanies />
         <ServicesSection />
@@ -31,7 +31,6 @@ export default function Home() {
         <ProcessSection />
         <PortfolioSection />
         <TestimonialsSection />
-        <StatsSection />
         <TechStackSection />
         <FAQSection />
         <CTASection />
