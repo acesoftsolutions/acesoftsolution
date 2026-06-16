@@ -1,13 +1,12 @@
 'use client';
 
 import React from 'react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
 import ScrollProgress from '@/components/shared/ScrollProgress';
 import BackToTop from '@/components/shared/FloatingElements';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
+
 import HeroSection from '@/components/home/HeroSection';
-import TrustedCompanies from '@/components/home/TrustedCompanies';
 import ServicesSection from '@/components/home/ServicesSection';
 import AboutSection from '@/components/home/AboutSection';
 import ProcessSection from '@/components/home/ProcessSection';
@@ -22,10 +21,10 @@ export default function Home() {
   return (
     <>
       <ScrollProgress />
-      <Navbar />
+
       <main className="overflow-hidden">
         <HeroSection />
-        <TrustedCompanies />
+
         <ServicesSection />
         <AboutSection />
         <ProcessSection />
@@ -35,7 +34,7 @@ export default function Home() {
         <FAQSection />
         <CTASection />
       </main>
-      <Footer />
+
       <BackToTop />
       <WhatsAppButton />
     </>

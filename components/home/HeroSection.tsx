@@ -1,263 +1,244 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Play, Sparkles } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+
+const stats = [
+  {
+    value: "150+",
+    label: "Clients Worldwide",
+  },
+  {
+    value: "50+",
+    label: "Projects Delivered",
+  },
+  {
+    value: "98%",
+    label: "Success Rate",
+  },
+  {
+    value: "5+",
+    label: "Years Experience",
+  },
+];
 
 export default function HeroSection() {
   return (
- <section className="relative overflow-hidden bg-[#080c14] pt-32 pb-24">
+    <section className="relative overflow-hidden bg-[#080c14] pt-28 md:pt-32 lg:pt-40 pb-16 md:pb-24">
+      {/* Background Grid */}
 
-  {/* Background Glow */}
+      <div
+        className="
+          absolute
+          inset-0
+          bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),
+          linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]
+          bg-[size:80px_80px]
+        "
+      />
 
-  <div className="absolute inset-0">
+      <div className="relative z-10 mx-auto max-w-[1280px] px-5 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:gap-20 lg:grid-cols-2">
+          {/* LEFT CONTENT */}
 
-    <div className="absolute top-0 left-0 h-[600px] w-[600px] rounded-full bg-cyan-500/10 blur-[160px]" />
-
-    <div className="absolute bottom-0 right-0 h-[600px] w-[600px] rounded-full bg-blue-600/10 blur-[160px]" />
-
-  </div>
-
-  <div className="relative z-10 mx-auto max-w-[1280px] px-5">
-
-    {/* Badge */}
-
-    <div className="mb-8 flex justify-center">
-
-      <div className="
-        rounded-full
-        border
-        border-cyan-500/20
-        bg-white/5
-        px-5
-        py-2
-        text-sm
-        text-cyan-300
-      ">
-        🚀 Trusted Technology Partner
-      </div>
-
-    </div>
-
-    {/* Heading */}
-
-    <h1 className="
-      mx-auto
-      max-w-5xl
-      text-center
-      text-5xl
-      font-bold
-      leading-tight
-      text-white
-      md:text-7xl
-    ">
-
-      Accelerate Your Business
-
-      <span className="
-        block
-        bg-gradient-to-r
-        from-[#0E4DB7]
-        via-[#3CC8F5]
-        to-[#12C7B5]
-        bg-clip-text
-        text-transparent
-      ">
-        With Future-Ready Technology
-      </span>
-
-    </h1>
-
-    <p className="
-      mx-auto
-      mt-8
-      max-w-3xl
-      text-center
-      text-xl
-      text-white/70
-    ">
-      We build scalable software, ERP systems,
-      AI solutions and digital products that
-      help businesses grow faster.
-    </p>
-
-    {/* Buttons */}
-
-    <div className="
-      mt-10
-      flex
-      justify-center
-      gap-4
-      flex-wrap
-    ">
-
-      <button className="
-        rounded-2xl
-        bg-gradient-to-r
-        from-[#0E4DB7]
-        via-[#3CC8F5]
-        to-[#12C7B5]
-        px-8
-        py-4
-        text-white
-        font-semibold
-      ">
-        Start Your Project
-      </button>
-
-      <button className="
-        rounded-2xl
-        border
-        border-cyan-500/20
-        bg-white/5
-        px-8
-        py-4
-        text-white
-      ">
-        View Portfolio
-      </button>
-
-    </div>
-
-    {/* Main Cards Area */}
-
-    <div className="
-      mt-24
-      grid
-      gap-8
-      lg:grid-cols-3
-    ">
-
-      {/* Service Cards */}
-
-      <div className="space-y-6">
-
-        {[
-          "Web Development",
-          "Mobile Apps",
-          "ERP Software",
-          "AI Solutions"
-        ].map((service) => (
-
-          <div
-            key={service}
-            className="
-              rounded-3xl
-              border
-              border-cyan-500/10
-              bg-white/[0.03]
-              p-6
-              backdrop-blur-xl
-            "
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <h3 className="text-xl font-semibold text-white">
-              {service}
-            </h3>
+            {/* Badge */}
 
-            <p className="mt-2 text-white/60">
-              Enterprise-grade solutions tailored for growth.
-            </p>
-
-          </div>
-
-        ))}
-
-      </div>
-
-      {/* Dashboard */}
-
-      <div className="lg:col-span-2">
-
-        <div className="
-          rounded-[32px]
-          border
-          border-cyan-500/10
-          bg-[#0B1220]
-          p-6
-          shadow-[0_25px_100px_rgba(60,200,245,0.15)]
-        ">
-
-          <div className="
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/[0.03]
-            p-8
-          ">
-
-            <div className="
-              grid
-              gap-4
-              md:grid-cols-3
-            ">
-
-              <div className="
-                rounded-2xl
-                bg-white/5
-                p-5
-              ">
-                <p className="text-white/60">
-                  Revenue Growth
-                </p>
-
-                <h4 className="mt-2 text-4xl font-bold text-white">
-                  +248%
-                </h4>
-              </div>
-
-              <div className="
-                rounded-2xl
-                bg-white/5
-                p-5
-              ">
-                <p className="text-white/60">
-                  Active Clients
-                </p>
-
-                <h4 className="mt-2 text-4xl font-bold text-white">
-                  150+
-                </h4>
-              </div>
-
-              <div className="
-                rounded-2xl
-                bg-white/5
-                p-5
-              ">
-                <p className="text-white/60">
-                  Success Rate
-                </p>
-
-                <h4 className="mt-2 text-4xl font-bold text-white">
-                  98%
-                </h4>
-              </div>
-
+            <div
+              className="
+               mb-6
+inline-flex
+items-center
+rounded-full
+border
+border-cyan-500/20
+bg-white/[0.03]
+px-4
+py-2
+text-xs
+sm:text-sm
+font-medium
+text-cyan-300
+              "
+            >
+              Trusted Technology Partner
             </div>
 
-            {/* Chart Area */}
+            {/* Heading */}
 
-            <div className="
-              mt-8
-              h-[320px]
-              rounded-3xl
-              bg-gradient-to-br
-              from-[#0E4DB7]/30
-              via-[#3CC8F5]/20
-              to-[#12C7B5]/20
-            " />
+            <h1
+              className="
+                text-4xl
+sm:text-5xl
+lg:text-6xl
+xl:text-7xl
+font-bold
+leading-[1.1]
+tracking-tight
+text-white
+              "
+            >
+              Enterprise Software
+              <br />
+              <span
+                className="
+                  bg-gradient-to-r
+                  from-[#0E4DB7]
+                  via-[#3CC8F5]
+                  to-[#12C7B5]
+                  bg-clip-text
+                  text-transparent
+                "
+              >
+                Built For Growth
+              </span>
+            </h1>
 
-          </div>
+            {/* Description */}
 
+            <p
+              className="
+               mt-6
+max-w-xl
+text-base
+sm:text-lg
+leading-relaxed
+text-white/70
+              "
+            >
+              We help startups, SMEs and enterprises build custom software,
+              mobile applications, ERP systems and AI-powered solutions that
+              streamline operations and accelerate business growth.
+            </p>
+
+            {/* Buttons */}
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-xl
+                  bg-[#0E4DB7]
+                  px-7
+                  py-4
+                  font-semibold
+                  text-white
+                  transition-colors
+                  hover:bg-[#0b3f97]
+                "
+              >
+                Start Your Project
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+
+              <Link
+                href="/portfolio"
+                className="
+                  inline-flex
+                  items-center
+                  rounded-xl
+                  border
+                  border-white/10
+                  px-7
+                  py-4
+                  font-semibold
+                  text-white
+                  transition-colors
+                  hover:bg-white/5
+                "
+              >
+                View Portfolio
+              </Link>
+            </div>
+
+            {/* Trust Points */}
+
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/70">
+              <div>✓ Custom Software Development</div>
+              <div>✓ Mobile App Development</div>
+              <div>✓ ERP Solutions</div>
+              <div>✓ Artificial Intelligence</div>
+              <div>✓ Cloud & DevOps</div>
+              <div>✓ Digital Transformation</div>
+            </div>
+          </motion.div>
+
+          {/* RIGHT CONTENT */}
+
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="relative"
+          >
+            {/* Main Image */}
+
+            <div
+              className="
+              overflow-hidden
+rounded-2xl
+lg:rounded-[28px]
+border
+border-white/10
+              "
+            >
+              <Image
+                src="/images/hero-image.jpg"
+                alt="Ace Soft Solution"
+                width={900}
+                height={700}
+                priority
+                className="
+                  h-auto
+                  w-full
+                  object-cover
+                "
+              />
+            </div>
+
+            {/* Statistics Bar */}
+
+            <div
+              className="
+                mt-6
+                grid
+                grid-cols-2
+                gap-4
+                md:grid-cols-4
+              "
+            >
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="
+                    rounded-2xl
+                    border
+                    border-white/10
+                    bg-white/[0.03]
+                    p-5
+                    text-center
+                  "
+                >
+                  <h3 className="text-3xl font-bold text-white">
+                    {stat.value}
+                  </h3>
+
+                  <p className="mt-1 text-sm text-white/60">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
-
       </div>
-
-    </div>
-
-  </div>
-
-</section>
+    </section>
   );
 }

@@ -1,520 +1,354 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { useState, useRef } from "react";
+import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Globe,
-  Mail,
-  Phone,
-  ArrowRight,
-} from 'lucide-react';
+const servicesDropdown = [
+  {
+    name: "Web Development",
+    href: "/services/web-development",
+  },
+  {
+    name: "Mobile App Development",
+    href: "/services/mobile-app-development",
+  },
+  {
+    name: "AI Solutions",
+    href: "/services/ai-solutions",
+  },
+  {
+    name: "UI/UX Design",
+    href: "/services/ui-ux-design",
+  },
+  {
+    name: "Digital Marketing",
+    href: "/services/digital-marketing",
+  },
+  {
+    name: "ERP Software",
+    href: "/services/erp-software",
+  },
+  {
+    name: "SEO Optimization",
+    href: "/services/seo-optimization",
+  },
+  {
+    name: "E-Commerce Development",
+    href: "/services/ecommerce-development",
+  },
+];
 
-import { cn } from '@/lib/utils';
+const industriesDropdown = [
+  {
+    name: "Retail & eCommerce",
+    href: "/industries/retail-ecommerce",
+  },
+  {
+    name: "Transportation & Logistics",
+    href: "/industries/logistics",
+  },
+  {
+    name: "EdTech",
+    href: "/industries/edtech",
+  },
+  {
+    name: "Automotive",
+    href: "/industries/automotive",
+  },
+  {
+    name: "Travel & Hospitality",
+    href: "/industries/travel",
+  },
+  {
+    name: "On Demand",
+    href: "/industries/on-demand",
+  },
+  {
+    name: "Fintech",
+    href: "/industries/fintech",
+  },
+  {
+    name: "Enterprises",
+    href: "/industries/enterprise",
+  },
+  {
+    name: "Healthcare",
+    href: "/industries/healthcare",
+  },
+  {
+    name: "Startups",
+    href: "/industries/startups",
+  },
+  {
+    name: "Real Estate",
+    href: "/industries/real-estate",
+  },
+  {
+    name: "Government & Public Sector",
+    href: "/industries/government",
+  },
+];
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-
-  { name: 'About', href: '/about' },
-
   {
-    name: 'Services',
-    href: '/services',
-
-    children: [
-      {
-        name: 'Web Development',
-        href: '/services/web-development',
-      },
-      {
-        name: 'Mobile App Development',
-        href: '/services/mobile-app-development',
-      },
-      {
-        name: 'SEO Optimization',
-        href: '/services/seo-optimization',
-      },
-      {
-        name: 'Digital Marketing',
-        href: '/services/digital-marketing',
-      },
-      {
-        name: 'UI/UX Design',
-        href: '/services/ui-ux-design',
-      },
-      {
-        name: 'ERP Software',
-        href: '/services/erp-software',
-      },
-      {
-        name: 'AI Solutions',
-        href: '/services/ai-solutions',
-      },
-      {
-        name: 'E-Commerce',
-        href: '/services/ecommerce-development',
-      },
-    ],
+    name: "Services",
+    href: "/services",
+    dropdown: servicesDropdown,
   },
-
-  { name: 'Portfolio', href: '/portfolio' },
-
-  { name: 'Blog', href: '/blog' },
-
-  { name: 'Careers', href: '/careers' },
-
-  { name: 'Contact', href: '/contact' },
+  {
+    name: "Work",
+    href: "/portfolio",
+  },
+  {
+    name: "Technology",
+    href: "/technology",
+  },
+  {
+    name: "Industries",
+    href: "/industries",
+    dropdown: industriesDropdown,
+  },
+  {
+    name: "Process",
+    href: "/process",
+  },
+  {
+    name: "Company",
+    href: "/about",
+  },
+  {
+    name: "Insights",
+    href: "/blog",
+  },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
-
   const [isOpen, setIsOpen] = useState(false);
 
-  const [scrolled, setScrolled] = useState(false);
-
-  const [activeDropdown, setActiveDropdown] =
-    useState<string | null>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () =>
-      window.removeEventListener(
-        'scroll',
-        handleScroll
-      );
-  }, []);
-
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
-
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   return (
-    <>
-      {/* TOP BAR */}
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 relative">
+      {" "}
+      <div className="max-w-[1280px] mx-auto px-5 lg:px-8">
+        <nav className="flex items-center justify-between h-24">
+          {/* Logo */}
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="Ace Soft Solution"
+              width={130}
+              height={60}
+              priority
+              className="w-[110px]
+sm:w-[120px]
+lg:w-[130px]
+h-auto"
+            />
+          </Link>
 
-      <div className="hidden border-b border-cyan-500/10 bg-[#060b14]/90 backdrop-blur-xl md:block">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-8 xl:gap-12">
+            {navLinks.map((link) => (
+              <div
+                key={link.name}
+                className="relative"
+                onMouseEnter={() => {
+                  if (timeoutRef.current) {
+                    clearTimeout(timeoutRef.current);
+                  }
 
-        <div className="container-custom flex items-center justify-between py-2 text-sm text-white/70">
-
-          <div className="flex items-center gap-6">
-
-            <a
-              href="mailto:info@acesoftsolutions.com"
-              className="flex items-center gap-2 transition-colors hover:text-cyan-300"
-            >
-              <Mail className="h-4 w-4 text-cyan-400" />
-
-              <span>
-                info@acesoftsolutions.com
-              </span>
-            </a>
-
-            <a
-              href="tel:+1234567890"
-              className="flex items-center gap-2 transition-colors hover:text-cyan-300"
-            >
-              <Phone className="h-4 w-4 text-cyan-400" />
-
-              <span>
-                +1 (234) 567-890
-              </span>
-            </a>
-          </div>
-
-          <div className="flex items-center gap-2">
-
-            <Globe className="h-4 w-4 text-cyan-400" />
-
-            <span>
-              Mon - Fri: 9:00 AM - 6:00 PM
-            </span>
-          </div>
-        </div>
-      </div>
-
-      {/* NAVBAR */}
-
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-        className={cn(
-          'fixed left-0 right-0 z-50 transition-all duration-500',
-          scrolled
-            ? 'top-2'
-            : 'top-0 md:top-[44px]'
-        )}
-      >
-        <div
-          className={cn(
-            'container-custom rounded-3xl border transition-all duration-500',
-            scrolled
-              ? 'border-cyan-500/10 bg-[#070b14]/90 shadow-[0_15px_60px_rgba(60,200,245,0.12)] backdrop-blur-3xl'
-              : 'border-white/5 bg-[#070b14]/50 backdrop-blur-xl'
-          )}
-        >
-          <nav className="flex h-20 items-center justify-between px-6">
-
-            {/* LOGO */}
-
-            <Link
-              href="/"
-              className="relative z-50"
-            >
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                  if (link.dropdown) {
+                    setActiveDropdown(link.name);
+                  }
+                }}
+                onMouseLeave={() => {
+                  timeoutRef.current = setTimeout(() => {
+                    setActiveDropdown(null);
+                  }, 150);
+                }}
               >
-                <Image
-                  src="/logo.png"
-                  alt="Ace Soft Solution"
-                  width={180}
-                  height={70}
-                  priority
-                  className="
-                    h-auto
-                    w-[170px]
-                    md:w-[150px]
-                    lg:w-[160px]
-                    object-contain
-                    rounded-sm
-                    drop-shadow-[0_0_25px_rgba(60,200,245,0.25)]
-                  "
-                />
-              </motion.div>
-            </Link>
+                <Link
+                  href={link.href}
+                  className={cn(
+                    "relative flex items-center gap-1 text-[15px] font-medium transition-colors duration-200",
 
-            {/* DESKTOP MENU */}
-
-            <div className="hidden items-center gap-8 lg:flex">
-
-              {navLinks.map((link) => (
-                <div
-                  key={link.name}
-                  className="relative"
-                  onMouseEnter={() =>
-                    setActiveDropdown(link.name)
-                  }
-                  onMouseLeave={() =>
-                    setActiveDropdown(null)
-                  }
-                >
-                  <Link
-                    href={link.href}
-                    className={cn(
-                      'relative flex items-center gap-1 text-[15px] font-medium transition-all duration-300',
-
-                      pathname === link.href ||
-                        pathname.startsWith(
-                          link.href + '/'
-                        )
-                        ? 'text-cyan-400'
-                        : 'text-white/80 hover:text-white'
-                    )}
-                  >
-                    {link.name}
-
-                    {link.children && (
-                      <ChevronDown className="h-4 w-4" />
-                    )}
-
-                    {(pathname === link.href ||
-                      pathname.startsWith(
-                        link.href + '/'
-                      )) && (
-                      <motion.div
-                        layoutId="navbar-indicator"
-                        className="
-                          absolute
-                          -bottom-2
-                          left-0
-                          right-0
-                          h-[2px]
-                          rounded-full
-                          bg-gradient-to-r
-                          from-[#0E4DB7]
-                          via-[#3CC8F5]
-                          to-[#12C7B5]
-                        "
-                      />
-                    )}
-                  </Link>
-
-                  {/* MEGA MENU */}
-
-                  {link.children && (
-                    <AnimatePresence>
-                      {activeDropdown ===
-                        link.name && (
-                        <motion.div
-                          initial={{
-                            opacity: 0,
-                            y: 20,
-                          }}
-                          animate={{
-                            opacity: 1,
-                            y: 0,
-                          }}
-                          exit={{
-                            opacity: 0,
-                            y: 20,
-                          }}
-                          transition={{
-                            duration: 0.25,
-                          }}
-                          className="
-                            absolute
-                            left-1/2
-                            top-full
-                            z-50
-                            mt-6
-                            w-[700px]
-                            -translate-x-1/2
-                            overflow-hidden
-                            rounded-3xl
-                            border
-                            border-cyan-500/10
-                            bg-[#0b1220]/95
-                            shadow-[0_25px_80px_rgba(60,200,245,0.15)]
-                            backdrop-blur-3xl
-                          "
-                        >
-                          <div className="grid grid-cols-2 gap-3 p-6">
-
-                            {link.children.map(
-                              (child) => (
-                                <Link
-                                  key={child.name}
-                                  href={
-                                    child.href
-                                  }
-                                  className="
-                                    group
-                                    rounded-2xl
-                                    border
-                                    border-transparent
-                                    bg-white/[0.02]
-                                    p-5
-                                    transition-all
-                                    duration-300
-                                    hover:border-cyan-500/20
-                                    hover:bg-white/[0.04]
-                                  "
-                                >
-                                  <div className="flex items-center justify-between">
-                                                                        <div>
-                                      <h4 className="font-semibold text-white">
-                                        {child.name}
-                                      </h4>
-
-                                      <p className="mt-1 text-sm text-white/50">
-                                        Professional business solutions
-                                      </p>
-                                    </div>
-
-                                    <ArrowRight
-                                      className="
-                                        h-5
-                                        w-5
-                                        text-cyan-400
-                                        opacity-0
-                                        transition-all
-                                        duration-300
-                                        group-hover:translate-x-1
-                                        group-hover:opacity-100
-                                      "
-                                    />
-                                  </div>
-                                </Link>
-                              )
-                            )}
-                          </div>
-
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                    pathname === link.href ||
+                      pathname.startsWith(link.href + "/")
+                      ? "text-[#0E4DB7]"
+                      : "text-gray-800 hover:text-[#0E4DB7]",
                   )}
-                </div>
-              ))}
-            </div>
+                >
+                  {link.name}
 
-            {/* DESKTOP CTA */}
+                  {link.dropdown && (
+                    <ChevronDown
+                      className={cn(
+                        "h-4 w-4 transition-transform duration-300",
+                        activeDropdown === link.name && "rotate-180",
+                      )}
+                    />
+                  )}
 
-            <div className="hidden lg:flex">
+                  {(pathname === link.href ||
+                    pathname.startsWith(link.href + "/")) && (
+                  <motion.span
+  layoutId="navbar-indicator"
+  className="
+    absolute
+    -bottom-2
+    left-0
+    h-[2px]
+    w-full
+    bg-[#0E4DB7]
+  "
+/>
+                  )}
+                </Link>
+              </div>
+            ))}
+          </div>
 
-              <Link
-                href="/contact"
-                className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-full
-                  bg-gradient-to-r
-                  from-[#0E4DB7]
-                  via-[#3CC8F5]
-                  to-[#12C7B5]
-                  px-7
-                  py-3
-                  text-sm
-                  font-semibold
-                  text-white
-                  shadow-[0_10px_35px_rgba(60,200,245,0.35)]
-                  transition-all
-                  duration-300
-                  hover:scale-105
-                "
-              >
-                <span className="flex items-center gap-2">
-
-                  Get Started
-
-                  <ArrowRight
-                    className="
-                      h-4
-                      w-4
-                      transition-transform
-                      duration-300
-                      group-hover:translate-x-1
-                    "
-                  />
-                </span>
-              </Link>
-            </div>
-
-            {/* MOBILE BUTTON */}
-
-            <button
-              className="relative z-50 p-2 lg:hidden"
-              onClick={() =>
-                setIsOpen(!isOpen)
-              }
+          {/* Desktop CTA */}
+          <div className="hidden lg:flex">
+            <Link
+              href="/contact"
+              className="
+            inline-flex
+            items-center
+            justify-center
+            px-6 xl:px-10
+            h-14
+            font-semibold
+            text-gray-900
+            border-2
+            border-gray-900
+            bg-white
+            shadow-[6px_6px_0px_#1f2937]
+            transition-all
+            duration-300
+            hover:translate-x-[3px]
+            hover:translate-y-[3px]
+            hover:shadow-none
+          "
             >
-              {isOpen ? (
-                <X className="h-7 w-7 text-white" />
-              ) : (
-                <Menu className="h-7 w-7 text-white" />
-              )}
-            </button>
-          </nav>
-        </div>
+              Contact Us
+            </Link>
+          </div>
 
-        {/* MOBILE MENU */}
-
+          {/* Mobile Button */}
+          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
+            {isOpen ? (
+              <X className="w-7 h-7 text-gray-900" />
+            ) : (
+              <Menu className="w-7 h-7 text-gray-900" />
+            )}
+          </button>
+        </nav>
         <AnimatePresence>
-
-          {isOpen && (
+          {activeDropdown && (
             <motion.div
-              initial={{
-                opacity: 0,
-                height: 0,
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              onMouseEnter={() => {
+                if (timeoutRef.current) {
+                  clearTimeout(timeoutRef.current);
+                }
               }}
-              animate={{
-                opacity: 1,
-                height: '100vh',
-              }}
-              exit={{
-                opacity: 0,
-                height: 0,
-              }}
-              transition={{
-                duration: 0.3,
+              onMouseLeave={() => {
+                timeoutRef.current = setTimeout(() => {
+                  setActiveDropdown(null);
+                }, 150);
               }}
               className="
-                fixed
-                inset-0
-                z-40
-                overflow-y-auto
-                bg-[#050913]/95
-                backdrop-blur-3xl
-                lg:hidden
-              "
+        absolute
+        left-0
+        right-0
+        top-full
+        bg-white
+        border-t
+        border-gray-200
+        shadow-xl
+        hidden
+        lg:block
+      "
             >
-              <div className="flex min-h-screen flex-col px-6 pb-10 pt-28">
-
-                {navLinks.map(
-                  (link, index) => (
-                    <motion.div
-                      key={link.name}
-                      initial={{
-                        opacity: 0,
-                        x: -20,
-                      }}
-                      animate={{
-                        opacity: 1,
-                        x: 0,
-                      }}
-                      transition={{
-                        delay:
-                          index * 0.05,
-                      }}
-                    >
+              <div className="max-w-[1280px] mx-auto px-5 py-12">
+                <div className="grid grid-cols-2 gap-x-28 gap-y-2">
+                  {navLinks
+                    .find((item) => item.name === activeDropdown)
+                    ?.dropdown?.map((item) => (
                       <Link
-                        href={link.href}
-                        className={cn(
-                          'block border-b border-white/10 py-5 text-lg font-medium',
-
-                          pathname ===
-                            link.href
-                            ? 'text-cyan-400'
-                            : 'text-white'
-                        )}
+                        key={item.name}
+                        href={item.href}
+                        className="
+                  py-5
+                  border-b
+                  border-gray-200
+                  text-[18px]
+                  font-medium
+                  text-gray-700
+                  hover:text-[#0E4DB7]
+                "
                       >
-                        {link.name}
+                        {item.name}
                       </Link>
-                    </motion.div>
-                  )
-                )}
-
-                <motion.div
-                  initial={{
-                    opacity: 0,
-                    y: 20,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  transition={{
-                    delay: 0.3,
-                  }}
-                  className="mt-8"
-                >
-                  <Link
-                    href="/contact"
-                    className="
-                      block
-                      rounded-xl
-                      bg-gradient-to-r
-                      from-[#0E4DB7]
-                      via-[#3CC8F5]
-                      to-[#12C7B5]
-                      px-6
-                      py-4
-                      text-center
-                      font-semibold
-                      text-white
-                    "
-                  >
-                    Get Started
-                  </Link>
-                </motion.div>
+                    ))}
+                </div>
               </div>
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.header>
-    </>
+      </div>
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="lg:hidden border-t border-gray-200 bg-white">
+          <div className="max-w-[1280px] mx-auto px-5 py-6">
+            <div className="flex flex-col">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    "py-4 text-base font-medium border-b border-gray-100",
+                    pathname === link.href ? "text-[#0E4DB7]" : "text-gray-800",
+                  )}
+                >
+                  {link.name}
+                </Link>
+              ))}
+
+              <Link
+                href="/contact"
+                onClick={() => setIsOpen(false)}
+                className="
+              mt-6
+              inline-flex
+              justify-center
+              items-center
+              h-12
+              border-2
+              border-gray-900
+              font-semibold
+              text-gray-900
+            "
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }

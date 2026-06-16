@@ -14,8 +14,7 @@ import {
   ShoppingCart,
   ArrowRight
 } from 'lucide-react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
 import ScrollProgress from '@/components/shared/ScrollProgress';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import { services } from '@/data/services';
@@ -35,7 +34,7 @@ export default function ServicesPage() {
   return (
     <>
       <ScrollProgress />
-      <Navbar />
+
 
       <main>
         <section className="pt-32 pb-20 bg-dark">
@@ -109,7 +108,7 @@ export default function ServicesPage() {
         </section>
       </main>
 
-      <Footer />
+     
     </>
   );
 }

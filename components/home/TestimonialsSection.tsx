@@ -1,348 +1,448 @@
 'use client';
 
-import {
-  Quote,
-  Star,
-} from 'lucide-react';
-
 import { motion } from 'framer-motion';
+import {
+Quote,
+Star,
+Users,
+TrendingUp,
+Award,
+} from 'lucide-react';
 
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import { testimonials } from '@/data/testimonials';
 
 export default function TestimonialsSection() {
-  const featured = testimonials[0];
-  const others = testimonials.slice(1, 5);
+const featured = testimonials[0];
+const others = testimonials.slice(1, 4);
 
-  return (
-    <section className="relative overflow-hidden py-24">
+return ( <section className="bg-[#F8FAFC] py-24 lg:py-32"> <div className="mx-auto max-w-7xl px-5 lg:px-8">
+{/* Header */}
 
-      {/* Background */}
+```
+    <AnimatedSection>
+      <div className="mx-auto max-w-4xl text-center">
+        <span
+          className="
+            inline-flex
+            rounded-full
+            border
+            border-blue-100
+            bg-blue-50
+            px-5
+            py-2
+            text-sm
+            font-semibold
+            text-blue-700
+          "
+        >
+          Client Testimonials
+        </span>
 
-      <div className="absolute inset-0">
-
-        <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[140px]" />
-
-        <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-600/5 blur-[140px]" />
-
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-[1280px] px-5 lg:px-8">
-
-        {/* Header */}
-
-        <AnimatedSection>
-
-          <div className="mx-auto max-w-4xl text-center">
-
-            <span
-              className="
-                inline-flex
-                rounded-full
-                border
-                border-cyan-500/20
-                bg-white/[0.03]
-                px-5
-                py-2
-                text-sm
-                text-cyan-300
-              "
-            >
-              Client Testimonials
-            </span>
-
-            <h2
-              className="
-                mt-6
-                text-4xl
-                font-bold
-                text-white
-                md:text-5xl
-                xl:text-6xl
-              "
-            >
-              What Our
-
-              <span
-                className="
-                  block
-                  bg-gradient-to-r
-                  from-[#0E4DB7]
-                  via-[#3CC8F5]
-                  to-[#12C7B5]
-                  bg-clip-text
-                  text-transparent
-                "
-              >
-                Clients Say
-              </span>
-
-            </h2>
-
-            <p
-              className="
-                mx-auto
-                mt-6
-                max-w-3xl
-                text-lg
-                text-white/60
-              "
-            >
-              Trusted by startups, SMEs and
-              enterprises worldwide.
-            </p>
-
-          </div>
-
-        </AnimatedSection>
-
-        {/* Testimonials Grid */}
-
-        <div className="mt-20 grid gap-8 lg:grid-cols-3">
-
-          {/* Left Column */}
-
-          <div className="space-y-6">
-
-            {others.slice(0, 2).map(
-              (item, index) => (
-                <motion.div
-                  key={item._id}
-                  whileHover={{
-                    y: -5,
-                  }}
-                  className="
-                    rounded-[28px]
-                    border
-                    border-cyan-500/10
-                    bg-[#0B1220]
-                    p-6
-                  "
-                >
-
-                  <Quote className="h-8 w-8 text-cyan-400/40" />
-
-                  <p className="mt-4 text-white/70">
-                    {item.content}
-                  </p>
-
-                  <div className="mt-5 flex gap-1">
-
-                    {Array.from({
-                      length: item.rating,
-                    }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className="
-                          h-4
-                          w-4
-                          fill-cyan-400
-                          text-cyan-400
-                        "
-                      />
-                    ))}
-
-                  </div>
-
-                  <div className="mt-6 flex items-center gap-3">
-
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="
-                        h-12
-                        w-12
-                        rounded-full
-                        object-cover
-                      "
-                    />
-
-                    <div>
-
-                      <h4 className="font-semibold text-white">
-                        {item.name}
-                      </h4>
-
-                      <p className="text-sm text-white/50">
-                        {item.company}
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                </motion.div>
-              )
-            )}
-
-          </div>
-
-          {/* Featured Testimonial */}
-
-          <motion.div
-            whileHover={{
-              y: -8,
-            }}
+        <h2
+          className="
+            mt-6
+            text-4xl
+            font-bold
+            text-slate-900
+            md:text-5xl
+            xl:text-6xl
+          "
+        >
+          Trusted By
+          <span
             className="
-              rounded-[36px]
-              border
-              border-cyan-500/20
-              bg-gradient-to-br
-              from-[#0E4DB7]/15
-              via-[#3CC8F5]/10
-              to-[#12C7B5]/15
-              p-10
+              block
+              bg-gradient-to-r
+              from-blue-700
+              via-cyan-500
+              to-teal-500
+              bg-clip-text
+              text-transparent
             "
           >
+            Businesses Worldwide
+          </span>
+        </h2>
 
-            <Quote className="h-14 w-14 text-cyan-300" />
+        <p
+          className="
+            mx-auto
+            mt-6
+            max-w-3xl
+            text-lg
+            text-slate-600
+          "
+        >
+          Helping startups, SMEs and enterprises
+          build scalable digital solutions that
+          drive measurable growth.
+        </p>
+      </div>
+    </AnimatedSection>
 
-            <p
-              className="
-                mt-8
-                text-xl
-                leading-relaxed
-                text-white
-              "
-            >
-              "{featured.content}"
-            </p>
+    {/* Rating */}
 
-            <div className="mt-8 flex gap-1">
-
-              {Array.from({
-                length: featured.rating,
-              }).map((_, i) => (
-                <Star
-                  key={i}
-                  className="
-                    h-5
-                    w-5
-                    fill-cyan-400
-                    text-cyan-400
-                  "
-                />
-              ))}
-
-            </div>
-
-            <div className="mt-10 flex items-center gap-4">
-
-              <img
-                src={featured.image}
-                alt={featured.name}
+    <AnimatedSection>
+      <div
+        className="
+          mt-12
+          flex
+          flex-col
+          items-center
+          justify-center
+        "
+      >
+        <div className="flex gap-1">
+          {Array.from({ length: 5 }).map(
+            (_, i) => (
+              <Star
+                key={i}
                 className="
-                  h-16
-                  w-16
-                  rounded-full
-                  object-cover
-                  ring-2
-                  ring-cyan-400/30
+                  h-7
+                  w-7
+                  fill-yellow-400
+                  text-yellow-400
                 "
               />
-
-              <div>
-
-                <h4 className="text-lg font-bold text-white">
-                  {featured.name}
-                </h4>
-
-                <p className="text-white/60">
-                  {featured.position}
-                </p>
-
-                <p className="text-cyan-300">
-                  {featured.company}
-                </p>
-
-              </div>
-
-            </div>
-
-          </motion.div>
-
-          {/* Right Column */}
-
-          <div className="space-y-6">
-
-            {others.slice(2, 4).map(
-              (item) => (
-                <motion.div
-                  key={item._id}
-                  whileHover={{
-                    y: -5,
-                  }}
-                  className="
-                    rounded-[28px]
-                    border
-                    border-cyan-500/10
-                    bg-[#0B1220]
-                    p-6
-                  "
-                >
-
-                  <Quote className="h-8 w-8 text-cyan-400/40" />
-
-                  <p className="mt-4 text-white/70">
-                    {item.content}
-                  </p>
-
-                  <div className="mt-5 flex gap-1">
-
-                    {Array.from({
-                      length: item.rating,
-                    }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className="
-                          h-4
-                          w-4
-                          fill-cyan-400
-                          text-cyan-400
-                        "
-                      />
-                    ))}
-
-                  </div>
-
-                  <div className="mt-6 flex items-center gap-3">
-
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="
-                        h-12
-                        w-12
-                        rounded-full
-                        object-cover
-                      "
-                    />
-
-                    <div>
-
-                      <h4 className="font-semibold text-white">
-                        {item.name}
-                      </h4>
-
-                      <p className="text-sm text-white/50">
-                        {item.company}
-                      </p>
-
-                    </div>
-
-                  </div>
-
-                </motion.div>
-              )
-            )}
-
-          </div>
-
+            )
+          )}
         </div>
 
+        <h3
+          className="
+            mt-4
+            text-4xl
+            font-bold
+            text-slate-900
+          "
+        >
+          4.9/5
+        </h3>
 
+        <p className="text-slate-500">
+          Based on client feedback
+        </p>
       </div>
+    </AnimatedSection>
 
-    </section>
-  );
+    {/* Featured Testimonial */}
+
+    <AnimatedSection>
+      <motion.div
+        whileHover={{
+          y: -4,
+        }}
+        className="
+          mt-16
+          rounded-[40px]
+          bg-white
+          p-8
+          shadow-xl
+          ring-1
+          ring-slate-200
+          lg:p-14
+        "
+      >
+        <Quote
+          className="
+            h-16
+            w-16
+            text-blue-600
+          "
+        />
+
+        <p
+          className="
+            mt-8
+            text-xl
+            leading-relaxed
+            text-slate-700
+            md:text-2xl
+          "
+        >
+          "{featured.content}"
+        </p>
+
+        <div className="mt-8 flex gap-1">
+          {Array.from({
+            length: featured.rating,
+          }).map((_, i) => (
+            <Star
+              key={i}
+              className="
+                h-5
+                w-5
+                fill-yellow-400
+                text-yellow-400
+              "
+            />
+          ))}
+        </div>
+
+        <div
+          className="
+            mt-10
+            flex
+            items-center
+            gap-4
+          "
+        >
+          <img
+            src={featured.image}
+            alt={featured.name}
+            className="
+              h-16
+              w-16
+              rounded-full
+              object-cover
+            "
+          />
+
+          <div>
+            <h4
+              className="
+                text-lg
+                font-bold
+                text-slate-900
+              "
+            >
+              {featured.name}
+            </h4>
+
+            <p className="text-slate-500">
+              {featured.position}
+            </p>
+
+            <p className="text-blue-700">
+              {featured.company}
+            </p>
+          </div>
+        </div>
+      </motion.div>
+    </AnimatedSection>
+
+    {/* Other Testimonials */}
+
+    <div className="mt-12 grid gap-6 md:grid-cols-3">
+      {others.map((item) => (
+        <motion.div
+          key={item._id}
+          whileHover={{
+            y: -4,
+          }}
+          className="
+            rounded-[28px]
+            bg-white
+            p-6
+            shadow-sm
+            ring-1
+            ring-slate-200
+            transition-all
+            duration-300
+            hover:shadow-lg
+          "
+        >
+          <Quote
+            className="
+              h-8
+              w-8
+              text-blue-300
+            "
+          />
+
+          <p
+            className="
+              mt-4
+              leading-relaxed
+              text-slate-600
+            "
+          >
+            {item.content}
+          </p>
+
+          <div className="mt-5 flex gap-1">
+            {Array.from({
+              length: item.rating,
+            }).map((_, i) => (
+              <Star
+                key={i}
+                className="
+                  h-4
+                  w-4
+                  fill-yellow-400
+                  text-yellow-400
+                "
+              />
+            ))}
+          </div>
+
+          <div
+            className="
+              mt-6
+              flex
+              items-center
+              gap-3
+            "
+          >
+            <img
+              src={item.image}
+              alt={item.name}
+              className="
+                h-12
+                w-12
+                rounded-full
+                object-cover
+              "
+            />
+
+            <div>
+              <h4
+                className="
+                  font-semibold
+                  text-slate-900
+                "
+              >
+                {item.name}
+              </h4>
+
+              <p
+                className="
+                  text-sm
+                  text-slate-500
+                "
+              >
+                {item.company}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* Stats */}
+
+    <AnimatedSection>
+      <div
+        className="
+          mt-20
+          grid
+          gap-6
+          md:grid-cols-3
+        "
+      >
+        <div
+          className="
+            rounded-3xl
+            bg-white
+            p-8
+            text-center
+            shadow-sm
+            ring-1
+            ring-slate-200
+          "
+        >
+          <Users
+            className="
+              mx-auto
+              h-10
+              w-10
+              text-blue-600
+            "
+          />
+
+          <h3
+            className="
+              mt-4
+              text-4xl
+              font-bold
+              text-slate-900
+            "
+          >
+            150+
+          </h3>
+
+          <p className="text-slate-500">
+            Happy Clients
+          </p>
+        </div>
+
+        <div
+          className="
+            rounded-3xl
+            bg-white
+            p-8
+            text-center
+            shadow-sm
+            ring-1
+            ring-slate-200
+          "
+        >
+          <TrendingUp
+            className="
+              mx-auto
+              h-10
+              w-10
+              text-green-600
+            "
+          />
+
+          <h3
+            className="
+              mt-4
+              text-4xl
+              font-bold
+              text-slate-900
+            "
+          >
+            98%
+          </h3>
+
+          <p className="text-slate-500">
+            Client Retention
+          </p>
+        </div>
+
+        <div
+          className="
+            rounded-3xl
+            bg-white
+            p-8
+            text-center
+            shadow-sm
+            ring-1
+            ring-slate-200
+          "
+        >
+          <Award
+            className="
+              mx-auto
+              h-10
+              w-10
+              text-cyan-600
+            "
+          />
+
+          <h3
+            className="
+              mt-4
+              text-4xl
+              font-bold
+              text-slate-900
+            "
+          >
+            500+
+          </h3>
+
+          <p className="text-slate-500">
+            Projects Delivered
+          </p>
+        </div>
+      </div>
+    </AnimatedSection>
+  </div>
+</section>
+
+
+);
 }

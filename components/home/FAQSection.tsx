@@ -1,7 +1,15 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo, useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
+import {
+Search,
+ChevronRight,
+MessageCircle,
+ArrowRight,
+} from 'lucide-react';
+
 import AnimatedSection from '@/components/shared/AnimatedSection';
 
 import {
@@ -11,261 +19,396 @@ AccordionItem,
 AccordionTrigger,
 } from '@/components/ui/accordion';
 
+const categories = [
+'All',
+'General',
+'Services',
+'Development',
+'AI Solutions',
+'Support',
+];
+
 const faqs = [
 {
-question: 'What services does Ace Soft Solution offer?',
+category: 'General',
+question:
+'What industries do you serve?',
 answer:
-'We provide Web Development, Mobile App Development, ERP Software, AI Solutions, UI/UX Design, SEO, Digital Marketing, Cloud Solutions, and Custom Software Development services.',
+'We work with startups, SMEs and enterprises across healthcare, finance, manufacturing, education, logistics, retail and technology sectors.',
 },
+
 {
-question: 'How long does a typical project take?',
+category: 'Services',
+question:
+'What services does Ace Soft Solution provide?',
 answer:
-'Project timelines vary depending on complexity and requirements. A standard business website typically takes 3–6 weeks, while enterprise-grade solutions may require several months.',
+'We provide Web Development, Mobile App Development, ERP Solutions, AI Automation, UI/UX Design, Cloud Services, Digital Marketing and Custom Software Development.',
 },
+
 {
-question: 'What technologies do you specialize in?',
+category: 'Development',
+question:
+'How long does a typical software project take?',
 answer:
-'We specialize in React, Next.js, TypeScript, Node.js, Python, MongoDB, PostgreSQL, AWS, Docker, Flutter, React Native, and AI-powered technologies.',
+'Project timelines depend on complexity and requirements. Small business websites may take 3–6 weeks, while enterprise applications can require several months.',
 },
+
 {
-question: 'Do you provide ongoing support and maintenance?',
+category: 'Development',
+question:
+'What technologies do you specialize in?',
 answer:
-'Yes. We provide continuous support, monitoring, updates, performance optimization, security enhancements, and maintenance services.',
+'We specialize in React, Next.js, TypeScript, Node.js, Python, MongoDB, PostgreSQL, AWS, Docker, Flutter, React Native and modern cloud technologies.',
 },
+
 {
-question: 'Can you redesign an existing website or application?',
+category: 'AI Solutions',
+question:
+'Can you develop AI-powered applications?',
 answer:
-'Absolutely. We help businesses modernize outdated websites and applications with improved UI/UX, performance, scalability, and security.',
+'Yes. We build AI chatbots, automation systems, recommendation engines, predictive analytics platforms and Generative AI solutions.',
 },
+
 {
-question: 'Do you work with startups and enterprises?',
+category: 'AI Solutions',
+question:
+'Do you integrate AI into existing software?',
 answer:
-'Yes. We work with startups, SMEs, and enterprise organizations, delivering solutions tailored to their specific business goals.',
+'Absolutely. We can integrate AI capabilities into your existing ERP systems, web applications, mobile apps and enterprise platforms.',
+},
+
+{
+category: 'Support',
+question:
+'Do you provide post-launch support?',
+answer:
+'Yes. We provide maintenance, updates, monitoring, performance optimization, bug fixing and long-term support services.',
+},
+
+{
+category: 'Support',
+question:
+'Do you offer dedicated development teams?',
+answer:
+'Yes. We provide dedicated developers, designers and complete development teams for long-term projects.',
+},
+
+{
+category: 'Services',
+question:
+'Can you redesign an existing website or application?',
+answer:
+'Yes. We modernize outdated systems with improved UI/UX, enhanced security, better performance and scalable architecture.',
+},
+
+{
+category: 'General',
+question:
+'Do you work with startups and enterprises?',
+answer:
+'Yes. We work with startups, growing businesses and enterprise organizations, delivering solutions tailored to their goals and budgets.',
 },
 ];
 
 export default function FAQSection() {
-return ( <section className="py-24 lg:py-32 bg-dark-light"> <div className="max-w-[1280px] mx-auto px-5 lg:px-8">
+const [activeCategory, setActiveCategory] =
+useState('All');
 
-```
-    {/* Section Heading */}
-    <AnimatedSection className="text-center max-w-3xl mx-auto mb-16">
-      <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-secondary mb-5">
-        Frequently Asked Questions
-      </span>
+const [searchTerm, setSearchTerm] =
+useState('');
 
-      <h2 className="font-poppins text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-        Got Questions?
-        <span className="block text-gradient">
-          We've Got Answers
+const filteredFaqs = useMemo(() => {
+return faqs.filter((faq) => {
+const categoryMatch =
+activeCategory === 'All'
+? true
+: faq.category === activeCategory;
+
+  const searchMatch =
+    faq.question
+      .toLowerCase()
+      .includes(
+        searchTerm.toLowerCase()
+      ) ||
+    faq.answer
+      .toLowerCase()
+      .includes(
+        searchTerm.toLowerCase()
+      );
+
+  return categoryMatch && searchMatch;
+});
+
+
+}, [activeCategory, searchTerm]);
+
+return ( <section className="bg-[#F8FAFC] py-24 lg:py-32"> <div className="mx-auto max-w-7xl px-5 lg:px-8">
+{/* Header */}
+
+
+    <AnimatedSection>
+      <div className="mx-auto max-w-4xl text-center">
+        <span
+          className="
+            inline-flex
+            items-center
+            rounded-full
+            border
+            border-blue-100
+            bg-blue-50
+            px-5
+            py-2
+            text-sm
+            font-semibold
+            text-blue-700
+          "
+        >
+          Frequently Asked Questions
         </span>
-      </h2>
 
-      <p className="text-muted text-lg">
-        Find answers to common questions about our development process,
-        technologies, support, and software solutions.
-      </p>
+        <h2
+          className="
+            mt-6
+            text-4xl
+            font-bold
+            text-slate-900
+            md:text-5xl
+            xl:text-6xl
+          "
+        >
+          Find Answers To
+          <span
+            className="
+              block
+              bg-gradient-to-r
+              from-blue-700
+              via-cyan-500
+              to-teal-500
+              bg-clip-text
+              text-transparent
+            "
+          >
+            Common Questions
+          </span>
+        </h2>
+
+        <p
+          className="
+            mx-auto
+            mt-6
+            max-w-3xl
+            text-lg
+            leading-relaxed
+            text-slate-600
+          "
+        >
+          Explore answers related to our
+          services, technologies, development
+          process, AI solutions and ongoing
+          support.
+        </p>
+      </div>
     </AnimatedSection>
 
-    <div className="grid lg:grid-cols-[1fr_380px] gap-8 items-start">
+    {/* Main Layout */}
 
-      {/* FAQ Area */}
-      <AnimatedSection>
-        <Accordion
-          type="single"
-          collapsible
-          className="space-y-5"
-        >
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="
-                rounded-3xl
-                border
-                border-white/10
-                bg-white/[0.03]
-                backdrop-blur-xl
-                overflow-hidden
-                px-6
-              "
-            >
-              <AccordionTrigger
-                className="
-                  py-6
-                  text-left
-                  text-white
-                  text-lg
-                  font-semibold
-                  hover:no-underline
-                "
-              >
-                {faq.question}
-              </AccordionTrigger>
+    <div
+      className="
+        mt-20
+        grid
+        gap-8
+        lg:grid-cols-[280px_1fr]
+      "
+    >
+      {/* Sidebar */}
 
-              <AccordionContent
-                className="
-                  pb-6
-                  text-muted
-                  leading-relaxed
-                "
-              >
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </AnimatedSection>
-
-      {/* Contact Card */}
       <AnimatedSection>
         <div className="lg:sticky lg:top-28">
           <div
             className="
-              rounded-3xl
+              rounded-[28px]
               border
-              border-white/10
-              bg-white/[0.03]
-              backdrop-blur-xl
-              p-8
+              border-slate-200
+              bg-white
+              p-4
+              shadow-sm
             "
           >
-            <span className="text-sm text-secondary font-medium uppercase tracking-wider">
-              Need More Help?
-            </span>
-
-            <h3 className="text-3xl font-bold text-white mt-4 mb-4">
-              Let's Discuss
-              <span className="block text-gradient">
-                Your Project
-              </span>
+            <h3
+              className="
+                mb-4
+                px-3
+                text-sm
+                font-semibold
+                uppercase
+                tracking-wider
+                text-slate-500
+              "
+            >
+              Categories
             </h3>
 
-            <p className="text-muted mb-8">
-              Connect with our experts and get tailored software solutions
-              for your business goals.
-            </p>
+            <div className="space-y-2">
+              {categories.map(
+                (category) => (
+                  <button
+                    key={category}
+                    onClick={() =>
+                      setActiveCategory(
+                        category
+                      )
+                    }
+                    className={`
+                      flex
+                      w-full
+                      items-center
+                      justify-between
+                      rounded-2xl
+                      px-4
+                      py-4
+                      text-left
+                      font-medium
+                      transition-all
+                      duration-300
 
-            <div className="space-y-4 mb-8">
+                      ${
+                        activeCategory ===
+                        category
+                          ? `
+                            border
+                            border-blue-200
+                            bg-blue-50
+                            text-blue-700
+                          `
+                          : `
+                            border
+                            border-transparent
+                            text-slate-700
+                            hover:bg-slate-50
+                          `
+                      }
+                    `}
+                  >
+                    {category}
 
-              <div className="flex items-center gap-3">
-                <div className="h-2.5 w-2.5 rounded-full bg-[#12C7B5]" />
-                <span className="text-white">
-                  Custom Software Development
-                </span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="h-2.5 w-2.5 rounded-full bg-[#3CC8F5]" />
-                <span className="text-white">
-                  Mobile App Development
-                </span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="h-2.5 w-2.5 rounded-full bg-[#5B21FF]" />
-                <span className="text-white">
-                  AI & Automation Solutions
-                </span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="h-2.5 w-2.5 rounded-full bg-[#0E4DB7]" />
-                <span className="text-white">
-                  ERP & Business Software
-                </span>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <div className="h-2.5 w-2.5 rounded-full bg-[#12C7B5]" />
-                <span className="text-white">
-                  SEO & Digital Marketing
-                </span>
-              </div>
-
+                    <ChevronRight className="h-4 w-4" />
+                  </button>
+                )
+              )}
             </div>
-
-            <div className="space-y-4">
-              <motion.a
-                href="/contact"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="
-                  flex
-                  justify-center
-                  items-center
-                  w-full
-                  py-4
-                  rounded-xl
-                  text-white
-                  font-semibold
-                  bg-gradient-to-r
-                  from-[#0E4DB7]
-                  via-[#3CC8F5]
-                  to-[#12C7B5]
-                "
-              >
-                Schedule Consultation
-              </motion.a>
-
-              <a
-                href="tel:+919999999999"
-                className="
-                  flex
-                  justify-center
-                  items-center
-                  w-full
-                  py-4
-                  rounded-xl
-                  border
-                  border-white/10
-                  bg-white/[0.03]
-                  text-white
-                  font-medium
-                "
-              >
-                Call Our Team
-              </a>
-            </div>
-
-            <div className="mt-8 pt-8 border-t border-white/10">
-              <div className="grid grid-cols-3 gap-4 text-center">
-
-                <div>
-                  <h4 className="text-gradient text-2xl font-bold">
-                    50+
-                  </h4>
-                  <p className="text-xs text-muted">
-                    Projects
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-gradient text-2xl font-bold">
-                    98%
-                  </h4>
-                  <p className="text-xs text-muted">
-                    Satisfaction
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-gradient text-2xl font-bold">
-                    24/7
-                  </h4>
-                  <p className="text-xs text-muted">
-                    Support
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
           </div>
         </div>
       </AnimatedSection>
 
+      {/* FAQ Content */}
+
+      <AnimatedSection>
+        <div>
+          {/* Search */}
+
+          <div
+            className="
+              mb-8
+              flex
+              items-center
+              gap-3
+              rounded-[24px]
+              border
+              border-slate-200
+              bg-white
+              px-5
+              py-4
+              shadow-sm
+            "
+          >
+            <Search className="h-5 w-5 text-slate-400" />
+
+            <input
+              type="text"
+              placeholder="Search frequently asked questions..."
+              value={searchTerm}
+              onChange={(e) =>
+                setSearchTerm(
+                  e.target.value
+                )
+              }
+              className="
+                w-full
+                bg-transparent
+                outline-none
+                placeholder:text-slate-400
+              "
+            />
+          </div>
+
+          {/* FAQ List */}
+
+          <div
+            className="
+              rounded-[32px]
+              border
+              border-slate-200
+              bg-white
+              shadow-sm
+            "
+          >
+            <Accordion
+              type="single"
+              collapsible
+              className="w-full"
+            >
+              {filteredFaqs.map(
+                (faq, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`faq-${index}`}
+                    className="
+                      border-b
+                      border-slate-200
+                      px-6
+                      last:border-none
+                    "
+                  >
+                    <AccordionTrigger
+                      className="
+                        py-7
+                        text-left
+                        text-lg
+                        font-semibold
+                        text-slate-900
+                        hover:no-underline
+                      "
+                    >
+                      {faq.question}
+                    </AccordionTrigger>
+
+                    <AccordionContent
+                      className="
+                        pb-7
+                        leading-relaxed
+                        text-slate-600
+                      "
+                    >
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                )
+              )}
+            </Accordion>
+
+            {filteredFaqs.length === 0 && (
+              <div className="p-10 text-center">
+                <p className="text-slate-500">
+                  No FAQs found matching your
+                  search.
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </AnimatedSection>
     </div>
+
   </div>
 </section>
 

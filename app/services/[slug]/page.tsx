@@ -16,8 +16,7 @@ import {
   ArrowRight,
   CheckCircle2
 } from 'lucide-react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
 import ScrollProgress from '@/components/shared/ScrollProgress';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import { services, getServiceBySlug } from '@/data/services';
@@ -42,14 +41,14 @@ export default function ServiceDetailPage() {
   if (!service) {
     return (
       <>
-        <Navbar />
+     
         <div className="pt-32 pb-20 text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Service Not Found</h1>
           <Link href="/services" className="text-accent hover:underline">
             View All Services
           </Link>
         </div>
-        <Footer />
+    
       </>
     );
   }
@@ -61,7 +60,7 @@ export default function ServiceDetailPage() {
   return (
     <>
       <ScrollProgress />
-      <Navbar />
+     
 
       <main>
         <section className="pt-32 pb-20 bg-dark relative overflow-hidden">
@@ -238,7 +237,7 @@ export default function ServiceDetailPage() {
         </section>
       </main>
 
-      <Footer />
+ 
     </>
   );
 }
