@@ -26,7 +26,7 @@ const stats = [
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-[#080c14] pt-28 md:pt-32 lg:pt-40 pb-16 md:pb-24">
+    <section className="relative overflow-hidden bg-[#080c14] pt-28 md:pt-12 lg:pt-20 pb-16 md:pb-24">
       {/* Background Grid */}
 
       <div

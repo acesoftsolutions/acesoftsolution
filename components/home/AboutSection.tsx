@@ -40,10 +40,9 @@ label: 'Countries Served',
 ];
 
 export default function AboutSection() {
-return ( <section className="bg-[#F8FAFC] py-24 lg:py-32"> <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
+return ( <section className="bg-[#F8FAFC] py-14 lg:py-14"> <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
 {/* Header */}
 
-```
     <AnimatedSection>
       <div className="mx-auto max-w-4xl text-center">
         <span

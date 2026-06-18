@@ -36,7 +36,7 @@ export default function ServicesSection() {
   const displayedServices = services.slice(0, 8);
 
   return (
-    <section className="bg-white py-24 lg:py-32">
+    <section className="bg-white py-14 lg:py-14">
       <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
         {/* Header */}
         <AnimatedSection className="text-center">

@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Tag, ExternalLink } from 'lucide-react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 import ScrollProgress from '@/components/shared/ScrollProgress';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import { getPortfolioBySlug } from '@/data/portfolios';
@@ -20,14 +18,14 @@ export default function PortfolioDetailPage() {
   if (!portfolio) {
     return (
       <>
-        <Navbar />
+ 
         <div className="pt-32 pb-20 text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Project Not Found</h1>
           <Link href="/portfolio" className="text-accent hover:underline">
             View All Projects
           </Link>
         </div>
-        <Footer />
+
       </>
     );
   }
@@ -37,7 +35,7 @@ export default function PortfolioDetailPage() {
   return (
     <>
       <ScrollProgress />
-      <Navbar />
+
 
       <main>
         <section className="pt-32 pb-12 bg-dark">
@@ -190,7 +188,7 @@ export default function PortfolioDetailPage() {
         </section>
       </main>
 
-      <Footer />
+
     </>
   );
 }

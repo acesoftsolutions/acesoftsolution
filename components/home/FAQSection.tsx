@@ -142,7 +142,7 @@ activeCategory === 'All'
 
 }, [activeCategory, searchTerm]);
 
-return ( <section className="bg-[#F8FAFC] py-24 lg:py-32"> <div className="mx-auto max-w-7xl px-5 lg:px-8">
+return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-auto max-w-7xl px-5 lg:px-8">
 {/* Header */}
 
 

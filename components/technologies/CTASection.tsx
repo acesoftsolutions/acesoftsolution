@@ -1,0 +1,222 @@
+'use client';
+
+import React from 'react';
+import { motion } from 'framer-motion';
+import {
+  ArrowUpRight,
+} from 'lucide-react';
+
+export default function CTASection() {
+  return (
+    <section className="relative overflow-hidden bg-white py-12 lg:py-10">
+      {/* Background Grid */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div
+          className="h-full w-full"
+          style={{
+            backgroundImage:
+              'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)',
+            backgroundSize: '80px 80px',
+          }}
+        />
+      </div>
+
+      {/* Glow */}
+      <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[180px]" />
+
+      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[180px]" />
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.8,
+          }}
+          className="text-center"
+        >
+          {/* Small Label */}
+          <div
+            className="
+              inline-flex
+              items-center
+              gap-2
+              rounded-full
+              border
+              border-slate-200
+              px-5
+              py-2
+              text-sm
+              font-semibold
+              text-slate-700
+            "
+          >
+            Ready To Start?
+
+            <span className="h-2 w-2 rounded-full bg-emerald-500" />
+          </div>
+
+          {/* Main Heading */}
+          <h2
+            className="
+              mx-auto
+              mt-10
+              max-w-6xl
+              text-center
+              text-6xl
+              font-black
+              uppercase
+              leading-[0.95]
+              tracking-tight
+              text-slate-950
+              md:text-7xl
+              lg:text-8xl
+              xl:text-[8rem]
+            "
+          >
+            READY TO BUILD
+            <br />
+            WITH CLARITY &
+            <br />
+            CONFIDENCE?
+          </h2>
+
+          {/* Highlight Line */}
+          <div
+            className="
+              mt-6
+              flex
+              flex-wrap
+              items-center
+              justify-center
+              gap-4
+            "
+          >
+            <span
+              className="
+                bg-gradient-to-r
+                from-blue-600
+                via-cyan-500
+                to-emerald-500
+                bg-clip-text
+                text-5xl
+                font-black
+                uppercase
+                text-transparent
+                md:text-6xl
+                lg:text-7xl
+              "
+            >
+              LET'S CONNECT
+            </span>
+
+            <ArrowUpRight
+              className="
+                h-14
+                w-14
+                text-slate-950
+                md:h-20
+                md:w-20
+              "
+            />
+          </div>
+      
+
+          {/* Buttons */}
+          <div
+            className="
+              mt-12
+              flex
+              flex-col
+              items-center
+              justify-center
+              gap-5
+              sm:flex-row
+            "
+          >
+            <button
+              className="
+                group
+                rounded-full
+                bg-slate-950
+                px-8
+                py-4
+                text-lg
+                font-semibold
+                text-white
+                transition-all
+                duration-300
+                hover:scale-105
+              "
+            >
+              Start Your Project
+            </button>
+
+            <button
+              className="
+                rounded-full
+                border
+                border-slate-300
+                px-8
+                py-4
+                text-lg
+                font-semibold
+                text-slate-900
+                transition-all
+                duration-300
+                hover:border-slate-900
+              "
+            >
+              Book Consultation
+            </button>
+          </div>
+
+          {/* Bottom Contact */}
+          <div
+            className="
+              mt-16
+              flex
+              flex-col
+              items-center
+              justify-center
+              gap-6
+              text-center
+              md:flex-row
+            "
+          >
+            <div>
+              <p className="text-sm uppercase tracking-widest text-slate-400">
+                Email
+              </p>
+
+              <p className="mt-2 font-semibold text-slate-900">
+                info@acesoftsolution.com
+              </p>
+            </div>
+
+            <div className="hidden h-10 w-px bg-slate-200 md:block" />
+
+            <div>
+              <p className="text-sm uppercase tracking-widest text-slate-400">
+                Phone
+              </p>
+
+              <p className="mt-2 font-semibold text-slate-900">
+                +91 XXXXX XXXXX
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

@@ -61,7 +61,6 @@ export default function ProcessSection() {
 return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-auto max-w-7xl px-5 lg:px-8">
 {/* Header */}
 
-```
     <AnimatedSection>
       <div className="mx-auto max-w-4xl text-center">
         <span

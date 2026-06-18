@@ -11,7 +11,7 @@ import AnimatedSection from '@/components/shared/AnimatedSection';
 
 export default function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC] py-28 lg:py-40">
+    <section className="relative overflow-hidden bg-[#F8FAFC] py-14 lg:py-12">
       {/* Background Blur */}
 
       <div className="absolute inset-0 overflow-hidden">

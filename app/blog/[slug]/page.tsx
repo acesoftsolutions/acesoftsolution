@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Clock, User, Tag, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
 import ScrollProgress from '@/components/shared/ScrollProgress';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import { blogs, getBlogBySlug } from '@/data/blogs';
@@ -19,14 +18,14 @@ export default function BlogDetailPage() {
   if (!blog) {
     return (
       <>
-        <Navbar />
+
         <div className="pt-32 pb-20 text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Article Not Found</h1>
           <Link href="/blog" className="text-accent hover:underline">
             View All Articles
           </Link>
         </div>
-        <Footer />
+
       </>
     );
   }
@@ -36,7 +35,7 @@ export default function BlogDetailPage() {
   return (
     <>
       <ScrollProgress />
-      <Navbar />
+
 
       <main>
         <article>
@@ -238,7 +237,6 @@ export default function BlogDetailPage() {
         )}
       </main>
 
-      <Footer />
     </>
   );
 }

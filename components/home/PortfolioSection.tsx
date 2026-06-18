@@ -66,7 +66,7 @@ const featuredProjects = [
 
 ];
 
-return ( <section className="bg-white py-24 lg:py-32"> <div className="mx-auto max-w-7xl px-5 lg:px-8">
+return ( <section className="bg-white py-14 lg:py-12"> <div className="mx-auto max-w-7xl px-5 lg:px-8">
 {/* Header */}
 
     <AnimatedSection>

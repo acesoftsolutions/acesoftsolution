@@ -4,8 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, User, Search, Tag } from 'lucide-react';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+
 import ScrollProgress from '@/components/shared/ScrollProgress';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 import { blogs } from '@/data/blogs';
@@ -26,7 +25,7 @@ export default function BlogPage() {
   return (
     <>
       <ScrollProgress />
-      <Navbar />
+     
 
       <main>
         <section className="pt-32 pb-20 bg-dark">
@@ -143,7 +142,7 @@ export default function BlogPage() {
         </section>
       </main>
 
-      <Footer />
+
     </>
   );
 }
