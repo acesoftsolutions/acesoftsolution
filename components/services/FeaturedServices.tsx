@@ -1,16 +1,34 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   Sparkles,
-} from 'lucide-react';
+  Globe,
+  Smartphone,
+  Search,
+  TrendingUp,
+  Palette,
+  Settings,
+  Brain,
+  ShoppingCart,
+} from "lucide-react";
 
-import AnimatedSection from '@/components/shared/AnimatedSection';
-import { services } from '@/data/services';
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import { services } from "@/data/services";
 
 export default function FeaturedServices() {
+  const iconMap = {
+    globe: Globe,
+    smartphone: Smartphone,
+    search: Search,
+    trendingup: TrendingUp,
+    palette: Palette,
+    settings: Settings,
+    brain: Brain,
+    shoppingcart: ShoppingCart,
+  };
   return (
     <section className="relative overflow-hidden bg-slate-950 py-12 lg:py-16">
       {/* Background */}
@@ -94,8 +112,7 @@ export default function FeaturedServices() {
                 text-slate-400
               "
             >
-              Helping organizations innovate,
-              scale, and grow through modern
+              Helping organizations innovate, scale, and grow through modern
               technology solutions.
             </p>
           </div>
@@ -103,31 +120,32 @@ export default function FeaturedServices() {
           {/* Services Grid */}
 
           <div className="mt-20 grid gap-6 lg:grid-cols-3">
-                      {services.map((service, index) => {
-            const Icon = service.icon;
+            {services.map((service, index) => {
+              const Icon =
+                iconMap[service.icon as keyof typeof iconMap] || Globe;
 
-            return (
-              <motion.div
-                key={service.slug}
-                initial={{
-                  opacity: 0,
-                  y: 30,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  y: -8,
-                }}
-                className="
+              return (
+                <motion.div
+                  key={service.slug}
+                  initial={{
+                    opacity: 0,
+                    y: 30,
+                  }}
+                  whileInView={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  viewport={{
+                    once: true,
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                  }}
+                  whileHover={{
+                    y: -8,
+                  }}
+                  className="
                   group
                   relative
                   overflow-hidden
@@ -137,11 +155,11 @@ export default function FeaturedServices() {
                   bg-white/[0.03]
                   backdrop-blur-xl
                 "
-              >
-                {/* Gradient Glow */}
+                >
+                  {/* Gradient Glow */}
 
-                <div
-                  className={`
+                  <div
+                    className={`
                     absolute
                     inset-0
                     bg-gradient-to-br
@@ -151,37 +169,37 @@ export default function FeaturedServices() {
                     duration-500
                     group-hover:opacity-[0.08]
                   `}
-                />
+                  />
 
-                {/* Top Gradient Bar */}
+                  {/* Top Gradient Bar */}
 
-                <div
-                  className={`
+                  <div
+                    className={`
                     h-1
                     w-full
                     bg-gradient-to-r
                     ${service.gradient}
                   `}
-                />
+                  />
 
-                <div className="relative z-10 p-8">
-                  {/* Service Number */}
+                  <div className="relative z-10 p-8">
+                    {/* Service Number */}
 
-                  <span
-                    className="
+                    <span
+                      className="
                       text-sm
                       font-semibold
                       tracking-[0.2em]
                       text-slate-500
                     "
-                  >
-                    {service.id}
-                  </span>
+                    >
+                      {service.id}
+                    </span>
 
-                  {/* Icon */}
+                    {/* Icon */}
 
-                  <div
-                    className={`
+                    <div
+                      className={`
                       mt-6
                       flex
                       h-16
@@ -193,41 +211,39 @@ export default function FeaturedServices() {
                       ${service.gradient}
                       shadow-lg
                     `}
-                  >
-                    <Icon className="h-8 w-8 text-white" />
-                  </div>
+                    >
+                      <Icon className="h-8 w-8 text-white" />
+                    </div>
 
-                  {/* Title */}
+                    {/* Title */}
 
-                  <h3
-                    className="
+                    <h3
+                      className="
                       mt-6
                       text-2xl
                       font-bold
                       text-white
                     "
-                  >
-                    {service.title}
-                  </h3>
+                    >
+                      {service.title}
+                    </h3>
 
-                  {/* Description */}
+                    {/* Description */}
 
-                  <p
-                    className="
+                    <p
+                      className="
                       mt-4
                       leading-relaxed
                       text-slate-400
                     "
-                  >
-                    {service.shortDescription}
-                  </p>
+                    >
+                      {service.shortDescription}
+                    </p>
 
-                  {/* Technology Preview */}
+                    {/* Technology Preview */}
 
-                  <div className="mt-8 flex flex-wrap gap-2">
-                    {service.technologies
-                      .slice(0, 4)
-                      .map((tech) => (
+                    <div className="mt-8 flex flex-wrap gap-2">
+                      {service.technologies.slice(0, 4).map((tech) => (
                         <span
                           key={tech}
                           className="
@@ -245,18 +261,16 @@ export default function FeaturedServices() {
                           {tech}
                         </span>
                       ))}
-                  </div>
+                    </div>
 
-                  {/* Divider */}
+                    {/* Divider */}
 
-                  <div className="my-8 h-px bg-white/10" />
+                    <div className="my-8 h-px bg-white/10" />
 
-                  {/* Features Preview */}
+                    {/* Features Preview */}
 
-                  <div className="space-y-3">
-                    {service.features
-                      .slice(0, 3)
-                      .map((feature) => (
+                    <div className="space-y-3">
+                      {service.features.slice(0, 3).map((feature) => (
                         <div
                           key={feature.title}
                           className="
@@ -284,13 +298,13 @@ export default function FeaturedServices() {
                           </span>
                         </div>
                       ))}
-                  </div>
+                    </div>
 
-                  {/* Learn More */}
+                    {/* Learn More */}
 
-                  <Link
-                    href={`/services/${service.slug}`}
-                    className="
+                    <Link
+                      href={`/services/${service.slug}`}
+                      className="
                       group/link
                       mt-8
                       inline-flex
@@ -299,26 +313,25 @@ export default function FeaturedServices() {
                       font-semibold
                       text-cyan-300
                     "
-                  >
-                    Learn More
-
-                    <ArrowRight
-                      size={18}
-                      className="
+                    >
+                      Learn More
+                      <ArrowRight
+                        size={18}
+                        className="
                         transition-transform
                         duration-300
                         group-hover/link:translate-x-1
                       "
-                    />
-                  </Link>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+                      />
+                    </Link>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
 
-        {/* Bottom CTA Starts In Part 3 */}
-                  <div className="mt-20">
+          {/* Bottom CTA Starts In Part 3 */}
+          <div className="mt-20">
             <div
               className="
                 relative
@@ -380,11 +393,9 @@ export default function FeaturedServices() {
                     text-slate-400
                   "
                 >
-                  From web applications and mobile
-                  platforms to AI-powered automation,
-                  we help businesses build scalable
-                  digital products tailored to their
-                  unique goals.
+                  From web applications and mobile platforms to AI-powered
+                  automation, we help businesses build scalable digital products
+                  tailored to their unique goals.
                 </p>
 
                 <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -406,7 +417,6 @@ export default function FeaturedServices() {
                     "
                   >
                     Start Your Project
-
                     <ArrowRight size={18} />
                   </Link>
 

@@ -90,18 +90,12 @@ export default function AdminServicesPage() {
                       </code>
                     </td>
                     <td className="p-4">
-                      <span
-                        className={`px-3 py-1 rounded-full text-xs font-medium ${
-                          service.isActive
-                            ? "bg-green-500/20 text-green-400"
-                            : "bg-red-500/20 text-red-400"
-                        }`}
-                      >
-                        {service.isActive ? "Active" : "Inactive"}
+                      <span className="px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
+                        Active
                       </span>
                     </td>
                     <td className="p-4">
-                      <span className="text-muted">{service.order}</span>
+                      <span className="text-muted">{index + 1}</span>
                     </td>
                     <td className="p-4">
                       <div className="flex items-center justify-end gap-2">
