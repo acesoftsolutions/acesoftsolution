@@ -1,21 +1,35 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Sparkles,
-  CheckCircle2,
-} from 'lucide-react';
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowUpRight, Sparkles } from "lucide-react";
 
 export default function ServicesCTA() {
   return (
-    <section className="py-24 bg-white border-t border-slate-200">
-      <div className="max-w-[1280px] mx-auto px-6">
+    <section className="relative overflow-hidden bg-white py-12 lg:py-16">
+      {/* Grid Background */}
+
+      <div
+        className="
+          absolute
+          inset-0
+          bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)]
+          bg-[size:64px_64px]
+          opacity-60
+        "
+      />
+
+      {/* Glow Effects */}
+
+      <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[120px]" />
+
+      <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[120px]" />
+
+      <div className="relative z-10 mx-auto max-w-[1280px] px-6">
         <motion.div
           initial={{
             opacity: 0,
-            y: 30,
+            y: 40,
           }}
           whileInView={{
             opacity: 1,
@@ -24,90 +38,142 @@ export default function ServicesCTA() {
           viewport={{
             once: true,
           }}
+          transition={{
+            duration: 0.8,
+          }}
+          className="text-center"
         >
-          <div className="rounded-[40px] overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-            <div className="p-10 md:p-16 lg:p-20">
-              <div className="max-w-5xl mx-auto text-center">
-                <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-cyan-400">
-                  <Sparkles size={16} />
-                  Let's Build Something Exceptional
-                </div>
+          {/* Badge */}
 
-                <h2 className="mt-8 text-4xl md:text-6xl font-bold text-white leading-tight">
-                  Ready To Transform Your
-                  Business With Technology?
-                </h2>
+          <div
+            className="
+              inline-flex
+              items-center
+              gap-2
+              rounded-full
+              border
+              border-slate-200
+              bg-white/80
+              px-5
+              py-3
+              text-sm
+              font-medium
+              text-slate-700
+              backdrop-blur-xl
+            "
+          >
+            <Sparkles size={14} />
+            Ready To Start?
+            <span className="h-2.5 w-2.5 rounded-full bg-emerald-500" />
+          </div>
 
-                <p className="mt-8 text-lg md:text-xl text-slate-300 leading-relaxed max-w-3xl mx-auto">
-                  Partner with Ace Soft Solution to
-                  create scalable digital products,
-                  enterprise applications, and modern
-                  customer experiences that drive
-                  measurable business growth.
-                </p>
+          {/* Heading */}
+          <h2
+            className="
+    mx-auto
+    mt-10
+    max-w-6xl
+    font-black
+    uppercase
+    tracking-tight
+    text-[#020617]
+    text-[40px]
+    leading-[0.9]
+    sm:text-[52px]
+    md:text-[68px]
+    lg:text-[84px]
+    xl:text-[100px]
+  "
+          >
+            READY TO BUILD
+            <br />
+            DIGITAL PRODUCTS
+            <br />
+            THAT SCALE?
+          </h2>
 
-                {/* Benefits */}
-                <div className="grid md:grid-cols-3 gap-4 mt-12 max-w-4xl mx-auto">
-                  {[
-                    'Enterprise Solutions',
-                    'Dedicated Team',
-                    'Long-Term Partnership',
-                  ].map((item) => (
-                    <div
-                      key={item}
-                      className="flex items-center justify-center gap-2 text-white"
-                    >
-                      <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+          {/* CTA Link */}
 
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+          <div className="mt-10 lg:mt-14">
+            <Link
+              href="/contact"
+              className="
+                group
+                inline-flex
+                items-center
+                gap-4
+                font-black
+                uppercase
+                tracking-tight
+                text-[28px]
+                sm:text-[36px]
+                md:text-[48px]
+                lg:text-[64px]
+              "
+            >
+              <span
+                className="
+                  bg-gradient-to-r
+                  from-blue-600
+                  via-cyan-500
+                  to-emerald-500
+                  bg-clip-text
+                  text-transparent
+                "
+              >
+                LET'S CONNECT
+              </span>
 
-                {/* Buttons */}
-                <div className="flex flex-wrap justify-center gap-4 mt-12">
-                  <Link
-                    href="/contact"
-                    className="
-                      inline-flex
-                      items-center
-                      gap-2
-                      rounded-2xl
-                      bg-white
-                      px-8
-                      py-4
-                      text-slate-900
-                      font-semibold
-                      hover:bg-slate-100
-                      transition-all
-                    "
-                  >
-                    Schedule A Consultation
+              <ArrowUpRight
+                className="
+                  h-8
+                  w-8
+                  text-slate-900
+                  transition-all
+                  duration-300
+                  sm:h-10
+                  sm:w-10
+                  md:h-12
+                  md:w-12
+                  group-hover:translate-x-2
+                  group-hover:-translate-y-2
+                "
+              />
+            </Link>
+          </div>
 
-                    <ArrowRight size={18} />
-                  </Link>
+          {/* Small Description */}
 
-                  <Link
-                    href="/portfolio"
-                    className="
-                      inline-flex
-                      items-center
-                      gap-2
-                      rounded-2xl
-                      border
-                      border-white/15
-                      px-8
-                      py-4
-                      text-white
-                      hover:bg-white/5
-                      transition-all
-                    "
-                  >
-                    View Case Studies
-                  </Link>
-                </div>
-              </div>
-            </div>
+          <p
+            className="
+              mx-auto
+              mt-8
+              max-w-2xl
+              text-sm
+              leading-relaxed
+              text-slate-500
+              md:text-base
+            "
+          >
+            Partner with Ace Soft Solution to design, develop, and scale digital
+            products that create measurable business impact.
+          </p>
+
+          {/* Secondary Link */}
+
+          <div className="mt-8">
+            <Link
+              href="/portfolio"
+              className="
+                text-sm
+                font-semibold
+                text-slate-600
+                transition-colors
+                hover:text-blue-600
+              "
+            >
+              View Our Work →
+            </Link>
           </div>
         </motion.div>
       </div>

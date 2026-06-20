@@ -12,6 +12,7 @@ import {
   Headphones,
   Sparkles,
   CheckCircle2,
+  ArrowRight,
 } from 'lucide-react';
 
 import AnimatedSection from '@/components/shared/AnimatedSection';
@@ -22,7 +23,7 @@ const processSteps = [
     icon: Search,
     title: 'Discovery',
     description:
-      'Understanding business objectives, user expectations, market opportunities, and project requirements to establish a solid foundation.',
+      'Understanding business objectives, user expectations, market opportunities, and project requirements to establish a strong project foundation.',
 
     deliverables: [
       'Business Analysis',
@@ -31,8 +32,7 @@ const processSteps = [
       'Project Scope Definition',
     ],
 
-    gradient:
-      'from-blue-600 via-cyan-500 to-violet-600',
+    gradient: 'from-blue-600 via-cyan-500 to-violet-600',
   },
 
   {
@@ -40,7 +40,7 @@ const processSteps = [
     icon: ClipboardCheck,
     title: 'Strategy',
     description:
-      'Defining the technical roadmap, architecture, priorities, and implementation strategy to ensure successful execution.',
+      'Defining the technical roadmap, architecture, priorities, and execution strategy to ensure successful project delivery.',
 
     deliverables: [
       'Technical Architecture',
@@ -49,8 +49,7 @@ const processSteps = [
       'Project Timeline',
     ],
 
-    gradient:
-      'from-cyan-500 via-blue-500 to-indigo-600',
+    gradient: 'from-cyan-500 via-blue-500 to-indigo-600',
   },
 
   {
@@ -58,7 +57,7 @@ const processSteps = [
     icon: PenTool,
     title: 'Design',
     description:
-      'Creating intuitive user experiences and visually engaging interfaces focused on usability and business goals.',
+      'Crafting intuitive user experiences and visually engaging interfaces that align with user behavior and business goals.',
 
     deliverables: [
       'Wireframes',
@@ -67,8 +66,7 @@ const processSteps = [
       'Interactive Prototypes',
     ],
 
-    gradient:
-      'from-violet-600 via-purple-500 to-fuchsia-500',
+    gradient: 'from-violet-600 via-purple-500 to-fuchsia-500',
   },
 
   {
@@ -76,7 +74,7 @@ const processSteps = [
     icon: Code2,
     title: 'Development',
     description:
-      'Building scalable, secure, and high-performance digital products using modern technologies and best practices.',
+      'Building scalable, secure, and high-performance digital solutions using modern technologies and engineering best practices.',
 
     deliverables: [
       'Frontend Development',
@@ -85,8 +83,7 @@ const processSteps = [
       'Performance Optimization',
     ],
 
-    gradient:
-      'from-emerald-500 via-green-500 to-teal-500',
+    gradient: 'from-emerald-500 via-green-500 to-teal-500',
   },
 
   {
@@ -94,7 +91,7 @@ const processSteps = [
     icon: ShieldCheck,
     title: 'Testing',
     description:
-      'Validating functionality, security, performance, and reliability to ensure a flawless user experience.',
+      'Ensuring reliability, performance, security, and quality through comprehensive validation and quality assurance.',
 
     deliverables: [
       'Quality Assurance',
@@ -103,8 +100,7 @@ const processSteps = [
       'Bug Resolution',
     ],
 
-    gradient:
-      'from-orange-500 via-amber-500 to-yellow-500',
+    gradient: 'from-orange-500 via-amber-500 to-yellow-500',
   },
 
   {
@@ -112,7 +108,7 @@ const processSteps = [
     icon: Rocket,
     title: 'Deployment',
     description:
-      'Launching the solution with optimized infrastructure, monitoring systems, and deployment workflows.',
+      'Launching products with optimized infrastructure, monitoring systems, and deployment workflows for seamless delivery.',
 
     deliverables: [
       'Production Release',
@@ -121,8 +117,7 @@ const processSteps = [
       'Launch Support',
     ],
 
-    gradient:
-      'from-sky-500 via-cyan-500 to-blue-600',
+    gradient: 'from-sky-500 via-cyan-500 to-blue-600',
   },
 
   {
@@ -130,7 +125,7 @@ const processSteps = [
     icon: Headphones,
     title: 'Support',
     description:
-      'Providing continuous maintenance, updates, monitoring, and long-term technical assistance.',
+      'Providing ongoing maintenance, monitoring, feature enhancements, and technical assistance for long-term success.',
 
     deliverables: [
       'Maintenance',
@@ -139,8 +134,7 @@ const processSteps = [
       'Technical Support',
     ],
 
-    gradient:
-      'from-rose-500 via-pink-500 to-purple-600',
+    gradient: 'from-rose-500 via-pink-500 to-purple-600',
   },
 ];
 
@@ -152,16 +146,18 @@ export default function ProcessSection() {
   const ActiveIcon = activeStep.icon;
 
   return (
-    <section className="relative overflow-hidden bg-white py-24 lg:py-32">
-      {/* Background */}
+    <section className="relative overflow-hidden bg-white py-14 lg:py-16">
+      {/* Background Effects */}
 
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[120px]" />
 
         <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-cyan-500/5 blur-[120px]" />
+
+        <div className="absolute left-1/2 top-1/2 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/5 blur-[120px]" />
       </div>
 
-      <div className="relative z-10 max-w-[1280px] mx-auto px-6">
+      <div className="relative z-10 mx-auto max-w-[1280px] px-6">
         <AnimatedSection>
           {/* Header */}
 
@@ -183,21 +179,22 @@ export default function ProcessSection() {
               "
             >
               <Sparkles size={16} />
-              Our Process
+              Our Delivery Framework
             </div>
 
             <h2
               className="
                 mt-6
                 text-4xl
-                md:text-5xl
-                xl:text-6xl
                 font-bold
                 tracking-tight
                 text-slate-900
+                md:text-5xl
+                xl:text-6xl
               "
             >
               How We Transform Ideas
+
               <span
                 className="
                   block
@@ -215,24 +212,27 @@ export default function ProcessSection() {
 
             <p
               className="
+                mx-auto
                 mt-6
+                max-w-3xl
                 text-lg
                 leading-relaxed
                 text-slate-600
               "
             >
-              Our structured delivery framework ensures
-              transparency, collaboration, predictable
-              outcomes, and long-term business success.
+              Our structured process ensures complete
+              transparency, seamless collaboration,
+              predictable delivery timelines, and
+              long-term business success.
             </p>
           </div>
 
-          {/* Main Layout */}
+          {/* Main Process Layout */}
 
           <div className="mt-20 grid gap-8 lg:grid-cols-12">
-            {/* Left Content Panel */}
+            {/* Left Active Content */}
 
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-8">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeStep.number}
@@ -259,12 +259,12 @@ export default function ProcessSection() {
                     border-slate-200
                     bg-white
                     p-8
-                    lg:p-10
                     shadow-[0_20px_60px_rgba(0,0,0,0.06)]
+                    lg:min-h-[720px]
+                    lg:p-10
                   "
                 >
-                  {/* Active Content Starts Here */}
-                                    {/* Gradient Glow */}
+                  {/* Active Gradient */}
 
                   <div
                     className={`
@@ -276,21 +276,23 @@ export default function ProcessSection() {
                     `}
                   />
 
-                  <div className="relative">
-                    {/* Top Header */}
+                  <div className="relative z-10">
+                    {/* Top Content Row */}
 
-                    <div className="flex flex-wrap items-start justify-between gap-6">
-                      <div>
+                    <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
+                      {/* Left Content */}
+
+                      <div className="lg:col-span-7">
                         <span
                           className={`
                             inline-flex
                             rounded-full
                             bg-gradient-to-r
                             ${activeStep.gradient}
-                            px-4
+                            px-5
                             py-2
                             text-sm
-                            font-medium
+                            font-semibold
                             text-white
                           `}
                         >
@@ -301,169 +303,193 @@ export default function ProcessSection() {
                           {activeStep.title}
                         </h3>
 
-                        <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
+                        <p className="mt-5 text-lg leading-relaxed text-slate-600">
                           {activeStep.description}
                         </p>
                       </div>
 
-                      <div
-                        className={`
-                          flex
-                          h-20
-                          w-20
-                          items-center
-                          justify-center
-                          rounded-3xl
-                          bg-gradient-to-br
-                          ${activeStep.gradient}
-                          shadow-xl
-                        `}
-                      >
-                        <ActiveIcon className="h-10 w-10 text-white" />
-                      </div>
-                    </div>
+                      {/* Right Illustration Area */}
 
-                    {/* Deliverables */}
-
-                    <div className="mt-10">
-                      <h4 className="text-lg font-semibold text-slate-900">
-                        Key Deliverables
-                      </h4>
-
-                      <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                        {activeStep.deliverables.map(
-                          (item) => (
-                            <motion.div
-                              key={item}
-                              whileHover={{
-                                x: 4,
-                              }}
-                              className="
-                                flex
-                                items-center
-                                gap-3
-                                rounded-2xl
-                                border
-                                border-slate-200
-                                bg-slate-50
-                                px-5
-                                py-4
-                              "
-                            >
-                              <CheckCircle2 className="h-5 w-5 text-emerald-500 shrink-0" />
-
-                              <span className="font-medium text-slate-700">
-                                {item}
-                              </span>
-                            </motion.div>
-                          )
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Process Insights */}
-
-                    <div
-                      className="
-                        mt-10
-                        rounded-[28px]
-                        border
-                        border-slate-200
-                        bg-slate-50
-                        p-6
-                      "
-                    >
-                      <div className="flex items-start gap-4">
+                      <div className="lg:col-span-5">
                         <div
                           className={`
+                            relative
                             flex
-                            h-12
-                            w-12
+                            h-[260px]
                             items-center
                             justify-center
-                            rounded-2xl
+                            overflow-hidden
+                            rounded-[32px]
                             bg-gradient-to-br
                             ${activeStep.gradient}
                           `}
                         >
-                          <ActiveIcon className="h-6 w-6 text-white" />
-                        </div>
+                          <div className="absolute h-56 w-56 rounded-full bg-white/10" />
 
-                        <div>
-                          <h4 className="font-semibold text-slate-900">
-                            Process Insight
-                          </h4>
+                          <div className="absolute h-36 w-36 rounded-full border border-white/20" />
 
-                          <p className="mt-2 text-slate-600 leading-relaxed">
-                            Every stage is designed to
-                            reduce project risk, improve
-                            collaboration, and ensure that
-                            business goals remain aligned
-                            with technical execution.
-                          </p>
+                          <ActiveIcon className="relative z-10 h-24 w-24 text-white" />
                         </div>
                       </div>
                     </div>
 
-                    {/* Process Outcomes */}
+                    {/* Deliverables + Insight will continue in Part 2 */}
+                                        {/* Deliverables + Insight */}
 
-                    <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                      {[
-                        {
-                          value: '100%',
-                          label: 'Transparency',
-                        },
-                        {
-                          value: 'Agile',
-                          label: 'Execution',
-                        },
-                        {
-                          value: 'Fast',
-                          label: 'Delivery',
-                        },
-                      ].map((item) => (
+                    <div className="mt-10 grid gap-6 lg:grid-cols-2">
+                      {/* Deliverables */}
+
+                      <div
+                        className="
+                          rounded-[28px]
+                          border
+                          border-slate-200
+                          bg-white/80
+                          p-6
+                          backdrop-blur-sm
+                        "
+                      >
+                        <div className="flex items-center gap-3">
+                          <div
+                            className={`
+                              flex
+                              h-12
+                              w-12
+                              items-center
+                              justify-center
+                              rounded-2xl
+                              bg-gradient-to-br
+                              ${activeStep.gradient}
+                            `}
+                          >
+                            <CheckCircle2 className="h-6 w-6 text-white" />
+                          </div>
+
+                          <h4 className="text-lg font-bold text-slate-900">
+                            Key Deliverables
+                          </h4>
+                        </div>
+
+                        <div className="mt-6 space-y-4">
+                          {activeStep.deliverables.map(
+                            (item) => (
+                              <motion.div
+                                key={item}
+                                whileHover={{
+                                  x: 6,
+                                }}
+                                className="
+                                  flex
+                                  items-center
+                                  gap-3
+                                  rounded-2xl
+                                  border
+                                  border-slate-100
+                                  bg-slate-50
+                                  px-4
+                                  py-4
+                                "
+                              >
+                                <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-500" />
+
+                                <span className="font-medium text-slate-700">
+                                  {item}
+                                </span>
+                              </motion.div>
+                            )
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Insight */}
+
+                      <div
+                        className="
+                          rounded-[28px]
+                          border
+                          border-slate-200
+                          bg-white/80
+                          p-6
+                          backdrop-blur-sm
+                        "
+                      >
+                        <div className="flex items-center gap-3">
+                          <div
+                            className={`
+                              flex
+                              h-12
+                              w-12
+                              items-center
+                              justify-center
+                              rounded-2xl
+                              bg-gradient-to-br
+                              ${activeStep.gradient}
+                            `}
+                          >
+                            <ActiveIcon className="h-6 w-6 text-white" />
+                          </div>
+
+                          <h4 className="text-lg font-bold text-slate-900">
+                            Process Insight
+                          </h4>
+                        </div>
+
+                        <p className="mt-6 leading-relaxed text-slate-600">
+                          Every phase of our delivery
+                          framework is carefully planned to
+                          minimize project risks, improve
+                          communication, maintain
+                          transparency, and ensure business
+                          objectives remain aligned with
+                          technical execution.
+                        </p>
+
                         <div
-                          key={item.label}
-                          className="
+                          className={`
+                            mt-6
                             rounded-3xl
-                            border
-                            border-slate-200
-                            bg-white
-                            p-5
-                            text-center
-                          "
+                            bg-gradient-to-r
+                            ${activeStep.gradient}
+                            p-[1px]
+                          `}
                         >
-                          <h5
+                          <div
                             className="
-                              text-2xl
-                              font-bold
-                              bg-gradient-to-r
-                              from-blue-600
-                              via-cyan-500
-                              to-violet-600
-                              bg-clip-text
-                              text-transparent
+                              rounded-3xl
+                              bg-white
+                              p-5
                             "
                           >
-                            {item.value}
-                          </h5>
+                            <div className="flex items-center justify-between">
+                              <div>
+                                <p className="text-sm text-slate-500">
+                                  Current Phase
+                                </p>
 
-                          <p className="mt-2 text-sm text-slate-600">
-                            {item.label}
-                          </p>
+                                <h5 className="mt-1 text-xl font-bold text-slate-900">
+                                  {activeStep.title}
+                                </h5>
+                              </div>
+
+                              <ArrowRight className="h-5 w-5 text-slate-400" />
+                            </div>
+                          </div>
                         </div>
-                      ))}
+                      </div>
                     </div>
+
+                
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
 
-            {/* Right Navigation */}
-
-            <div className="lg:col-span-5">
+            {/* Right Navigation Starts Here */}
+                        <div className="lg:col-span-4">
               <div
                 className="
+                  sticky
+                  top-28
                   rounded-[40px]
                   border
                   border-slate-200
@@ -472,7 +498,18 @@ export default function ProcessSection() {
                   shadow-[0_20px_60px_rgba(0,0,0,0.06)]
                 "
               >
-                <div className="space-y-3">
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-slate-900">
+                    Project Journey
+                  </h3>
+
+                  <p className="mt-2 text-sm text-slate-600">
+                    Explore each phase of our proven
+                    delivery process.
+                  </p>
+                </div>
+
+                <div className="grid gap-3">
                   {processSteps.map((step) => {
                     const Icon = step.icon;
 
@@ -486,6 +523,9 @@ export default function ProcessSection() {
                         whileHover={{
                           x: 6,
                         }}
+                        whileTap={{
+                          scale: 0.98,
+                        }}
                         onMouseEnter={() =>
                           setActiveStep(step)
                         }
@@ -496,18 +536,20 @@ export default function ProcessSection() {
                       >
                         <div
                           className={`
+                            relative
+                            overflow-hidden
                             rounded-3xl
-                            p-5
+                            border
                             transition-all
                             duration-300
                             ${
                               isActive
-                                ? `bg-gradient-to-r ${step.gradient} text-white shadow-lg`
-                                : 'bg-slate-50 hover:bg-slate-100'
+                                ? `border-transparent bg-gradient-to-r ${step.gradient} text-white shadow-lg`
+                                : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
                             }
                           `}
                         >
-                          <div className="flex items-center gap-4">
+                          <div className="flex items-center gap-4 p-4">
                             <div
                               className={`
                                 flex
@@ -523,15 +565,15 @@ export default function ProcessSection() {
                                 }
                               `}
                             >
-                              <Icon className="h-6 w-6" />
+                              <Icon className="h-5 w-5" />
                             </div>
 
-                            <div>
+                            <div className="flex-1">
                               <p
                                 className={`
                                   text-xs
                                   font-semibold
-                                  tracking-widest
+                                  tracking-[0.2em]
                                   ${
                                     isActive
                                       ? 'text-white/70'
@@ -539,13 +581,17 @@ export default function ProcessSection() {
                                   }
                                 `}
                               >
-                                {step.number}
+                                STEP {step.number}
                               </p>
 
-                              <h4 className="font-semibold">
+                              <h4 className="mt-1 font-semibold">
                                 {step.title}
                               </h4>
                             </div>
+
+                            {isActive && (
+                              <ArrowRight className="h-5 w-5" />
+                            )}
                           </div>
                         </div>
                       </motion.button>
@@ -554,227 +600,11 @@ export default function ProcessSection() {
                 </div>
               </div>
             </div>
-                      </div>
-
-          {/* Process Principles */}
-
-          <div className="mt-20">
-            <div
-              className="
-                rounded-[40px]
-                border
-                border-slate-200
-                bg-white
-                p-8
-                lg:p-10
-                shadow-[0_20px_60px_rgba(0,0,0,0.06)]
-              "
-            >
-              <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
-                {/* Left Content */}
-
-                <div className="lg:col-span-4">
-                  <span
-                    className="
-                      inline-flex
-                      rounded-full
-                      border
-                      border-blue-100
-                      bg-blue-50
-                      px-4
-                      py-2
-                      text-sm
-                      font-medium
-                      text-blue-700
-                    "
-                  >
-                    Delivery Principles
-                  </span>
-
-                  <h3 className="mt-5 text-3xl font-bold text-slate-900">
-                    Built Around
-                    Transparency &
-                    Collaboration
-                  </h3>
-
-                  <p className="mt-4 text-slate-600 leading-relaxed">
-                    Our delivery framework ensures
-                    every stakeholder stays informed,
-                    aligned, and involved throughout
-                    the project lifecycle.
-                  </p>
-                </div>
-
-                {/* Metrics */}
-
-                <div className="lg:col-span-8">
-                  <div className="grid gap-5 md:grid-cols-3">
-                    {[
-                      {
-                        value: '100%',
-                        title:
-                          'Transparent Communication',
-                      },
-                      {
-                        value: 'Agile',
-                        title:
-                          'Development Methodology',
-                      },
-                      {
-                        value: 'End-to-End',
-                        title:
-                          'Project Ownership',
-                      },
-                    ].map((item) => (
-                      <motion.div
-                        key={item.title}
-                        whileHover={{
-                          y: -6,
-                        }}
-                        className="
-                          rounded-[28px]
-                          border
-                          border-slate-200
-                          bg-slate-50
-                          p-8
-                          text-center
-                        "
-                      >
-                        <h4
-                          className="
-                            text-3xl
-                            lg:text-4xl
-                            font-bold
-                            bg-gradient-to-r
-                            from-blue-600
-                            via-cyan-500
-                            to-violet-600
-                            bg-clip-text
-                            text-transparent
-                          "
-                        >
-                          {item.value}
-                        </h4>
-
-                        <p className="mt-3 text-slate-600">
-                          {item.title}
-                        </p>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Premium CTA Banner */}
+      
 
-          <div className="mt-16">
-            <div
-              className="
-                relative
-                overflow-hidden
-                rounded-[40px]
-                bg-gradient-to-r
-                from-blue-600
-                via-cyan-500
-                to-violet-600
-                p-10
-                lg:p-14
-              "
-            >
-              {/* Decorative Blurs */}
-
-              <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-white/10 blur-[120px]" />
-
-              <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-white/10 blur-[120px]" />
-
-              <div className="relative z-10 text-center">
-                <span
-                  className="
-                    inline-flex
-                    rounded-full
-                    bg-white/15
-                    px-4
-                    py-2
-                    text-sm
-                    font-medium
-                    text-white
-                    backdrop-blur-xl
-                  "
-                >
-                  Structured For Success
-                </span>
-
-                <h3
-                  className="
-                    mt-6
-                    text-3xl
-                    md:text-5xl
-                    font-bold
-                    text-white
-                  "
-                >
-                  A Process Designed To
-                  Deliver Predictable Results
-                </h3>
-
-                <p
-                  className="
-                    mx-auto
-                    mt-6
-                    max-w-3xl
-                    text-lg
-                    leading-relaxed
-                    text-white/90
-                  "
-                >
-                  From discovery to post-launch
-                  support, every step is carefully
-                  planned to reduce risk, improve
-                  efficiency, and maximize project
-                  success.
-                </p>
-
-                <div className="mt-10 flex flex-wrap justify-center gap-4">
-                  <button
-                    className="
-                      rounded-2xl
-                      bg-white
-                      px-8
-                      py-4
-                      font-semibold
-                      text-slate-900
-                      transition-all
-                      duration-300
-                      hover:scale-105
-                    "
-                  >
-                    Start Your Project
-                  </button>
-
-                  <button
-                    className="
-                      rounded-2xl
-                      border
-                      border-white/20
-                      bg-white/10
-                      px-8
-                      py-4
-                      font-semibold
-                      text-white
-                      backdrop-blur-xl
-                      transition-all
-                      duration-300
-                      hover:bg-white/20
-                    "
-                  >
-                    Schedule Consultation
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+     
         </AnimatedSection>
       </div>
     </section>
