@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   Globe,
   Smartphone,
@@ -13,15 +13,12 @@ import {
   Brain,
   ShoppingCart,
   ArrowRight,
-} from 'lucide-react';
+} from "lucide-react";
 
-import AnimatedSection from '@/components/shared/AnimatedSection';
-import { services } from '@/data/services';
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import { services } from "@/data/services";
 
-const iconMap: Record<
-  string,
-  React.ComponentType<{ className?: string }>
-> = {
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Globe,
   Smartphone,
   Search,
@@ -52,10 +49,9 @@ export default function ServicesSection() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-            We help startups, enterprises, and growing businesses
-            build scalable digital products through software
-            development, AI automation, mobile applications,
-            digital marketing, and cloud solutions.
+            We help startups, enterprises, and growing businesses build scalable
+            digital products through software development, AI automation, mobile
+            applications, digital marketing, and cloud solutions.
           </p>
         </AnimatedSection>
 
@@ -63,12 +59,12 @@ export default function ServicesSection() {
         <AnimatedSection className="mt-12">
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'Web Development',
-              'Mobile Apps',
-              'ERP Solutions',
-              'AI Automation',
-              'Digital Marketing',
-              'Cloud Services',
+              "Web Development",
+              "Mobile Apps",
+              "ERP Solutions",
+              "AI Automation",
+              "Digital Marketing",
+              "Cloud Services",
             ].map((item) => (
               <span
                 key={item}
@@ -83,14 +79,10 @@ export default function ServicesSection() {
         {/* Services Grid */}
         <div className="mt-20 grid gap-7 md:grid-cols-2 xl:grid-cols-4">
           {displayedServices.map((service, index) => {
-            const IconComponent =
-              iconMap[service.icon] || Globe;
+            const IconComponent = iconMap[service.icon] || Globe;
 
             return (
-              <AnimatedSection
-                key={service._id}
-                delay={index * 0.08}
-              >
+              <AnimatedSection key={service.id} delay={index * 0.08}>
                 <Link href={`/services/${service.slug}`}>
                   <motion.div
                     whileHover={{
@@ -128,7 +120,7 @@ export default function ServicesSection() {
                         text-slate-100
                       "
                     >
-                      {String(index + 1).padStart(2, '0')}
+                      {String(index + 1).padStart(2, "0")}
                     </span>
 
                     {/* Icon */}
@@ -191,7 +183,6 @@ export default function ServicesSection() {
                       "
                     >
                       Learn More
-
                       <ArrowRight
                         className="
                           h-4
@@ -208,8 +199,6 @@ export default function ServicesSection() {
             );
           })}
         </div>
-
-    
       </div>
     </section>
   );

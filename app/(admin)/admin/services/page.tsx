@@ -1,21 +1,23 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Plus, Edit, Trash2, Search, Eye, Globe } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import AnimatedSection from '@/components/shared/AnimatedSection';
-import { services } from '@/data/services';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Plus, Edit, Trash2, Search, Eye, Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import AnimatedSection from "@/components/shared/AnimatedSection";
+import { services } from "@/data/services";
 
 export default function AdminServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   return (
     <div className="space-y-6">
       <AnimatedSection>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h1 className="font-poppins text-3xl font-bold text-white">Services</h1>
+            <h1 className="font-poppins text-3xl font-bold text-white">
+              Services
+            </h1>
             <p className="text-muted mt-1">Manage your service offerings</p>
           </div>
           <Button className="btn-primary flex items-center gap-2">
@@ -44,21 +46,28 @@ export default function AdminServicesPage() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-white/10">
-                  <th className="text-left p-4 text-muted font-medium">Service</th>
+                  <th className="text-left p-4 text-muted font-medium">
+                    Service
+                  </th>
                   <th className="text-left p-4 text-muted font-medium">Slug</th>
-                  <th className="text-left p-4 text-muted font-medium">Status</th>
-                  <th className="text-left p-4 text-muted font-medium">Order</th>
-                  <th className="text-right p-4 text-muted font-medium">Actions</th>
+                  <th className="text-left p-4 text-muted font-medium">
+                    Status
+                  </th>
+                  <th className="text-left p-4 text-muted font-medium">
+                    Order
+                  </th>
+                  <th className="text-right p-4 text-muted font-medium">
+                    Actions
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {services.map((service, index) => (
                   <motion.tr
-                    key={service._id}
+                    key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    className="border-b border-white/5 hover:bg-white/5 transition-colors"
                   >
                     <td className="p-4">
                       <div className="flex items-center gap-3">
@@ -66,8 +75,12 @@ export default function AdminServicesPage() {
                           <Globe className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <p className="text-white font-medium">{service.title}</p>
-                          <p className="text-muted text-sm">{service.shortDescription.substring(0, 40)}...</p>
+                          <p className="text-white font-medium">
+                            {service.title}
+                          </p>
+                          <p className="text-muted text-sm">
+                            {service.shortDescription.substring(0, 40)}...
+                          </p>
                         </div>
                       </div>
                     </td>
@@ -77,12 +90,14 @@ export default function AdminServicesPage() {
                       </code>
                     </td>
                     <td className="p-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        service.isActive
-                          ? 'bg-green-500/20 text-green-400'
-                          : 'bg-red-500/20 text-red-400'
-                      }`}>
-                        {service.isActive ? 'Active' : 'Inactive'}
+                      <span
+                        className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          service.isActive
+                            ? "bg-green-500/20 text-green-400"
+                            : "bg-red-500/20 text-red-400"
+                        }`}
+                      >
+                        {service.isActive ? "Active" : "Inactive"}
                       </span>
                     </td>
                     <td className="p-4">
