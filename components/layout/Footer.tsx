@@ -57,11 +57,11 @@ const companyLinks = [
 const legalLinks = [
   {
     name: "Privacy Policy",
-    href: "/privacy-policy",
+    href: "/privacy",
   },
   {
     name: "Terms & Conditions",
-    href: "/terms-and-conditions",
+    href: "/terms",
   },
   {
     name: "Sitemap",
