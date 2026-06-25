@@ -95,6 +95,25 @@ const industriesDropdown = [
   },
 ];
 
+const companyDropdown = [
+  {
+    name: "About Us",
+    href: "/about",
+  },
+  {
+    name: "Careers",
+    href: "/careers",
+  },
+  {
+    name: "Team",
+    href: "/team",
+  },
+  {
+    name: "Testimonials",
+    href: "/testimonials",
+  },
+];
+
 const navLinks = [
   {
     name: "Services",
@@ -120,7 +139,8 @@ const navLinks = [
   },
   {
     name: "Company",
-    href: "/about",
+    href: "/company",
+    dropdown: companyDropdown,
   },
   {
     name: "Insights",
@@ -134,6 +154,21 @@ export default function Navbar() {
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Active only if the current path matches the link's own href, or one
+  // of its dropdown items' hrefs — not just any unrelated page.
+  const isLinkActive = (link: (typeof navLinks)[number]) => {
+    const matchesOwnPath =
+      pathname === link.href || pathname.startsWith(link.href + "/");
+
+    const matchesDropdownItem =
+      link.dropdown?.some(
+        (item) => pathname === item.href || pathname.startsWith(item.href + "/"),
+      ) ?? false;
+
+    return matchesOwnPath || matchesDropdownItem;
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 relative">
       {" "}
@@ -156,52 +191,53 @@ h-auto"
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8 xl:gap-12">
-            {navLinks.map((link) => (
-              <div
-                key={link.name}
-                className="relative"
-                onMouseEnter={() => {
-                  if (timeoutRef.current) {
-                    clearTimeout(timeoutRef.current);
-                  }
+            {navLinks.map((link) => {
+              const active = isLinkActive(link);
 
-                  if (link.dropdown) {
-                    setActiveDropdown(link.name);
-                  }
-                }}
-                onMouseLeave={() => {
-                  timeoutRef.current = setTimeout(() => {
-                    setActiveDropdown(null);
-                  }, 150);
-                }}
-              >
-                <Link
-                  href={link.href}
-                  className={cn(
-                    "relative flex items-center gap-1 text-[15px] font-medium transition-colors duration-200",
+              return (
+                <div
+                  key={link.name}
+                  className="relative"
+                  onMouseEnter={() => {
+                    if (timeoutRef.current) {
+                      clearTimeout(timeoutRef.current);
+                    }
 
-                    pathname === link.href ||
-                      pathname.startsWith(link.href + "/")
-                      ? "text-[#0E4DB7]"
-                      : "text-gray-800 hover:text-[#0E4DB7]",
-                  )}
+                    if (link.dropdown) {
+                      setActiveDropdown(link.name);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    timeoutRef.current = setTimeout(() => {
+                      setActiveDropdown(null);
+                    }, 150);
+                  }}
                 >
-                  {link.name}
+                  <Link
+                    href={link.href}
+                    className={cn(
+                      "relative flex items-center gap-1 text-[15px] font-medium transition-colors duration-200",
 
-                  {link.dropdown && (
-                    <ChevronDown
-                      className={cn(
-                        "h-4 w-4 transition-transform duration-300",
-                        activeDropdown === link.name && "rotate-180",
-                      )}
-                    />
-                  )}
+                      active
+                        ? "text-[#0E4DB7]"
+                        : "text-gray-800 hover:text-[#0E4DB7]",
+                    )}
+                  >
+                    {link.name}
 
-                  {(pathname === link.href ||
-                    pathname.startsWith(link.href + "/")) && (
-                  <motion.span
-  layoutId="navbar-indicator"
-  className="
+                    {link.dropdown && (
+                      <ChevronDown
+                        className={cn(
+                          "h-4 w-4 transition-transform duration-300",
+                          activeDropdown === link.name && "rotate-180",
+                        )}
+                      />
+                    )}
+
+                    {active && (
+                      <motion.span
+                        layoutId="navbar-indicator"
+                        className="
     absolute
     -bottom-2
     left-0
@@ -209,11 +245,12 @@ h-auto"
     w-full
     bg-[#0E4DB7]
   "
-/>
-                  )}
-                </Link>
-              </div>
-            ))}
+                      />
+                    )}
+                  </Link>
+                </div>
+              );
+            })}
           </div>
 
           {/* Desktop CTA */}
@@ -314,19 +351,39 @@ h-auto"
         <div className="lg:hidden border-t border-gray-200 bg-white">
           <div className="max-w-[1280px] mx-auto px-5 py-6">
             <div className="flex flex-col">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={cn(
-                    "py-4 text-base font-medium border-b border-gray-100",
-                    pathname === link.href ? "text-[#0E4DB7]" : "text-gray-800",
-                  )}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const active = isLinkActive(link);
+
+                return (
+                  <div key={link.name} className="border-b border-gray-100">
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={cn(
+                        "block py-4 text-base font-medium",
+                        active ? "text-[#0E4DB7]" : "text-gray-800",
+                      )}
+                    >
+                      {link.name}
+                    </Link>
+
+                    {link.dropdown && (
+                      <div className="flex flex-col pl-4 pb-3 gap-2">
+                        {link.dropdown.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className="text-sm text-gray-600 hover:text-[#0E4DB7] py-1"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
 
               <Link
                 href="/contact"

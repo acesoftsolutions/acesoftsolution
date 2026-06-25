@@ -41,16 +41,16 @@ const companyLinks = [
     href: "/about",
   },
   {
-    name: "Portfolio",
-    href: "/portfolio",
+    name: "Careers",
+    href: "/careers",
   },
   {
-    name: "Blog",
-    href: "/blog",
+    name: "Team",
+    href: "/team",
   },
   {
-    name: "Contact",
-    href: "/contact",
+    name: "Testimonials",
+    href: "/testimonials",
   },
 ];
 
@@ -229,7 +229,7 @@ export default function Footer() {
                 >
                   <Phone className="w-5 h-5 text-primary mt-0.5" />
 
-                  <span>+91 99999 99999</span>
+                  <span>+91 99999 89999</span>
                 </a>
 
                 <div
