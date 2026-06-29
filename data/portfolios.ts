@@ -1,129 +1,352 @@
-import { Portfolio } from '@/types';
+import { Portfolio } from "@/types";
 
 export const portfolios: Portfolio[] = [
   {
-    _id: '1',
-    title: 'FinanceFlow - Banking App',
-    slug: 'financeflow-banking-app',
-    description: 'A comprehensive digital banking platform featuring real-time transactions, AI-powered fraud detection, and seamless user experience. The platform serves over 2 million users with 99.9% uptime.',
-    shortDescription: 'Digital banking platform with AI-powered security and real-time transactions',
-    client: 'FinanceFlow Inc.',
-    industry: 'Finance',
-    image: 'https://images.pexels.com/photos/3943723/pexels-photo-3943723.jpeg?auto=compress&cs=tinysrgb&w=800',
+    _id: "1",
+
+    title: "Enterprise CRM Software Development",
+
+    slug: "enterprise-crm-software-development",
+
+    description:
+      "A custom enterprise CRM platform developed to centralize customer data, automate sales workflows, streamline business operations, and provide real-time analytics. The solution helps organizations improve team collaboration, enhance customer engagement, and make data-driven decisions through a scalable cloud-based architecture.",
+
+    shortDescription:
+      "Custom CRM platform for sales automation, customer management, and business analytics.",
+
+    client: "Confidential Enterprise Client",
+
+    industry: "Enterprise Software",
+
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600",
+
     images: [
-      'https://images.pexels.com/photos/3943723/pexels-photo-3943723.jpeg?auto=compress&cs=tinysrgb&w=800',
-      'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=800'
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600",
     ],
-    technologies: ['React Native', 'Node.js', 'MongoDB', 'AWS', 'TensorFlow'],
-    features: ['Real-time Transactions', 'Biometric Authentication', 'AI Fraud Detection', 'Multi-currency Support'],
-    category: 'Mobile App',
-    completedAt: '2024-03-15',
-    serviceId: '2',
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "AWS",
+    ],
+
+    features: [
+      "Customer Management",
+      "Lead & Opportunity Tracking",
+      "Sales Pipeline",
+      "Workflow Automation",
+      "Task Management",
+      "Role-Based Access",
+      "Analytics Dashboard",
+      "Custom Reporting",
+    ],
+
+    category: "Enterprise Software",
+
+    completedAt: "2025-02-20",
+
+    serviceId: "1",
+
     isActive: true,
-    createdAt: '2024-01-01'
+
+    createdAt: "2025-01-05",
   },
   {
-    _id: '2',
-    title: 'ShopMax E-Commerce Platform',
-    slug: 'shopmax-ecommerce-platform',
-    description: 'A high-performance e-commerce platform handling 100,000+ daily transactions with advanced inventory management, personalized recommendations, and seamless checkout experience.',
-    shortDescription: 'High-performance e-commerce platform with AI-powered recommendations',
-    client: 'ShopMax Retail',
-    industry: 'Retail',
-    image: 'https://images.pexels.com/photos/2305445/pexels-photo-2305445.jpeg?auto=compress&cs=tinysrgb&w=800',
+    _id: "2",
+
+    title: "Healthcare Management System",
+
+    slug: "healthcare-management-system",
+
+    description:
+      "A comprehensive healthcare management system developed to streamline patient registration, appointment scheduling, electronic medical records (EMR), billing, laboratory management, and hospital administration. The platform enables healthcare providers to improve operational efficiency while delivering a better patient experience through a secure, cloud-based solution.",
+
+    shortDescription:
+      "Custom healthcare software for patient management, appointments, EMR, and hospital operations.",
+
+    client: "Multi-Specialty Healthcare Provider",
+
+    industry: "Healthcare",
+
+    image:
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600",
+
     images: [
-      'https://images.pexels.com/photos/2305445/pexels-photo-2305445.jpeg?auto=compress&cs=tinysrgb&w=800'
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600",
+      "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1600",
     ],
-    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Redis', 'Stripe'],
-    features: ['AI Product Recommendations', 'Real-time Inventory', 'Multi-vendor Support', 'Analytics Dashboard'],
-    category: 'E-Commerce',
-    completedAt: '2024-02-20',
-    serviceId: '8',
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "AWS",
+    ],
+
+    features: [
+      "Patient Management",
+      "Appointment Scheduling",
+      "Electronic Medical Records (EMR)",
+      "Doctor & Staff Management",
+      "Laboratory Management",
+      "Billing & Invoicing",
+      "Prescription Management",
+      "Analytics Dashboard",
+    ],
+
+    category: "Healthcare Software",
+
+    completedAt: "2025-04-10",
+
+    serviceId: "2",
+
     isActive: true,
-    createdAt: '2024-01-01'
+
+    createdAt: "2025-02-15",
   },
+
   {
-    _id: '3',
-    title: 'MediCare Health Portal',
-    slug: 'medicare-health-portal',
-    description: 'A comprehensive healthcare management platform connecting patients with healthcare providers, featuring telemedicine, appointment scheduling, and electronic health records.',
-    shortDescription: 'Healthcare platform with telemedicine and EHR integration',
-    client: 'MediCare Health Systems',
-    industry: 'Healthcare',
-    image: 'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=800',
+    _id: "3",
+
+    title: "Multi-Vendor eCommerce Marketplace",
+
+    slug: "ecommerce-marketplace",
+
+    description:
+      "A scalable multi-vendor eCommerce marketplace developed to help businesses manage vendors, products, inventory, orders, payments, and customer interactions from a centralized platform. The solution delivers a seamless shopping experience while enabling vendors to efficiently manage their online stores through dedicated dashboards.",
+
+    shortDescription:
+      "Custom multi-vendor marketplace with product management, secure payments, and order automation.",
+
+    client: "Online Retail Marketplace",
+
+    industry: "Retail & eCommerce",
+
+    image:
+      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600",
+
     images: [
-      'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=800'
+      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1600",
     ],
-    technologies: ['React', 'Django', 'PostgreSQL', 'WebRTC', 'AWS'],
-    features: ['Telemedicine Integration', 'EHR Management', 'Appointment Scheduling', 'HIPAA Compliant'],
-    category: 'Web App',
-    completedAt: '2024-01-10',
-    serviceId: '1',
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+    ],
+
+    features: [
+      "Multi-Vendor Management",
+      "Product Catalog",
+      "Inventory Management",
+      "Order Management",
+      "Secure Payment Gateway",
+      "Vendor Dashboard",
+      "Customer Dashboard",
+      "Sales Analytics",
+    ],
+
+    category: "eCommerce Platform",
+
+    completedAt: "2025-05-18",
+
+    serviceId: "3",
+
     isActive: true,
-    createdAt: '2024-01-01'
+
+    createdAt: "2025-03-10",
   },
+
   {
-    _id: '4',
-    title: 'EduLearn Learning Platform',
-    slug: 'edulearn-learning-platform',
-    description: 'An interactive e-learning platform with live classes, AI-powered course recommendations, progress tracking, and gamification elements for enhanced engagement.',
-    shortDescription: 'Interactive e-learning platform with AI personalization',
-    client: 'EduLearn Academy',
-    industry: 'Education',
-    image: 'https://images.pexels.com/photos/5428006/pexels-photo-5428006.jpeg?auto=compress&cs=tinysrgb&w=800',
+    _id: "4",
+
+    title: "Learning Management System (LMS)",
+
+    slug: "learning-management-system",
+
+    description:
+      "A modern Learning Management System (LMS) developed for educational institutions, training organizations, and EdTech companies to deliver online courses, virtual classrooms, assessments, certifications, and learner analytics through a secure cloud-based platform. The solution simplifies course management while improving learner engagement and academic administration.",
+
+    shortDescription:
+      "Custom LMS platform for online learning, virtual classrooms, assessments, and student management.",
+
+    client: "EdTech Company",
+
+    industry: "Education",
+
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
+
     images: [
-      'https://images.pexels.com/photos/5428006/pexels-photo-5428006.jpeg?auto=compress&cs=tinysrgb&w=800'
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600",
     ],
-    technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Socket.io', 'WebRTC'],
-    features: ['Live Classes', 'AI Course Recommendations', 'Progress Tracking', 'Gamification'],
-    category: 'Web App',
-    completedAt: '2023-12-05',
-    serviceId: '1',
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "AWS",
+      "WebRTC",
+    ],
+
+    features: [
+      "Course Management",
+      "Virtual Classrooms",
+      "Student Dashboard",
+      "Instructor Portal",
+      "Online Assessments",
+      "Certificates",
+      "Progress Tracking",
+      "Learning Analytics",
+    ],
+
+    category: "Education Platform",
+
+    completedAt: "2025-06-12",
+
+    serviceId: "4",
+
     isActive: true,
-    createdAt: '2024-01-01'
+
+    createdAt: "2025-04-08",
   },
+
   {
-    _id: '5',
-    title: 'LogiTrack Fleet Management',
-    slug: 'logitrack-fleet-management',
-    description: 'An IoT-powered fleet management solution with real-time GPS tracking, predictive maintenance, route optimization, and comprehensive analytics dashboard.',
-    shortDescription: 'IoT fleet management with GPS tracking and predictive maintenance',
-    client: 'LogiTrack Logistics',
-    industry: 'Logistics',
-    image: 'https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=800',
+    _id: "5",
+
+    title: "Real Estate Platform",
+
+    slug: "real-estate-platform",
+
+    description:
+      "A custom real estate platform developed to simplify property buying, selling, renting, and management through an intuitive digital experience. The solution enables property listings, advanced search, virtual property tours, lead management, agent collaboration, and real-time property inquiries within a secure and scalable platform.",
+
+    shortDescription:
+      "Custom real estate platform for property listings, lead management, and digital property transactions.",
+
+    client: "Property Management Company",
+
+    industry: "Real Estate",
+
+    image:
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600",
+
     images: [
-      'https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=800'
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600",
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1600",
     ],
-    technologies: ['React', 'Python', 'TensorFlow', 'AWS IoT', 'PostgreSQL'],
-    features: ['Real-time GPS Tracking', 'Predictive Maintenance', 'Route Optimization', 'Driver Analytics'],
-    category: 'Enterprise',
-    completedAt: '2023-11-20',
-    serviceId: '6',
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Google Maps API",
+      "AWS",
+    ],
+
+    features: [
+      "Property Listings",
+      "Advanced Property Search",
+      "Interactive Maps",
+      "Virtual Property Tours",
+      "Lead Management",
+      "Agent Dashboard",
+      "Appointment Scheduling",
+      "Analytics Dashboard",
+    ],
+
+    category: "Real Estate Platform",
+
+    completedAt: "2025-07-08",
+
+    serviceId: "5",
+
     isActive: true,
-    createdAt: '2024-01-01'
+
+    createdAt: "2025-05-20",
   },
+
   {
-    _id: '6',
-    title: 'FoodieHub Restaurant App',
-    slug: 'foodiehub-restaurant-app',
-    description: 'A food delivery platform connecting restaurants with customers, featuring real-time order tracking, AI-powered restaurant recommendations, and seamless payment integration.',
-    shortDescription: 'Food delivery platform with real-time tracking and AI recommendations',
-    client: 'FoodieHub Inc.',
-    industry: 'Food & Beverage',
-    image: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800',
+    _id: "6",
+
+    title: "FinTech Analytics Dashboard",
+
+    slug: "fintech-dashboard",
+
+    description:
+      "A secure FinTech analytics dashboard developed for financial institutions to monitor transactions, visualize financial performance, analyze customer activity, and generate real-time business insights. The platform centralizes financial data, automates reporting, and enables faster, data-driven decision-making through interactive dashboards and advanced analytics.",
+
+    shortDescription:
+      "Custom FinTech dashboard for financial analytics, transaction monitoring, and real-time business intelligence.",
+
+    client: "Digital Financial Services Company",
+
+    industry: "FinTech",
+
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600",
+
     images: [
-      'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800'
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600",
     ],
-    technologies: ['Flutter', 'Node.js', 'MongoDB', 'Google Maps', 'Stripe'],
-    features: ['Real-time Order Tracking', 'AI Recommendations', 'Multi-restaurant Partnerships', 'Rating System'],
-    category: 'Mobile App',
-    completedAt: '2023-10-15',
-    serviceId: '2',
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+    ],
+
+    features: [
+      "Financial Analytics Dashboard",
+      "Real-Time Transaction Monitoring",
+      "Revenue & Profit Reporting",
+      "Customer Insights",
+      "Interactive Charts",
+      "Role-Based Access",
+      "Custom Reports",
+      "Audit Logs",
+    ],
+
+    category: "FinTech Software",
+
+    completedAt: "2025-08-05",
+
+    serviceId: "6",
+
     isActive: true,
-    createdAt: '2024-01-01'
-  }
+
+    createdAt: "2025-06-18",
+  },
 ];
 
 export const getPortfolioBySlug = (slug: string): Portfolio | undefined => {
-  return portfolios.find(p => p.slug === slug);
+  return portfolios.find((p) => p.slug === slug);
 };

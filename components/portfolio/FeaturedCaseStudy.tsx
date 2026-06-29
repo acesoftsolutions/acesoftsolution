@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   TrendingUp,
   Users,
   Target,
   CheckCircle2,
-} from 'lucide-react';
+} from "lucide-react";
 
-import { caseStudies } from '@/data/portfolioData';
+import { caseStudies } from "@/data/portfolioData";
 
 export default function FeaturedCaseStudy() {
   return (
@@ -53,12 +53,11 @@ export default function FeaturedCaseStudy() {
               text-blue-600
             "
           >
-            Success Stories
+            Client Success Stories
           </span>
 
-          <h2 className="mt-6 text-4xl font-black text-slate-900 md:text-5xl">
+          <h2 className="mt-6 text-3xl font-black text-slate-900 md:text-4xl">
             Transforming Businesses
-
             <span
               className="
                 block
@@ -70,23 +69,21 @@ export default function FeaturedCaseStudy() {
                 text-transparent
               "
             >
-              Through Digital Innovation
+              Through Software Innovation
             </span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">
-            Explore how we help businesses achieve measurable growth
-            through innovative technology solutions.
+            See how our software development company helps businesses achieve
+            measurable growth through innovative solutions.
           </p>
         </motion.div>
 
         <div className="mt-16 space-y-16">
           {caseStudies.map((study, index) => {
-            const primaryMetric =
-              study.metrics.primary.value;
+            const primaryMetric = study.metrics.primary.value;
 
-            const secondaryMetric =
-              study.metrics.secondary.value;
+            const secondaryMetric = study.metrics.secondary.value;
 
             return (
               <motion.div
@@ -119,12 +116,10 @@ export default function FeaturedCaseStudy() {
               >
                 <div
                   className={`grid gap-10 lg:grid-cols-2 ${
-                    index % 2 !== 0
-                      ? 'lg:[&>*:first-child]:order-2'
-                      : ''
+                    index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""
                   }`}
                 >
-                                      {/* Content */}
+                  {/* Content */}
                   <div className="p-8 lg:p-12">
                     <span
                       className="
@@ -317,7 +312,7 @@ export default function FeaturedCaseStudy() {
                     </div>
                   </div>
                 </div>
-                                {/* Bottom Story */}
+                {/* Bottom Story */}
                 <div className="border-t border-slate-200 p-8 lg:p-12">
                   <div className="grid gap-8 md:grid-cols-3">
                     <div>
@@ -396,9 +391,7 @@ export default function FeaturedCaseStudy() {
                     "
                   >
                     <div>
-                      <p className="text-sm text-slate-500">
-                        Industry
-                      </p>
+                      <p className="text-sm text-slate-500">Industry</p>
 
                       <p className="font-semibold text-slate-900">
                         {study.industry}
@@ -427,7 +420,6 @@ export default function FeaturedCaseStudy() {
                       "
                     >
                       View Full Case Study
-
                       <ArrowUpRight className="h-5 w-5" />
                     </Link>
                   </div>

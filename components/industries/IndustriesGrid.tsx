@@ -61,11 +61,7 @@ export default function IndustriesGrid() {
                 text-slate-600
               "
             >
-              Every industry has unique workflows,
-              regulations, customer expectations,
-              and operational challenges. We build
-              tailored digital solutions that align
-              with your industry's specific needs.
+             Every industry has unique workflows, regulations, customer expectations, and operational challenges. We build tailored software solutions that align with your industry's specific needs.
             </p>
           </div>
 

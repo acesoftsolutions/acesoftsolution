@@ -14,24 +14,25 @@ import {
 
 const services = [
   {
-    name: "Web Development",
-    href: "/services/web-development",
+    name: "Custom Software Development  ",
+    href: "/services/custom-software-development",
   },
+
   {
     name: "Mobile App Development",
     href: "/services/mobile-app-development",
   },
   {
-    name: "SEO Optimization",
-    href: "/services/seo-optimization",
+    name: "UI/UX Design",
+    href: "/services/ui-ux-design",
   },
   {
-    name: "Digital Marketing",
-    href: "/services/digital-marketing",
+    name: "ERP Software Solutions",
+    href: "/services/erp-software-solutions",
   },
   {
-    name: "AI Solutions",
-    href: "/services/ai-solutions",
+    name: "AI & Machine Learning",
+    href: "/services/ai-machine-learning",
   },
 ];
 
@@ -41,16 +42,24 @@ const companyLinks = [
     href: "/about",
   },
   {
+    name: "Work",
+    href: "/portfolio",
+  },
+  {
+    name: "Insights",
+    href: "/blog",
+  },
+  {
     name: "Careers",
     href: "/careers",
   },
   {
-    name: "Team",
-    href: "/team",
+    name: "Privacy Policy",
+    href: "/privacy",
   },
   {
-    name: "Testimonials",
-    href: "/testimonials",
+    name: "Terms & Conditions",
+    href: "/terms",
   },
 ];
 
@@ -66,6 +75,10 @@ const legalLinks = [
   {
     name: "Sitemap",
     href: "/sitemap",
+  },
+  {
+    name: "Cookie Policy",
+    href: "/cookie-policy",
   },
 ];
 
@@ -108,9 +121,10 @@ export default function Footer() {
               </Link>
 
               <p className="text-muted max-w-md leading-relaxed mb-8">
-                We help startups, businesses, and enterprises build scalable
-                software solutions, websites, mobile apps, AI-powered products,
-                and digital experiences that drive measurable business growth.
+                Ace Soft Solution is a trusted software development company
+                helping startups, SMEs, and enterprises build custom software,
+                mobile apps, ERP systems, AI-powered solutions, and scalable
+                digital products that drive measurable business growth.
               </p>
 
               <div className="flex gap-3">
@@ -266,8 +280,8 @@ export default function Footer() {
             "
           >
             <p className="text-sm text-muted text-center md:text-left">
-              © {new Date().getFullYear()} ACE SOFT SOLUTION. All Rights
-              Reserved.
+              © {new Date().getFullYear()} Ace Soft Solution. All Rights
+              Reserved. | Registered Software Development Company, London, UK
             </p>
 
             <div className="flex flex-wrap justify-center gap-6">

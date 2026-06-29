@@ -63,21 +63,21 @@ export const caseStudies: CaseStudy[] = [
 
     featured: true,
 
-    slug: "enterprise-crm-platform",
+    slug: "enterprise-crm-software-development",
 
-    title: "Enterprise CRM Platform",
+    title: "Custom Enterprise CRM Software Development",
 
-    industry: "Business Management",
+    industry: "Enterprise Software",
 
-    client: "TechCorp Solutions",
+    client: "Confidential Enterprise Client",
 
-    duration: "4 Months",
+    duration: "5 Months",
 
     description:
-      "A scalable CRM platform designed to centralize customer interactions, automate workflows, and improve team productivity.",
+      "Designed and developed a custom enterprise CRM platform that centralized customer management, automated sales workflows, and improved operational efficiency across multiple business departments.",
 
     overview:
-      "TechCorp Solutions needed a modern CRM system capable of managing thousands of customer interactions across multiple departments. The goal was to eliminate disconnected systems, improve collaboration, and provide real-time business insights.",
+      "A rapidly growing enterprise needed a centralized CRM platform to replace multiple disconnected spreadsheets and legacy tools. The objective was to improve customer relationship management, automate repetitive business processes, provide real-time reporting, and create a scalable solution capable of supporting future business growth.",
 
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600",
@@ -88,650 +88,737 @@ export const caseStudies: CaseStudy[] = [
       "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1600",
     ],
 
-    technologies: ["React", "Next.js", "Node.js", "MongoDB", "AWS"],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "AWS",
+    ],
 
     services: [
+      "Business Analysis",
       "UI/UX Design",
-      "Frontend Development",
-      "Backend Development",
+      "Custom Software Development",
+      "API Integration",
       "Cloud Deployment",
+      "Quality Assurance",
     ],
 
     objectives: [
-      "Centralize customer data",
-      "Automate sales workflows",
-      "Improve team productivity",
-      "Provide real-time reporting",
+      "Centralize customer and sales data",
+      "Automate lead and sales workflows",
+      "Improve collaboration across departments",
+      "Provide real-time business insights",
+      "Build a scalable cloud-based CRM platform",
     ],
 
     keyFeatures: [
-      "Customer Management",
+      "Customer Relationship Management",
+      "Lead & Opportunity Management",
       "Sales Pipeline Tracking",
       "Workflow Automation",
-      "Analytics Dashboard",
+      "Task & Activity Management",
       "Role-Based Access Control",
-      "Reporting System",
+      "Advanced Analytics Dashboard",
+      "Custom Reports",
+      "Notification System",
+      "Third-Party API Integration",
     ],
 
     metrics: {
       primary: {
-        value: "45%",
-        label: "Productivity Increase",
+        value: "40%",
+        label: "Operational Efficiency Improved",
       },
 
       secondary: {
-        value: "15K+",
-        label: "Active Users",
+        value: "10K+",
+        label: "Customer Records Managed",
       },
     },
 
     businessImpacts: [
       {
-        title: "Revenue Growth",
-        value: "+32%",
+        title: "Administrative Work Reduced",
+        value: "-35%",
       },
 
       {
-        title: "Lead Conversion",
-        value: "+41%",
+        title: "Sales Process Efficiency",
+        value: "+40%",
       },
 
       {
-        title: "Operational Efficiency",
-        value: "+45%",
+        title: "Customer Response Time",
+        value: "-50%",
       },
     ],
 
     challenge:
-      "Disconnected systems and manual processes reduced operational efficiency and made it difficult for teams to access customer information.",
+      "The client relied on disconnected spreadsheets, manual reporting, and multiple standalone applications that created data duplication, inconsistent customer records, slow communication between teams, and limited visibility into sales performance.",
 
     solution:
-      "We developed a centralized CRM ecosystem featuring workflow automation, real-time analytics, role-based permissions, and seamless integrations.",
+      "We developed a fully customized cloud-based CRM platform that unified customer information, automated lead management and sales workflows, integrated existing business systems, and delivered real-time dashboards for management and sales teams.",
 
     result:
-      "Improved team productivity by 45%, reduced operational overhead, and streamlined customer relationship management.",
+      "The new CRM platform streamlined daily operations, reduced manual effort, improved collaboration between departments, accelerated customer response times, and provided leadership with actionable business insights for informed decision-making.",
 
-    businessGoal: "Improve team efficiency and customer engagement.",
+    businessGoal:
+      "Digitize customer relationship management while improving productivity, collaboration, and long-term business scalability.",
 
-    launchStatus: "Delivered on schedule",
+    launchStatus: "Successfully Delivered",
 
     testimonial: {
       quote:
-        "Ace Soft Solution delivered a powerful CRM platform that transformed how our teams collaborate and manage customer relationships.",
+        "The new CRM platform significantly simplified our daily operations and gave our teams a single source of truth for customer data. Automation and reporting have greatly improved productivity and decision-making.",
 
-      name: "David Anderson",
+      name: "Operations Manager",
 
-      role: "Chief Operations Officer",
+      role: "Enterprise Operations",
 
-      company: "TechCorp Solutions",
+      company: "Confidential Client",
     },
 
-    websiteUrl: "https://example.com",
+    websiteUrl: "",
   },
 
   {
     id: 2,
 
+    featured: true,
+
     slug: "healthcare-management-system",
 
-    title: "Healthcare Management System",
+    title: "Custom Healthcare Management System",
 
     industry: "Healthcare",
 
-    client: "MediCare Plus",
+    client: "Multi-Specialty Healthcare Provider",
 
     duration: "6 Months",
 
     description:
-      "Secure healthcare management solution for patient records, appointment scheduling, telemedicine, and doctor communication.",
+      "Developed a secure healthcare management system that streamlined patient registration, appointment scheduling, electronic medical records, billing, and administrative workflows across multiple departments.",
 
     overview:
-      "MediCare Plus required a centralized healthcare platform to digitize patient management, streamline appointment scheduling, improve doctor-patient communication, and ensure compliance with healthcare security standards. The objective was to eliminate paper-based processes while providing healthcare professionals with instant access to critical patient information.",
+      "A growing healthcare organization required a centralized digital platform to manage patient records, appointments, billing, laboratory reports, and daily hospital operations. The goal was to reduce administrative workload, improve patient experience, and digitize healthcare workflows with a secure, scalable solution.",
 
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1600",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600",
 
     projectGallery: [
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600",
-      "https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=1600",
-      "https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=1600",
+      "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1600",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=1600",
+      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1600",
     ],
 
-    technologies: ["Next.js", "PostgreSQL", "Node.js", "AWS"],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "AWS",
+    ],
 
     services: [
-      "Healthcare Software Development",
+      "Healthcare Software Consulting",
       "UI/UX Design",
-      "Backend Development",
-      "Cloud Infrastructure",
-      "Database Architecture",
+      "Custom Software Development",
+      "API Integration",
+      "Cloud Deployment",
+      "Quality Assurance",
     ],
 
     objectives: [
-      "Digitize patient records",
-      "Improve appointment management",
-      "Enhance doctor-patient communication",
+      "Digitize patient management",
+      "Automate appointment scheduling",
+      "Improve hospital operations",
+      "Centralize medical records",
       "Reduce administrative workload",
-      "Ensure healthcare data security",
     ],
 
     keyFeatures: [
-      "Electronic Health Records (EHR)",
-      "Appointment Scheduling System",
-      "Doctor Dashboard",
-      "Patient Portal",
-      "Telemedicine Integration",
+      "Patient Registration",
+      "Appointment Scheduling",
+      "Electronic Medical Records (EMR)",
+      "Doctor & Staff Management",
+      "Laboratory Management",
       "Prescription Management",
-      "Medical Reports & Analytics",
+      "Billing & Invoicing",
       "Role-Based Access Control",
+      "Analytics Dashboard",
+      "Notification System",
     ],
 
     metrics: {
       primary: {
-        value: "60%",
-        label: "Process Efficiency",
+        value: "50%",
+        label: "Administrative Work Reduced",
       },
 
       secondary: {
         value: "25K+",
-        label: "Patient Records",
+        label: "Patient Records Managed",
       },
     },
 
     businessImpacts: [
       {
-        title: "Administrative Time Reduction",
-        value: "-60%",
+        title: "Appointment Efficiency",
+        value: "+45%",
       },
 
       {
-        title: "Appointment Accuracy",
-        value: "+85%",
+        title: "Patient Waiting Time",
+        value: "-35%",
       },
 
       {
-        title: "Patient Satisfaction",
+        title: "Operational Productivity",
         value: "+40%",
       },
     ],
 
     challenge:
-      "Healthcare providers struggled with fragmented patient management systems, manual scheduling processes, and delayed access to patient records. These inefficiencies increased administrative costs and negatively impacted patient experience.",
+      "The healthcare provider relied on manual paperwork and disconnected software systems, making patient management, appointment scheduling, billing, and medical record access inefficient and time-consuming.",
 
     solution:
-      "Ace Soft Solution developed a secure healthcare ecosystem featuring centralized patient records, intelligent appointment scheduling, telemedicine support, automated notifications, and advanced analytics dashboards for healthcare professionals.",
+      "We developed a centralized healthcare management platform that unified patient records, automated appointment scheduling, streamlined billing, digitized medical documentation, and provided secure access for doctors, staff, and administrators.",
 
     result:
-      "Reduced administration time by 60%, improved patient engagement, enhanced operational efficiency, and enabled healthcare staff to deliver faster and more personalized patient care.",
+      "The new healthcare management system improved operational efficiency, reduced manual administrative tasks, enhanced patient experiences, and provided healthcare professionals with quick access to accurate medical information.",
 
-    businessGoal: "Improve patient care and streamline healthcare operations.",
+    businessGoal:
+      "Digitize healthcare operations to improve patient care, operational efficiency, and long-term scalability.",
 
-    launchStatus: "Successfully deployed",
+    launchStatus: "Successfully Delivered",
 
     testimonial: {
       quote:
-        "The healthcare platform developed by Ace Soft Solution transformed our operations. Patient management became seamless, appointments are better organized, and our staff can focus more on patient care rather than paperwork.",
+        "The platform transformed how we manage patient care and daily operations. Our staff now works more efficiently, and patients enjoy a much smoother healthcare experience.",
 
-      name: "Dr. Sarah Mitchell",
+      name: "Hospital Administrator",
 
-      role: "Medical Director",
+      role: "Operations Department",
 
-      company: "MediCare Plus",
+      company: "Healthcare Provider",
     },
 
-    websiteUrl: "https://example-healthcare.com",
+    websiteUrl: "",
   },
 
   {
     id: 3,
 
+    featured: true,
+
     slug: "ecommerce-marketplace",
 
-    title: "E-Commerce Marketplace",
+    title: "Multi-Vendor eCommerce Marketplace Development",
 
-    industry: "Retail & Commerce",
+    industry: "Retail & eCommerce",
 
-    client: "CommerceHub",
+    client: "Online Retail Marketplace",
 
     duration: "5 Months",
 
     description:
-      "A scalable multi-vendor e-commerce marketplace with secure payments, inventory management, vendor onboarding, and advanced business analytics.",
+      "Designed and developed a scalable multi-vendor eCommerce marketplace that enables multiple sellers to manage products, process orders, accept secure payments, and deliver seamless shopping experiences across web and mobile platforms.",
 
     overview:
-      "CommerceHub wanted to build a modern multi-vendor marketplace capable of handling thousands of products, vendors, and customers simultaneously. The goal was to create a seamless shopping experience while providing vendors with powerful tools for inventory management, order tracking, and sales analytics.",
+      "A fast-growing retail business wanted to launch a modern multi-vendor marketplace where vendors could independently manage their stores while customers enjoyed a smooth shopping experience. The platform required secure payment processing, inventory management, vendor dashboards, order tracking, and a scalable architecture capable of supporting future growth.",
 
     image:
       "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600",
 
     projectGallery: [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1600",
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600",
+      "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=1600",
       "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1600",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1600",
     ],
 
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+    ],
 
     services: [
-      "Marketplace Development",
+      "Business Analysis",
       "UI/UX Design",
-      "Payment Gateway Integration",
+      "Marketplace Development",
       "Backend Development",
+      "Payment Gateway Integration",
       "Cloud Deployment",
     ],
 
     objectives: [
-      "Launch a scalable multi-vendor marketplace",
-      "Increase online sales revenue",
+      "Build a scalable multi-vendor marketplace",
+      "Simplify vendor onboarding",
       "Improve customer shopping experience",
-      "Automate vendor management",
-      "Enable real-time business analytics",
+      "Automate order management",
+      "Support business growth",
     ],
 
     keyFeatures: [
       "Multi-Vendor Management",
-      "Secure Stripe Payments",
-      "Inventory Management System",
-      "Order Tracking",
-      "Product Reviews & Ratings",
-      "Analytics Dashboard",
-      "Vendor Portal",
-      "Customer Account Management",
+      "Product Catalog Management",
+      "Inventory Management",
+      "Secure Payment Gateway",
+      "Order & Shipment Tracking",
+      "Vendor Dashboard",
+      "Customer Dashboard",
+      "Ratings & Reviews",
+      "Coupon & Promotion Management",
+      "Sales Analytics Dashboard",
     ],
 
     metrics: {
       primary: {
-        value: "120%",
-        label: "Revenue Growth",
+        value: "55%",
+        label: "Order Processing Faster",
       },
 
       secondary: {
         value: "50K+",
-        label: "Monthly Users",
+        label: "Products Managed",
       },
     },
 
     businessImpacts: [
       {
-        title: "Online Revenue Growth",
-        value: "+120%",
+        title: "Online Sales Growth",
+        value: "+48%",
       },
 
       {
-        title: "Vendor Onboarding Speed",
-        value: "+70%",
+        title: "Vendor Onboarding Time",
+        value: "-60%",
       },
 
       {
         title: "Customer Retention",
-        value: "+45%",
+        value: "+35%",
       },
     ],
 
     challenge:
-      "The client needed a marketplace capable of supporting rapid business growth while maintaining excellent user experience, fast performance, and secure payment processing. Managing thousands of products and vendors efficiently was a key challenge.",
+      "The client needed a centralized marketplace capable of supporting multiple vendors, thousands of products, secure transactions, inventory synchronization, and real-time order management without relying on multiple disconnected systems.",
 
     solution:
-      "Ace Soft Solution developed a scalable marketplace architecture with vendor automation, secure Stripe payment integration, inventory management tools, advanced analytics, and a highly optimized shopping experience across all devices.",
+      "We developed a custom multi-vendor eCommerce platform featuring independent vendor dashboards, inventory management, secure payment integration, order tracking, customer management, promotional tools, and powerful analytics for business growth.",
 
     result:
-      "The platform achieved 120% revenue growth within the first year, attracted over 50,000 monthly users, streamlined vendor operations, and significantly improved customer satisfaction.",
+      "The marketplace successfully streamlined vendor operations, accelerated order fulfillment, improved customer satisfaction, and provided a scalable foundation for expanding product categories and seller partnerships.",
 
-    businessGoal: "Increase online revenue and scale marketplace operations.",
+    businessGoal:
+      "Launch a scalable digital marketplace that increases online sales while delivering a seamless shopping experience for customers and vendors.",
 
-    launchStatus: "Launched successfully",
+    launchStatus: "Successfully Delivered",
 
     testimonial: {
       quote:
-        "Ace Soft Solution delivered a marketplace platform that exceeded our expectations. The user experience, vendor management tools, and performance improvements have directly contributed to our rapid business growth.",
+        "The marketplace exceeded our expectations. Vendor management became effortless, order processing improved significantly, and the customer experience has been outstanding since launch.",
 
-      name: "Michael Roberts",
+      name: "Business Director",
 
-      role: "Founder & CEO",
+      role: "Marketplace Operations",
 
-      company: "CommerceHub",
+      company: "Online Retail Marketplace",
     },
 
-    websiteUrl: "https://example-commercehub.com",
+    websiteUrl: "",
   },
   {
     id: 4,
 
+    featured: true,
+
     slug: "learning-management-system",
 
-    title: "Learning Management System",
+    title: "Custom Learning Management System (LMS)",
 
     industry: "Education",
 
-    client: "EduTech Global",
+    client: "EdTech Company",
 
-    duration: "4 Months",
+    duration: "5 Months",
 
     description:
-      "Interactive online learning platform with course management, assessments, progress tracking, and virtual classroom capabilities.",
+      "Developed a modern Learning Management System (LMS) that enables educational institutions and training providers to deliver online courses, manage learners, conduct assessments, and track learning progress through a centralized digital platform.",
 
     overview:
-      "EduTech Global needed a scalable Learning Management System (LMS) to support online education, course delivery, student engagement, and performance tracking. The objective was to create a modern digital learning ecosystem capable of serving thousands of learners while providing educators with powerful course management and analytics tools.",
+      "An EdTech company required a scalable Learning Management System to support online education, instructor-led training, and corporate learning programs. The platform needed to provide course management, live classes, assessments, certifications, learner analytics, and a seamless experience across web and mobile devices.",
 
     image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
 
     projectGallery: [
       "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600",
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
-      "https://images.unsplash.com/photo-1503676382389-4809596d5290?q=80&w=1600",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600",
+      "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1600",
     ],
 
-    technologies: ["Next.js", "Node.js", "MongoDB", "AWS"],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "AWS",
+      "WebRTC",
+    ],
 
     services: [
-      "Educational Platform Development",
+      "Product Strategy",
       "UI/UX Design",
-      "Frontend Development",
-      "Backend Development",
-      "Cloud Infrastructure",
+      "LMS Development",
+      "API Integration",
+      "Cloud Deployment",
+      "Quality Assurance",
     ],
 
     objectives: [
-      "Enable digital learning at scale",
-      "Increase student engagement",
-      "Improve course completion rates",
-      "Provide real-time learning analytics",
-      "Support educators with advanced course management tools",
+      "Digitize learning experiences",
+      "Simplify course management",
+      "Enable virtual classrooms",
+      "Track learner progress",
+      "Support scalable online education",
     ],
 
     keyFeatures: [
-      "Course Management System",
-      "Student Dashboard",
-      "Interactive Assessments",
+      "Course Management",
+      "Learning Dashboard",
       "Virtual Classrooms",
-      "Progress Tracking",
-      "Certificates & Achievements",
+      "Assignment Management",
+      "Online Assessments & Quizzes",
+      "Certificates & Course Completion",
+      "Student Progress Tracking",
+      "Instructor Management",
       "Discussion Forums",
-      "Learning Analytics Dashboard",
+      "Analytics & Reporting",
     ],
 
     metrics: {
       primary: {
-        value: "70%",
-        label: "Student Engagement",
+        value: "60%",
+        label: "Administrative Tasks Reduced",
       },
 
       secondary: {
-        value: "80K+",
-        label: "Students",
+        value: "20K+",
+        label: "Active Learners",
       },
     },
 
     businessImpacts: [
       {
         title: "Course Completion Rate",
-        value: "+55%",
+        value: "+38%",
       },
 
       {
-        title: "Student Retention",
-        value: "+48%",
+        title: "Student Engagement",
+        value: "+42%",
       },
 
       {
-        title: "Learning Efficiency",
-        value: "+70%",
+        title: "Training Administration",
+        value: "-50%",
       },
     ],
 
     challenge:
-      "Traditional learning systems lacked scalability, engagement features, and data-driven insights. Students struggled to stay engaged, while educators had limited visibility into learner progress and performance.",
+      "The client relied on multiple disconnected tools for course delivery, learner management, assessments, and reporting, making administration complex while limiting engagement and scalability.",
 
     solution:
-      "Ace Soft Solution developed a cloud-native Learning Management System featuring interactive learning modules, virtual classrooms, assessments, progress tracking, and comprehensive analytics dashboards for educators and administrators.",
+      "We developed a centralized Learning Management System that streamlined course creation, virtual learning, assessments, learner management, certification, and real-time performance analytics within a secure cloud-based platform.",
 
     result:
-      "The platform significantly increased student engagement, improved course completion rates, enhanced learning outcomes, and enabled educators to deliver more personalized learning experiences.",
+      "The LMS significantly improved learner engagement, simplified academic administration, automated training workflows, and provided educators with actionable insights to enhance learning outcomes.",
 
     businessGoal:
-      "Drive digital learning transformation and improve educational outcomes.",
+      "Build a scalable digital learning platform that delivers engaging educational experiences while simplifying academic and training management.",
 
-    launchStatus: "Production ready",
+    launchStatus: "Successfully Delivered",
 
     testimonial: {
       quote:
-        "Ace Soft Solution helped us modernize our education platform with an intuitive learning experience, powerful analytics, and scalable infrastructure. Student engagement and course completion rates have improved dramatically.",
+        "The new LMS has completely transformed our online learning experience. Course management is easier, learner engagement has improved, and our instructors now have the tools they need to deliver high-quality education.",
 
-      name: "Jennifer Wilson",
+      name: "Academic Program Manager",
 
-      role: "Director of Digital Learning",
+      role: "Learning & Development",
 
-      company: "EduTech Global",
+      company: "EdTech Company",
     },
 
-    websiteUrl: "https://example-edutech.com",
+    websiteUrl: "",
   },
 
   {
     id: 5,
 
+    featured: true,
+
     slug: "real-estate-platform",
 
-    title: "Real Estate Portal",
+    title: "Custom Real Estate Platform Development",
 
     industry: "Real Estate",
 
-    client: "Prime Properties",
+    client: "Property Management Company",
 
-    duration: "3 Months",
+    duration: "6 Months",
 
     description:
-      "Modern real estate marketplace platform with property listings, virtual tours, CRM integration, lead automation, and advanced property search capabilities.",
+      "Developed a comprehensive real estate platform that enables property listings, lead management, virtual property tours, agent collaboration, and seamless property buying, selling, and renting experiences.",
 
     overview:
-      "Prime Properties required a digital platform to streamline property discovery, improve lead management, and provide prospective buyers with an immersive property browsing experience. The objective was to modernize traditional real estate operations through automation, virtual property tours, and centralized lead tracking.",
+      "A growing real estate company required a modern digital platform to manage residential and commercial property listings, automate lead management, simplify agent workflows, and deliver an engaging property search experience for buyers, sellers, landlords, and tenants. The platform was designed to improve operational efficiency while supporting long-term business growth.",
 
     image:
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600",
 
     projectGallery: [
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1600",
-      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1600",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600",
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1600",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1600",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1600",
     ],
 
-    technologies: ["React", "Node.js", "MongoDB"],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Google Maps API",
+      "AWS",
+    ],
 
     services: [
-      "Real Estate Portal Development",
+      "Business Analysis",
       "UI/UX Design",
-      "Frontend Development",
-      "Backend Development",
-      "CRM Integration",
+      "Custom Software Development",
+      "API Integration",
+      "Cloud Deployment",
+      "Quality Assurance",
     ],
 
     objectives: [
-      "Increase qualified property leads",
-      "Improve buyer engagement",
-      "Automate lead management",
-      "Enhance property discovery experience",
-      "Accelerate property sales cycles",
+      "Digitize property management",
+      "Simplify property discovery",
+      "Improve lead conversion",
+      "Automate agent workflows",
+      "Build a scalable PropTech platform",
     ],
 
     keyFeatures: [
+      "Property Listing Management",
       "Advanced Property Search",
-      "Interactive Property Listings",
+      "Interactive Maps",
       "Virtual Property Tours",
       "Lead Management System",
-      "CRM Integration",
-      "Property Comparison Tool",
       "Agent Dashboard",
-      "Inquiry & Booking Management",
+      "Property Inquiry Management",
+      "Appointment Scheduling",
+      "Document Management",
+      "Analytics Dashboard",
     ],
 
     metrics: {
       primary: {
-        value: "40%",
-        label: "Lead Conversion",
+        value: "45%",
+        label: "Lead Conversion Improved",
       },
 
       secondary: {
-        value: "35K+",
-        label: "Property Visitors",
+        value: "12K+",
+        label: "Properties Managed",
       },
     },
 
     businessImpacts: [
       {
-        title: "Qualified Leads",
+        title: "Property Inquiries",
+        value: "+52%",
+      },
+
+      {
+        title: "Sales Process Efficiency",
         value: "+40%",
       },
 
       {
-        title: "Property Inquiries",
-        value: "+65%",
-      },
-
-      {
-        title: "Sales Cycle Reduction",
-        value: "-30%",
+        title: "Administrative Work",
+        value: "-35%",
       },
     ],
 
     challenge:
-      "Manual lead management processes slowed down response times, caused missed opportunities, and made it difficult for sales teams to effectively track potential buyers throughout the property acquisition journey.",
+      "The client relied on multiple disconnected systems for property listings, customer inquiries, and sales management, resulting in duplicated data, slow response times, and inefficient agent collaboration.",
 
     solution:
-      "Ace Soft Solution developed a modern real estate platform featuring advanced search capabilities, virtual property tours, CRM integration, automated lead nurturing workflows, and centralized property management tools.",
+      "We developed a centralized real estate platform featuring property listing management, advanced search filters, interactive maps, virtual property tours, lead tracking, appointment scheduling, agent dashboards, and real-time analytics.",
 
     result:
-      "The platform generated more qualified leads, improved buyer engagement, accelerated sales processes, and provided real estate agents with better visibility into customer interactions.",
+      "The platform streamlined property management, increased qualified lead generation, improved customer engagement, accelerated sales processes, and provided a scalable foundation for future expansion.",
 
     businessGoal:
-      "Increase qualified leads and improve property sales performance.",
+      "Create a modern PropTech platform that simplifies property transactions while improving operational efficiency and customer experience.",
 
-    launchStatus: "Delivered successfully",
+    launchStatus: "Successfully Delivered",
 
     testimonial: {
       quote:
-        "Ace Soft Solution transformed our property sales process with a powerful and intuitive real estate platform. The automation features and lead management tools have significantly improved our conversion rates and customer experience.",
+        "The platform has transformed the way we manage properties and interact with clients. Our agents work more efficiently, and customers can easily discover and inquire about properties online.",
 
-      name: "Robert Harrison",
+      name: "Sales & Operations Manager",
 
-      role: "Managing Director",
+      role: "Real Estate Operations",
 
-      company: "Prime Properties",
+      company: "Property Management Company",
     },
 
-    websiteUrl: "https://example-primeproperties.com",
+    websiteUrl: "",
   },
   {
     id: 6,
 
+    featured: true,
+
     slug: "fintech-dashboard",
 
-    title: "FinTech Analytics Dashboard",
+    title: "Custom FinTech Analytics Dashboard",
 
-    industry: "Finance",
+    industry: "FinTech",
 
-    client: "FinEdge Capital",
+    client: "Digital Financial Services Company",
 
-    duration: "5 Months",
+    duration: "4 Months",
 
     description:
-      "Advanced financial analytics platform for reporting, forecasting, portfolio management, and real-time investment tracking.",
+      "Developed a secure fintech analytics dashboard that provides real-time financial insights, transaction monitoring, customer analytics, and business intelligence through an intuitive and scalable web application.",
 
     overview:
-      "FinEdge Capital required a modern analytics platform to provide investors, analysts, and executives with real-time financial insights. The objective was to replace manual reporting processes with an intelligent dashboard capable of delivering automated reporting, forecasting, portfolio monitoring, and data-driven investment decisions.",
+      "A digital financial services company required a centralized dashboard to monitor transactions, customer activity, revenue, and operational performance across multiple financial products. The objective was to replace fragmented reporting tools with a secure, data-driven platform that supports faster decision-making and business growth.",
 
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600",
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600",
 
     projectGallery: [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600",
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600",
-      "https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1600",
-      "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600",
     ],
 
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+    ],
 
     services: [
-      "FinTech Software Development",
-      "Dashboard Design",
-      "Data Visualization",
-      "Backend Development",
-      "Financial Reporting Automation",
+      "Business Analysis",
+      "UI/UX Design",
+      "Dashboard Development",
+      "API Integration",
+      "Cloud Deployment",
+      "Quality Assurance",
     ],
 
     objectives: [
-      "Improve financial visibility",
-      "Automate reporting workflows",
-      "Provide real-time portfolio insights",
-      "Enhance forecasting accuracy",
-      "Support faster investment decisions",
+      "Centralize financial reporting",
+      "Monitor transactions in real time",
+      "Improve operational visibility",
+      "Support data-driven decisions",
+      "Build a scalable analytics platform",
     ],
 
     keyFeatures: [
-      "Real-Time Analytics Dashboard",
-      "Portfolio Performance Tracking",
-      "Automated Financial Reports",
-      "Revenue Forecasting",
-      "Investment Monitoring",
-      "Interactive Data Visualization",
+      "Financial Analytics Dashboard",
+      "Real-Time Transaction Monitoring",
+      "Revenue & Profit Reporting",
+      "Customer Insights",
       "Role-Based Access Control",
-      "Executive KPI Dashboard",
+      "Interactive Charts & KPIs",
+      "Custom Reports",
+      "Notification & Alert System",
+      "Data Export",
+      "Audit Logs",
     ],
 
     metrics: {
       primary: {
         value: "50%",
-        label: "Reporting Speed",
+        label: "Reporting Time Reduced",
       },
 
       secondary: {
-        value: "20K+",
-        label: "Investors",
+        value: "2M+",
+        label: "Transactions Analyzed",
       },
     },
 
     businessImpacts: [
       {
-        title: "Reporting Efficiency",
-        value: "+50%",
-      },
-
-      {
-        title: "Forecast Accuracy",
-        value: "+35%",
-      },
-
-      {
         title: "Decision-Making Speed",
-        value: "+40%",
+        value: "+45%",
+      },
+
+      {
+        title: "Reporting Efficiency",
+        value: "+55%",
+      },
+
+      {
+        title: "Manual Data Processing",
+        value: "-60%",
       },
     ],
 
     challenge:
-      "Financial teams lacked real-time access to critical performance data, resulting in delayed reporting, inefficient workflows, and slower decision-making processes. Existing systems relied heavily on spreadsheets and manual data consolidation.",
+      "The client relied on multiple spreadsheets and disconnected reporting tools to analyze financial data, making it difficult to monitor transactions, identify business trends, and generate timely management reports.",
 
     solution:
-      "Ace Soft Solution developed a secure FinTech analytics platform featuring automated reporting, real-time portfolio monitoring, advanced forecasting models, interactive visualizations, and centralized financial data management.",
+      "We developed a centralized fintech analytics dashboard that consolidated financial data from multiple systems, delivered real-time reporting, visualized key performance indicators, automated business reports, and provided secure role-based access for different stakeholders.",
 
     result:
-      "The solution improved reporting efficiency by 50%, enabled faster executive decision-making, enhanced forecasting accuracy, and provided investors with transparent access to portfolio performance metrics.",
+      "The new dashboard significantly improved reporting efficiency, enhanced operational visibility, reduced manual reporting efforts, and enabled executives to make faster, data-driven business decisions.",
 
     businessGoal:
-      "Improve financial visibility and support data-driven investment decisions.",
+      "Enable real-time financial visibility while improving reporting accuracy, operational efficiency, and executive decision-making.",
 
-    launchStatus: "Enterprise launch completed",
+    launchStatus: "Successfully Delivered",
 
     testimonial: {
       quote:
-        "Ace Soft Solution delivered an exceptional analytics platform that transformed how we monitor investments and generate financial reports. The real-time insights and automation capabilities have significantly improved our operational efficiency.",
+        "The dashboard has become an essential part of our daily operations. We now have instant access to accurate financial insights, enabling faster reporting and better strategic decisions.",
 
-      name: "James Richardson",
+      name: "Head of Operations",
 
-      role: "Chief Financial Officer",
+      role: "Business Operations",
 
-      company: "FinEdge Capital",
+      company: "Digital Financial Services Company",
     },
 
-    websiteUrl: "https://example-finedge.com",
+    websiteUrl: "",
   },
 ];

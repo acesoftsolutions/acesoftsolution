@@ -148,7 +148,7 @@ export default function CaseStudiesSection() {
               text-blue-600
             "
           >
-            Success Stories
+            Client Success Stories
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
@@ -169,9 +169,7 @@ export default function CaseStudiesSection() {
           </h2>
 
           <p className="mt-6 text-lg text-slate-600">
-            Discover how Ace Soft Solution transforms ideas
-            into scalable digital products that deliver
-            measurable business growth.
+       As a leading software development company, Ace Soft Solution turns ideas into scalable products that drive measurable growth.
           </p>
         </motion.div>
 

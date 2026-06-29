@@ -16,7 +16,7 @@ const techCategories = [
     title: 'Frontend',
     icon: Monitor,
     description:
-      'Modern frontend technologies for building fast and engaging user experiences.',
+      'Industry-leading frontend technologies for building fast, responsive, and highly engaging user interfaces and experiences.',
     technologies: [
       'React.js',
       'Next.js',
@@ -32,7 +32,7 @@ const techCategories = [
     title: 'Backend',
     icon: Server,
     description:
-      'Scalable backend architecture and API development solutions.',
+      'Enterprise-grade backend technologies for developing secure, scalable, and high-performance APIs and server-side applications.',
     technologies: [
       'Node.js',
       'Express.js',
@@ -40,7 +40,7 @@ const techCategories = [
       'REST API',
       'GraphQL',
       'Socket.io',
-      'JWT',
+      'JWT Authentication',
       'Microservices',
     ],
   },
@@ -48,11 +48,11 @@ const techCategories = [
     title: 'Database',
     icon: Database,
     description:
-      'Reliable databases for secure and high-performance applications.',
+      'Secure, optimized, and high-performance database technologies designed to power modern business applications at scale.',
     technologies: [
       'MongoDB',
-      'MySQL',
       'PostgreSQL',
+      'MySQL',
       'Firebase',
       'Redis',
       'Supabase',
@@ -62,7 +62,7 @@ const techCategories = [
     title: 'Cloud & DevOps',
     icon: Cloud,
     description:
-      'Cloud infrastructure and deployment automation.',
+      'Modern cloud infrastructure and DevOps solutions enabling automated deployments, scalability, and enterprise-grade reliability.',
     technologies: [
       'AWS',
       'Docker',
@@ -77,7 +77,7 @@ const techCategories = [
     title: 'Mobile',
     icon: Smartphone,
     description:
-      'Cross-platform mobile application development.',
+      'Cross-platform and native mobile development technologies for delivering seamless iOS and Android experiences.',
     technologies: [
       'React Native',
       'Flutter',
@@ -87,11 +87,15 @@ const techCategories = [
     ],
   },
   {
-    title: 'Tools',
+    title: 'AI & Tools',
     icon: Wrench,
     description:
-      'Development and collaboration tools we use daily.',
+      'Advanced AI technologies and modern development tools that accelerate innovation, collaboration, automation, and software delivery.',
     technologies: [
+      'OpenAI',
+      'ChatGPT Integration',
+      'AI Automation',
+      'Machine Learning',
       'Git',
       'GitHub',
       'Postman',
@@ -138,8 +142,8 @@ export default function TechStackGrid() {
             Technology Stack
           </div>
 
-          <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-            Technologies Behind
+          <h2 className="mt-6 text-3xl font-bold text-slate-900 md:text-4xl">
+            The Technologies Powering
 
             <span
               className="
@@ -157,7 +161,10 @@ export default function TechStackGrid() {
           </h2>
 
           <p className="mt-6 text-lg text-slate-600">
-            Modern technologies and proven frameworks for scalable digital solutions.
+           Industry-proven technologies and cutting-edge frameworks
+              that power secure, scalable, and future-ready digital
+              solutions.
+
           </p>
         </div>
 

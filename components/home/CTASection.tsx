@@ -82,17 +82,17 @@ export default function CTASection() {
                 mt-10
                 max-w-6xl
                 text-center
-                text-5xl
+                text-4xl
                 font-black
                 uppercase
                 leading-[0.95]
                 tracking-tight
                 text-slate-900
-                md:text-7xl
+                md:text-6xl
                 xl:text-[7rem]
               "
             >
-              Ready To Transform
+              Ready To 
               <br />
 
               <span
@@ -105,7 +105,7 @@ export default function CTASection() {
                   text-transparent
                 "
               >
-                Your Business?
+                SCALE YOUR BUSINESS?                       
               </span>
             </h2>
 
@@ -121,11 +121,11 @@ export default function CTASection() {
                 text-slate-600
               "
             >
-              Whether you're launching a startup,
-              scaling operations, automating workflows,
-              or building enterprise-grade software,
-              our team is ready to turn your vision
-              into a powerful digital product.
+              Whether you're launching a startup, scaling operations,
+              automating workflows, or building enterprise-grade
+              software - our expert team is ready to turn your vision
+              into a high-performance digital product.
+
             </p>
 
             {/* CTA Buttons */}
@@ -203,7 +203,7 @@ export default function CTASection() {
                     hover:border-cyan-300
                   "
                 >
-                  View Our Work
+                  Explore Our Portfolio 
                 </Link>
               </motion.div>
             </div>
@@ -223,8 +223,8 @@ export default function CTASection() {
                 'Web Development',
                 'Mobile Apps',
                 'ERP Software',
-                'AI Solutions',
-                'Cloud Services',
+                'AI & ML Solutions',
+                'Cloud & DevOps',
                 'Digital Marketing',
               ].map((service) => (
                 <span

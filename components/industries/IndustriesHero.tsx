@@ -28,7 +28,7 @@ const highlights = [
 
 const stats = [
   {
-    value: 100,
+    value: 250,
     suffix: '+',
     label: 'Projects Delivered',
   },
@@ -38,7 +38,7 @@ const stats = [
     label: 'Clients Worldwide',
   },
   {
-    value: 12,
+    value: 15,
     suffix: '+',
     label: 'Industries Served',
   },
@@ -94,15 +94,15 @@ export default function IndustriesHero() {
               <h1
                 className="
                   mt-8
-                  text-5xl
+                  text-4xl
                   font-bold
                   leading-tight
                   text-white
-                  md:text-6xl
-                  xl:text-7xl
+                  md:text-5xl
+                  xl:text-6xl
                 "
               >
-                Building Digital Products
+                Building Software Solutions
                 <span
                   className="
                     block
@@ -127,13 +127,7 @@ export default function IndustriesHero() {
                   text-slate-400
                 "
               >
-                We partner with startups,
-                enterprises, healthcare
-                organizations, fintech companies,
-                logistics providers, and retailers
-                to build scalable software
-                solutions that accelerate growth
-                and digital transformation.
+               As a software development company, we partner with startups, enterprises, healthcare organizations, fintech companies, logistics providers, and retailers to build scalable solutions that accelerate growth and digital transformation.
               </p>
 
               {/* Highlights */}

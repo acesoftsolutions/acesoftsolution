@@ -6,61 +6,61 @@ export const industryDetails = {
   healthcare: {
     slug: "healthcare",
 
-    title: "Healthcare Software Development",
+    title: "Healthcare Software Development Services",
 
     shortTitle: "Healthcare",
 
     description:
-      "We help healthcare providers, hospitals, clinics, and health-tech companies build secure, scalable, and patient-centric digital solutions that improve operational efficiency, patient engagement, and healthcare outcomes.",
+      "We build secure, scalable, and intelligent healthcare software solutions for hospitals, clinics, diagnostic centers, pharmacies, and health-tech startups. Our digital platforms streamline operations, improve patient care, enhance data security, and accelerate healthcare innovation.",
 
     hero: {
       badge: "Healthcare Industry",
 
-      title: "Transforming Healthcare Through Digital Innovation",
+      title: "Building Secure & Intelligent Digital Healthcare Solutions",
 
       description:
-        "From patient portals and telemedicine platforms to hospital management systems and healthcare automation, we develop secure and scalable healthcare software solutions that enhance patient care and streamline operations.",
+        "From hospital management systems and patient engagement platforms to telemedicine, EHR integrations, AI-powered healthcare applications, and medical workflow automation, we develop technology that helps healthcare organizations deliver better care with greater efficiency.",
 
       stats: [
         {
-          value: "100+",
-          label: "Projects Delivered",
+          value: "10+",
+          label: "Healthcare Solutions",
         },
         {
-          value: "50+",
-          label: "Clients Served",
-        },
-        {
-          value: "98%",
-          label: "Client Retention",
+          value: "99.9%",
+          label: "Secure Infrastructure",
         },
         {
           value: "24/7",
-          label: "Support Available",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
         },
       ],
     },
 
     overview: {
-      title: "Healthcare Technology Expertise",
+      title: "Digital Transformation for Modern Healthcare",
 
       description:
-        "Healthcare organizations face increasing demands for better patient experiences, secure data management, regulatory compliance, and operational efficiency. Our healthcare technology solutions help providers modernize processes, improve care delivery, and accelerate digital transformation.",
+        "Healthcare providers require secure, compliant, and reliable technology to improve patient outcomes while reducing operational complexity. We design and develop custom healthcare software that simplifies clinical workflows, enhances patient engagement, enables remote care, and supports long-term digital transformation.",
 
       challenges: [
-        "Patient Data Management",
-        "Appointment Scheduling",
-        "Healthcare Compliance",
-        "Telemedicine Adoption",
-        "Operational Inefficiencies",
-        "Legacy System Modernization",
+        "Fragmented Patient Records",
+        "Manual Administrative Processes",
+        "Appointment & Resource Scheduling",
+        "Data Security & Privacy",
+        "Telemedicine & Remote Care",
+        "Legacy System Integration",
       ],
 
       benefits: [
         "Improved Patient Experience",
-        "Enhanced Security & Compliance",
-        "Better Operational Efficiency",
-        "Scalable Healthcare Infrastructure",
+        "Operational Efficiency",
+        "Secure Data Management",
+        "Scalable Digital Infrastructure",
       ],
     },
 
@@ -68,255 +68,49 @@ export const industryDetails = {
       {
         title: "Hospital Management Systems",
         description:
-          "Comprehensive healthcare management platforms for hospitals, clinics, and healthcare providers.",
+          "End-to-end hospital management software covering patient registration, billing, appointments, pharmacy, laboratory, inventory, and administration.",
       },
 
       {
-        title: "Patient Portals",
+        title: "Electronic Health Record (EHR/EMR) Solutions",
         description:
-          "Secure self-service portals that improve communication and patient engagement.",
+          "Secure digital patient record systems that improve clinical workflows, documentation, and information accessibility.",
+      },
+
+      {
+        title: "Patient Portal Development",
+        description:
+          "Self-service patient portals for appointment booking, prescriptions, medical records, reports, and secure communication.",
       },
 
       {
         title: "Telemedicine Platforms",
         description:
-          "Virtual consultation and remote healthcare solutions for modern care delivery.",
+          "Virtual consultation platforms with video appointments, secure messaging, online prescriptions, and remote patient monitoring.",
       },
 
       {
-        title: "Appointment Management Systems",
+        title: "Medical Appointment & Queue Management",
         description:
-          "Online scheduling and patient booking systems that reduce administrative overhead.",
+          "Smart scheduling systems that optimize doctor availability, reduce waiting times, and improve patient experience.",
+      },
+
+      {
+        title: "Healthcare Mobile Applications",
+        description:
+          "Custom Android and iOS healthcare apps for patients, doctors, caregivers, pharmacies, and healthcare administrators.",
+      },
+
+      {
+        title: "Medical Billing & Insurance Management",
+        description:
+          "Automated billing, insurance claim processing, payment tracking, invoicing, and financial reporting solutions.",
       },
 
       {
         title: "Healthcare CRM",
         description:
-          "Patient relationship management solutions that improve engagement and retention.",
-      },
-
-      {
-        title: "Medical Billing Software",
-        description:
-          "Automated billing, invoicing, and claims processing systems for healthcare providers.",
-      },
-    ],
-
-    technologies: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      "Express.js",
-      "Python",
-      "MongoDB",
-      "PostgreSQL",
-      "AWS",
-      "Azure",
-      "Docker",
-      "Kubernetes",
-    ],
-
-    process: [
-      {
-        title: "Discovery",
-        description:
-          "Understanding healthcare workflows, compliance requirements, and business objectives.",
-      },
-
-      {
-        title: "Strategy",
-        description:
-          "Defining the technology roadmap, architecture, and implementation approach.",
-      },
-
-      {
-        title: "UI/UX Design",
-        description:
-          "Creating intuitive experiences for healthcare professionals and patients.",
-      },
-
-      {
-        title: "Development",
-        description:
-          "Building secure, scalable, and compliant healthcare applications.",
-      },
-
-      {
-        title: "Testing & Compliance",
-        description:
-          "Ensuring reliability, security, performance, and regulatory compliance.",
-      },
-
-      {
-        title: "Deployment & Support",
-        description:
-          "Launch, monitoring, maintenance, and continuous optimization.",
-      },
-    ],
-
-    faqs: [
-      {
-        question: "What healthcare software solutions do you develop?",
-
-        answer:
-          "We develop hospital management systems, patient portals, telemedicine platforms, healthcare CRM systems, appointment management software, and custom healthcare applications.",
-      },
-
-      {
-        question: "Can you modernize our existing healthcare system?",
-
-        answer:
-          "Yes. We help healthcare organizations modernize legacy systems, improve performance, enhance security, and add modern capabilities.",
-      },
-
-      {
-        question: "Do you provide ongoing support and maintenance?",
-
-        answer:
-          "Yes. We offer continuous support, monitoring, maintenance, and feature enhancements after deployment.",
-      },
-
-      {
-        question: "How do you ensure healthcare data security?",
-
-        answer:
-          "We follow secure development practices, role-based access control, encrypted communications, secure infrastructure, and industry-standard security measures.",
-      },
-
-      {
-        question: "Can you integrate third-party healthcare systems?",
-
-        answer:
-          "Yes. We can integrate healthcare applications with existing systems, APIs, databases, and third-party platforms.",
-      },
-    ],
-
-    cta: {
-      title: "Ready to Build Healthcare Software Solutions?",
-
-      description:
-        "Partner with our experts to develop secure, scalable, and future-ready healthcare applications that improve patient experiences and streamline operations.",
-
-      primaryButton: "Start Your Project",
-
-      secondaryButton: "Book Consultation",
-    },
-
-    seo: {
-      title: "Healthcare Software Development Services | Ace Soft Solution",
-
-      description:
-        "Custom healthcare software development services including patient portals, telemedicine platforms, hospital management systems, healthcare CRM, and healthcare automation solutions.",
-
-      keywords: [
-        "Healthcare Software Development",
-        "Hospital Management System",
-        "Patient Portal Development",
-        "Telemedicine Software",
-        "Healthcare CRM",
-        "Healthcare App Development",
-        "Healthcare Automation",
-        "Medical Software Development",
-      ],
-    },
-  },
-  fintech: {
-    slug: "fintech",
-
-    title: "FinTech Software Development",
-
-    shortTitle: "FinTech",
-
-    description:
-      "We help banks, financial institutions, payment providers, insurance companies, and fintech startups build secure, scalable, and compliant digital financial solutions that improve customer experiences, automate operations, and accelerate innovation.",
-
-    hero: {
-      badge: "FinTech Industry",
-
-      title: "Driving Financial Innovation Through Technology",
-
-      description:
-        "From digital banking platforms and payment gateways to lending systems and financial automation, we develop secure and scalable fintech solutions that enable growth, efficiency, and customer trust.",
-
-      stats: [
-        {
-          value: "100+",
-          label: "Projects Delivered",
-        },
-        {
-          value: "50+",
-          label: "Clients Served",
-        },
-        {
-          value: "98%",
-          label: "Client Retention",
-        },
-        {
-          value: "24/7",
-          label: "Support Available",
-        },
-      ],
-    },
-
-    overview: {
-      title: "Financial Technology Expertise",
-
-      description:
-        "Financial organizations face increasing pressure to improve customer experiences, strengthen security, ensure compliance, and deliver innovative digital services. Our fintech solutions help businesses modernize operations, streamline transactions, and accelerate digital transformation.",
-
-      challenges: [
-        "Regulatory Compliance",
-        "Fraud Detection & Prevention",
-        "Payment Processing Efficiency",
-        "Customer Experience Enhancement",
-        "Legacy Banking System Modernization",
-        "Data Security & Privacy",
-      ],
-
-      benefits: [
-        "Secure Financial Transactions",
-        "Improved Customer Experience",
-        "Reduced Operational Costs",
-        "Scalable Digital Financial Infrastructure",
-      ],
-    },
-
-    solutions: [
-      {
-        title: "Digital Banking Platforms",
-        description:
-          "Modern banking applications that deliver seamless digital experiences across web and mobile channels.",
-      },
-
-      {
-        title: "Payment Gateway Solutions",
-        description:
-          "Secure and scalable payment processing systems for online and offline financial transactions.",
-      },
-
-      {
-        title: "Lending & Loan Management Systems",
-        description:
-          "Automated lending platforms with borrower onboarding, approvals, repayment tracking, and risk assessment.",
-      },
-
-      {
-        title: "Financial CRM Solutions",
-        description:
-          "Customer relationship management platforms tailored for banks, insurers, and financial service providers.",
-      },
-
-      {
-        title: "Wealth Management Platforms",
-        description:
-          "Investment and portfolio management solutions that enhance financial planning and advisory services.",
-      },
-
-      {
-        title: "Fraud Detection & Risk Management",
-        description:
-          "AI-powered monitoring and risk analysis systems that help prevent fraud and improve compliance.",
+          "Patient relationship management platforms that improve communication, follow-ups, retention, and personalized care.",
       },
     ],
 
@@ -327,8 +121,246 @@ export const industryDetails = {
       "Node.js",
       "NestJS",
       "Python",
-      "PostgreSQL",
       "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "AWS",
+      "Docker",
+      "FHIR APIs",
+    ],
+
+    process: [
+      {
+        title: "Requirement Discovery",
+        description:
+          "Understanding healthcare workflows, operational challenges, patient journeys, and business objectives.",
+      },
+
+      {
+        title: "Solution Architecture",
+        description:
+          "Designing secure, scalable, and compliance-ready software architecture tailored to healthcare operations.",
+      },
+
+      {
+        title: "UI/UX Design",
+        description:
+          "Creating intuitive experiences for doctors, patients, nurses, administrators, and healthcare staff.",
+      },
+
+      {
+        title: "Custom Development",
+        description:
+          "Developing high-performance healthcare applications with robust security, integrations, and scalable architecture.",
+      },
+
+      {
+        title: "Quality Assurance & Security Testing",
+        description:
+          "Performing comprehensive testing for functionality, performance, reliability, security, and data protection.",
+      },
+
+      {
+        title: "Deployment & Continuous Support",
+        description:
+          "Production deployment, monitoring, maintenance, feature enhancements, and long-term technical support.",
+      },
+    ],
+
+    faqs: [
+      {
+        question: "What healthcare software solutions do you develop?",
+
+        answer:
+          "We develop hospital management systems, EHR/EMR software, patient portals, telemedicine platforms, healthcare mobile apps, medical billing software, healthcare CRM systems, and custom healthcare applications.",
+      },
+
+      {
+        question:
+          "Can you integrate healthcare software with existing systems?",
+
+        answer:
+          "Yes. We can integrate your software with EHR/EMR platforms, laboratory systems, pharmacy systems, payment gateways, APIs, third-party healthcare services, and other enterprise applications.",
+      },
+
+      {
+        question:
+          "Do you build HIPAA or compliance-ready healthcare applications?",
+
+        answer:
+          "Yes. We follow secure development practices and build healthcare solutions with strong authentication, encrypted communications, role-based access control, audit logs, and industry-standard security practices to support regulatory requirements.",
+      },
+
+      {
+        question: "Can you modernize our legacy healthcare software?",
+
+        answer:
+          "Absolutely. We help healthcare organizations upgrade outdated systems, migrate data securely, improve performance, modernize user experiences, and implement scalable cloud-based solutions.",
+      },
+
+      {
+        question: "Do you provide post-launch maintenance and support?",
+
+        answer:
+          "Yes. We provide ongoing maintenance, performance monitoring, security updates, bug fixes, feature enhancements, cloud management, and long-term technical support.",
+      },
+    ],
+
+    cta: {
+      title: "Let's Build the Future of Digital Healthcare",
+
+      description:
+        "Partner with Ace Soft Solution to develop secure, scalable, and patient-centric healthcare software that improves operational efficiency, enhances care delivery, and supports long-term digital growth.",
+
+      primaryButton: "Start Your Healthcare Project",
+
+      secondaryButton: "Schedule a Consultation",
+    },
+
+    seo: {
+      title:
+        "Healthcare Software Development Company | Hospital & Medical Software Solutions",
+
+      description:
+        "Ace Soft Solution develops custom healthcare software including hospital management systems, EHR/EMR solutions, telemedicine platforms, patient portals, healthcare mobile apps, medical billing systems, and healthcare CRM software.",
+
+      keywords: [
+        "Healthcare Software Development",
+        "Healthcare Software Company",
+        "Hospital Management System Development",
+        "EHR Development",
+        "EMR Software Development",
+        "Telemedicine App Development",
+        "Patient Portal Development",
+        "Healthcare Mobile App Development",
+        "Medical Billing Software",
+        "Healthcare CRM",
+        "Healthcare Automation",
+        "Custom Medical Software Development",
+      ],
+    },
+  },
+
+  fintech: {
+    slug: "fintech",
+
+    title: "FinTech Software Development Services",
+
+    shortTitle: "FinTech",
+
+    description:
+      "We develop secure, scalable, and innovative fintech software solutions for banks, financial institutions, insurance companies, lending platforms, investment firms, and fintech startups. Our solutions help businesses automate financial operations, improve customer experiences, and accelerate digital transformation.",
+
+    hero: {
+      badge: "FinTech Industry",
+
+      title: "Building Secure & Future-Ready Financial Technology Solutions",
+
+      description:
+        "From digital banking platforms and payment gateways to lending software, investment platforms, insurance technology, and financial automation systems, we build fintech solutions that deliver security, compliance, and exceptional user experiences.",
+
+      stats: [
+        {
+          value: "10+",
+          label: "FinTech Solutions",
+        },
+        {
+          value: "99.9%",
+          label: "Secure Transactions",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
+        },
+      ],
+    },
+
+    overview: {
+      title: "Digital Innovation for Modern Financial Services",
+
+      description:
+        "Financial organizations require secure, reliable, and scalable technology to meet growing customer expectations, comply with regulations, and streamline operations. We build custom fintech software that enables digital payments, online banking, lending, wealth management, and intelligent financial automation.",
+
+      challenges: [
+        "Data Security & Privacy",
+        "Regulatory Compliance",
+        "Payment Processing",
+        "Fraud Detection",
+        "Legacy System Modernization",
+        "Customer Experience",
+      ],
+
+      benefits: [
+        "Enhanced Security",
+        "Faster Financial Operations",
+        "Improved Customer Engagement",
+        "Scalable Financial Infrastructure",
+      ],
+    },
+
+    solutions: [
+      {
+        title: "Digital Banking Platforms",
+        description:
+          "Modern banking solutions with account management, fund transfers, digital onboarding, transaction history, and customer self-service features.",
+      },
+
+      {
+        title: "Payment Gateway Solutions",
+        description:
+          "Secure payment processing platforms supporting online payments, recurring billing, digital wallets, and multi-channel transactions.",
+      },
+
+      {
+        title: "Lending & Loan Management Systems",
+        description:
+          "End-to-end lending platforms with loan applications, approvals, credit assessment, repayment tracking, and automated workflows.",
+      },
+
+      {
+        title: "Investment & Wealth Management Platforms",
+        description:
+          "Custom investment platforms for portfolio management, trading, financial analytics, and investor engagement.",
+      },
+
+      {
+        title: "Insurance Technology Solutions",
+        description:
+          "Insurance management software for policy administration, claims processing, customer portals, and digital underwriting.",
+      },
+
+      {
+        title: "Personal Finance Applications",
+        description:
+          "Mobile and web applications that help users manage budgets, expenses, savings, investments, and financial goals.",
+      },
+
+      {
+        title: "Financial CRM Solutions",
+        description:
+          "Customer relationship management systems designed for banks, financial advisors, insurers, and lending institutions.",
+      },
+
+      {
+        title: "Financial Analytics & Reporting",
+        description:
+          "Interactive dashboards, business intelligence, real-time reporting, and financial analytics for data-driven decision making.",
+      },
+    ],
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Python",
+      "MongoDB",
+      "PostgreSQL",
       "Redis",
       "AWS",
       "Docker",
@@ -337,39 +369,39 @@ export const industryDetails = {
 
     process: [
       {
-        title: "Discovery",
+        title: "Business Discovery",
         description:
-          "Understanding business objectives, financial workflows, compliance requirements, and customer expectations.",
+          "Understanding financial products, compliance requirements, operational workflows, and customer expectations.",
       },
 
       {
-        title: "Strategy",
+        title: "Solution Architecture",
         description:
-          "Defining product architecture, security standards, integrations, and technology roadmap.",
+          "Designing secure, scalable, and high-performance fintech architecture with future growth in mind.",
       },
 
       {
         title: "UI/UX Design",
         description:
-          "Designing intuitive financial experiences that improve customer engagement and trust.",
+          "Creating intuitive, trustworthy, and user-friendly digital experiences for customers and financial professionals.",
       },
 
       {
-        title: "Development",
+        title: "Custom Development",
         description:
-          "Building secure, scalable, and high-performance fintech applications and platforms.",
+          "Building secure fintech applications with advanced integrations, automation, and high-performance infrastructure.",
       },
 
       {
-        title: "Testing & Security",
+        title: "Security & Quality Assurance",
         description:
-          "Ensuring reliability, transaction accuracy, security, and compliance through rigorous testing.",
+          "Performing rigorous testing, security validation, performance optimization, and compliance-focused quality assurance.",
       },
 
       {
-        title: "Deployment & Support",
+        title: "Deployment & Ongoing Support",
         description:
-          "Continuous monitoring, maintenance, optimization, and long-term platform support.",
+          "Deploying scalable fintech platforms with continuous monitoring, maintenance, feature enhancements, and technical support.",
       },
     ],
 
@@ -378,65 +410,70 @@ export const industryDetails = {
         question: "What fintech software solutions do you develop?",
 
         answer:
-          "We develop digital banking platforms, payment gateways, lending systems, wealth management platforms, financial CRM solutions, and custom fintech applications.",
-      },
-
-      {
-        question: "Can you modernize our legacy banking systems?",
-
-        answer:
-          "Yes. We help financial institutions modernize outdated systems, improve performance, strengthen security, and enhance customer experiences.",
-      },
-
-      {
-        question: "Do you build secure payment processing solutions?",
-
-        answer:
-          "Yes. We develop secure payment systems with advanced encryption, fraud detection, transaction monitoring, and compliance best practices.",
-      },
-
-      {
-        question: "How do you ensure financial data security?",
-
-        answer:
-          "We implement secure development practices, encrypted communications, access controls, audit trails, and industry-standard security measures.",
+          "We develop digital banking platforms, payment gateway solutions, lending software, investment platforms, insurance technology solutions, personal finance apps, financial CRM systems, and custom fintech applications.",
       },
 
       {
         question:
-          "Can you integrate with third-party financial services and APIs?",
+          "Can you integrate third-party payment providers and banking APIs?",
 
         answer:
-          "Yes. We integrate fintech applications with banking systems, payment gateways, accounting software, ERP systems, and third-party financial APIs.",
+          "Yes. We integrate payment gateways, banking APIs, financial data providers, KYC services, authentication systems, and other third-party financial platforms based on your business requirements.",
+      },
+
+      {
+        question: "How do you ensure security in fintech applications?",
+
+        answer:
+          "We implement secure authentication, encrypted communications, role-based access control, secure APIs, audit logging, continuous security testing, and industry best practices to protect financial data and transactions.",
+      },
+
+      {
+        question: "Can you modernize our existing financial software?",
+
+        answer:
+          "Absolutely. We help financial organizations upgrade legacy systems, migrate to modern cloud infrastructure, improve performance, enhance security, and add new digital capabilities.",
+      },
+
+      {
+        question: "Do you provide long-term maintenance and support?",
+
+        answer:
+          "Yes. We provide continuous maintenance, infrastructure monitoring, security updates, feature development, performance optimization, and dedicated technical support after deployment.",
       },
     ],
 
     cta: {
-      title: "Ready to Build Secure FinTech Solutions?",
+      title: "Build Your Next FinTech Solution with Confidence",
 
       description:
-        "Partner with our fintech experts to develop secure, scalable, and innovative financial software solutions that drive growth, efficiency, and customer trust.",
+        "Partner with Ace Soft Solution to develop secure, scalable, and innovative fintech software that enhances customer experiences, automates financial operations, and supports long-term business growth.",
 
-      primaryButton: "Start Your Project",
+      primaryButton: "Start Your FinTech Project",
 
-      secondaryButton: "Book Consultation",
+      secondaryButton: "Book a Consultation",
     },
 
     seo: {
-      title: "FinTech Software Development Services | Ace Soft Solution",
+      title:
+        "FinTech Software Development Company | Custom Financial Software Solutions",
 
       description:
-        "Custom fintech software development services including digital banking platforms, payment gateways, lending systems, financial CRM, fraud detection, and wealth management solutions.",
+        "Ace Soft Solution provides custom fintech software development services including digital banking platforms, payment gateways, lending software, investment platforms, insurance technology, financial CRM, and fintech mobile applications.",
 
       keywords: [
         "FinTech Software Development",
-        "Digital Banking Development",
+        "Financial Software Development",
+        "Digital Banking Solutions",
         "Payment Gateway Development",
         "Lending Software Development",
+        "Investment Platform Development",
+        "Insurance Software Development",
         "Financial CRM",
-        "Wealth Management Platform",
+        "Personal Finance App Development",
         "FinTech App Development",
-        "Fraud Detection Software",
+        "Financial Technology Company",
+        "Custom FinTech Solutions",
       ],
     },
   },
@@ -444,61 +481,61 @@ export const industryDetails = {
   retailEcommerce: {
     slug: "retail-ecommerce",
 
-    title: "Retail & eCommerce Software Development",
+    title: "Retail & eCommerce Software Development Services",
 
     shortTitle: "Retail & eCommerce",
 
     description:
-      "We help retailers, eCommerce brands, marketplaces, wholesalers, and direct-to-consumer businesses build scalable digital commerce solutions that improve customer experiences, streamline operations, and drive revenue growth.",
+      "We develop modern retail and eCommerce software solutions that help businesses deliver seamless shopping experiences, optimize operations, manage inventory, and increase sales across online and offline channels.",
 
     hero: {
       badge: "Retail & eCommerce Industry",
 
-      title: "Empowering Modern Retail Through Digital Commerce",
+      title: "Empowering Retail Businesses with Intelligent Digital Commerce",
 
       description:
-        "From eCommerce platforms and online marketplaces to inventory management systems and customer engagement solutions, we develop scalable retail technology that enhances shopping experiences and accelerates business growth.",
+        "From custom eCommerce platforms and multi-vendor marketplaces to POS systems, inventory management, omnichannel retail solutions, and customer engagement platforms, we build scalable technology that drives growth and enhances customer experiences.",
 
       stats: [
         {
-          value: "100+",
-          label: "Projects Delivered",
+          value: "10+",
+          label: "Retail Solutions",
         },
         {
-          value: "50+",
-          label: "Clients Served",
-        },
-        {
-          value: "98%",
-          label: "Client Retention",
+          value: "99.9%",
+          label: "Platform Availability",
         },
         {
           value: "24/7",
-          label: "Support Available",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
         },
       ],
     },
 
     overview: {
-      title: "Retail & eCommerce Technology Expertise",
+      title: "Driving Digital Transformation in Retail & Commerce",
 
       description:
-        "Retail businesses face increasing pressure to deliver seamless omnichannel experiences, optimize inventory, personalize customer journeys, and stay competitive in a rapidly evolving digital marketplace. Our retail technology solutions help businesses modernize operations, improve customer engagement, and maximize sales performance.",
+        "Modern retailers need fast, scalable, and customer-centric digital solutions to stay competitive. We build custom retail and eCommerce platforms that streamline operations, improve customer engagement, automate inventory management, and enable seamless omnichannel shopping experiences.",
 
       challenges: [
-        "Omnichannel Customer Experience",
         "Inventory Management",
-        "Order Fulfillment Efficiency",
-        "Customer Retention & Loyalty",
-        "Marketplace Competition",
-        "Legacy Commerce Platform Modernization",
+        "Omnichannel Integration",
+        "Customer Retention",
+        "Order & Fulfillment Management",
+        "Payment Processing",
+        "Scalable eCommerce Infrastructure",
       ],
 
       benefits: [
-        "Improved Customer Experience",
-        "Higher Conversion Rates",
-        "Optimized Operations",
-        "Scalable Commerce Infrastructure",
+        "Enhanced Shopping Experience",
+        "Improved Operational Efficiency",
+        "Real-Time Inventory Visibility",
+        "Scalable Digital Commerce Platform",
       ],
     },
 
@@ -506,37 +543,49 @@ export const industryDetails = {
       {
         title: "Custom eCommerce Platforms",
         description:
-          "Scalable online stores and commerce platforms designed for growth, performance, and customer engagement.",
+          "Feature-rich B2B, B2C, and D2C eCommerce websites with secure payments, product catalogs, promotions, and order management.",
       },
 
       {
-        title: "Multi-Vendor Marketplaces",
+        title: "Multi-Vendor Marketplace Development",
         description:
-          "Marketplace solutions that connect buyers and sellers with advanced management and transaction capabilities.",
+          "Scalable marketplace platforms with vendor management, commission systems, product approvals, and customer management.",
       },
 
       {
-        title: "Inventory Management Systems",
+        title: "Point of Sale (POS) Systems",
         description:
-          "Real-time inventory tracking and stock management solutions that improve operational efficiency.",
+          "Modern POS software with billing, inventory synchronization, sales tracking, customer management, and reporting.",
       },
 
       {
-        title: "Order Management Systems",
+        title: "Inventory & Warehouse Management",
         description:
-          "Centralized order processing platforms that streamline fulfillment and customer satisfaction.",
+          "Real-time inventory tracking, warehouse management, stock optimization, barcode integration, and automated replenishment.",
       },
 
       {
-        title: "Customer Loyalty Platforms",
+        title: "Order & Fulfillment Management",
         description:
-          "Rewards, membership, and loyalty solutions designed to improve retention and lifetime customer value.",
+          "Centralized order processing, shipping integration, delivery tracking, returns management, and fulfillment automation.",
       },
 
       {
-        title: "Retail Analytics & Reporting",
+        title: "Customer Loyalty & Rewards Platforms",
         description:
-          "Data-driven dashboards and reporting systems that provide actionable insights for better business decisions.",
+          "Custom loyalty programs, rewards management, memberships, referral systems, and personalized customer engagement.",
+      },
+
+      {
+        title: "Retail CRM Solutions",
+        description:
+          "Customer relationship management systems that help retailers improve sales, customer retention, and marketing effectiveness.",
+      },
+
+      {
+        title: "Retail Analytics & Business Intelligence",
+        description:
+          "Interactive dashboards, sales analytics, customer insights, inventory reports, and AI-powered business intelligence.",
       },
     ],
 
@@ -552,2159 +601,2248 @@ export const industryDetails = {
       "Stripe",
       "AWS",
       "Docker",
-      "Kubernetes",
+      "Shopify APIs",
     ],
 
     process: [
       {
-        title: "Discovery",
+        title: "Business Discovery",
         description:
-          "Analyzing business goals, customer journeys, operational workflows, and commerce requirements.",
+          "Understanding your retail operations, customer journey, sales channels, and business objectives.",
       },
 
       {
-        title: "Strategy",
+        title: "Solution Planning",
         description:
-          "Defining platform architecture, integrations, scalability requirements, and growth roadmap.",
+          "Designing scalable commerce architecture, workflows, integrations, and technology strategy.",
       },
 
       {
         title: "UI/UX Design",
         description:
-          "Designing intuitive shopping experiences that maximize engagement and conversions.",
+          "Creating intuitive shopping experiences optimized for customer engagement and conversions.",
       },
 
       {
-        title: "Development",
+        title: "Custom Development",
         description:
-          "Building secure, scalable, and high-performance retail and eCommerce platforms.",
+          "Building secure, scalable, and high-performance retail applications with seamless third-party integrations.",
       },
 
       {
-        title: "Testing & Optimization",
+        title: "Testing & Quality Assurance",
         description:
-          "Ensuring platform reliability, speed, security, and seamless customer experiences.",
+          "Ensuring performance, security, usability, payment reliability, and cross-device compatibility.",
       },
 
       {
-        title: "Deployment & Growth",
+        title: "Deployment & Continuous Support",
         description:
-          "Launching, monitoring, optimizing, and continuously improving digital commerce solutions.",
+          "Launching, monitoring, maintaining, and continuously improving your retail software platform.",
       },
     ],
 
     faqs: [
       {
-        question: "What retail and eCommerce solutions do you develop?",
+        question:
+          "What retail and eCommerce software solutions do you develop?",
 
         answer:
-          "We develop custom eCommerce websites, marketplaces, inventory management systems, order management platforms, loyalty programs, and retail analytics solutions.",
+          "We develop custom eCommerce websites, online marketplaces, POS systems, inventory management software, warehouse management systems, retail CRM solutions, loyalty platforms, and mobile commerce applications.",
       },
 
       {
-        question: "Can you migrate our existing eCommerce platform?",
+        question: "Can you integrate payment gateways and shipping providers?",
 
         answer:
-          "Yes. We help businesses migrate from legacy platforms while preserving data, improving performance, and enhancing customer experiences.",
+          "Yes. We integrate leading payment gateways, shipping carriers, ERP systems, accounting software, CRM platforms, and third-party APIs to create a seamless commerce ecosystem.",
       },
 
       {
-        question: "Do you build multi-vendor marketplace platforms?",
+        question: "Do you build mobile-friendly eCommerce platforms?",
 
         answer:
-          "Yes. We develop scalable marketplace solutions with vendor management, product catalogs, payments, and order processing capabilities.",
+          "Absolutely. Every retail solution we build is fully responsive and optimized for desktops, tablets, and mobile devices to maximize customer engagement and conversions.",
       },
 
       {
-        question: "Can you integrate payment gateways and third-party systems?",
+        question: "Can you modernize our existing eCommerce platform?",
 
         answer:
-          "Yes. We integrate payment gateways, ERP systems, CRM platforms, inventory software, logistics providers, and other third-party services.",
+          "Yes. We modernize legacy retail systems, migrate platforms, improve performance, enhance security, and implement modern technologies to support business growth.",
       },
 
       {
-        question: "Do you provide ongoing support and maintenance?",
+        question: "Do you provide ongoing maintenance and technical support?",
 
         answer:
-          "Yes. We offer continuous monitoring, maintenance, feature enhancements, performance optimization, and technical support after launch.",
+          "Yes. We provide continuous maintenance, security updates, performance optimization, feature enhancements, cloud management, and long-term technical support.",
       },
     ],
 
     cta: {
-      title: "Ready to Scale Your Retail & eCommerce Business?",
+      title: "Build the Future of Digital Retail",
 
       description:
-        "Partner with our experts to build powerful digital commerce solutions that improve customer experiences, increase conversions, and accelerate business growth.",
+        "Partner with Ace Soft Solution to develop secure, scalable, and customer-focused retail and eCommerce software that increases sales, improves operations, and delivers exceptional shopping experiences.",
 
-      primaryButton: "Start Your Project",
+      primaryButton: "Start Your Retail Project",
 
-      secondaryButton: "Book Consultation",
+      secondaryButton: "Book a Consultation",
     },
 
     seo: {
       title:
-        "Retail & eCommerce Software Development Services | Ace Soft Solution",
+        "Retail & eCommerce Software Development Company | Custom Commerce Solutions",
 
       description:
-        "Custom retail and eCommerce software development services including online stores, marketplaces, inventory management systems, order management platforms, customer loyalty solutions, and retail analytics.",
+        "Ace Soft Solution provides custom retail and eCommerce software development services including eCommerce websites, marketplace development, POS systems, inventory management, retail CRM, warehouse management, and omnichannel commerce solutions.",
 
       keywords: [
         "Retail Software Development",
         "eCommerce Development",
+        "Custom eCommerce Website",
         "Marketplace Development",
-        "Online Store Development",
+        "POS Software Development",
         "Inventory Management Software",
-        "Order Management System",
-        "Retail App Development",
-        "eCommerce Solutions",
+        "Warehouse Management System",
+        "Retail CRM",
+        "Omnichannel Commerce",
+        "eCommerce App Development",
+        "Retail Technology Solutions",
+        "Custom Retail Software",
       ],
     },
   },
 
   education: {
-  slug: 'education',
+    slug: "education",
 
-  title: 'Education Software Development',
+    title: "Education Software Development Services",
 
-  shortTitle: 'Education',
-
-  description:
-    'We help schools, colleges, universities, edtech startups, training institutes, and corporate learning providers build innovative digital learning solutions that improve student engagement, streamline administration, and enhance educational outcomes.',
-
-  hero: {
-    badge: 'Education Industry',
-
-    title:
-      'Transforming Learning Through Digital Innovation',
+    shortTitle: "Education",
 
     description:
-      'From learning management systems and virtual classrooms to student portals and educational mobile applications, we develop scalable education technology solutions that empower learners, educators, and institutions.',
+      "We develop innovative education software solutions for schools, colleges, universities, coaching institutes, EdTech companies, and corporate training providers. Our platforms enhance learning experiences, simplify administration, and enable digital education at scale.",
 
-    stats: [
+    hero: {
+      badge: "Education Industry",
+
+      title: "Empowering Education Through Innovative Digital Solutions",
+
+      description:
+        "From learning management systems and student information systems to virtual classrooms, online examination platforms, and AI-powered learning solutions, we build secure, scalable, and engaging education technology that transforms teaching and learning.",
+
+      stats: [
+        {
+          value: "10+",
+          label: "Education Solutions",
+        },
+        {
+          value: "99.9%",
+          label: "Platform Availability",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
+        },
+      ],
+    },
+
+    overview: {
+      title: "Driving Digital Transformation in Education",
+
+      description:
+        "Educational institutions require modern technology to improve learning outcomes, streamline administration, and support hybrid education. We build custom education software that enables interactive learning, automates academic processes, enhances communication, and improves student engagement.",
+
+      challenges: [
+        "Student Management",
+        "Online Learning Delivery",
+        "Examination & Assessment",
+        "Academic Administration",
+        "Student Engagement",
+        "Data Security & Accessibility",
+      ],
+
+      benefits: [
+        "Enhanced Learning Experience",
+        "Simplified Administration",
+        "Improved Student Engagement",
+        "Scalable Digital Learning Platform",
+      ],
+    },
+
+    solutions: [
       {
-        value: '100+',
-        label: 'Projects Delivered',
+        title: "Learning Management Systems (LMS)",
+        description:
+          "Comprehensive learning platforms for course management, assignments, assessments, certifications, and learner progress tracking.",
       },
+
       {
-        value: '50+',
-        label: 'Clients Served',
+        title: "Student Information Systems (SIS)",
+        description:
+          "Centralized student management software for admissions, attendance, academics, fees, records, and administration.",
       },
+
       {
-        value: '98%',
-        label: 'Client Retention',
+        title: "Virtual Classroom Platforms",
+        description:
+          "Interactive online learning solutions with live classes, video conferencing, screen sharing, whiteboards, and collaboration tools.",
       },
+
       {
-        value: '24/7',
-        label: 'Support Available',
+        title: "Online Examination Systems",
+        description:
+          "Secure online assessment platforms with automated grading, question banks, proctoring support, and detailed performance analytics.",
+      },
+
+      {
+        title: "School & College Management Software",
+        description:
+          "Integrated ERP solutions for admissions, fee management, attendance, transport, library, HR, payroll, and academic operations.",
+      },
+
+      {
+        title: "eLearning Mobile Applications",
+        description:
+          "Android and iOS learning apps with video lessons, quizzes, offline access, notifications, and personalized learning experiences.",
+      },
+
+      {
+        title: "Education CRM",
+        description:
+          "CRM solutions for managing student inquiries, admissions, communication, marketing campaigns, and alumni engagement.",
+      },
+
+      {
+        title: "Education Analytics & Reporting",
+        description:
+          "Interactive dashboards providing academic insights, student performance analytics, attendance reports, and institutional KPIs.",
       },
     ],
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Python",
+      "MongoDB",
+      "PostgreSQL",
+      "AWS",
+      "Docker",
+      "WebRTC",
+      "Firebase",
+    ],
+
+    process: [
+      {
+        title: "Requirement Discovery",
+        description:
+          "Understanding academic workflows, institutional objectives, learner needs, and operational challenges.",
+      },
+
+      {
+        title: "Solution Architecture",
+        description:
+          "Designing scalable, secure, and flexible education technology tailored to your institution or EdTech platform.",
+      },
+
+      {
+        title: "UI/UX Design",
+        description:
+          "Creating engaging and accessible user experiences for students, educators, administrators, and parents.",
+      },
+
+      {
+        title: "Custom Development",
+        description:
+          "Building high-performance education software with seamless integrations and future-ready architecture.",
+      },
+
+      {
+        title: "Testing & Quality Assurance",
+        description:
+          "Ensuring reliability, usability, accessibility, security, and cross-platform compatibility before deployment.",
+      },
+
+      {
+        title: "Deployment & Continuous Support",
+        description:
+          "Launching your education platform with ongoing maintenance, monitoring, updates, and technical support.",
+      },
+    ],
+
+    faqs: [
+      {
+        question: "What education software solutions do you develop?",
+
+        answer:
+          "We develop learning management systems (LMS), student information systems (SIS), school ERP software, virtual classroom platforms, online examination systems, education CRM solutions, mobile learning applications, and custom EdTech platforms.",
+      },
+
+      {
+        question: "Can you build custom eLearning platforms?",
+
+        answer:
+          "Yes. We create fully customized eLearning platforms with course management, live classes, assessments, certifications, learner analytics, and subscription-based learning models.",
+      },
+
+      {
+        question:
+          "Can your software integrate with existing education systems?",
+
+        answer:
+          "Absolutely. We integrate education software with payment gateways, video conferencing platforms, CRM systems, ERP software, learning tools, APIs, and third-party services.",
+      },
+
+      {
+        question: "Do you develop mobile apps for educational institutions?",
+
+        answer:
+          "Yes. We build Android and iOS mobile applications for students, teachers, parents, and administrators with features like notifications, attendance, assignments, online learning, and communication.",
+      },
+
+      {
+        question: "Do you provide ongoing maintenance and support?",
+
+        answer:
+          "Yes. We provide long-term maintenance, feature enhancements, cloud management, performance optimization, security updates, and dedicated technical support after deployment.",
+      },
+    ],
+
+    cta: {
+      title: "Transform Learning with Custom Education Software",
+
+      description:
+        "Partner with Ace Soft Solution to build secure, scalable, and engaging education software that enhances learning experiences, streamlines academic operations, and supports long-term institutional growth.",
+
+      primaryButton: "Start Your Education Project",
+
+      secondaryButton: "Book a Consultation",
+    },
+
+    seo: {
+      title: "Education Software Development Company | Custom EdTech Solutions",
+
+      description:
+        "Ace Soft Solution provides custom education software development services including LMS development, school ERP systems, student information systems, virtual classrooms, online examination platforms, education mobile apps, and EdTech solutions.",
+
+      keywords: [
+        "Education Software Development",
+        "EdTech Development",
+        "Learning Management System",
+        "LMS Development",
+        "School ERP Development",
+        "Student Information System",
+        "Online Learning Platform",
+        "Virtual Classroom Software",
+        "Education Mobile App Development",
+        "Online Examination System",
+        "School Management Software",
+        "Custom Education Software",
+      ],
+    },
   },
 
-  overview: {
-    title: 'Education Technology Expertise',
+  travelHospitality: {
+    slug: "travel-hospitality",
+
+    title: "Travel & Hospitality Software Development Services",
+
+    shortTitle: "Travel & Hospitality",
 
     description:
-      'Educational institutions face increasing demands for personalized learning experiences, remote education capabilities, administrative efficiency, and student engagement. Our education technology solutions help organizations modernize learning environments and deliver impactful educational experiences.',
+      "We develop innovative travel and hospitality software solutions for hotels, resorts, travel agencies, tour operators, airlines, vacation rental businesses, and hospitality brands. Our digital platforms streamline operations, enhance guest experiences, and drive business growth.",
 
-    challenges: [
-      'Student Engagement',
-      'Remote Learning Adoption',
-      'Learning Personalization',
-      'Administrative Inefficiencies',
-      'Student Performance Tracking',
-      'Legacy System Modernization',
-    ],
+    hero: {
+      badge: "Travel & Hospitality Industry",
 
-    benefits: [
-      'Enhanced Learning Experiences',
-      'Improved Student Engagement',
-      'Streamlined Academic Operations',
-      'Scalable Digital Learning Platforms',
-    ],
-  },
+      title:
+        "Deliver Exceptional Guest Experiences with Smart Digital Solutions",
 
-  solutions: [
-    {
-      title: 'Learning Management Systems (LMS)',
       description:
-        'Comprehensive learning platforms that simplify course management, content delivery, assessments, and student progress tracking.',
+        "From hotel management systems and online booking platforms to travel marketplaces, property management software, mobile travel apps, and guest engagement solutions, we build secure and scalable technology that powers modern travel businesses.",
+
+      stats: [
+        {
+          value: "10+",
+          label: "Travel Solutions",
+        },
+        {
+          value: "99.9%",
+          label: "Platform Availability",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
+        },
+      ],
     },
 
-    {
-      title: 'Virtual Classroom Solutions',
+    overview: {
+      title: "Accelerating Digital Transformation in Travel & Hospitality",
+
       description:
-        'Interactive online learning environments with live classes, collaboration tools, and engagement features.',
+        "Today's travelers expect seamless digital experiences across every touchpoint—from booking and check-in to personalized recommendations and post-trip engagement. We create intelligent travel and hospitality software that simplifies operations, increases bookings, and delivers memorable customer experiences.",
+
+      challenges: [
+        "Online Booking Management",
+        "Property & Reservation Management",
+        "Guest Experience Personalization",
+        "Multi-Channel Booking Integration",
+        "Payment & Billing Automation",
+        "Operational Efficiency",
+      ],
+
+      benefits: [
+        "Higher Booking Conversions",
+        "Enhanced Guest Experience",
+        "Automated Operations",
+        "Scalable Hospitality Platform",
+      ],
     },
 
-    {
-      title: 'Student Information Systems',
-      description:
-        'Centralized platforms for managing student records, admissions, attendance, grades, and academic performance.',
-    },
-
-    {
-      title: 'eLearning Platforms',
-      description:
-        'Scalable digital learning solutions designed for schools, universities, coaching centers, and training organizations.',
-    },
-
-    {
-      title: 'Education Mobile Applications',
-      description:
-        'Mobile-first learning experiences that enable students and educators to access educational resources anytime, anywhere.',
-    },
-
-    {
-      title: 'Online Examination Systems',
-      description:
-        'Secure assessment platforms with automated evaluation, reporting, and performance analytics.',
-    },
-  ],
-
-  technologies: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'NestJS',
-    'MongoDB',
-    'PostgreSQL',
-    'Firebase',
-    'AWS',
-    'Azure',
-    'Docker',
-    'Kubernetes',
-  ],
-
-  process: [
-    {
-      title: 'Discovery',
-      description:
-        'Understanding educational objectives, learning requirements, institutional workflows, and user needs.',
-    },
-
-    {
-      title: 'Strategy',
-      description:
-        'Defining platform architecture, learning experiences, integrations, and implementation roadmap.',
-    },
-
-    {
-      title: 'UI/UX Design',
-      description:
-        'Designing engaging and accessible experiences for students, educators, and administrators.',
-    },
-
-    {
-      title: 'Development',
-      description:
-        'Building secure, scalable, and user-friendly education technology solutions.',
-    },
-
-    {
-      title: 'Testing & Optimization',
-      description:
-        'Ensuring platform reliability, accessibility, performance, and seamless learning experiences.',
-    },
-
-    {
-      title: 'Deployment & Support',
-      description:
-        'Launching, monitoring, maintaining, and continuously improving educational platforms.',
-    },
-  ],
-
-  faqs: [
-    {
-      question:
-        'What education software solutions do you develop?',
-
-      answer:
-        'We develop learning management systems, virtual classrooms, student information systems, eLearning platforms, education mobile apps, and online examination systems.',
-    },
-
-    {
-      question:
-        'Can you build custom LMS platforms?',
-
-      answer:
-        'Yes. We develop custom learning management systems tailored to your institution, training organization, or edtech business requirements.',
-    },
-
-    {
-      question:
-        'Do you support online learning and virtual classrooms?',
-
-      answer:
-        'Yes. We build virtual classroom platforms with live sessions, collaboration tools, assessments, and student engagement features.',
-    },
-
-    {
-      question:
-        'Can you integrate third-party education tools?',
-
-      answer:
-        'Yes. We can integrate video conferencing tools, payment gateways, CRM systems, ERP platforms, and other educational technologies.',
-    },
-
-    {
-      question:
-        'Do you provide ongoing maintenance and support?',
-
-      answer:
-        'Yes. We offer continuous support, performance monitoring, maintenance, feature enhancements, and platform optimization.',
-    },
-  ],
-
-  cta: {
-    title:
-      'Ready to Build Innovative Education Solutions?',
-
-    description:
-      'Partner with our education technology experts to create engaging, scalable, and future-ready learning platforms that empower students, educators, and institutions.',
-
-    primaryButton: 'Start Your Project',
-
-    secondaryButton: 'Book Consultation',
-  },
-
-  seo: {
-    title:
-      'Education Software Development Services | Ace Soft Solution',
-
-    description:
-      'Custom education software development services including LMS platforms, virtual classrooms, student information systems, eLearning solutions, online examination systems, and education mobile apps.',
-
-    keywords: [
-      'Education Software Development',
-      'Learning Management System',
-      'LMS Development',
-      'eLearning Platform Development',
-      'Virtual Classroom Software',
-      'Student Information System',
-      'Education App Development',
-      'EdTech Software Development',
-    ],
-  },
-},
-
-travelHospitality: {
-  slug: 'travel-hospitality',
-
-  title: 'Travel & Hospitality Software Development',
-
-  shortTitle: 'Travel & Hospitality',
-
-  description:
-    'We help travel agencies, tour operators, hotels, resorts, airlines, hospitality brands, and travel-tech startups build innovative digital solutions that enhance guest experiences, streamline operations, and drive business growth.',
-
-  hero: {
-    badge: 'Travel & Hospitality Industry',
-
-    title:
-      'Creating Exceptional Travel Experiences Through Technology',
-
-    description:
-      'From hotel booking platforms and travel portals to hospitality management systems and customer engagement solutions, we develop scalable travel technology that improves operational efficiency and delivers seamless guest experiences.',
-
-    stats: [
+    solutions: [
       {
-        value: '100+',
-        label: 'Projects Delivered',
+        title: "Hotel Management Systems",
+        description:
+          "Complete hotel management software for reservations, front desk operations, housekeeping, billing, staff management, and reporting.",
       },
+
       {
-        value: '50+',
-        label: 'Clients Served',
+        title: "Property Management Systems (PMS)",
+        description:
+          "Centralized property management solutions for hotels, resorts, serviced apartments, and vacation rentals.",
       },
+
       {
-        value: '98%',
-        label: 'Client Retention',
+        title: "Online Booking Platforms",
+        description:
+          "Custom booking engines with real-time availability, secure payments, dynamic pricing, and reservation management.",
       },
+
       {
-        value: '24/7',
-        label: 'Support Available',
+        title: "Travel Portal & Marketplace Development",
+        description:
+          "Scalable B2B and B2C travel portals featuring flights, hotels, holiday packages, activities, and travel services.",
+      },
+
+      {
+        title: "Travel Mobile Applications",
+        description:
+          "Feature-rich Android and iOS apps for booking, itinerary management, travel updates, navigation, and customer engagement.",
+      },
+
+      {
+        title: "Guest Experience Platforms",
+        description:
+          "Digital guest engagement solutions with online check-in, concierge services, feedback management, loyalty programs, and personalized offers.",
+      },
+
+      {
+        title: "Tour & Activity Management Systems",
+        description:
+          "Software for managing tour packages, itineraries, guides, bookings, schedules, and customer communications.",
+      },
+
+      {
+        title: "Hospitality CRM & Analytics",
+        description:
+          "CRM solutions and business intelligence dashboards for guest management, marketing automation, revenue tracking, and operational insights.",
       },
     ],
-  },
 
-  overview: {
-    title: 'Travel & Hospitality Technology Expertise',
-
-    description:
-      'Travel and hospitality businesses must continuously improve customer experiences, optimize bookings, manage operations efficiently, and adapt to changing traveler expectations. Our technology solutions help organizations deliver personalized experiences while maximizing operational performance.',
-
-    challenges: [
-      'Online Booking Management',
-      'Guest Experience Enhancement',
-      'Reservation System Integration',
-      'Revenue Optimization',
-      'Operational Inefficiencies',
-      'Legacy Platform Modernization',
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+      "Docker",
+      "Google Maps API",
+      "Stripe",
     ],
 
-    benefits: [
-      'Improved Guest Satisfaction',
-      'Higher Booking Conversions',
-      'Streamlined Operations',
-      'Scalable Digital Infrastructure',
-    ],
-  },
-
-  solutions: [
-    {
-      title: 'Travel Booking Platforms',
-      description:
-        'Custom travel portals and booking engines that simplify reservations, payments, and itinerary management.',
-    },
-
-    {
-      title: 'Hotel Management Systems',
-      description:
-        'Comprehensive hospitality platforms for managing reservations, guest services, billing, and operations.',
-    },
-
-    {
-      title: 'Travel Marketplace Solutions',
-      description:
-        'Multi-vendor travel platforms connecting travelers with hotels, tour operators, and service providers.',
-    },
-
-    {
-      title: 'Guest Experience Applications',
-      description:
-        'Mobile and web applications that enhance customer engagement before, during, and after travel experiences.',
-    },
-
-    {
-      title: 'Tour & Activity Management Systems',
-      description:
-        'Platforms that simplify tour scheduling, bookings, customer management, and operational coordination.',
-    },
-
-    {
-      title: 'Travel CRM Solutions',
-      description:
-        'Customer relationship management systems designed to improve traveler engagement and loyalty.',
-    },
-  ],
-
-  technologies: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'NestJS',
-    'MongoDB',
-    'PostgreSQL',
-    'Redis',
-    'AWS',
-    'Azure',
-    'Docker',
-    'Kubernetes',
-  ],
-
-  process: [
-    {
-      title: 'Discovery',
-      description:
-        'Understanding business goals, traveler journeys, operational workflows, and hospitality requirements.',
-    },
-
-    {
-      title: 'Strategy',
-      description:
-        'Defining platform architecture, integrations, scalability requirements, and digital transformation roadmap.',
-    },
-
-    {
-      title: 'UI/UX Design',
-      description:
-        'Creating engaging and intuitive experiences that improve customer satisfaction and bookings.',
-    },
-
-    {
-      title: 'Development',
-      description:
-        'Building secure, scalable, and high-performance travel and hospitality software solutions.',
-    },
-
-    {
-      title: 'Testing & Optimization',
-      description:
-        'Ensuring reliability, performance, security, and seamless user experiences across platforms.',
-    },
-
-    {
-      title: 'Deployment & Support',
-      description:
-        'Launching, monitoring, maintaining, and continuously improving travel technology solutions.',
-    },
-  ],
-
-  faqs: [
-    {
-      question:
-        'What travel and hospitality software solutions do you develop?',
-
-      answer:
-        'We develop travel booking platforms, hotel management systems, travel marketplaces, guest experience applications, tour management solutions, and hospitality CRM platforms.',
-    },
-
-    {
-      question:
-        'Can you build custom hotel booking and reservation systems?',
-
-      answer:
-        'Yes. We create custom booking engines, reservation management systems, and hospitality platforms tailored to your business requirements.',
-    },
-
-    {
-      question:
-        'Do you develop mobile applications for travel businesses?',
-
-      answer:
-        'Yes. We build mobile apps for travelers, hotels, resorts, travel agencies, and hospitality businesses to enhance customer engagement and convenience.',
-    },
-
-    {
-      question:
-        'Can you integrate third-party travel APIs and booking systems?',
-
-      answer:
-        'Yes. We integrate travel applications with booking engines, payment gateways, airline APIs, hotel systems, CRM platforms, and other third-party services.',
-    },
-
-    {
-      question:
-        'Do you provide ongoing maintenance and support?',
-
-      answer:
-        'Yes. We offer continuous support, monitoring, maintenance, feature enhancements, and platform optimization after launch.',
-    },
-  ],
-
-  cta: {
-    title:
-      'Ready to Transform Your Travel & Hospitality Business?',
-
-    description:
-      'Partner with our experts to build innovative travel and hospitality solutions that improve guest experiences, increase bookings, and drive long-term business growth.',
-
-    primaryButton: 'Start Your Project',
-
-    secondaryButton: 'Book Consultation',
-  },
-
-  seo: {
-    title:
-      'Travel & Hospitality Software Development Services | Ace Soft Solution',
-
-    description:
-      'Custom travel and hospitality software development services including booking platforms, hotel management systems, travel marketplaces, guest experience applications, hospitality CRM, and travel automation solutions.',
-
-    keywords: [
-      'Travel Software Development',
-      'Hospitality Software Development',
-      'Hotel Management System',
-      'Travel Booking Platform',
-      'Travel Portal Development',
-      'Hospitality CRM',
-      'Travel App Development',
-      'Hotel Booking Software',
-    ],
-  },
-},
-
-realEstate: {
-  slug: 'real-estate',
-
-  title: 'Real Estate Software Development',
-
-  shortTitle: 'Real Estate',
-
-  description:
-    'We help real estate agencies, property developers, brokers, construction companies, and proptech startups build digital solutions that streamline property management, improve customer engagement, and accelerate business growth.',
-
-  hero: {
-    badge: 'Real Estate Industry',
-
-    title:
-      'Transforming Real Estate Through Digital Innovation',
-
-    description:
-      'From property listing platforms and real estate marketplaces to CRM systems and property management solutions, we develop scalable software that enhances buyer experiences, improves operational efficiency, and drives sales growth.',
-
-    stats: [
+    process: [
       {
-        value: '100+',
-        label: 'Projects Delivered',
+        title: "Business Discovery",
+        description:
+          "Understanding your hospitality operations, guest journey, business goals, and digital transformation requirements.",
       },
+
       {
-        value: '50+',
-        label: 'Clients Served',
+        title: "Solution Architecture",
+        description:
+          "Designing scalable software architecture with booking workflows, integrations, and cloud infrastructure.",
       },
+
       {
-        value: '98%',
-        label: 'Client Retention',
+        title: "UI/UX Design",
+        description:
+          "Creating engaging and intuitive digital experiences that increase bookings and improve guest satisfaction.",
       },
+
       {
-        value: '24/7',
-        label: 'Support Available',
+        title: "Custom Development",
+        description:
+          "Building secure, high-performance travel applications with seamless third-party integrations and automation.",
+      },
+
+      {
+        title: "Testing & Quality Assurance",
+        description:
+          "Performing comprehensive testing for performance, security, usability, payment processing, and cross-device compatibility.",
+      },
+
+      {
+        title: "Deployment & Continuous Support",
+        description:
+          "Deploying, monitoring, maintaining, and continuously enhancing your travel and hospitality platform.",
       },
     ],
-  },
 
-  overview: {
-    title: 'Real Estate Technology Expertise',
-
-    description:
-      'The real estate industry is rapidly evolving with increasing demand for digital property experiences, streamlined operations, and data-driven decision-making. Our technology solutions help businesses modernize processes, improve customer engagement, and increase property sales and management efficiency.',
-
-    challenges: [
-      'Property Listing Management',
-      'Lead Generation & Conversion',
-      'Property Management Complexity',
-      'Customer Engagement',
-      'Manual Business Processes',
-      'Legacy System Modernization',
-    ],
-
-    benefits: [
-      'Improved Lead Conversion',
-      'Enhanced Customer Experience',
-      'Streamlined Property Operations',
-      'Scalable Real Estate Infrastructure',
-    ],
-  },
-
-  solutions: [
-    {
-      title: 'Property Listing Platforms',
-      description:
-        'Custom property listing portals with advanced search, filtering, virtual tours, and property discovery features.',
-    },
-
-    {
-      title: 'Real Estate Marketplaces',
-      description:
-        'Scalable marketplaces connecting buyers, sellers, agents, and developers through a seamless digital experience.',
-    },
-
-    {
-      title: 'Property Management Systems',
-      description:
-        'Comprehensive solutions for managing residential, commercial, and rental properties efficiently.',
-    },
-
-    {
-      title: 'Real Estate CRM Solutions',
-      description:
-        'Customer relationship management systems designed to streamline lead nurturing, sales, and client communication.',
-    },
-
-    {
-      title: 'Property Booking & Scheduling Systems',
-      description:
-        'Online appointment booking and property visit scheduling platforms that improve customer convenience.',
-    },
-
-    {
-      title: 'Real Estate Analytics & Reporting',
-      description:
-        'Data-driven dashboards and reporting systems that provide valuable insights into sales, performance, and market trends.',
-    },
-  ],
-
-  technologies: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'NestJS',
-    'MongoDB',
-    'PostgreSQL',
-    'Redis',
-    'AWS',
-    'Google Maps API',
-    'Docker',
-    'Kubernetes',
-  ],
-
-  process: [
-    {
-      title: 'Discovery',
-      description:
-        'Understanding business goals, property workflows, customer journeys, and operational challenges.',
-    },
-
-    {
-      title: 'Strategy',
-      description:
-        'Defining product architecture, integrations, scalability requirements, and implementation roadmap.',
-    },
-
-    {
-      title: 'UI/UX Design',
-      description:
-        'Creating intuitive property browsing and management experiences that maximize engagement and conversions.',
-    },
-
-    {
-      title: 'Development',
-      description:
-        'Building secure, scalable, and feature-rich real estate applications and platforms.',
-    },
-
-    {
-      title: 'Testing & Optimization',
-      description:
-        'Ensuring reliability, performance, security, and seamless user experiences across all devices.',
-    },
-
-    {
-      title: 'Deployment & Support',
-      description:
-        'Launching, monitoring, maintaining, and continuously optimizing real estate software solutions.',
-    },
-  ],
-
-  faqs: [
-    {
-      question:
-        'What real estate software solutions do you develop?',
-
-      answer:
-        'We develop property listing portals, real estate marketplaces, property management systems, CRM solutions, booking platforms, and analytics dashboards.',
-    },
-
-    {
-      question:
-        'Can you build a custom real estate marketplace?',
-
-      answer:
-        'Yes. We develop scalable real estate marketplaces that connect buyers, sellers, agents, brokers, and developers with advanced search and management capabilities.',
-    },
-
-    {
-      question:
-        'Do you integrate maps and property location services?',
-
-      answer:
-        'Yes. We integrate mapping solutions, geolocation services, property search tools, and location-based features to improve user experiences.',
-    },
-
-    {
-      question:
-        'Can you modernize our existing real estate platform?',
-
-      answer:
-        'Yes. We help real estate businesses upgrade legacy systems, improve performance, enhance security, and add modern digital capabilities.',
-    },
-
-    {
-      question:
-        'Do you provide ongoing support and maintenance?',
-
-      answer:
-        'Yes. We offer continuous monitoring, maintenance, feature enhancements, performance optimization, and technical support after deployment.',
-    },
-  ],
-
-  cta: {
-    title:
-      'Ready to Build Modern Real Estate Solutions?',
-
-    description:
-      'Partner with our experts to develop innovative real estate software that improves customer experiences, streamlines operations, and accelerates business growth.',
-
-    primaryButton: 'Start Your Project',
-
-    secondaryButton: 'Book Consultation',
-  },
-
-  seo: {
-    title:
-      'Real Estate Software Development Services | Ace Soft Solution',
-
-    description:
-      'Custom real estate software development services including property listing platforms, real estate marketplaces, property management systems, CRM solutions, booking systems, and analytics dashboards.',
-
-    keywords: [
-      'Real Estate Software Development',
-      'Property Management Software',
-      'Real Estate Marketplace Development',
-      'Property Listing Platform',
-      'Real Estate CRM',
-      'Property Booking System',
-      'PropTech Development',
-      'Real Estate App Development',
-    ],
-  },
-},
-
-logistics: {
-  slug: 'logistics',
-
-  title: 'Logistics & Supply Chain Software Development',
-
-  shortTitle: 'Logistics',
-
-  description:
-    'We help logistics companies, transportation providers, fleet operators, warehouses, freight forwarders, and supply chain businesses build intelligent digital solutions that improve visibility, optimize operations, and accelerate business growth.',
-
-  hero: {
-    badge: 'Logistics Industry',
-
-    title:
-      'Powering Logistics & Supply Chains Through Technology',
-
-    description:
-      'From fleet management systems and transportation platforms to warehouse automation and supply chain visibility solutions, we develop scalable software that improves efficiency, reduces costs, and enables real-time operational control.',
-
-    stats: [
+    faqs: [
       {
-        value: '100+',
-        label: 'Projects Delivered',
+        question:
+          "What travel and hospitality software solutions do you develop?",
+
+        answer:
+          "We develop hotel management systems, property management systems (PMS), online booking platforms, travel portals, hospitality CRM solutions, tour management software, guest engagement platforms, and travel mobile applications.",
       },
+
       {
-        value: '50+',
-        label: 'Clients Served',
+        question: "Can you integrate third-party booking and payment systems?",
+
+        answer:
+          "Yes. We integrate payment gateways, hotel channel managers, booking engines, travel APIs, maps, CRM systems, ERP platforms, and other third-party services to create a seamless digital ecosystem.",
       },
+
       {
-        value: '98%',
-        label: 'Client Retention',
+        question: "Do you build custom hotel and resort management software?",
+
+        answer:
+          "Absolutely. We develop customized hotel and resort management systems that simplify reservations, housekeeping, billing, guest services, reporting, and day-to-day operations.",
       },
+
       {
-        value: '24/7',
-        label: 'Support Available',
+        question: "Can you modernize our existing travel platform?",
+
+        answer:
+          "Yes. We modernize legacy travel software by improving performance, upgrading technology stacks, enhancing user experiences, migrating to the cloud, and adding modern digital capabilities.",
+      },
+
+      {
+        question: "Do you provide ongoing maintenance and support?",
+
+        answer:
+          "Yes. We offer long-term maintenance, feature enhancements, security updates, infrastructure monitoring, performance optimization, and dedicated technical support.",
       },
     ],
-  },
 
-  overview: {
-    title: 'Logistics Technology Expertise',
+    cta: {
+      title: "Build Next-Generation Travel & Hospitality Solutions",
+
+      description:
+        "Partner with Ace Soft Solution to develop secure, scalable, and customer-focused travel software that increases bookings, improves operational efficiency, and delivers exceptional guest experiences.",
+
+      primaryButton: "Start Your Travel Project",
+
+      secondaryButton: "Book a Consultation",
+    },
+
+    seo: {
+      title:
+        "Travel & Hospitality Software Development Company | Hotel & Travel Technology Solutions",
+
+      description:
+        "Ace Soft Solution develops custom travel and hospitality software including hotel management systems, property management software, booking platforms, travel portals, hospitality CRM, travel mobile apps, and guest engagement solutions.",
+
+      keywords: [
+        "Travel Software Development",
+        "Hospitality Software Development",
+        "Hotel Management System",
+        "Property Management System",
+        "Travel Portal Development",
+        "Online Booking Platform",
+        "Travel Mobile App Development",
+        "Hospitality CRM",
+        "Tour Management Software",
+        "Hotel Booking Software",
+        "Vacation Rental Software",
+        "Custom Travel Software",
+      ],
+    },
+  },
+  realEstate: {
+    slug: "real-estate",
+
+    title: "Real Estate Software Development Services",
+
+    shortTitle: "Real Estate",
 
     description:
-      'Modern logistics businesses face increasing demands for real-time tracking, operational efficiency, route optimization, warehouse automation, and supply chain transparency. Our logistics technology solutions help organizations streamline operations, improve customer experiences, and increase profitability.',
+      "We develop custom real estate software solutions for property developers, real estate agencies, brokers, property management companies, commercial real estate firms, and PropTech startups. Our digital platforms streamline property management, automate sales processes, and enhance buyer and tenant experiences.",
 
-    challenges: [
-      'Fleet Tracking & Monitoring',
-      'Route Optimization',
-      'Warehouse Management',
-      'Supply Chain Visibility',
-      'Delivery Management',
-      'Legacy System Modernization',
-    ],
+    hero: {
+      badge: "Real Estate Industry",
 
-    benefits: [
-      'Real-Time Operational Visibility',
-      'Reduced Transportation Costs',
-      'Improved Delivery Efficiency',
-      'Scalable Logistics Infrastructure',
-    ],
-  },
+      title: "Transforming Real Estate with Smart Digital Solutions",
 
-  solutions: [
-    {
-      title: 'Transportation Management Systems',
       description:
-        'Comprehensive logistics platforms that streamline transportation planning, execution, and performance monitoring.',
+        "From property listing platforms and CRM systems to property management software, real estate marketplaces, tenant portals, and AI-powered PropTech solutions, we build secure and scalable technology that drives efficiency and business growth.",
+
+      stats: [
+        {
+          value: "10+",
+          label: "Real Estate Solutions",
+        },
+        {
+          value: "99.9%",
+          label: "Platform Availability",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
+        },
+      ],
     },
 
-    {
-      title: 'Fleet Management Solutions',
+    overview: {
+      title: "Accelerating Digital Transformation in Real Estate",
+
       description:
-        'Real-time fleet tracking, vehicle monitoring, maintenance scheduling, and driver management systems.',
+        "Today's real estate businesses require digital platforms that simplify property management, improve customer engagement, streamline transactions, and provide real-time insights. We build modern real estate software that helps organizations automate operations, increase sales, and deliver exceptional customer experiences.",
+
+      challenges: [
+        "Property Listing Management",
+        "Lead & Customer Management",
+        "Property Maintenance",
+        "Tenant & Lease Management",
+        "Document & Contract Management",
+        "Sales & Operational Efficiency",
+      ],
+
+      benefits: [
+        "Faster Property Sales",
+        "Improved Customer Experience",
+        "Automated Business Operations",
+        "Scalable PropTech Infrastructure",
+      ],
     },
 
-    {
-      title: 'Warehouse Management Systems',
-      description:
-        'Intelligent warehouse solutions that optimize inventory, storage, picking, packing, and fulfillment operations.',
-    },
-
-    {
-      title: 'Supply Chain Visibility Platforms',
-      description:
-        'End-to-end supply chain monitoring systems that provide real-time visibility and actionable insights.',
-    },
-
-    {
-      title: 'Last-Mile Delivery Solutions',
-      description:
-        'Delivery management platforms with route optimization, live tracking, proof of delivery, and customer notifications.',
-    },
-
-    {
-      title: 'Logistics Analytics & Reporting',
-      description:
-        'Advanced dashboards and reporting tools that help organizations optimize operations and make data-driven decisions.',
-    },
-  ],
-
-  technologies: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'NestJS',
-    'MongoDB',
-    'PostgreSQL',
-    'Redis',
-    'AWS',
-    'Google Maps API',
-    'Docker',
-    'Kubernetes',
-  ],
-
-  process: [
-    {
-      title: 'Discovery',
-      description:
-        'Understanding logistics workflows, operational challenges, transportation processes, and business objectives.',
-    },
-
-    {
-      title: 'Strategy',
-      description:
-        'Defining platform architecture, integrations, automation opportunities, and scalability requirements.',
-    },
-
-    {
-      title: 'UI/UX Design',
-      description:
-        'Designing intuitive dashboards and operational interfaces for logistics teams, managers, and customers.',
-    },
-
-    {
-      title: 'Development',
-      description:
-        'Building secure, scalable, and high-performance logistics software solutions tailored to business needs.',
-    },
-
-    {
-      title: 'Testing & Optimization',
-      description:
-        'Ensuring system reliability, operational efficiency, performance, and seamless user experiences.',
-    },
-
-    {
-      title: 'Deployment & Support',
-      description:
-        'Launching, monitoring, maintaining, and continuously optimizing logistics technology platforms.',
-    },
-  ],
-
-  faqs: [
-    {
-      question:
-        'What logistics software solutions do you develop?',
-
-      answer:
-        'We develop transportation management systems, fleet management platforms, warehouse management software, supply chain visibility solutions, delivery management systems, and logistics analytics dashboards.',
-    },
-
-    {
-      question:
-        'Can you build fleet tracking and route optimization solutions?',
-
-      answer:
-        'Yes. We develop GPS-enabled fleet management and route optimization systems that improve operational efficiency and reduce transportation costs.',
-    },
-
-    {
-      question:
-        'Do you develop warehouse management systems?',
-
-      answer:
-        'Yes. We build warehouse management solutions that improve inventory control, order fulfillment, storage management, and operational productivity.',
-    },
-
-    {
-      question:
-        'Can you integrate third-party logistics and tracking systems?',
-
-      answer:
-        'Yes. We integrate logistics platforms with ERP systems, GPS providers, shipment tracking services, warehouse solutions, and third-party APIs.',
-    },
-
-    {
-      question:
-        'Do you provide ongoing support and maintenance?',
-
-      answer:
-        'Yes. We offer continuous monitoring, maintenance, feature enhancements, performance optimization, and technical support after deployment.',
-    },
-  ],
-
-  cta: {
-    title:
-      'Ready to Optimize Your Logistics Operations?',
-
-    description:
-      'Partner with our experts to build intelligent logistics and supply chain solutions that improve visibility, streamline operations, and drive long-term business growth.',
-
-    primaryButton: 'Start Your Project',
-
-    secondaryButton: 'Book Consultation',
-  },
-
-  seo: {
-    title:
-      'Logistics Software Development Services | Ace Soft Solution',
-
-    description:
-      'Custom logistics software development services including transportation management systems, fleet management solutions, warehouse management software, supply chain visibility platforms, delivery tracking systems, and logistics analytics.',
-
-    keywords: [
-      'Logistics Software Development',
-      'Transportation Management System',
-      'Fleet Management Software',
-      'Warehouse Management System',
-      'Supply Chain Software',
-      'Delivery Management Platform',
-      'Logistics App Development',
-      'Supply Chain Visibility Solution',
-    ],
-  },
-}, 
-
-automotive: {
-  slug: 'automotive',
-
-  title: 'Automotive Software Development',
-
-  shortTitle: 'Automotive',
-
-  description:
-    'We help automotive manufacturers, dealerships, fleet operators, mobility startups, auto service providers, and automotive technology companies build innovative digital solutions that improve operational efficiency, enhance customer experiences, and accelerate business growth.',
-
-  hero: {
-    badge: 'Automotive Industry',
-
-    title:
-      'Driving Automotive Innovation Through Technology',
-
-    description:
-      'From connected vehicle platforms and dealership management systems to fleet management and automotive eCommerce solutions, we develop scalable software that helps automotive businesses modernize operations and deliver exceptional customer experiences.',
-
-    stats: [
+    solutions: [
       {
-        value: '100+',
-        label: 'Projects Delivered',
+        title: "Property Listing Platforms",
+        description:
+          "Custom real estate portals with advanced property search, filters, maps, media galleries, and inquiry management.",
       },
+
       {
-        value: '50+',
-        label: 'Clients Served',
+        title: "Real Estate CRM",
+        description:
+          "CRM solutions for managing leads, property inquiries, client communication, sales pipelines, and follow-ups.",
       },
+
       {
-        value: '98%',
-        label: 'Client Retention',
+        title: "Property Management Software",
+        description:
+          "Comprehensive property management systems for residential, commercial, and rental properties with maintenance and financial tracking.",
       },
+
       {
-        value: '24/7',
-        label: 'Support Available',
+        title: "Tenant & Owner Portals",
+        description:
+          "Secure self-service portals for tenants and property owners to manage payments, maintenance requests, leases, and documents.",
+      },
+
+      {
+        title: "Real Estate Mobile Applications",
+        description:
+          "Android and iOS applications for property browsing, virtual tours, booking site visits, customer engagement, and notifications.",
+      },
+
+      {
+        title: "Real Estate Marketplace Development",
+        description:
+          "Scalable property marketplace platforms connecting buyers, sellers, brokers, developers, and agents in one ecosystem.",
+      },
+
+      {
+        title: "Lease & Document Management",
+        description:
+          "Digital document management solutions for contracts, agreements, approvals, renewals, and secure document storage.",
+      },
+
+      {
+        title: "Real Estate Analytics & Reporting",
+        description:
+          "Business intelligence dashboards with sales reports, occupancy insights, property performance, and revenue analytics.",
       },
     ],
-  },
 
-  overview: {
-    title: 'Automotive Technology Expertise',
-
-    description:
-      'The automotive industry is rapidly evolving with connected vehicles, digital retail experiences, fleet optimization, predictive maintenance, and mobility services. Our automotive software solutions help organizations improve efficiency, enhance customer engagement, and embrace digital transformation.',
-
-    challenges: [
-      'Connected Vehicle Management',
-      'Fleet Operations Optimization',
-      'Dealership Process Automation',
-      'Vehicle Maintenance Tracking',
-      'Customer Experience Enhancement',
-      'Legacy System Modernization',
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+      "Docker",
+      "Google Maps API",
+      "Cloudinary",
     ],
 
-    benefits: [
-      'Improved Operational Efficiency',
-      'Enhanced Customer Engagement',
-      'Real-Time Vehicle Insights',
-      'Scalable Automotive Infrastructure',
-    ],
-  },
-
-  solutions: [
-    {
-      title: 'Dealership Management Systems',
-      description:
-        'Comprehensive dealership platforms that streamline vehicle inventory, sales, service scheduling, customer management, and reporting.',
-    },
-
-    {
-      title: 'Fleet Management Solutions',
-      description:
-        'Real-time fleet tracking, vehicle monitoring, route management, maintenance scheduling, and performance analytics.',
-    },
-
-    {
-      title: 'Connected Vehicle Platforms',
-      description:
-        'IoT-enabled solutions that provide real-time vehicle diagnostics, tracking, telematics, and driver insights.',
-    },
-
-    {
-      title: 'Automotive eCommerce Platforms',
-      description:
-        'Online vehicle marketplaces and automotive commerce solutions that improve customer acquisition and sales processes.',
-    },
-
-    {
-      title: 'Vehicle Service & Maintenance Systems',
-      description:
-        'Digital platforms for service scheduling, maintenance tracking, repair management, and customer communication.',
-    },
-
-    {
-      title: 'Automotive Analytics & Reporting',
-      description:
-        'Advanced dashboards and reporting systems that provide actionable insights into vehicle performance and business operations.',
-    },
-  ],
-
-  technologies: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'NestJS',
-    'MongoDB',
-    'PostgreSQL',
-    'Redis',
-    'AWS',
-    'IoT Platforms',
-    'Docker',
-    'Kubernetes',
-  ],
-
-  process: [
-    {
-      title: 'Discovery',
-      description:
-        'Understanding automotive workflows, mobility challenges, operational requirements, and business objectives.',
-    },
-
-    {
-      title: 'Strategy',
-      description:
-        'Defining technology architecture, integration requirements, automation opportunities, and implementation roadmap.',
-    },
-
-    {
-      title: 'UI/UX Design',
-      description:
-        'Designing intuitive digital experiences for dealerships, fleet managers, service teams, and customers.',
-    },
-
-    {
-      title: 'Development',
-      description:
-        'Building secure, scalable, and high-performance automotive software solutions tailored to industry requirements.',
-    },
-
-    {
-      title: 'Testing & Optimization',
-      description:
-        'Ensuring reliability, performance, security, and seamless experiences across automotive platforms.',
-    },
-
-    {
-      title: 'Deployment & Support',
-      description:
-        'Launching, monitoring, maintaining, and continuously optimizing automotive technology solutions.',
-    },
-  ],
-
-  faqs: [
-    {
-      question:
-        'What automotive software solutions do you develop?',
-
-      answer:
-        'We develop dealership management systems, fleet management platforms, connected vehicle solutions, automotive eCommerce platforms, vehicle service management systems, and analytics dashboards.',
-    },
-
-    {
-      question:
-        'Can you build fleet tracking and vehicle monitoring systems?',
-
-      answer:
-        'Yes. We develop real-time fleet tracking and telematics solutions that improve operational visibility, efficiency, and vehicle performance monitoring.',
-    },
-
-    {
-      question:
-        'Do you create dealership management platforms?',
-
-      answer:
-        'Yes. We build dealership software that streamlines inventory management, sales processes, service operations, customer management, and reporting.',
-    },
-
-    {
-      question:
-        'Can you integrate automotive platforms with third-party systems?',
-
-      answer:
-        'Yes. We integrate automotive applications with ERP systems, CRM platforms, telematics providers, inventory systems, payment gateways, and external APIs.',
-    },
-
-    {
-      question:
-        'Do you provide ongoing support and maintenance?',
-
-      answer:
-        'Yes. We offer continuous monitoring, maintenance, feature enhancements, performance optimization, and technical support after deployment.',
-    },
-  ],
-
-  cta: {
-    title:
-      'Ready to Accelerate Automotive Innovation?',
-
-    description:
-      'Partner with our experts to build modern automotive software solutions that improve efficiency, enhance customer experiences, and drive sustainable business growth.',
-
-    primaryButton: 'Start Your Project',
-
-    secondaryButton: 'Book Consultation',
-  },
-
-  seo: {
-    title:
-      'Automotive Software Development Services | Ace Soft Solution',
-
-    description:
-      'Custom automotive software development services including dealership management systems, fleet management solutions, connected vehicle platforms, automotive eCommerce systems, maintenance software, and automotive analytics.',
-
-    keywords: [
-      'Automotive Software Development',
-      'Fleet Management Software',
-      'Dealership Management System',
-      'Connected Vehicle Platform',
-      'Automotive App Development',
-      'Vehicle Tracking Software',
-      'Automotive eCommerce Platform',
-      'Automotive Technology Solutions',
-    ],
-  },
-}, 
-
-onDemand: {
-  slug: 'on-demand',
-
-  title: 'On-Demand App Development',
-
-  shortTitle: 'On-Demand',
-
-  description:
-    'We help startups, enterprises, aggregators, and service-based businesses build scalable on-demand platforms that connect customers, service providers, and administrators through seamless digital experiences.',
-
-  hero: {
-    badge: 'On-Demand Industry',
-
-    title:
-      'Building Next-Generation On-Demand Digital Platforms',
-
-    description:
-      'From ride-sharing and food delivery applications to home services and multi-service marketplaces, we develop scalable on-demand solutions that streamline operations, enhance customer experiences, and accelerate business growth.',
-
-    stats: [
+    process: [
       {
-        value: '100+',
-        label: 'Projects Delivered',
+        title: "Business Discovery",
+        description:
+          "Understanding your property portfolio, workflows, customer journey, and operational goals.",
       },
+
       {
-        value: '50+',
-        label: 'Clients Served',
+        title: "Solution Architecture",
+        description:
+          "Designing secure, scalable, and cloud-ready software architecture tailored to your real estate business.",
       },
+
       {
-        value: '98%',
-        label: 'Client Retention',
+        title: "UI/UX Design",
+        description:
+          "Creating intuitive digital experiences that simplify property discovery and improve customer engagement.",
       },
+
       {
-        value: '24/7',
-        label: 'Support Available',
+        title: "Custom Development",
+        description:
+          "Building high-performance real estate applications with powerful integrations and automation capabilities.",
+      },
+
+      {
+        title: "Testing & Quality Assurance",
+        description:
+          "Ensuring reliability, security, performance, and seamless functionality across all devices and platforms.",
+      },
+
+      {
+        title: "Deployment & Continuous Support",
+        description:
+          "Launching, maintaining, monitoring, and continuously improving your real estate software solution.",
       },
     ],
-  },
 
-  overview: {
-    title: 'On-Demand Platform Development Expertise',
-
-    description:
-      'Modern consumers expect instant access to products and services. On-demand businesses require robust technology platforms that manage customer requests, service providers, payments, tracking, and operations efficiently. Our solutions help businesses launch, scale, and optimize on-demand marketplaces successfully.',
-
-    challenges: [
-      'Real-Time Service Matching',
-      'Order & Booking Management',
-      'Provider Management',
-      'Location Tracking',
-      'Scalable Platform Architecture',
-      'Customer Retention & Engagement',
-    ],
-
-    benefits: [
-      'Faster Service Delivery',
-      'Improved Customer Experience',
-      'Operational Automation',
-      'Scalable Marketplace Infrastructure',
-    ],
-  },
-
-  solutions: [
-    {
-      title: 'Multi-Service Marketplace Platforms',
-      description:
-        'Comprehensive marketplace solutions that connect customers with service providers through a centralized digital platform.',
-    },
-
-    {
-      title: 'Food Delivery Applications',
-      description:
-        'On-demand food ordering and delivery platforms with real-time tracking, payments, and restaurant management features.',
-    },
-
-    {
-      title: 'Home Service Platforms',
-      description:
-        'Applications that connect customers with service professionals for cleaning, repairs, maintenance, and home improvement services.',
-    },
-
-    {
-      title: 'Ride-Hailing Applications',
-      description:
-        'Scalable transportation and mobility platforms with driver management, route tracking, and fare calculation capabilities.',
-    },
-
-    {
-      title: 'Appointment & Booking Systems',
-      description:
-        'Real-time booking platforms for healthcare, beauty, fitness, education, and professional services.',
-    },
-
-    {
-      title: 'Delivery & Logistics Applications',
-      description:
-        'On-demand delivery management solutions with dispatching, route optimization, and live order tracking.',
-    },
-  ],
-
-  technologies: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'React Native',
-    'Node.js',
-    'NestJS',
-    'MongoDB',
-    'PostgreSQL',
-    'Redis',
-    'AWS',
-    'Google Maps API',
-    'Docker',
-    'Kubernetes',
-  ],
-
-  process: [
-    {
-      title: 'Discovery',
-      description:
-        'Understanding business models, customer journeys, operational workflows, and marketplace requirements.',
-    },
-
-    {
-      title: 'Strategy',
-      description:
-        'Defining platform architecture, scalability requirements, user roles, and business workflows.',
-    },
-
-    {
-      title: 'UI/UX Design',
-      description:
-        'Designing intuitive experiences for customers, service providers, and administrators.',
-    },
-
-    {
-      title: 'Development',
-      description:
-        'Building secure, scalable, and real-time on-demand platforms tailored to business requirements.',
-    },
-
-    {
-      title: 'Testing & Optimization',
-      description:
-        'Ensuring platform reliability, performance, security, and seamless user experiences.',
-    },
-
-    {
-      title: 'Deployment & Growth',
-      description:
-        'Launching, monitoring, optimizing, and scaling on-demand applications for long-term success.',
-    },
-  ],
-
-  faqs: [
-    {
-      question:
-        'What types of on-demand applications do you develop?',
-
-      answer:
-        'We develop food delivery apps, ride-hailing platforms, home service marketplaces, appointment booking systems, logistics applications, and multi-service marketplace solutions.',
-    },
-
-    {
-      question:
-        'Can you build apps similar to Uber, Zomato, Swiggy, or Urban Company?',
-
-      answer:
-        'Yes. We develop custom on-demand platforms with customer apps, provider apps, admin dashboards, payments, tracking, and advanced marketplace features.',
-    },
-
-    {
-      question:
-        'Do you develop mobile apps for both Android and iOS?',
-
-      answer:
-        'Yes. We build cross-platform and native mobile applications that deliver seamless experiences across Android and iOS devices.',
-    },
-
-    {
-      question:
-        'Can you integrate payment gateways and location tracking?',
-
-      answer:
-        'Yes. We integrate payment gateways, GPS tracking, maps, notifications, messaging systems, and third-party APIs into on-demand platforms.',
-    },
-
-    {
-      question:
-        'Do you provide support after launch?',
-
-      answer:
-        'Yes. We offer ongoing maintenance, performance optimization, monitoring, feature enhancements, and technical support after deployment.',
-    },
-  ],
-
-  cta: {
-    title:
-      'Ready to Launch Your On-Demand Platform?',
-
-    description:
-      'Partner with our experts to build scalable on-demand applications that connect users, automate operations, and create exceptional customer experiences.',
-
-    primaryButton: 'Start Your Project',
-
-    secondaryButton: 'Book Consultation',
-  },
-
-  seo: {
-    title:
-      'On-Demand App Development Services | Ace Soft Solution',
-
-    description:
-      'Custom on-demand app development services including food delivery apps, ride-hailing platforms, home service marketplaces, booking systems, logistics applications, and multi-service marketplace solutions.',
-
-    keywords: [
-      'On-Demand App Development',
-      'Marketplace App Development',
-      'Food Delivery App Development',
-      'Ride Sharing App Development',
-      'Booking App Development',
-      'Service Marketplace Development',
-      'Uber Like App Development',
-      'On-Demand Platform Development',
-    ],
-  },
-}, 
-
-enterprise: {
-  slug: 'enterprise',
-
-  title: 'Enterprise Software Development',
-
-  shortTitle: 'Enterprise',
-
-  description:
-    'We help enterprises, large organizations, and growing businesses build scalable software solutions that streamline operations, improve productivity, enhance customer experiences, and accelerate digital transformation initiatives.',
-
-  hero: {
-    badge: 'Enterprise Industry',
-
-    title:
-      'Empowering Enterprises Through Digital Transformation',
-
-    description:
-      'From enterprise applications and workflow automation to ERP systems and cloud modernization, we develop scalable software solutions that help organizations improve efficiency, drive innovation, and achieve sustainable growth.',
-
-    stats: [
+    faqs: [
       {
-        value: '100+',
-        label: 'Projects Delivered',
+        question: "What real estate software solutions do you develop?",
+
+        answer:
+          "We develop property listing platforms, real estate CRM systems, property management software, tenant portals, owner portals, real estate marketplaces, mobile applications, and custom PropTech solutions.",
       },
+
       {
-        value: '50+',
-        label: 'Clients Served',
+        question:
+          "Can you integrate maps, payment gateways, and third-party services?",
+
+        answer:
+          "Yes. We integrate Google Maps, payment gateways, CRM platforms, ERP systems, document management solutions, marketing tools, and other third-party APIs based on your business needs.",
       },
+
       {
-        value: '98%',
-        label: 'Client Retention',
+        question: "Do you build software for property management companies?",
+
+        answer:
+          "Absolutely. We develop complete property management software for residential, commercial, rental, and mixed-use properties with lease management, maintenance tracking, accounting, and reporting features.",
       },
+
       {
-        value: '24/7',
-        label: 'Support Available',
+        question: "Can you modernize our existing real estate platform?",
+
+        answer:
+          "Yes. We modernize legacy real estate software by upgrading technologies, improving performance, enhancing security, migrating to the cloud, and implementing modern user experiences.",
+      },
+
+      {
+        question: "Do you provide maintenance and long-term technical support?",
+
+        answer:
+          "Yes. We offer continuous maintenance, cloud management, security updates, performance optimization, feature enhancements, and dedicated technical support after deployment.",
       },
     ],
+
+    cta: {
+      title: "Build Smarter Real Estate Solutions",
+
+      description:
+        "Partner with Ace Soft Solution to develop secure, scalable, and innovative real estate software that streamlines operations, improves customer experiences, and accelerates business growth.",
+
+      primaryButton: "Start Your Real Estate Project",
+
+      secondaryButton: "Book a Consultation",
+    },
+
+    seo: {
+      title:
+        "Real Estate Software Development Company | Custom PropTech Solutions",
+
+      description:
+        "Ace Soft Solution provides custom real estate software development services including property management software, real estate CRM, property listing platforms, tenant portals, PropTech solutions, real estate mobile apps, and marketplace development.",
+
+      keywords: [
+        "Real Estate Software Development",
+        "PropTech Development",
+        "Property Management Software",
+        "Real Estate CRM",
+        "Property Listing Platform",
+        "Real Estate Marketplace Development",
+        "Tenant Portal Development",
+        "Property Management System",
+        "Real Estate Mobile App Development",
+        "Commercial Real Estate Software",
+        "Real Estate ERP",
+        "Custom Real Estate Software",
+      ],
+    },
   },
 
-  overview: {
-    title: 'Enterprise Technology Expertise',
+  logistics: {
+    slug: "logistics",
+
+    title: "Logistics & Supply Chain Software Development Services",
+
+    shortTitle: "Logistics",
 
     description:
-      'Modern enterprises face increasing challenges around operational efficiency, system integration, data management, security, and scalability. Our enterprise technology solutions help organizations modernize infrastructure, automate processes, and create connected digital ecosystems that drive business success.',
+      "We develop intelligent logistics and supply chain software solutions for logistics companies, freight forwarders, transportation providers, warehouses, distributors, manufacturers, and third-party logistics (3PL) businesses. Our solutions optimize operations, improve visibility, and streamline end-to-end supply chain management.",
 
-    challenges: [
-      'Legacy System Modernization',
-      'Business Process Automation',
-      'Enterprise Data Management',
-      'Cross-System Integration',
-      'Operational Scalability',
-      'Security & Compliance',
-    ],
+    hero: {
+      badge: "Logistics & Supply Chain Industry",
 
-    benefits: [
-      'Improved Business Efficiency',
-      'Reduced Operational Costs',
-      'Enhanced Productivity',
-      'Scalable Enterprise Infrastructure',
-    ],
-  },
+      title: "Driving Smarter Logistics with Intelligent Digital Solutions",
 
-  solutions: [
-    {
-      title: 'Enterprise Resource Planning (ERP)',
       description:
-        'Custom ERP solutions that unify operations, finance, HR, inventory, and business processes into a centralized platform.',
+        "From transportation management systems and warehouse management software to fleet tracking, shipment monitoring, supply chain automation, and logistics analytics, we build secure and scalable solutions that improve efficiency and reduce operational costs.",
+
+      stats: [
+        {
+          value: "10+",
+          label: "Logistics Solutions",
+        },
+        {
+          value: "99.9%",
+          label: "Platform Availability",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
+        },
+      ],
     },
 
-    {
-      title: 'Business Process Automation',
+    overview: {
+      title: "Digital Transformation for Modern Logistics",
+
       description:
-        'Workflow automation systems that eliminate manual tasks, improve efficiency, and increase organizational productivity.',
+        "Modern logistics businesses require real-time visibility, automated workflows, and intelligent decision-making to remain competitive. We build custom logistics software that streamlines transportation, warehouse operations, inventory management, fleet monitoring, and supply chain collaboration.",
+
+      challenges: [
+        "Shipment Tracking",
+        "Fleet Management",
+        "Warehouse Operations",
+        "Inventory Visibility",
+        "Route Optimization",
+        "Supply Chain Coordination",
+      ],
+
+      benefits: [
+        "Improved Operational Efficiency",
+        "Real-Time Supply Chain Visibility",
+        "Reduced Transportation Costs",
+        "Scalable Logistics Infrastructure",
+      ],
     },
 
-    {
-      title: 'Enterprise Application Development',
-      description:
-        'Scalable enterprise-grade applications designed to support complex business operations and long-term growth.',
-    },
-
-    {
-      title: 'CRM & Customer Management Systems',
-      description:
-        'Customer relationship management solutions that improve engagement, sales processes, and customer retention.',
-    },
-
-    {
-      title: 'Enterprise Data & Analytics Platforms',
-      description:
-        'Business intelligence and analytics solutions that transform enterprise data into actionable insights.',
-    },
-
-    {
-      title: 'Cloud Modernization Solutions',
-      description:
-        'Cloud-native platforms and migration services that improve scalability, performance, and operational agility.',
-    },
-  ],
-
-  technologies: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'NestJS',
-    '.NET',
-    'Java',
-    'PostgreSQL',
-    'MongoDB',
-    'AWS',
-    'Azure',
-    'Docker',
-    'Kubernetes',
-  ],
-
-  process: [
-    {
-      title: 'Discovery',
-      description:
-        'Analyzing business goals, operational workflows, existing systems, and enterprise requirements.',
-    },
-
-    {
-      title: 'Strategy',
-      description:
-        'Defining architecture, integration strategy, automation opportunities, and implementation roadmap.',
-    },
-
-    {
-      title: 'UI/UX Design',
-      description:
-        'Creating intuitive user experiences that improve adoption, productivity, and business outcomes.',
-    },
-
-    {
-      title: 'Development',
-      description:
-        'Building secure, scalable, and enterprise-grade applications tailored to organizational needs.',
-    },
-
-    {
-      title: 'Testing & Quality Assurance',
-      description:
-        'Ensuring performance, security, reliability, and compliance through comprehensive testing processes.',
-    },
-
-    {
-      title: 'Deployment & Continuous Improvement',
-      description:
-        'Launching, monitoring, maintaining, and continuously optimizing enterprise solutions.',
-    },
-  ],
-
-  faqs: [
-    {
-      question:
-        'What enterprise software solutions do you develop?',
-
-      answer:
-        'We develop ERP systems, CRM platforms, workflow automation solutions, enterprise applications, analytics platforms, and cloud-based business systems.',
-    },
-
-    {
-      question:
-        'Can you modernize our legacy enterprise systems?',
-
-      answer:
-        'Yes. We help organizations modernize outdated systems, migrate to cloud environments, improve performance, and enhance scalability.',
-    },
-
-    {
-      question:
-        'Do you provide enterprise system integrations?',
-
-      answer:
-        'Yes. We integrate enterprise applications with ERP, CRM, HRMS, finance systems, third-party APIs, and existing business platforms.',
-    },
-
-    {
-      question:
-        'How do you ensure enterprise-grade security?',
-
-      answer:
-        'We implement secure development practices, role-based access controls, data encryption, monitoring, auditing, and compliance-focused architectures.',
-    },
-
-    {
-      question:
-        'Do you provide long-term support and maintenance?',
-
-      answer:
-        'Yes. We offer ongoing maintenance, monitoring, performance optimization, feature enhancements, and technical support for enterprise applications.',
-    },
-  ],
-
-  cta: {
-    title:
-      'Ready to Modernize Your Enterprise Systems?',
-
-    description:
-      'Partner with our enterprise technology experts to build scalable, secure, and future-ready software solutions that improve efficiency, accelerate innovation, and drive business growth.',
-
-    primaryButton: 'Start Your Project',
-
-    secondaryButton: 'Book Consultation',
-  },
-
-  seo: {
-    title:
-      'Enterprise Software Development Services | Ace Soft Solution',
-
-    description:
-      'Custom enterprise software development services including ERP systems, CRM platforms, workflow automation, enterprise applications, cloud modernization, and business intelligence solutions.',
-
-    keywords: [
-      'Enterprise Software Development',
-      'ERP Development',
-      'CRM Development',
-      'Business Process Automation',
-      'Enterprise Application Development',
-      'Cloud Modernization',
-      'Business Intelligence Solutions',
-      'Enterprise Digital Transformation',
-    ],
-  },
-}, 
-
-startups: {
-  slug: 'startups',
-
-  title: 'Startup Software Development',
-
-  shortTitle: 'Startups',
-
-  description:
-    'We help startups, founders, entrepreneurs, and fast-growing businesses transform ideas into scalable digital products. From MVP development to product scaling, we provide technology solutions that accelerate growth, reduce time-to-market, and support long-term success.',
-
-  hero: {
-    badge: 'Startup Industry',
-
-    title:
-      'Helping Startups Build, Launch & Scale Faster',
-
-    description:
-      'From MVP development and product validation to SaaS platforms and scalable applications, we help startups transform innovative ideas into successful digital products that attract users, investors, and market opportunities.',
-
-    stats: [
+    solutions: [
       {
-        value: '100+',
-        label: 'Projects Delivered',
+        title: "Transportation Management Systems (TMS)",
+        description:
+          "End-to-end transportation management software for shipment planning, carrier management, route optimization, freight tracking, and delivery management.",
       },
+
       {
-        value: '50+',
-        label: 'Clients Served',
+        title: "Warehouse Management Systems (WMS)",
+        description:
+          "Warehouse software for inventory control, barcode scanning, order picking, packing, stock movement, and warehouse automation.",
       },
+
       {
-        value: '98%',
-        label: 'Client Retention',
+        title: "Fleet Management Solutions",
+        description:
+          "Fleet tracking software with GPS monitoring, vehicle maintenance scheduling, fuel management, driver monitoring, and route optimization.",
       },
+
       {
-        value: '24/7',
-        label: 'Support Available',
+        title: "Shipment Tracking Platforms",
+        description:
+          "Real-time shipment tracking systems providing live location updates, delivery status, notifications, and proof of delivery.",
+      },
+
+      {
+        title: "Inventory Management Software",
+        description:
+          "Centralized inventory management solutions with real-time stock visibility, replenishment automation, forecasting, and warehouse synchronization.",
+      },
+
+      {
+        title: "Supply Chain Management Solutions",
+        description:
+          "Integrated supply chain software connecting suppliers, manufacturers, distributors, warehouses, and customers through a unified platform.",
+      },
+
+      {
+        title: "Logistics Customer Portals",
+        description:
+          "Self-service customer portals for shipment booking, tracking, invoices, documentation, delivery history, and customer support.",
+      },
+
+      {
+        title: "Logistics Analytics & Reporting",
+        description:
+          "Interactive dashboards with transportation analytics, warehouse KPIs, delivery performance, fleet utilization, and operational insights.",
       },
     ],
-  },
 
-  overview: {
-    title: 'Startup Product Development Expertise',
-
-    description:
-      'Startups face unique challenges including limited resources, rapid market changes, product validation, and scaling demands. Our startup-focused development services help founders build lean, scalable, and investor-ready products that accelerate growth and minimize development risks.',
-
-    challenges: [
-      'MVP Development',
-      'Product Validation',
-      'Rapid Time-to-Market',
-      'Limited Development Resources',
-      'Scalability Planning',
-      'Technology Decision Making',
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Python",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+      "Docker",
+      "Google Maps API",
     ],
 
-    benefits: [
-      'Faster Product Launch',
-      'Reduced Development Costs',
-      'Scalable Product Architecture',
-      'Accelerated Business Growth',
-    ],
-  },
-
-  solutions: [
-    {
-      title: 'MVP Development',
-      description:
-        'Rapid development of minimum viable products that help startups validate ideas, attract users, and secure investor interest.',
-    },
-
-    {
-      title: 'SaaS Product Development',
-      description:
-        'Scalable software-as-a-service platforms designed to support subscription-based business models and long-term growth.',
-    },
-
-    {
-      title: 'Web Application Development',
-      description:
-        'Modern web applications built with scalable architecture, high performance, and exceptional user experiences.',
-    },
-
-    {
-      title: 'Mobile App Development',
-      description:
-        'Cross-platform and native mobile applications that help startups reach customers across Android and iOS devices.',
-    },
-
-    {
-      title: 'Product Modernization & Scaling',
-      description:
-        'Enhancement and scaling services for growing startups looking to improve performance, features, and infrastructure.',
-    },
-
-    {
-      title: 'Startup Technology Consulting',
-      description:
-        'Strategic technology guidance covering architecture, product planning, technology selection, and growth strategies.',
-    },
-  ],
-
-  technologies: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'React Native',
-    'Node.js',
-    'NestJS',
-    'MongoDB',
-    'PostgreSQL',
-    'Firebase',
-    'AWS',
-    'Docker',
-    'Kubernetes',
-  ],
-
-  process: [
-    {
-      title: 'Product Discovery',
-      description:
-        'Understanding your business vision, target audience, market opportunities, and product requirements.',
-    },
-
-    {
-      title: 'Strategy & Planning',
-      description:
-        'Defining product roadmap, feature prioritization, architecture, and go-to-market strategy.',
-    },
-
-    {
-      title: 'UI/UX Design',
-      description:
-        'Creating intuitive and engaging user experiences that improve adoption and customer satisfaction.',
-    },
-
-    {
-      title: 'Agile Development',
-      description:
-        'Building scalable digital products using agile methodologies for faster iterations and delivery.',
-    },
-
-    {
-      title: 'Testing & Launch',
-      description:
-        'Ensuring quality, performance, security, and reliability before launching to users.',
-    },
-
-    {
-      title: 'Growth & Scaling',
-      description:
-        'Supporting product evolution, infrastructure scaling, feature enhancements, and continuous optimization.',
-    },
-  ],
-
-  faqs: [
-    {
-      question:
-        'Do you help startups build MVPs?',
-
-      answer:
-        'Yes. We specialize in MVP development that helps startups validate ideas, gather user feedback, and launch products quickly while minimizing costs and risks.',
-    },
-
-    {
-      question:
-        'Can you help scale our product after launch?',
-
-      answer:
-        'Absolutely. We help startups optimize infrastructure, improve performance, add new features, and scale applications as user demand grows.',
-    },
-
-    {
-      question:
-        'Do you provide product strategy and consulting?',
-
-      answer:
-        'Yes. Our team assists with product planning, technology selection, architecture decisions, feature prioritization, and growth strategies.',
-    },
-
-    {
-      question:
-        'Can you build SaaS platforms for startups?',
-
-      answer:
-        'Yes. We develop secure, scalable SaaS applications that support subscription models, multi-tenancy, and long-term business growth.',
-    },
-
-    {
-      question:
-        'Do you provide ongoing support after launch?',
-
-      answer:
-        'Yes. We offer continuous maintenance, monitoring, feature enhancements, technical support, and product optimization services.',
-    },
-  ],
-
-  cta: {
-    title:
-      'Ready to Turn Your Startup Idea Into Reality?',
-
-    description:
-      'Partner with our startup development experts to build scalable products, validate ideas faster, and accelerate your journey from concept to successful business.',
-
-    primaryButton: 'Start Your Project',
-
-    secondaryButton: 'Book Consultation',
-  },
-
-  seo: {
-    title:
-      'Startup Software Development Services | Ace Soft Solution',
-
-    description:
-      'Custom startup software development services including MVP development, SaaS platforms, mobile apps, web applications, product scaling, and startup technology consulting.',
-
-    keywords: [
-      'Startup Software Development',
-      'MVP Development',
-      'Startup App Development',
-      'SaaS Development',
-      'Product Development for Startups',
-      'Startup Technology Consulting',
-      'Startup Web Development',
-      'Startup Mobile App Development',
-    ],
-  },
-}, 
-
-government: {
-  slug: 'government',
-
-  title: 'Government Software Development',
-
-  shortTitle: 'Government',
-
-  description:
-    'We help government agencies, public sector organizations, municipalities, departments, and civic institutions build secure, scalable, and citizen-centric digital solutions that improve service delivery, operational efficiency, transparency, and public engagement.',
-
-  hero: {
-    badge: 'Government Industry',
-
-    title:
-      'Accelerating Digital Transformation for Public Services',
-
-    description:
-      'From citizen service portals and eGovernance platforms to workflow automation and public sector management systems, we develop secure digital solutions that modernize government operations and improve citizen experiences.',
-
-    stats: [
+    process: [
       {
-        value: '100+',
-        label: 'Projects Delivered',
+        title: "Business Discovery",
+        description:
+          "Understanding your logistics operations, supply chain workflows, transportation processes, and business objectives.",
       },
+
       {
-        value: '50+',
-        label: 'Clients Served',
+        title: "Solution Architecture",
+        description:
+          "Designing scalable, cloud-native software architecture with seamless integrations and automation capabilities.",
       },
+
       {
-        value: '98%',
-        label: 'Client Retention',
+        title: "UI/UX Design",
+        description:
+          "Creating intuitive interfaces for logistics teams, warehouse operators, fleet managers, and customers.",
       },
+
       {
-        value: '24/7',
-        label: 'Support Available',
+        title: "Custom Development",
+        description:
+          "Building secure, high-performance logistics applications with real-time data processing and third-party integrations.",
+      },
+
+      {
+        title: "Testing & Quality Assurance",
+        description:
+          "Performing comprehensive testing for performance, reliability, security, and cross-platform compatibility.",
+      },
+
+      {
+        title: "Deployment & Continuous Support",
+        description:
+          "Launching, monitoring, maintaining, and continuously improving your logistics software platform.",
       },
     ],
-  },
 
-  overview: {
-    title: 'Public Sector Technology Expertise',
+    faqs: [
+      {
+        question: "What logistics software solutions do you develop?",
 
-    description:
-      'Government organizations face increasing demands for digital accessibility, operational transparency, data security, and efficient service delivery. Our public sector technology solutions help agencies modernize legacy systems, automate processes, and deliver better services to citizens and stakeholders.',
+        answer:
+          "We develop transportation management systems (TMS), warehouse management systems (WMS), fleet management software, shipment tracking platforms, inventory management systems, supply chain solutions, logistics portals, and custom logistics applications.",
+      },
 
-    challenges: [
-      'Legacy System Modernization',
-      'Citizen Service Delivery',
-      'Data Security & Privacy',
-      'Interdepartmental Coordination',
-      'Process Automation',
-      'Digital Accessibility & Inclusion',
+      {
+        question:
+          "Can you integrate GPS tracking and third-party logistics services?",
+
+        answer:
+          "Yes. We integrate GPS tracking, mapping services, ERP platforms, accounting software, payment gateways, barcode systems, IoT devices, and third-party logistics APIs based on your business requirements.",
+      },
+
+      {
+        question:
+          "Do you develop software for warehouse and inventory management?",
+
+        answer:
+          "Absolutely. We build warehouse management and inventory control systems with barcode scanning, stock tracking, warehouse automation, inventory forecasting, and reporting capabilities.",
+      },
+
+      {
+        question: "Can you modernize our existing logistics platform?",
+
+        answer:
+          "Yes. We modernize legacy logistics software by improving scalability, upgrading technology stacks, enhancing security, migrating to cloud infrastructure, and adding modern digital capabilities.",
+      },
+
+      {
+        question: "Do you provide long-term maintenance and technical support?",
+
+        answer:
+          "Yes. We provide ongoing maintenance, cloud management, security updates, infrastructure monitoring, feature enhancements, performance optimization, and dedicated technical support.",
+      },
     ],
 
-    benefits: [
-      'Improved Citizen Experience',
-      'Enhanced Operational Efficiency',
-      'Greater Transparency & Accountability',
-      'Scalable Digital Government Infrastructure',
-    ],
+    cta: {
+      title: "Build Smarter Logistics & Supply Chain Solutions",
+
+      description:
+        "Partner with Ace Soft Solution to develop secure, scalable, and intelligent logistics software that optimizes operations, improves visibility, and supports sustainable business growth.",
+
+      primaryButton: "Start Your Logistics Project",
+
+      secondaryButton: "Book a Consultation",
+    },
+
+    seo: {
+      title:
+        "Logistics Software Development Company | Supply Chain Software Solutions",
+
+      description:
+        "Ace Soft Solution develops custom logistics software including transportation management systems (TMS), warehouse management systems (WMS), fleet management software, shipment tracking platforms, inventory management, and supply chain management solutions.",
+
+      keywords: [
+        "Logistics Software Development",
+        "Supply Chain Software Development",
+        "Transportation Management System",
+        "Warehouse Management System",
+        "Fleet Management Software",
+        "Shipment Tracking Software",
+        "Inventory Management System",
+        "Supply Chain Management Software",
+        "Logistics Mobile App Development",
+        "3PL Software Development",
+        "Freight Management Software",
+        "Custom Logistics Software",
+      ],
+    },
   },
 
-  solutions: [
-    {
-      title: 'eGovernance Platforms',
-      description:
-        'Comprehensive digital governance solutions that streamline public services, approvals, applications, and citizen interactions.',
-    },
+  automotive: {
+    slug: "automotive",
 
-    {
-      title: 'Citizen Service Portals',
-      description:
-        'Self-service digital platforms that enable citizens to access government services, applications, documents, and information online.',
-    },
+    title: "Automotive Software Development Services",
 
-    {
-      title: 'Document & Workflow Automation',
-      description:
-        'Automated document management and workflow systems that improve efficiency, reduce paperwork, and accelerate decision-making.',
-    },
-
-    {
-      title: 'Public Sector Management Systems',
-      description:
-        'Custom software solutions for administration, operations, reporting, compliance, and departmental coordination.',
-    },
-
-    {
-      title: 'Smart City Solutions',
-      description:
-        'Technology platforms that support urban development initiatives, public services, infrastructure monitoring, and citizen engagement.',
-    },
-
-    {
-      title: 'Data Analytics & Reporting Platforms',
-      description:
-        'Business intelligence and analytics solutions that help agencies make informed decisions using real-time data and insights.',
-    },
-  ],
-
-  technologies: [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Node.js',
-    'NestJS',
-    '.NET',
-    'Java',
-    'PostgreSQL',
-    'MongoDB',
-    'AWS',
-    'Azure',
-    'Docker',
-    'Kubernetes',
-  ],
-
-  process: [
-    {
-      title: 'Discovery',
-      description:
-        'Understanding agency objectives, citizen needs, regulatory requirements, and operational workflows.',
-    },
-
-    {
-      title: 'Strategy',
-      description:
-        'Defining architecture, security standards, integration requirements, and digital transformation roadmap.',
-    },
-
-    {
-      title: 'UI/UX Design',
-      description:
-        'Designing accessible, user-friendly experiences that improve service adoption and citizen engagement.',
-    },
-
-    {
-      title: 'Development',
-      description:
-        'Building secure, scalable, and compliant public sector software solutions tailored to organizational requirements.',
-    },
-
-    {
-      title: 'Testing & Compliance',
-      description:
-        'Ensuring performance, security, reliability, accessibility, and compliance through rigorous testing procedures.',
-    },
-
-    {
-      title: 'Deployment & Support',
-      description:
-        'Launching, monitoring, maintaining, and continuously improving government technology platforms.',
-    },
-  ],
-
-  faqs: [
-    {
-      question:
-        'What government software solutions do you develop?',
-
-      answer:
-        'We develop eGovernance platforms, citizen service portals, workflow automation systems, document management solutions, public sector management software, and smart city applications.',
-    },
-
-    {
-      question:
-        'Can you modernize legacy government systems?',
-
-      answer:
-        'Yes. We help government agencies modernize outdated systems, improve performance, strengthen security, and provide better digital services to citizens.',
-    },
-
-    {
-      question:
-        'How do you ensure security and compliance for government applications?',
-
-      answer:
-        'We implement secure development practices, role-based access controls, encryption, audit logging, monitoring, and compliance-focused architectures to protect sensitive data and systems.',
-    },
-
-    {
-      question:
-        'Can you integrate with existing government platforms and databases?',
-
-      answer:
-        'Yes. We can integrate new applications with existing government systems, databases, APIs, third-party services, and departmental platforms.',
-    },
-
-    {
-      question:
-        'Do you provide ongoing support and maintenance?',
-
-      answer:
-        'Yes. We offer continuous monitoring, maintenance, security updates, performance optimization, feature enhancements, and technical support after deployment.',
-    },
-  ],
-
-  cta: {
-    title:
-      'Ready to Modernize Public Services Through Technology?',
+    shortTitle: "Automotive",
 
     description:
-      'Partner with our experts to build secure, scalable, and citizen-focused digital solutions that improve service delivery, increase transparency, and drive government innovation.',
+      "We develop innovative automotive software solutions for vehicle manufacturers, dealerships, fleet operators, automotive suppliers, mobility startups, and service centers. Our digital platforms streamline operations, improve customer experiences, and accelerate digital transformation across the automotive industry.",
 
-    primaryButton: 'Start Your Project',
+    hero: {
+      badge: "Automotive Industry",
 
-    secondaryButton: 'Book Consultation',
+      title: "Powering the Future of Mobility with Intelligent Software",
+
+      description:
+        "From dealership management systems and connected vehicle applications to fleet management, vehicle service platforms, mobility solutions, and automotive analytics, we build secure and scalable software that drives efficiency and innovation.",
+
+      stats: [
+        {
+          value: "10+",
+          label: "Automotive Solutions",
+        },
+        {
+          value: "99.9%",
+          label: "Platform Availability",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
+        },
+      ],
+    },
+
+    overview: {
+      title: "Accelerating Digital Transformation in the Automotive Industry",
+
+      description:
+        "The automotive industry is rapidly evolving with connected vehicles, digital retail, fleet management, and mobility services. We develop custom automotive software that simplifies operations, enhances customer engagement, automates business processes, and supports next-generation mobility solutions.",
+
+      challenges: [
+        "Dealer Operations",
+        "Fleet Management",
+        "Vehicle Maintenance",
+        "Connected Vehicle Integration",
+        "Customer Experience",
+        "Data & Operational Visibility",
+      ],
+
+      benefits: [
+        "Improved Operational Efficiency",
+        "Enhanced Customer Experience",
+        "Smarter Fleet & Vehicle Management",
+        "Scalable Automotive Technology",
+      ],
+    },
+
+    solutions: [
+      {
+        title: "Dealership Management Systems (DMS)",
+        description:
+          "Comprehensive dealership software for vehicle inventory, sales, financing, service scheduling, customer management, and reporting.",
+      },
+
+      {
+        title: "Fleet Management Solutions",
+        description:
+          "Fleet management platforms with GPS tracking, vehicle utilization, maintenance scheduling, driver management, and fuel monitoring.",
+      },
+
+      {
+        title: "Vehicle Service & Workshop Management",
+        description:
+          "Digital workshop management systems for appointment scheduling, repair tracking, spare parts inventory, billing, and customer communication.",
+      },
+
+      {
+        title: "Connected Vehicle Applications",
+        description:
+          "Smart vehicle applications with telematics integration, remote monitoring, diagnostics, alerts, and connected mobility features.",
+      },
+
+      {
+        title: "Vehicle Marketplace Platforms",
+        description:
+          "Online platforms for buying, selling, leasing, and managing new and used vehicles with advanced search and secure transactions.",
+      },
+
+      {
+        title: "Automotive Mobile Applications",
+        description:
+          "Android and iOS apps for vehicle owners, dealerships, fleet operators, and service providers with booking, tracking, and maintenance features.",
+      },
+
+      {
+        title: "Automotive CRM Solutions",
+        description:
+          "Customer relationship management systems that improve lead management, after-sales service, customer retention, and marketing automation.",
+      },
+
+      {
+        title: "Automotive Analytics & Reporting",
+        description:
+          "Business intelligence dashboards providing insights into sales, inventory, fleet performance, workshop operations, and customer behavior.",
+      },
+    ],
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Python",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+      "Docker",
+      "Google Maps API",
+    ],
+
+    process: [
+      {
+        title: "Business Discovery",
+        description:
+          "Understanding your automotive operations, customer journey, mobility services, and business objectives.",
+      },
+
+      {
+        title: "Solution Architecture",
+        description:
+          "Designing scalable and secure software architecture tailored to automotive workflows and future growth.",
+      },
+
+      {
+        title: "UI/UX Design",
+        description:
+          "Creating intuitive digital experiences for customers, dealerships, fleet managers, technicians, and administrators.",
+      },
+
+      {
+        title: "Custom Development",
+        description:
+          "Building high-performance automotive applications with seamless integrations, automation, and cloud-native architecture.",
+      },
+
+      {
+        title: "Testing & Quality Assurance",
+        description:
+          "Ensuring software reliability, performance, security, usability, and compatibility across multiple devices and platforms.",
+      },
+
+      {
+        title: "Deployment & Continuous Support",
+        description:
+          "Deploying, monitoring, maintaining, and continuously enhancing your automotive software ecosystem.",
+      },
+    ],
+
+    faqs: [
+      {
+        question: "What automotive software solutions do you develop?",
+
+        answer:
+          "We develop dealership management systems, fleet management software, vehicle service platforms, workshop management systems, connected vehicle applications, automotive CRM solutions, mobile apps, and custom automotive software.",
+      },
+
+      {
+        question:
+          "Can you integrate GPS, telematics, and third-party automotive services?",
+
+        answer:
+          "Yes. We integrate GPS tracking, telematics platforms, payment gateways, ERP systems, CRM software, mapping services, IoT devices, and third-party automotive APIs to create a connected digital ecosystem.",
+      },
+
+      {
+        question:
+          "Do you build software for vehicle service centers and workshops?",
+
+        answer:
+          "Absolutely. We develop workshop management software with service scheduling, repair management, spare parts inventory, billing, technician management, and customer communication features.",
+      },
+
+      {
+        question: "Can you modernize our existing automotive software?",
+
+        answer:
+          "Yes. We modernize legacy automotive systems by upgrading technologies, improving scalability, enhancing security, migrating to cloud infrastructure, and implementing modern user experiences.",
+      },
+
+      {
+        question: "Do you provide ongoing maintenance and technical support?",
+
+        answer:
+          "Yes. We provide continuous maintenance, cloud management, infrastructure monitoring, security updates, feature enhancements, performance optimization, and long-term technical support.",
+      },
+    ],
+
+    cta: {
+      title: "Build the Next Generation of Automotive Software",
+
+      description:
+        "Partner with Ace Soft Solution to develop secure, scalable, and intelligent automotive software that streamlines operations, improves customer experiences, and drives innovation across the mobility ecosystem.",
+
+      primaryButton: "Start Your Automotive Project",
+
+      secondaryButton: "Book a Consultation",
+    },
+
+    seo: {
+      title:
+        "Automotive Software Development Company | Custom Mobility & Automotive Solutions",
+
+      description:
+        "Ace Soft Solution provides custom automotive software development services including dealership management systems, fleet management software, workshop management systems, connected vehicle applications, automotive CRM, and mobility solutions.",
+
+      keywords: [
+        "Automotive Software Development",
+        "Dealership Management System",
+        "Fleet Management Software",
+        "Workshop Management Software",
+        "Vehicle Service Management",
+        "Connected Vehicle Solutions",
+        "Automotive CRM",
+        "Automotive Mobile App Development",
+        "Mobility Software Development",
+        "Vehicle Marketplace Development",
+        "Automotive Technology Solutions",
+        "Custom Automotive Software",
+      ],
+    },
   },
 
-  seo: {
-    title:
-      'Government Software Development Services | Ace Soft Solution',
+  onDemand: {
+    slug: "on-demand",
+
+    title: "On-Demand App Development Services",
+
+    shortTitle: "On-Demand",
 
     description:
-      'Custom government software development services including eGovernance platforms, citizen service portals, workflow automation systems, public sector management software, smart city solutions, and government digital transformation services.',
+      "We develop scalable on-demand web and mobile applications for startups, enterprises, and service-based businesses. From booking and scheduling platforms to multi-vendor marketplaces and delivery solutions, we build digital products that connect customers with service providers in real time.",
 
-    keywords: [
-      'Government Software Development',
-      'eGovernance Development',
-      'Citizen Service Portal',
-      'Public Sector Software',
-      'Government Digital Transformation',
-      'Workflow Automation Software',
-      'Smart City Solutions',
-      'Government Application Development',
+    hero: {
+      badge: "On-Demand Industry",
+
+      title: "Build Powerful On-Demand Platforms That Scale",
+
+      description:
+        "Whether you're launching a ride-hailing app, food delivery platform, home service marketplace, healthcare booking system, or any on-demand business, we develop secure, high-performance solutions with seamless user experiences and real-time capabilities.",
+
+      stats: [
+        {
+          value: "10+",
+          label: "On-Demand Solutions",
+        },
+        {
+          value: "99.9%",
+          label: "Platform Availability",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
+        },
+      ],
+    },
+
+    overview: {
+      title: "Accelerating Growth for On-Demand Businesses",
+
+      description:
+        "Consumers expect instant access to products and services anytime, anywhere. We build intelligent on-demand platforms that simplify bookings, automate operations, manage service providers, enable secure payments, and deliver exceptional customer experiences.",
+
+      challenges: [
+        "Real-Time Service Matching",
+        "Booking & Scheduling",
+        "Delivery & Dispatch Management",
+        "Payment Processing",
+        "Customer & Provider Management",
+        "Business Scalability",
+      ],
+
+      benefits: [
+        "Faster Service Delivery",
+        "Improved Customer Experience",
+        "Automated Business Operations",
+        "Scalable Digital Platform",
+      ],
+    },
+
+    solutions: [
+      {
+        title: "Service Marketplace Platforms",
+        description:
+          "Multi-vendor platforms connecting customers with service providers for home services, beauty, healthcare, repairs, consulting, and more.",
+      },
+
+      {
+        title: "Food & Grocery Delivery Apps",
+        description:
+          "On-demand ordering platforms with restaurant management, delivery tracking, payments, promotions, and customer engagement.",
+      },
+
+      {
+        title: "Taxi & Ride-Hailing Applications",
+        description:
+          "Ride-booking platforms featuring GPS tracking, fare estimation, driver management, route optimization, and secure payments.",
+      },
+
+      {
+        title: "Home Service Applications",
+        description:
+          "Apps for electricians, plumbers, cleaners, technicians, and maintenance professionals with booking, scheduling, and service management.",
+      },
+
+      {
+        title: "Appointment & Booking Systems",
+        description:
+          "Online booking solutions for healthcare, salons, fitness centers, professional services, education, and other appointment-based businesses.",
+      },
+
+      {
+        title: "Delivery Management Systems",
+        description:
+          "Logistics and delivery software with dispatch management, live tracking, route optimization, proof of delivery, and notifications.",
+      },
+
+      {
+        title: "Admin & Vendor Management Portals",
+        description:
+          "Centralized dashboards for managing users, vendors, bookings, payments, commissions, analytics, and platform operations.",
+      },
+
+      {
+        title: "Customer Mobile Applications",
+        description:
+          "Feature-rich Android and iOS applications with real-time tracking, secure payments, notifications, ratings, reviews, and personalized experiences.",
+      },
     ],
-  },
-},
 
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "React Native",
+      "MongoDB",
+      "PostgreSQL",
+      "Redis",
+      "AWS",
+      "Docker",
+      "Google Maps API",
+    ],
+
+    process: [
+      {
+        title: "Business Discovery",
+        description:
+          "Understanding your business model, target audience, service workflow, and operational requirements.",
+      },
+
+      {
+        title: "Solution Architecture",
+        description:
+          "Designing scalable architecture with real-time communication, cloud infrastructure, and third-party integrations.",
+      },
+
+      {
+        title: "UI/UX Design",
+        description:
+          "Creating intuitive experiences for customers, service providers, delivery partners, and administrators.",
+      },
+
+      {
+        title: "Custom Development",
+        description:
+          "Building secure, high-performance web and mobile applications with real-time functionality and automation.",
+      },
+
+      {
+        title: "Testing & Quality Assurance",
+        description:
+          "Ensuring reliability, scalability, security, performance, and seamless functionality across all platforms.",
+      },
+
+      {
+        title: "Deployment & Continuous Support",
+        description:
+          "Launching your platform with continuous monitoring, maintenance, optimization, and feature enhancements.",
+      },
+    ],
+
+    faqs: [
+      {
+        question: "What types of on-demand applications do you develop?",
+
+        answer:
+          "We develop food delivery apps, grocery delivery platforms, taxi booking apps, home service applications, appointment booking systems, healthcare booking platforms, logistics applications, multi-vendor marketplaces, and other custom on-demand solutions.",
+      },
+
+      {
+        question: "Can you build apps for Android, iOS, and the web?",
+
+        answer:
+          "Yes. We develop complete on-demand ecosystems including customer apps, service provider apps, delivery partner apps, admin dashboards, and responsive web platforms.",
+      },
+
+      {
+        question: "Can you integrate maps, payments, and notifications?",
+
+        answer:
+          "Absolutely. We integrate Google Maps, payment gateways, SMS services, push notifications, email platforms, chat systems, analytics tools, and other third-party APIs based on your business needs.",
+      },
+
+      {
+        question: "Can you scale the platform as our business grows?",
+
+        answer:
+          "Yes. Our solutions are built using scalable cloud architecture that supports increasing users, vendors, transactions, locations, and business expansion without compromising performance.",
+      },
+
+      {
+        question: "Do you provide maintenance and long-term support?",
+
+        answer:
+          "Yes. We provide continuous maintenance, security updates, cloud management, performance optimization, feature enhancements, and dedicated technical support after deployment.",
+      },
+    ],
+
+    cta: {
+      title: "Launch Your On-Demand Business with Confidence",
+
+      description:
+        "Partner with Ace Soft Solution to build secure, scalable, and user-friendly on-demand applications that streamline operations, improve customer experiences, and accelerate business growth.",
+
+      primaryButton: "Start Your Project",
+
+      secondaryButton: "Book a Consultation",
+    },
+
+    seo: {
+      title:
+        "On-Demand App Development Company | Custom Marketplace & Booking Solutions",
+
+      description:
+        "Ace Soft Solution provides custom on-demand app development services including food delivery apps, taxi booking platforms, home service applications, appointment booking systems, delivery management software, and multi-vendor marketplace development.",
+
+      keywords: [
+        "On-Demand App Development",
+        "On-Demand Software Development",
+        "Marketplace App Development",
+        "Booking App Development",
+        "Food Delivery App Development",
+        "Taxi Booking App Development",
+        "Home Service App Development",
+        "Delivery Management Software",
+        "Multi Vendor Marketplace Development",
+        "Appointment Booking Software",
+        "React Native App Development",
+        "Custom On-Demand Solutions",
+      ],
+    },
+  },
+
+  enterprise: {
+    slug: "enterprise",
+
+    title: "Enterprise Software Development Services",
+
+    shortTitle: "Enterprise",
+
+    description:
+      "We develop enterprise-grade software solutions that help organizations automate business processes, improve collaboration, integrate systems, and accelerate digital transformation. Our custom enterprise applications are secure, scalable, and designed to support long-term business growth.",
+
+    hero: {
+      badge: "Enterprise Solutions",
+
+      title: "Building Enterprise Software That Drives Business Growth",
+
+      description:
+        "From ERP systems and CRM platforms to workflow automation, business intelligence, and enterprise integrations, we develop robust software solutions that streamline operations, improve productivity, and enable data-driven decision making.",
+
+      stats: [
+        {
+          value: "10+",
+          label: "Enterprise Solutions",
+        },
+        {
+          value: "99.9%",
+          label: "Platform Availability",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
+        },
+      ],
+    },
+
+    overview: {
+      title: "Accelerating Enterprise Digital Transformation",
+
+      description:
+        "Modern enterprises need scalable technology that connects people, processes, and data across the organization. We build custom enterprise software that improves operational efficiency, automates workflows, enhances collaboration, and supports business innovation across departments.",
+
+      challenges: [
+        "Legacy System Modernization",
+        "Business Process Automation",
+        "Enterprise Data Management",
+        "Cross-System Integration",
+        "Operational Efficiency",
+        "Scalability & Security",
+      ],
+
+      benefits: [
+        "Automated Business Processes",
+        "Improved Productivity",
+        "Centralized Business Data",
+        "Scalable Enterprise Infrastructure",
+      ],
+    },
+
+    solutions: [
+      {
+        title: "Enterprise Resource Planning (ERP)",
+        description:
+          "Custom ERP solutions that integrate finance, HR, procurement, inventory, manufacturing, sales, and operations into a unified platform.",
+      },
+
+      {
+        title: "Customer Relationship Management (CRM)",
+        description:
+          "Enterprise CRM systems for sales automation, customer support, marketing, lead management, and customer engagement.",
+      },
+
+      {
+        title: "Business Process Automation",
+        description:
+          "Workflow automation solutions that eliminate manual tasks, streamline approvals, improve collaboration, and increase operational efficiency.",
+      },
+
+      {
+        title: "Enterprise Portals & Intranets",
+        description:
+          "Secure employee portals and enterprise intranets for communication, document management, collaboration, and knowledge sharing.",
+      },
+
+      {
+        title: "Document Management Systems",
+        description:
+          "Centralized document management with secure storage, version control, digital approvals, search capabilities, and access management.",
+      },
+
+      {
+        title: "Business Intelligence & Analytics",
+        description:
+          "Interactive dashboards, KPI monitoring, advanced reporting, and business intelligence solutions that support informed decision making.",
+      },
+
+      {
+        title: "Enterprise System Integration",
+        description:
+          "Seamless integration between ERP, CRM, HRMS, accounting software, cloud services, APIs, and third-party enterprise applications.",
+      },
+
+      {
+        title: "Custom Enterprise Applications",
+        description:
+          "Tailor-made enterprise software designed to address unique business processes, operational challenges, and industry-specific requirements.",
+      },
+    ],
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Python",
+      "Java",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "AWS",
+      "Docker",
+    ],
+
+    process: [
+      {
+        title: "Business Discovery",
+        description:
+          "Analyzing organizational structure, existing systems, operational workflows, and long-term business objectives.",
+      },
+
+      {
+        title: "Solution Architecture",
+        description:
+          "Designing secure, scalable enterprise architecture with cloud infrastructure, integrations, and future expansion in mind.",
+      },
+
+      {
+        title: "UI/UX Design",
+        description:
+          "Creating intuitive interfaces that improve employee productivity, collaboration, and user adoption.",
+      },
+
+      {
+        title: "Custom Development",
+        description:
+          "Developing enterprise-grade software using modern technologies, secure coding standards, and scalable architecture.",
+      },
+
+      {
+        title: "Testing & Quality Assurance",
+        description:
+          "Performing functional, performance, security, integration, and user acceptance testing to ensure enterprise reliability.",
+      },
+
+      {
+        title: "Deployment & Continuous Support",
+        description:
+          "Deploying enterprise applications with ongoing monitoring, maintenance, security updates, optimization, and technical support.",
+      },
+    ],
+
+    faqs: [
+      {
+        question: "What enterprise software solutions do you develop?",
+
+        answer:
+          "We develop ERP systems, CRM platforms, workflow automation software, enterprise portals, document management systems, business intelligence dashboards, enterprise integrations, and custom business applications.",
+      },
+
+      {
+        question: "Can you integrate our existing business systems?",
+
+        answer:
+          "Yes. We integrate enterprise software with ERP, CRM, HRMS, accounting software, cloud platforms, payment systems, APIs, databases, and third-party business applications.",
+      },
+
+      {
+        question: "Can you modernize our legacy enterprise software?",
+
+        answer:
+          "Absolutely. We modernize legacy systems by migrating them to modern technology stacks, improving performance, enhancing security, moving to the cloud, and implementing modern user experiences.",
+      },
+
+      {
+        question:
+          "Is your enterprise software scalable for growing organizations?",
+
+        answer:
+          "Yes. Our enterprise solutions are designed with scalable architecture that supports increasing users, departments, business processes, integrations, and future business expansion.",
+      },
+
+      {
+        question: "Do you provide long-term maintenance and support?",
+
+        answer:
+          "Yes. We provide continuous maintenance, cloud management, infrastructure monitoring, security updates, feature enhancements, performance optimization, and dedicated technical support.",
+      },
+    ],
+
+    cta: {
+      title: "Transform Your Enterprise with Custom Software",
+
+      description:
+        "Partner with Ace Soft Solution to build secure, scalable, and future-ready enterprise software that improves efficiency, automates operations, and supports sustainable business growth.",
+
+      primaryButton: "Start Your Enterprise Project",
+
+      secondaryButton: "Book a Consultation",
+    },
+
+    seo: {
+      title:
+        "Enterprise Software Development Company | Custom Business Software Solutions",
+
+      description:
+        "Ace Soft Solution provides enterprise software development services including ERP development, CRM software, workflow automation, enterprise portals, business intelligence, system integration, and custom enterprise applications.",
+
+      keywords: [
+        "Enterprise Software Development",
+        "Custom Enterprise Software",
+        "ERP Development",
+        "CRM Development",
+        "Business Process Automation",
+        "Enterprise Application Development",
+        "Enterprise Portal Development",
+        "Business Intelligence Solutions",
+        "Workflow Automation Software",
+        "Enterprise System Integration",
+        "Digital Transformation Services",
+        "Business Software Development",
+      ],
+    },
+  },
+
+  startups: {
+    slug: "startups",
+
+    title: "Startup Software Development Services",
+
+    shortTitle: "Startups",
+
+    description:
+      "We help startups transform innovative ideas into successful digital products through strategic consulting, MVP development, scalable software engineering, and long-term technology partnerships. From idea validation to product scaling, we empower startups at every stage of their journey.",
+
+    hero: {
+      badge: "Startup Solutions",
+
+      title: "Helping Startups Build, Launch & Scale Faster",
+
+      description:
+        "Whether you're building an MVP, SaaS platform, mobile application, AI-powered product, or enterprise-grade solution, we provide end-to-end product development services that help startups validate ideas, reduce time-to-market, and achieve sustainable growth.",
+
+      stats: [
+        {
+          value: "MVP to Scale",
+          label: "Product Development",
+        },
+        {
+          value: "Fast",
+          label: "Time to Market",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Solutions",
+        },
+      ],
+    },
+
+    overview: {
+      title: "Technology Partner for Modern Startups",
+
+      description:
+        "Launching a startup requires more than great ideas—it demands the right technology, product strategy, and execution. We work as your technology partner to design, develop, launch, and continuously improve digital products that are scalable, secure, and ready for future growth.",
+
+      challenges: [
+        "Idea Validation",
+        "MVP Development",
+        "Limited Development Resources",
+        "Rapid Product Iteration",
+        "Scalable Architecture",
+        "Go-to-Market Readiness",
+      ],
+
+      benefits: [
+        "Faster Product Launch",
+        "Reduced Development Risk",
+        "Scalable Technology Foundation",
+        "Long-Term Technical Partnership",
+      ],
+    },
+
+    solutions: [
+      {
+        title: "MVP Development",
+        description:
+          "Rapid development of Minimum Viable Products (MVPs) that help validate business ideas, attract early users, and secure investor confidence.",
+      },
+
+      {
+        title: "Custom SaaS Development",
+        description:
+          "Scalable SaaS applications with subscription management, user authentication, multi-tenancy, billing, analytics, and cloud infrastructure.",
+      },
+
+      {
+        title: "Web Application Development",
+        description:
+          "Modern, high-performance web applications built with scalable architecture, intuitive interfaces, and future-ready technologies.",
+      },
+
+      {
+        title: "Mobile App Development",
+        description:
+          "Cross-platform and native mobile applications for Android and iOS that deliver seamless user experiences and business value.",
+      },
+
+      {
+        title: "AI-Powered Product Development",
+        description:
+          "Integrate AI capabilities such as chatbots, automation, intelligent search, recommendation engines, analytics, and generative AI into your product.",
+      },
+
+      {
+        title: "Startup Product Design (UI/UX)",
+        description:
+          "User-centered UI/UX design focused on improving user engagement, customer retention, and product usability from day one.",
+      },
+
+      {
+        title: "Cloud & DevOps Solutions",
+        description:
+          "Cloud-native infrastructure, CI/CD pipelines, containerization, monitoring, and automated deployments for scalable startup products.",
+      },
+
+      {
+        title: "Product Scaling & Optimization",
+        description:
+          "Enhance application performance, security, infrastructure, and architecture to support rapid user growth and business expansion.",
+      },
+    ],
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Python",
+      "React Native",
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "OpenAI APIs",
+    ],
+
+    process: [
+      {
+        title: "Product Discovery",
+        description:
+          "Understanding your startup vision, target audience, market opportunity, and product requirements.",
+      },
+
+      {
+        title: "Strategy & Roadmap",
+        description:
+          "Defining the MVP scope, technology stack, product roadmap, milestones, and development timeline.",
+      },
+
+      {
+        title: "UI/UX Design",
+        description:
+          "Designing intuitive, user-focused experiences that improve adoption, engagement, and product-market fit.",
+      },
+
+      {
+        title: "Agile Development",
+        description:
+          "Building your product using agile methodologies with rapid iterations, continuous feedback, and scalable architecture.",
+      },
+
+      {
+        title: "Testing & Launch",
+        description:
+          "Conducting comprehensive testing, optimizing performance, fixing issues, and preparing your product for a successful launch.",
+      },
+
+      {
+        title: "Growth & Continuous Improvement",
+        description:
+          "Providing ongoing maintenance, feature enhancements, infrastructure optimization, and technical support as your startup scales.",
+      },
+    ],
+
+    faqs: [
+      {
+        question: "Do you help startups build MVPs?",
+
+        answer:
+          "Yes. We specialize in MVP development that helps startups validate ideas, launch quickly, gather user feedback, and prepare for funding or market expansion.",
+      },
+
+      {
+        question: "Can you work as our dedicated technology partner?",
+
+        answer:
+          "Absolutely. We work closely with founders as an extended technology team, providing product strategy, design, development, testing, deployment, and long-term technical support.",
+      },
+
+      {
+        question: "Can you scale the product after launch?",
+
+        answer:
+          "Yes. We design scalable architectures that support increasing users, new features, cloud infrastructure, third-party integrations, and business growth.",
+      },
+
+      {
+        question: "What types of startups do you work with?",
+
+        answer:
+          "We work with SaaS startups, AI startups, FinTech, HealthTech, EdTech, eCommerce, PropTech, Logistics, and other technology-driven startups across multiple industries.",
+      },
+
+      {
+        question: "Do you provide post-launch support?",
+
+        answer:
+          "Yes. We offer continuous maintenance, cloud management, security updates, feature development, performance optimization, and dedicated technical support after launch.",
+      },
+    ],
+
+    cta: {
+      title: "Turn Your Startup Idea into a Successful Product",
+
+      description:
+        "Partner with Ace Soft Solution to build scalable, secure, and investor-ready digital products that help your startup launch faster, grow confidently, and compete effectively in the market.",
+
+      primaryButton: "Build Your MVP",
+
+      secondaryButton: "Talk to Our Experts",
+    },
+
+    seo: {
+      title:
+        "Startup Software Development Company | MVP & SaaS Development Services",
+
+      description:
+        "Ace Soft Solution helps startups with MVP development, SaaS development, AI-powered applications, web and mobile app development, UI/UX design, cloud solutions, and product scaling services.",
+
+      keywords: [
+        "Startup Software Development",
+        "MVP Development",
+        "Startup App Development",
+        "SaaS Development Company",
+        "Startup Product Development",
+        "Custom Software for Startups",
+        "Web Application Development",
+        "Mobile App Development",
+        "AI Product Development",
+        "Startup Technology Partner",
+        "Startup Software Company",
+        "Startup Development Services",
+      ],
+    },
+  },
+
+  government: {
+    slug: "government",
+
+    title: "Government Software Development Services",
+
+    shortTitle: "Government",
+
+    description:
+      "We develop secure, scalable, and citizen-centric software solutions for government departments, public sector organizations, municipalities, smart cities, and public service agencies. Our digital platforms improve service delivery, enhance transparency, and streamline administrative operations.",
+
+    hero: {
+      badge: "Government & Public Sector",
+
+      title: "Empowering Digital Governance Through Innovative Technology",
+
+      description:
+        "From e-Governance portals and citizen service platforms to document management systems, smart city solutions, and public administration software, we build reliable digital solutions that modernize government services and improve citizen engagement.",
+
+      stats: [
+        {
+          value: "10+",
+          label: "Government Solutions",
+        },
+        {
+          value: "99.9%",
+          label: "Platform Availability",
+        },
+        {
+          value: "24/7",
+          label: "Technical Support",
+        },
+        {
+          value: "100%",
+          label: "Custom Development",
+        },
+      ],
+    },
+
+    overview: {
+      title: "Driving Digital Transformation in the Public Sector",
+
+      description:
+        "Government organizations require secure, accessible, and scalable digital platforms to deliver efficient public services. We build custom software that automates administrative workflows, enhances citizen experiences, improves transparency, and supports data-driven governance.",
+
+      challenges: [
+        "Legacy System Modernization",
+        "Citizen Service Delivery",
+        "Document & Record Management",
+        "Interdepartmental Collaboration",
+        "Data Security & Privacy",
+        "Digital Accessibility",
+      ],
+
+      benefits: [
+        "Improved Public Service Delivery",
+        "Greater Operational Efficiency",
+        "Enhanced Transparency",
+        "Scalable Digital Infrastructure",
+      ],
+    },
+
+    solutions: [
+      {
+        title: "e-Governance Portals",
+        description:
+          "Comprehensive citizen portals for online services, applications, approvals, certificates, payments, grievance management, and service tracking.",
+      },
+
+      {
+        title: "Citizen Service Platforms",
+        description:
+          "Digital platforms that enable citizens to access government services, submit requests, receive updates, and interact with departments online.",
+      },
+
+      {
+        title: "Government ERP Solutions",
+        description:
+          "Integrated enterprise solutions for finance, HR, procurement, payroll, asset management, budgeting, and administrative operations.",
+      },
+
+      {
+        title: "Document & Records Management",
+        description:
+          "Secure document management systems with digital archiving, version control, workflow automation, approvals, and audit trails.",
+      },
+
+      {
+        title: "Smart City Solutions",
+        description:
+          "Technology platforms supporting smart city initiatives including utility management, public infrastructure, citizen engagement, and urban analytics.",
+      },
+
+      {
+        title: "Inspection & Field Workforce Applications",
+        description:
+          "Mobile applications for inspectors and field officers with task management, GPS tracking, digital reporting, and real-time synchronization.",
+      },
+
+      {
+        title: "Public Grievance & Complaint Management",
+        description:
+          "Citizen complaint management systems with automated workflows, status tracking, escalation mechanisms, and performance reporting.",
+      },
+
+      {
+        title: "Government Analytics & Dashboards",
+        description:
+          "Business intelligence dashboards that provide real-time insights into departmental performance, service delivery, operational KPIs, and public programs.",
+      },
+    ],
+
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "NestJS",
+      "Java",
+      "Python",
+      "PostgreSQL",
+      "MongoDB",
+      "AWS",
+      "Docker",
+      "Kubernetes",
+    ],
+
+    process: [
+      {
+        title: "Requirement Analysis",
+        description:
+          "Understanding departmental workflows, regulatory requirements, operational challenges, and citizen service objectives.",
+      },
+
+      {
+        title: "Solution Architecture",
+        description:
+          "Designing secure, scalable, and interoperable government software architecture with long-term sustainability.",
+      },
+
+      {
+        title: "UI/UX Design",
+        description:
+          "Creating accessible, user-friendly interfaces for citizens, government employees, and administrative staff.",
+      },
+
+      {
+        title: "Custom Development",
+        description:
+          "Building secure public-sector applications with workflow automation, integrations, and enterprise-grade architecture.",
+      },
+
+      {
+        title: "Testing & Security Validation",
+        description:
+          "Performing comprehensive testing for functionality, accessibility, performance, reliability, and application security.",
+      },
+
+      {
+        title: "Deployment & Long-Term Support",
+        description:
+          "Deploying solutions with continuous maintenance, monitoring, feature enhancements, and technical support.",
+      },
+    ],
+
+    faqs: [
+      {
+        question: "What government software solutions do you develop?",
+
+        answer:
+          "We develop e-Governance portals, citizen service platforms, government ERP systems, document management solutions, complaint management systems, smart city platforms, mobile applications, and custom public sector software.",
+      },
+
+      {
+        question: "Can you integrate with existing government systems?",
+
+        answer:
+          "Yes. We integrate software with existing databases, government APIs, ERP systems, identity management platforms, payment gateways, GIS services, and other third-party systems where integration is supported.",
+      },
+
+      {
+        question: "How do you ensure security in government applications?",
+
+        answer:
+          "We follow secure software development practices, implement role-based access control, data encryption, audit logging, secure authentication, API security, and infrastructure best practices to protect sensitive government data.",
+      },
+
+      {
+        question: "Can you modernize legacy government software?",
+
+        answer:
+          "Absolutely. We modernize legacy applications by upgrading technology stacks, migrating to cloud infrastructure where appropriate, improving performance, enhancing user experiences, and adding modern digital capabilities.",
+      },
+
+      {
+        question: "Do you provide ongoing maintenance and support?",
+
+        answer:
+          "Yes. We provide long-term maintenance, security updates, infrastructure monitoring, performance optimization, feature enhancements, and dedicated technical support after deployment.",
+      },
+    ],
+
+    cta: {
+      title: "Modernize Public Services with Digital Solutions",
+
+      description:
+        "Partner with Ace Soft Solution to develop secure, scalable, and citizen-focused government software that improves service delivery, operational efficiency, and digital governance.",
+
+      primaryButton: "Start Your Government Project",
+
+      secondaryButton: "Book a Consultation",
+    },
+
+    seo: {
+      title:
+        "Government Software Development Company | e-Governance & Public Sector Solutions",
+
+      description:
+        "Ace Soft Solution provides government software development services including e-Governance portals, citizen service platforms, government ERP, smart city solutions, document management systems, and custom public sector applications.",
+
+      keywords: [
+        "Government Software Development",
+        "e-Governance Development",
+        "Government ERP",
+        "Citizen Service Portal",
+        "Public Sector Software",
+        "Government Application Development",
+        "Smart City Solutions",
+        "Document Management System",
+        "Government Mobile App Development",
+        "Public Administration Software",
+        "Digital Government Solutions",
+        "Custom Government Software",
+      ],
+    },
+  },
 };

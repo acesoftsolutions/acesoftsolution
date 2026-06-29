@@ -104,14 +104,7 @@ const companyDropdown = [
     name: "Careers",
     href: "/careers",
   },
-  {
-    name: "Team",
-    href: "/team",
-  },
-  {
-    name: "Testimonials",
-    href: "/testimonials",
-  },
+
 ];
 
 const navLinks = [

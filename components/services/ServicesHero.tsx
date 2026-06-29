@@ -1,29 +1,29 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   Sparkles,
   Star,
   CheckCircle2,
   TrendingUp,
-} from 'lucide-react';
+} from "lucide-react";
 
 const technologies = [
-  'React',
-  'Next.js',
-  'Node.js',
-  'TypeScript',
-  'AWS',
-  'DevOps',
+  "React",
+  "Next.js",
+  "Node.js",
+  "TypeScript",
+  "AWS",
+  "DevOps",
 ];
 
 const services = [
-  'Custom Software Development',
-  'Enterprise Web Applications',
-  'Mobile App Development',
-  'AI & Process Automation',
+  "Custom Software Development",
+  "Enterprise Web Applications",
+  "Mobile App Development",
+  "AI & Process Automation",
 ];
 
 export default function ServicesHero() {
@@ -89,8 +89,7 @@ export default function ServicesHero() {
                 "
               >
                 <Sparkles size={16} />
-
-                Trusted Digital Engineering Partner
+                Award-Winning Digital Engineering Partner
               </div>
 
               {/* Heading */}
@@ -107,7 +106,7 @@ export default function ServicesHero() {
                   text-white
                 "
               >
-                Building
+                Engineering
                 <span
                   className="
                     block
@@ -121,7 +120,7 @@ export default function ServicesHero() {
                 >
                   Future-Ready
                 </span>
-                Digital Products
+                Digital Solutions
               </h1>
 
               {/* Description */}
@@ -136,11 +135,10 @@ export default function ServicesHero() {
                   text-slate-400
                 "
               >
-                From custom software development and cloud
-                engineering to AI-powered automation, we help
-                startups, SMEs, and enterprises build scalable
-                digital solutions that accelerate growth,
-                optimize operations, and create measurable
+                From custom software development and cloud engineering to
+                AI-powered automation and ERP systems, we help startups, SMEs,
+                and enterprises build scalable digital solutions that accelerate
+                growth, optimize operations, and deliver measurable, real-world
                 business impact.
               </p>
 
@@ -157,9 +155,7 @@ export default function ServicesHero() {
                   >
                     <CheckCircle2 className="h-5 w-5 text-cyan-400 shrink-0" />
 
-                    <span className="text-slate-300">
-                      {item}
-                    </span>
+                    <span className="text-slate-300">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -188,8 +184,7 @@ export default function ServicesHero() {
                     hover:scale-105
                   "
                 >
-                  Book Strategy Call
-
+                  Book a Free Strategy Call
                   <ArrowRight
                     size={18}
                     className="
@@ -223,7 +218,7 @@ export default function ServicesHero() {
                   Explore Case Studies
                 </Link>
               </div>
-                            {/* Trust Metrics */}
+              {/* Trust Metrics */}
 
               <div className="mt-14 flex flex-wrap items-center gap-8 border-t border-white/10 pt-8">
                 <div className="flex items-center gap-1">
@@ -240,32 +235,22 @@ export default function ServicesHero() {
                 </div>
 
                 <div>
-                  <p className="text-2xl font-bold text-white">
-                    50+
-                  </p>
+                  <p className="text-2xl font-bold text-white">500+</p>
 
-                  <p className="text-sm text-slate-500">
-                    Projects Delivered
-                  </p>
+                  <p className="text-sm text-slate-500">Projects Delivered</p>
                 </div>
 
                 <div>
-                  <p className="text-2xl font-bold text-white">
-                    10+
-                  </p>
+                  <p className="text-2xl font-bold text-white">15+</p>
 
-                  <p className="text-sm text-slate-500">
-                    Industries Served
-                  </p>
+                  <p className="text-sm text-slate-500">Industries Served</p>
                 </div>
 
                 <div>
-                  <p className="text-2xl font-bold text-white">
-                    24/7
-                  </p>
+                  <p className="text-2xl font-bold text-white">24/7</p>
 
                   <p className="text-sm text-slate-500">
-                    Support & Maintenance
+                    Dedicated Support & Maintenance
                   </p>
                 </div>
               </div>
@@ -321,7 +306,7 @@ export default function ServicesHero() {
                     </p>
 
                     <h3 className="mt-3 text-2xl font-bold text-white">
-                      Enterprise Growth
+                      Enterprise Growth Dashboard
                     </h3>
                   </div>
 
@@ -356,9 +341,7 @@ export default function ServicesHero() {
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm text-slate-400">
-                        Business Growth
-                      </p>
+                      <p className="text-sm text-slate-400">Business Growth</p>
 
                       <h4 className="mt-2 text-5xl font-bold text-white">
                         +127%
@@ -367,7 +350,7 @@ export default function ServicesHero() {
 
                     <div className="rounded-2xl bg-emerald-500/10 px-4 py-2">
                       <span className="text-sm font-medium text-emerald-400">
-                        Performance
+                        Performance Boost
                       </span>
                     </div>
                   </div>
@@ -378,7 +361,7 @@ export default function ServicesHero() {
                         width: 0,
                       }}
                       animate={{
-                        width: '87%',
+                        width: "87%",
                       }}
                       transition={{
                         duration: 1.5,
@@ -413,11 +396,12 @@ export default function ServicesHero() {
                     </p>
 
                     <h5 className="mt-2 text-lg font-semibold text-white">
-                      Automation
+                      Automation & Intelligence
                     </h5>
 
                     <p className="mt-2 text-sm text-slate-400">
-                      Intelligent workflows and business process optimization.
+                      Intelligent workflow automation and AI-driven business
+                      process optimization at scale.
                     </p>
                   </div>
 
@@ -435,11 +419,12 @@ export default function ServicesHero() {
                     </p>
 
                     <h5 className="mt-2 text-lg font-semibold text-white">
-                      Infrastructure
+                      Infrastructure & DevOps
                     </h5>
 
                     <p className="mt-2 text-sm text-slate-400">
-                      Scalable cloud-native applications and deployments.
+                      Scalable, secure cloud-native applications, deployments,
+                      and managed DevOps pipelines.
                     </p>
                   </div>
 
@@ -461,7 +446,8 @@ export default function ServicesHero() {
                     </h5>
 
                     <p className="mt-2 text-sm text-slate-400">
-                      Enterprise-grade web solutions and platforms.
+                      Enterprise-grade web applications, SaaS platforms, and
+                      scalable digital solutions.
                     </p>
                   </div>
 
@@ -479,15 +465,16 @@ export default function ServicesHero() {
                     </p>
 
                     <h5 className="mt-2 text-lg font-semibold text-white">
-                      Experiences
+                      Experiences & Apps
                     </h5>
 
                     <p className="mt-2 text-sm text-slate-400">
-                      Native and cross-platform mobile development.
+                      Native and cross-platform mobile development for iOS,
+                      Android, and emerging platforms.
                     </p>
                   </div>
                 </div>
-                                {/* Enterprise Footer Card */}
+                {/* Enterprise Footer Card */}
 
                 <div
                   className="
@@ -507,10 +494,10 @@ export default function ServicesHero() {
                   </p>
 
                   <p className="mt-3 text-base leading-relaxed text-slate-300">
-                    Helping startups, SMEs, and enterprises build
-                    scalable digital products, automate business
-                    processes, and accelerate innovation through
-                    modern technologies.
+                    We help startups, SMEs, and enterprises build scalable
+                    digital products, automate core business processes, and
+                    accelerate innovation through cutting-edge, future-proof
+                    technologies.
                   </p>
                 </div>
               </motion.div>
@@ -519,12 +506,12 @@ export default function ServicesHero() {
 
               {technologies.map((tech, index) => {
                 const positions = [
-                  'top-8 -left-10',
-                  'top-20 -right-10',
-                  'bottom-24 -left-8',
-                  'bottom-10 -right-8',
-                  'top-1/2 -left-12',
-                  'top-1/2 -right-12',
+                  "top-8 -left-10",
+                  "top-20 -right-10",
+                  "bottom-24 -left-8",
+                  "bottom-10 -right-8",
+                  "top-1/2 -left-12",
+                  "top-1/2 -right-12",
                 ];
 
                 return (
@@ -536,7 +523,7 @@ export default function ServicesHero() {
                     transition={{
                       duration: 3 + index,
                       repeat: Infinity,
-                      ease: 'easeInOut',
+                      ease: "easeInOut",
                     }}
                     className={`
                       absolute

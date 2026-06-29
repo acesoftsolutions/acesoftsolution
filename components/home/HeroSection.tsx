@@ -11,7 +11,7 @@ const stats = [
     label: "Clients Worldwide",
   },
   {
-    value: "50+",
+    value: "250+",
     label: "Projects Delivered",
   },
   {
@@ -19,7 +19,7 @@ const stats = [
     label: "Success Rate",
   },
   {
-    value: "5+",
+    value: "10+",
     label: "Years Experience",
   },
 ];
@@ -67,7 +67,7 @@ font-medium
 text-cyan-300
               "
             >
-              Trusted Technology Partner
+              Award-Winning Software Development Company
             </div>
 
             {/* Heading */}
@@ -75,16 +75,16 @@ text-cyan-300
             <h1
               className="
                 text-4xl
-sm:text-5xl
-lg:text-6xl
-xl:text-7xl
+sm:text-4xl
+lg:text-5xl
+xl:text-6xl
 font-bold
 leading-[1.1]
 tracking-tight
 text-white
               "
             >
-              Enterprise Software
+              Custom Software Solutions
               <br />
               <span
                 className="
@@ -96,7 +96,7 @@ text-white
                   text-transparent
                 "
               >
-                Built For Growth
+                Engineered to Scale
               </span>
             </h1>
 
@@ -112,9 +112,11 @@ leading-relaxed
 text-white/70
               "
             >
-              We help startups, SMEs and enterprises build custom software,
-              mobile applications, ERP systems and AI-powered solutions that
-              streamline operations and accelerate business growth.
+             We empower startups, SMEs, and enterprises with custom
+              software development, mobile apps, ERP systems, and
+              AI-driven solutions designed to optimize workflows and
+              accelerate scalable growth.
+
             </p>
 
             {/* Buttons */}
@@ -156,7 +158,7 @@ text-white/70
                   hover:bg-white/5
                 "
               >
-                View Portfolio
+                Explore Our Work
               </Link>
             </div>
 
@@ -165,9 +167,9 @@ text-white/70
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/70">
               <div>✓ Custom Software Development</div>
               <div>✓ Mobile App Development</div>
-              <div>✓ ERP Solutions</div>
-              <div>✓ Artificial Intelligence</div>
-              <div>✓ Cloud & DevOps</div>
+              <div>✓ ERP & Business Automation </div>
+              <div>✓ AI & Machine Learning</div>
+              <div>✓ Cloud Infrastructure & DevOps</div>
               <div>✓ Digital Transformation</div>
             </div>
           </motion.div>

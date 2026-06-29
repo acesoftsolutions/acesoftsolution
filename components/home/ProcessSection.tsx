@@ -1,70 +1,73 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
-Search,
-Lightbulb,
-PenTool,
-Code2,
-Rocket,
-TrendingUp,
-} from 'lucide-react';
+  Search,
+  Lightbulb,
+  PenTool,
+  Code2,
+  Rocket,
+  TrendingUp,
+} from "lucide-react";
 
-import AnimatedSection from '@/components/shared/AnimatedSection';
+import AnimatedSection from "@/components/shared/AnimatedSection";
 
 const processSteps = [
-{
-number: '01',
-title: 'Discovery & Analysis',
-description:
-'Understanding your business goals, challenges, users, and requirements to build the right solution foundation.',
-icon: Search,
-},
-{
-number: '02',
-title: 'Strategy & Planning',
-description:
-'Creating a clear roadmap, project scope, timelines, technology stack, and execution strategy.',
-icon: Lightbulb,
-},
-{
-number: '03',
-title: 'UI/UX Design',
-description:
-'Designing intuitive user experiences and modern interfaces focused on engagement and conversion.',
-icon: PenTool,
-},
-{
-number: '04',
-title: 'Development',
-description:
-'Building scalable, secure, and high-performance solutions using modern technologies.',
-icon: Code2,
-},
-{
-number: '05',
-title: 'Launch & Deployment',
-description:
-'Rigorous testing, optimization, deployment, and go-live support for a smooth launch.',
-icon: Rocket,
-},
-{
-number: '06',
-title: 'Growth & Support',
-description:
-'Continuous improvements, maintenance, analytics, and scaling strategies for long-term success.',
-icon: TrendingUp,
-},
+  {
+    number: "01",
+    title: "Discovery & Requirements Analysis",
+    description:
+      "We deep-dive into your business goals, target users, technical challenges, and project requirements to build a solid, strategy-aligned solution foundation.",
+    icon: Search,
+  },
+  {
+    number: "02",
+    title: "Strategy & Project Planning",
+    description:
+      "We define a clear project roadmap, detailed scope, realistic timelines, the right technology stack, and a phased execution strategy built for predictable delivery.",
+    icon: Lightbulb,
+  },
+  {
+    number: "03",
+    title: "UI/UX Design & Prototyping",
+    description:
+      "We craft intuitive, visually compelling user interfaces and interactive prototypes focused on maximizing         engagement, usability, and conversion performance. ",
+    icon: PenTool,
+  },
+  {
+    number: "04",
+    title: "Development & Engineering",
+    description:
+      "We build scalable, secure, and high-performance software using modern tech stacks, clean code practices, and agile sprint-based development cycles. ",
+    icon: Code2,
+  },
+  {
+    number: "05",
+    title: "Testing, Launch & Deployment",
+    description:
+      "We conduct rigorous QA testing, performance optimization, and seamless deployment - followed by dedicated go-live support to ensure a flawless, zero-downtime launch.",
+    icon: Rocket,
+  },
+  {
+    number: "06",
+    title: "Growth, Support & Optimization",
+    description:
+      "We provide continuous maintenance, performance analytics, feature enhancements, and strategic scaling support to drive long-term growth and maximize your ROI.",
+    icon: TrendingUp,
+  },
 ];
 
 export default function ProcessSection() {
-return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-auto max-w-7xl px-5 lg:px-8">
-{/* Header */}
+  return (
+    <section className="bg-[#F8FAFC] py-14 lg:py-12">
+      {" "}
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        {/* Header */}
 
-    <AnimatedSection>
-      <div className="mx-auto max-w-4xl text-center">
-        <span
-          className="
+        <AnimatedSection>
+          <div className="mx-auto max-w-4xl text-center">
+            <span
+              className="
             inline-flex
             items-center
             rounded-full
@@ -77,12 +80,12 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
             font-semibold
             text-blue-700
           "
-        >
-          Our Process
-        </span>
+            >
+              Our Process
+            </span>
 
-        <h2
-          className="
+            <h2
+              className="
             mt-6
             text-4xl
             font-bold
@@ -91,10 +94,10 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
             md:text-5xl
             xl:text-6xl
           "
-        >
-          A Proven Process
-          <span
-            className="
+            >
+              A Structured Process
+              <span
+                className="
               block
               bg-gradient-to-r
               from-blue-700
@@ -103,13 +106,13 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
               bg-clip-text
               text-transparent
             "
-          >
-            Built For Results
-          </span>
-        </h2>
+              >
+                Engineered For Results
+              </span>
+            </h2>
 
-        <p
-          className="
+            <p
+              className="
             mx-auto
             mt-6
             max-w-3xl
@@ -117,20 +120,19 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
             leading-relaxed
             text-slate-600
           "
-        >
-          We follow a structured and transparent
-          development process that ensures every
-          project is delivered efficiently,
-          strategically, and successfully.
-        </p>
-      </div>
-    </AnimatedSection>
+            >
+              We follow a transparent, milestone-driven development process that
+              ensures every project is delivered on time, within budget, and to
+              the highest standard.
+            </p>
+          </div>
+        </AnimatedSection>
 
-    {/* Desktop Timeline */}
+        {/* Desktop Timeline */}
 
-    <div className="relative mt-24 hidden lg:block">
-      <div
-        className="
+        <div className="relative mt-24 hidden lg:block">
+          <div
+            className="
           absolute
           left-1/2
           top-0
@@ -142,43 +144,32 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
           via-cyan-300
           to-teal-200
         "
-      />
+          />
 
-      <div className="space-y-12">
-        {processSteps.map((step, index) => {
-          const Icon = step.icon;
-          const isEven = index % 2 === 0;
+          <div className="space-y-12">
+            {processSteps.map((step, index) => {
+              const Icon = step.icon;
+              const isEven = index % 2 === 0;
 
-          return (
-            <AnimatedSection
-              key={step.number}
-              delay={index * 0.08}
-            >
-              <div
-                className={`
+              return (
+                <AnimatedSection key={step.number} delay={index * 0.08}>
+                  <div
+                    className={`
                   flex items-center
-                  ${
-                    isEven
-                      ? 'justify-start'
-                      : 'justify-end'
-                  }
+                  ${isEven ? "justify-start" : "justify-end"}
                 `}
-              >
-                <div
-                  className={`
+                  >
+                    <div
+                      className={`
                     w-[calc(50%-40px)]
-                    ${
-                      isEven
-                        ? 'pr-14'
-                        : 'pl-14'
-                    }
+                    ${isEven ? "pr-14" : "pl-14"}
                   `}
-                >
-                  <motion.div
-                    whileHover={{
-                      y: -6,
-                    }}
-                    className="
+                    >
+                      <motion.div
+                        whileHover={{
+                          y: -6,
+                        }}
+                        className="
                       relative
                       rounded-[32px]
                       border
@@ -190,9 +181,9 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
                       duration-300
                       hover:shadow-xl
                     "
-                  >
-                    <div
-                      className="
+                      >
+                        <div
+                          className="
                         mb-6
                         flex
                         h-16
@@ -205,45 +196,45 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
                         via-cyan-500
                         to-teal-500
                       "
-                    >
-                      <Icon className="h-8 w-8 text-white" />
-                    </div>
+                        >
+                          <Icon className="h-8 w-8 text-white" />
+                        </div>
 
-                    <div
-                      className="
+                        <div
+                          className="
                         text-sm
                         font-bold
                         text-blue-600
                       "
-                    >
-                      STEP {step.number}
-                    </div>
+                        >
+                          STEP {step.number}
+                        </div>
 
-                    <h3
-                      className="
+                        <h3
+                          className="
                         mt-3
                         text-2xl
                         font-bold
                         text-slate-900
                       "
-                    >
-                      {step.title}
-                    </h3>
+                        >
+                          {step.title}
+                        </h3>
 
-                    <p
-                      className="
+                        <p
+                          className="
                         mt-4
                         leading-relaxed
                         text-slate-600
                       "
-                    >
-                      {step.description}
-                    </p>
-                  </motion.div>
-                </div>
+                        >
+                          {step.description}
+                        </p>
+                      </motion.div>
+                    </div>
 
-                <div
-                  className="
+                    <div
+                      className="
                     absolute
                     left-1/2
                     flex
@@ -263,32 +254,29 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
                     text-white
                     shadow-lg
                   "
-                >
-                  {step.number}
-                </div>
-              </div>
-            </AnimatedSection>
-          );
-        })}
-      </div>
-    </div>
+                    >
+                      {step.number}
+                    </div>
+                  </div>
+                </AnimatedSection>
+              );
+            })}
+          </div>
+        </div>
 
-    {/* Mobile Layout */}
+        {/* Mobile Layout */}
 
-    <div className="mt-16 grid gap-5 lg:hidden">
-      {processSteps.map((step, index) => {
-        const Icon = step.icon;
+        <div className="mt-16 grid gap-5 lg:hidden">
+          {processSteps.map((step, index) => {
+            const Icon = step.icon;
 
-        return (
-          <AnimatedSection
-            key={step.number}
-            delay={index * 0.08}
-          >
-            <motion.div
-              whileHover={{
-                y: -4,
-              }}
-              className="
+            return (
+              <AnimatedSection key={step.number} delay={index * 0.08}>
+                <motion.div
+                  whileHover={{
+                    y: -4,
+                  }}
+                  className="
                 rounded-[28px]
                 border
                 border-slate-200
@@ -296,10 +284,10 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
                 p-6
                 shadow-sm
               "
-            >
-              <div className="flex items-start gap-4">
-                <div
-                  className="
+                >
+                  <div className="flex items-start gap-4">
+                    <div
+                      className="
                     flex
                     h-14
                     w-14
@@ -312,55 +300,55 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
                     via-cyan-500
                     to-teal-500
                   "
-                >
-                  <Icon className="h-6 w-6 text-white" />
-                </div>
+                    >
+                      <Icon className="h-6 w-6 text-white" />
+                    </div>
 
-                <div>
-                  <div
-                    className="
+                    <div>
+                      <div
+                        className="
                       text-xs
                       font-bold
                       tracking-wider
                       text-blue-600
                     "
-                  >
-                    STEP {step.number}
-                  </div>
+                      >
+                        STEP {step.number}
+                      </div>
 
-                  <h3
-                    className="
+                      <h3
+                        className="
                       mt-1
                       text-xl
                       font-bold
                       text-slate-900
                     "
-                  >
-                    {step.title}
-                  </h3>
+                      >
+                        {step.title}
+                      </h3>
 
-                  <p
-                    className="
+                      <p
+                        className="
                       mt-3
                       text-slate-600
                       leading-relaxed
                     "
-                  >
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </AnimatedSection>
-        );
-      })}
-    </div>
+                      >
+                        {step.description}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatedSection>
+            );
+          })}
+        </div>
 
-    {/* Bottom CTA */}
+        {/* Bottom CTA */}
 
-    <AnimatedSection className="mt-20">
-      <div
-        className="
+        <AnimatedSection className="mt-20">
+          <div
+            className="
           overflow-hidden
           rounded-[40px]
           bg-white
@@ -370,9 +358,9 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
           ring-slate-200
           lg:p-12
         "
-      >
-        <div
-          className="
+          >
+            <div
+              className="
             flex
             flex-col
             gap-8
@@ -380,35 +368,33 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
             lg:items-center
             lg:justify-between
           "
-        >
-          <div>
-            <h3
-              className="
+            >
+              <div>
+                <h3
+                  className="
                 text-3xl
                 font-bold
                 text-slate-900
               "
-            >
-              Transparent Process.
-              Predictable Results.
-            </h3>
+                >
+                  Transparent Process. Measurable Results.
+                </h3>
 
-            <p
-              className="
+                <p
+                  className="
                 mt-3
                 max-w-2xl
                 text-slate-600
               "
-            >
-              From discovery to deployment and
-              ongoing support, we ensure complete
-              visibility and collaboration at every
-              stage of your project.
-            </p>
-          </div>
+                >
+                  From initial discovery through deployment and ongoing support,
+                  we ensure full transparency, real-time collaboration, and
+                  clear milestone reporting at every stage of your project.
+                </p>
+              </div>
 
-          <div
-            className="
+              <div
+                className="
               rounded-2xl
               bg-gradient-to-r
               from-blue-700
@@ -419,21 +405,15 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
               text-center
               text-white
             "
-          >
-            <div className="text-3xl font-bold">
-              6-Step
-            </div>
+              >
+                <div className="text-3xl font-bold">6-Step</div>
 
-            <div className="text-white/90">
-              Delivery Framework
+                <div className="text-white/90">Delivery Framework</div>
+              </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
-    </AnimatedSection>
-  </div>
-</section>
-
-
-);
+    </section>
+  );
 }

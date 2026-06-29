@@ -91,7 +91,7 @@ export default function IndustrySolutions() {
                 md:text-5xl
               "
             >
-              Technology Solutions Built
+              Software Solutions Built
               <span className="block text-blue-400">
                 For Every Industry
               </span>
@@ -107,11 +107,7 @@ export default function IndustrySolutions() {
                 text-slate-400
               "
             >
-              From custom software and mobile
-              applications to AI-powered platforms
-              and cloud infrastructure, we deliver
-              solutions that help organizations
-              innovate, automate, and scale.
+             From custom software development and mobile apps to AI-powered platforms and cloud infrastructure, we help organizations innovate, automate, and scale.
             </p>
           </div>
 

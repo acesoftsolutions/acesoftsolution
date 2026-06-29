@@ -13,31 +13,31 @@ import {
 const stats = [
   {
     number: '20+',
-    label: 'Technologies',
+    label: 'Technologies Stack',
     icon: Code2,
   },
   {
-    number: '50+',
-    label: 'Projects',
+    number: '250+',
+    label: 'Projects Delivered  ',
     icon: Briefcase,
   },
   {
-    number: '10+',
-    label: 'Industries',
+    number: '15+',
+    label: 'Industries Served   ',
     icon: Building2,
   },
   {
-    number: '99%',
-    label: 'Satisfaction',
+    number: '98%',
+    label: 'Client Satisfaction Rate',
     icon: Award,
   },
 ];
 
 const expertisePoints = [
-  'Web Applications',
-  'Mobile Apps',
-  'Cloud Solutions',
-  'API Development',
+  'Enterprise Web Applications',
+  'Mobile Apps (iOS & Android)',
+  'Cloud-Native Solutions',
+  'API Design & Development',
 ];
 
 export default function ExpertiseSection() {
@@ -75,8 +75,8 @@ export default function ExpertiseSection() {
               Technology Expertise
             </div>
 
-            <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-              Building Reliable
+            <h2 className="mt-6 text-3xl font-bold text-slate-900 md:text-4xl">
+              Engineering Reliable
 
               <span
                 className="
@@ -89,13 +89,17 @@ export default function ExpertiseSection() {
                   text-transparent
                 "
               >
-                Digital Solutions
+               High-Performance Digital Solutions
               </span>
             </h2>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
-              We combine modern technologies and industry best practices
-              to build secure, scalable, and high-performing digital products.
+              We combine cutting-edge technologies and industry-proven
+              best practices to engineer secure, scalable, and
+              high-performance digital products built to exceed
+              business expectations.
+
+
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">

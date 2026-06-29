@@ -41,11 +41,11 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
         <h2
           className="
             mt-6
-            text-4xl
+            text-3xl
             font-bold
             text-slate-900
-            md:text-5xl
-            xl:text-6xl
+            md:text-4xl
+            xl:text-5xl
           "
         >
           Trusted By
@@ -60,7 +60,7 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
               text-transparent
             "
           >
-            Businesses Worldwide
+            Growing Businesses Worldwide
           </span>
         </h2>
 
@@ -73,9 +73,10 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
             text-slate-600
           "
         >
-          Helping startups, SMEs and enterprises
-          build scalable digital solutions that
-          drive measurable growth.
+          Empowering startups, SMEs, and enterprises with scalable
+              digital solutions, expert development, and strategies
+              that consistently drive measurable, real-world growth.
+
         </p>
       </div>
     </AnimatedSection>
@@ -120,7 +121,7 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
         </h3>
 
         <p className="text-slate-500">
-          Based on client feedback
+          Rated 4.9/5 by Verified Clients
         </p>
       </div>
     </AnimatedSection>
@@ -362,7 +363,7 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
           </h3>
 
           <p className="text-slate-500">
-            Happy Clients
+            Global Clients Served
           </p>
         </div>
 
@@ -398,7 +399,7 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
           </h3>
 
           <p className="text-slate-500">
-            Client Retention
+            Client Retention Rate
           </p>
         </div>
 
@@ -430,11 +431,11 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
               text-slate-900
             "
           >
-            500+
+            250+
           </h3>
 
           <p className="text-slate-500">
-            Projects Delivered
+            Projects Successfully Delivered
           </p>
         </div>
       </div>

@@ -6,7 +6,6 @@ import ScrollProgress from '@/components/shared/ScrollProgress';
 
 import PortfolioHero from '@/components/portfolio/PortfolioHero';
 import FeaturedCaseStudy from '@/components/portfolio/FeaturedCaseStudy';
-import PortfolioGrid from '@/components/portfolio/PortfolioGrid';
 import ResultsSection from '@/components/portfolio/ResultsSection';
 import TestimonialsSection from '@/components/portfolio/TestimonialsSection';
 import PortfolioCTA from '@/components/portfolio/WorkCTA';
@@ -22,9 +21,6 @@ return (
 
     {/* Featured Project */}
     <FeaturedCaseStudy />
-
-    {/* Portfolio Showcase */}
-    <PortfolioGrid />
 
     {/* Business Results */}
     <ResultsSection />

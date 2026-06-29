@@ -17,7 +17,7 @@ const technologyCategories = [
     title: 'Frontend Development',
     icon: Monitor,
     description:
-      'Modern frontend frameworks for building fast, interactive, and scalable user experiences.',
+      'Industry-leading frontend frameworks for building fast, interactive, responsive, and highly scalable user interfaces and experiences.',
     technologies: [
       'React.js',
       'Next.js',
@@ -33,7 +33,7 @@ const technologyCategories = [
     title: 'Backend Development',
     icon: Server,
     description:
-      'Robust backend architectures and APIs designed for performance and scalability.',
+      'Robust, enterprise-grade backend architectures and high-performance APIs engineered for speed, security, scalability, and reliability.',
     technologies: [
       'Node.js',
       'Express.js',
@@ -46,10 +46,10 @@ const technologyCategories = [
     ],
   },
   {
-    title: 'Database Solutions',
+    title: 'Database Solutions & Management',
     icon: Database,
     description:
-      'Secure and optimized databases for handling business-critical applications.',
+      'Secure, high-performance, and optimized database solutions engineered to power business-critical applications at any scale.',
     technologies: [
       'MongoDB',
       'PostgreSQL',
@@ -60,10 +60,10 @@ const technologyCategories = [
     ],
   },
   {
-    title: 'Cloud & DevOps',
+    title: 'Cloud Infrastructure & DevOps',
     icon: Cloud,
     description:
-      'Reliable deployment pipelines and cloud infrastructure for modern applications.',
+      'Reliable, automated deployment pipelines and enterprise-grade cloud infrastructure built for modern, scalable, and resilient applications.',
     technologies: [
       'AWS',
       'Docker',
@@ -78,7 +78,7 @@ const technologyCategories = [
     title: 'Mobile App Development',
     icon: Smartphone,
     description:
-      'Cross-platform and native mobile applications with seamless user experiences.',
+      'High-performance cross-platform and native mobile applications for iOS and Android, delivering seamless, intuitive user experiences.',
     technologies: [
       'React Native',
       'Flutter',
@@ -88,10 +88,10 @@ const technologyCategories = [
     ],
   },
   {
-    title: 'AI & Automation',
+    title: 'AI & Intelligent Automation',
     icon: Bot,
     description:
-      'Smart automation and AI-powered solutions to accelerate business growth.',
+      'Cutting-edge AI, machine learning, and intelligent automation solutions that streamline operations and accelerate measurable business growth through data-driven decision making.',
     technologies: [
       'OpenAI',
       'ChatGPT Integration',
@@ -140,8 +140,8 @@ export default function TechnologyAccordion() {
             Technology Expertise
           </div>
 
-          <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
-            Technologies We Use To
+          <h2 className="mt-6 text-3xl font-bold text-slate-900 md:text-4xl">
+            Technologies We Use To 
 
             <span
               className="
@@ -154,14 +154,16 @@ export default function TechnologyAccordion() {
                 text-transparent
               "
             >
-              Build Powerful Solutions
+              Engineer Exceptional Solutions
             </span>
           </h2>
 
           <p className="mt-6 text-lg leading-relaxed text-slate-600">
-            We combine modern frameworks, cloud platforms, and development
-            tools to deliver secure, scalable, and high-performing digital
-            products.
+           We combine industry-proven frameworks, enterprise cloud
+              platforms, and cutting-edge development tools to deliver
+              secure, scalable, and high-performance digital products
+              that exceed client expectations
+
           </p>
         </div>
 

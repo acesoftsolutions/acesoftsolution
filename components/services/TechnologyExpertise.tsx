@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   Code2,
   Server,
@@ -10,103 +10,104 @@ import {
   Layers3,
   Zap,
   Sparkles,
-} from 'lucide-react';
+} from "lucide-react";
 
-import AnimatedSection from '@/components/shared/AnimatedSection';
+import AnimatedSection from "@/components/shared/AnimatedSection";
 
 const techCategories = [
   {
     icon: Code2,
-    title: 'Frontend Development',
+    title: "Frontend Development",
     description:
-      'Modern interfaces built for speed, responsiveness, and exceptional user experiences.',
+      "Modern, performant, and responsive interfaces built with industry-leading frontend frameworks.",
 
     technologies: [
-      'React',
-      'Next.js',
-      'TypeScript',
-      'Tailwind CSS',
-      'Framer Motion',
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vue.js",
     ],
 
-    gradient:
-      'from-blue-600 via-cyan-500 to-violet-600',
+    gradient: "from-blue-600 via-cyan-500 to-violet-600",
   },
 
   {
     icon: Server,
-    title: 'Backend Development',
+    title: "Backend Development",
     description:
-      'Scalable backend systems designed for security, performance, and reliability.',
+      "Robust, scalable server-side solutions and API architectures powering your digital products.",
 
     technologies: [
-      'Node.js',
-      'Express.js',
-      'REST APIs',
-      'Authentication',
-      'Microservices',
+      "Node.js",
+      "Express.js",
+      "REST APIs",
+      "Authentication",
+      "Microservices",
+      "GraphQL",
     ],
 
-    gradient:
-      'from-cyan-500 via-blue-500 to-indigo-600',
+    gradient: "from-cyan-500 via-blue-500 to-indigo-600",
   },
 
   {
     icon: Database,
-    title: 'Database Systems',
+    title: "Database Systems & Management",
     description:
-      'Robust data architecture engineered for efficiency and long-term scalability.',
+      "Secure, high-performance database architecture, management, and optimization for any scale.",
 
     technologies: [
-      'MongoDB',
-      'PostgreSQL',
-      'MySQL',
-      'Redis',
-      'Database Optimization',
+      "MongoDB",
+      "PostgreSQL",
+      "MySQL",
+      "Redis",
+      "Database Optimization",
+      "Firebase",
     ],
 
-    gradient:
-      'from-violet-600 via-purple-500 to-fuchsia-500',
+    gradient: "from-violet-600 via-purple-500 to-fuchsia-500",
   },
 
   {
     icon: Cloud,
-    title: 'Cloud & DevOps',
+    title: "Cloud Infrastructure & DevOps",
     description:
-      'Automated deployment pipelines and cloud-native infrastructure for growth.',
+      "Scalable cloud deployments, automated CI/CD pipelines, and managed infrastructure for enterprise applications.",
 
     technologies: [
-      'AWS',
-      'Vercel',
-      'Docker',
-      'CI/CD',
-      'Cloud Infrastructure',
+      "AWS",
+      "Vercel",
+      "Docker",
+      "CI/CD",
+      "Cloud Infrastructure",
+      "Kubernetes",
+      "Azure",
     ],
 
-    gradient:
-      'from-emerald-500 via-green-500 to-teal-500',
+    gradient: "from-emerald-500 via-green-500 to-teal-500",
   },
 ];
 
 const stats = [
   {
-    value: '20+',
-    label: 'Technologies',
+    value: "20+",
+    label: "Technologies",
   },
 
   {
-    value: '100%',
-    label: 'Scalable Solutions',
+    value: "100%",
+    label: "Scalable Solutions",
   },
 
   {
-    value: 'Cloud',
-    label: 'Native Architecture',
+    value: "Cloud",
+    label: "Native Architecture",
   },
 
   {
-    value: 'Enterprise',
-    label: 'Security Standards',
+    value: "Enterprise",
+    label: "Security Standards",
   },
 ];
 
@@ -163,16 +164,15 @@ export default function TechnologyExpertise() {
               <h2
                 className="
                   mt-6
-                  text-4xl
+                  text-3xl
                   font-bold
                   leading-tight
                   text-slate-900
-                  md:text-5xl
-                  xl:text-6xl
+                  md:text-4xl
+                  xl:text-5xl
                 "
               >
-                Powered By
-
+                Engineered with Cutting
                 <span
                   className="
                     block
@@ -184,7 +184,7 @@ export default function TechnologyExpertise() {
                     text-transparent
                   "
                 >
-                  Modern Technology Stack
+                  Technologies and Enterprise-Grade Architecture
                 </span>
               </h2>
             </div>
@@ -197,11 +197,9 @@ export default function TechnologyExpertise() {
                   text-slate-600
                 "
               >
-                We leverage proven technologies,
-                enterprise-grade frameworks, and
-                scalable architecture patterns to
-                create secure, high-performance, and
-                future-ready digital solutions.
+                We leverage industry-proven technologies, cutting-edge
+                frameworks, and enterprise-grade architecture patterns to build
+                secure, scalable, and future-ready digital solutions.
               </p>
             </div>
           </div>
@@ -240,9 +238,7 @@ export default function TechnologyExpertise() {
                   {item.value}
                 </h3>
 
-                <p className="mt-2 text-slate-600">
-                  {item.label}
-                </p>
+                <p className="mt-2 text-slate-600">{item.label}</p>
               </motion.div>
             ))}
           </div>
@@ -250,7 +246,7 @@ export default function TechnologyExpertise() {
           {/* Technology Cards */}
 
           <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2">
-                        {techCategories.map((category) => {
+            {techCategories.map((category) => {
               const Icon = category.icon;
 
               return (
@@ -333,11 +329,10 @@ export default function TechnologyExpertise() {
                     {/* Technologies */}
 
                     <div className="mt-8 flex flex-wrap gap-3">
-                      {category.technologies.map(
-                        (tech) => (
-                          <span
-                            key={tech}
-                            className="
+                      {category.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="
                               rounded-2xl
                               border
                               border-blue-100
@@ -348,11 +343,10 @@ export default function TechnologyExpertise() {
                               font-medium
                               text-blue-700
                             "
-                          >
-                            {tech}
-                          </span>
-                        )
-                      )}
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
 
                     {/* Bottom Line */}
@@ -376,9 +370,8 @@ export default function TechnologyExpertise() {
             })}
           </div>
 
-
           {/* Architecture Section Starts In Part 3 */}
-                    <div className="mt-20">
+          <div className="mt-20">
             <div
               className="
                 overflow-hidden
@@ -390,30 +383,30 @@ export default function TechnologyExpertise() {
                 {[
                   {
                     icon: Layers3,
-                    title: 'Scalable Architecture',
+                    title: "Scalable Architecture",
                     description:
-                      'Built to support business growth, high traffic, and long-term maintainability.',
+                      "Engineered to support rapid growth, peak performance, and long-term maintainability at any scale of operation.",
                   },
 
                   {
                     icon: ShieldCheck,
-                    title: 'Enterprise Security',
+                    title: "Enterprise-Grade Security",
                     description:
-                      'Modern security practices, authentication systems, and infrastructure protection.',
+                      "Built to the highest security standards—OWASP-compliant, with robust authentication, data encryption, and infrastructure protection.",
                   },
 
                   {
                     icon: Cloud,
-                    title: 'Cloud Ready',
+                    title: "Cloud-Native & Ready",
                     description:
-                      'Optimized deployments and cloud-native environments designed for reliability.',
+                      "Cloud-native deployments optimized for high availability, auto-scaling, and maximum infrastructure reliability.",
                   },
 
                   {
                     icon: Zap,
-                    title: 'Performance First',
+                    title: "Performance Optimization",
                     description:
-                      'Fast, optimized, and highly responsive applications delivering superior experiences.',
+                      "Performance-first engineering with optimized code, intelligent caching, fast load times, and exceptional user experiences across every device.",
                   },
                 ].map((item, index) => {
                   const Icon = item.icon;
@@ -430,8 +423,8 @@ export default function TechnologyExpertise() {
                         lg:p-10
                         ${
                           index !== 3
-                            ? 'border-b lg:border-b-0 lg:border-r border-white/10'
-                            : ''
+                            ? "border-b lg:border-b-0 lg:border-r border-white/10"
+                            : ""
                         }
                       `}
                     >
@@ -475,8 +468,6 @@ export default function TechnologyExpertise() {
               </div>
             </div>
           </div>
-
-     
         </AnimatedSection>
       </div>
     </section>

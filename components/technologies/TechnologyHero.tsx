@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   Layers3,
@@ -10,58 +10,58 @@ import {
   Cloud,
   Globe,
   CheckCircle2,
-} from 'lucide-react';
+} from "lucide-react";
 
 const technologies = [
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Node.js',
-  'MongoDB',
-  'AWS',
-  'Docker',
-  'Tailwind CSS',
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Node.js",
+  "MongoDB",
+  "AWS",
+  "Docker",
+  "Tailwind CSS",
 ];
 
 const stats = [
   {
-    number: '20+',
-    label: 'Technologies',
+    number: "20+",
+    label: "Technologies",
   },
   {
-    number: '50+',
-    label: 'Projects',
+    number: "250+",
+    label: "Projects Delivered",
   },
   {
-    number: '10+',
-    label: 'Industries',
+    number: "15+",
+    label: "Industries Served",
   },
   {
-    number: '99%',
-    label: 'Satisfaction',
+    number: "98%",
+    label: "Client Satisfaction",
   },
 ];
 
 const stackData = [
   {
     icon: Globe,
-    title: 'Frontend',
-    items: ['React', 'Next.js', 'TypeScript'],
+    title: "Frontend",
+    items: ["React", "Next.js", "TypeScript", "vue.js"],
   },
   {
     icon: Database,
-    title: 'Backend',
-    items: ['Node.js', 'Express', 'NestJS'],
+    title: "Backend",
+    items: ["Node.js", "Express", "NestJS", "GraphQL"],
   },
   {
     icon: Database,
-    title: 'Database',
-    items: ['MongoDB', 'PostgreSQL', 'MySQL'],
+    title: "Database",
+    items: ["MongoDB", "PostgreSQL", "MySQL", "Redis"],
   },
   {
     icon: Cloud,
-    title: 'Cloud',
-    items: ['AWS', 'Docker', 'CI/CD'],
+    title: "Cloud",
+    items: ["AWS", "Docker", "CI/CD", "Kubernetes "],
   },
 ];
 
@@ -77,7 +77,7 @@ export default function TechnologyHero() {
               linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
             `,
-            backgroundSize: '50px 50px',
+            backgroundSize: "50px 50px",
           }}
         />
 
@@ -105,44 +105,38 @@ export default function TechnologyHero() {
               <Layers3 className="h-4 w-4 text-cyan-400" />
 
               <span className="text-sm font-medium text-cyan-300">
-                Technology Excellence
+                Industry-Leading Technology Excellence
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="mt-8 text-5xl font-bold leading-tight text-white lg:text-6xl">
-              Modern Technologies
-
+            <h1 className="mt-8 text-4xl font-bold leading-tight text-white lg:text-5xl">
+              Cutting-Edge Technologies
               <span className="mt-2 block bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                For Scalable Digital Products
+                Powering Scalable Digital Products
               </span>
             </h1>
 
             {/* Description */}
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-slate-400">
-              We leverage cutting-edge technologies, cloud infrastructure,
-              and modern development practices to build scalable, secure,
-              and future-ready digital solutions that help businesses
-              innovate faster.
+              We leverage industry-proven, cutting-edge technologies, enterprise
+              cloud infrastructure, and best-in-class development practices to
+              build scalable, secure, future-ready digital solutions that help
+              businesses innovate, grow, and outperform the competition.
             </p>
 
             {/* Features */}
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
-                'Modern Architecture',
-                'Cloud Native Solutions',
-                'Enterprise Security',
-                'Scalable Infrastructure',
+                "Modern, Scalable Architecture",
+                "Cloud-Native Solutions",
+                "Enterprise-Grade Security",
+                "Elastic, Scalable Infrastructure",
               ].map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-3"
-                >
+                <div key={item} className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-cyan-400" />
 
-                  <span className="text-slate-300">
-                    {item}
-                  </span>
+                  <span className="text-slate-300">{item}</span>
                 </div>
               ))}
             </div>
@@ -167,8 +161,7 @@ export default function TechnologyHero() {
                   hover:shadow-[0_10px_30px_rgba(37,99,235,0.35)]
                 "
               >
-                Explore Technologies
-
+                Explore Our Teck Stack
                 <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
@@ -188,7 +181,7 @@ export default function TechnologyHero() {
                   hover:bg-white/10
                 "
               >
-                Get Consultation
+                Get a Free Consultation
               </button>
             </div>
 
@@ -226,7 +219,7 @@ export default function TechnologyHero() {
               ))}
             </div>
           </motion.div>
-                    {/* Right Side */}
+          {/* Right Side */}
           <motion.div
             initial={{
               opacity: 0,
@@ -262,9 +255,7 @@ export default function TechnologyHero() {
               {/* Header */}
               <div className="mb-8 flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-slate-400">
-                    Technology Ecosystem
-                  </p>
+                  <p className="text-sm text-slate-400">Technology Ecosystem</p>
 
                   <h3 className="mt-1 text-2xl font-bold text-white">
                     Our Core Stack
@@ -370,8 +361,9 @@ export default function TechnologyHero() {
                     </h4>
 
                     <p className="mt-1 text-sm text-slate-400">
-                      Modern frameworks, scalable architecture, and
-                      cloud-native solutions built for long-term growth.
+                      Industry-proven frameworks, enterprise-grade scalable
+                      architecture, and cloud-native solutions engineered for
+                      performance, security, and long-term business growth.
                     </p>
                   </div>
                 </div>
@@ -386,7 +378,7 @@ export default function TechnologyHero() {
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                ease: 'easeInOut',
+                ease: "easeInOut",
               }}
               className="
                 absolute
@@ -403,13 +395,9 @@ export default function TechnologyHero() {
                 lg:block
               "
             >
-              <p className="text-3xl font-bold text-white">
-                50+
-              </p>
+              <p className="text-3xl font-bold text-white">500+</p>
 
-              <p className="text-sm text-slate-400">
-                Projects Delivered
-              </p>
+              <p className="text-sm text-slate-400">Projects Delivered</p>
             </motion.div>
           </motion.div>
         </div>
@@ -458,9 +446,7 @@ export default function TechnologyHero() {
                 {item.number}
               </h3>
 
-              <p className="mt-2 text-slate-400">
-                {item.label}
-              </p>
+              <p className="mt-2 text-slate-400">{item.label}</p>
             </motion.div>
           ))}
         </div>

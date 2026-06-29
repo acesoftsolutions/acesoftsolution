@@ -13,79 +13,77 @@ Headphones,
 } from 'lucide-react';
 
 const processSteps = [
-{
-id: '01',
-title: 'Discovery',
-description:
-'Understanding business goals, requirements, target audience, and project scope.',
-icon: Search,
-},
-{
-id: '02',
-title: 'Planning',
-description:
-'Creating project roadmap, technology selection, timelines, and architecture.',
-icon: ClipboardList,
-},
-{
-id: '03',
-title: 'UI/UX Design',
-description:
-'Designing intuitive user experiences and modern interfaces that engage users.',
-icon: PenTool,
-},
-{
-id: '04',
-title: 'Development',
-description:
-'Building scalable frontend and backend solutions using modern technologies.',
-icon: Code2,
-},
-{
-id: '05',
-title: 'Testing',
-description:
-'Performing quality assurance, bug fixing, and performance optimization.',
-icon: ShieldCheck,
-},
-{
-id: '06',
-title: 'Deployment',
-description:
-'Launching applications securely on production environments and cloud platforms.',
-icon: Rocket,
-},
-{
-id: '07',
-title: 'Support',
-description:
-'Continuous maintenance, monitoring, updates, and technical support.',
-icon: Headphones,
-},
+  {
+    id: '01',
+    title: 'Discovery',
+    description:
+      'We analyze your business goals, requirements, target audience, and project scope.',
+    icon: Search,
+  },
+  {
+    id: '02',
+    title: 'Planning',
+    description:
+      'Building a clear roadmap, tech stack selection, timelines, and architecture.',
+    icon: ClipboardList,
+  },
+  {
+    id: '03',
+    title: 'UI/UX Design',
+    description:
+      'Crafting intuitive UI/UX designs and modern interfaces that engage users.',
+    icon: PenTool,
+  },
+  {
+    id: '04',
+    title: 'Development',
+    description:
+      'Developing scalable, secure frontend and backend solutions using modern technologies.',
+    icon: Code2,
+  },
+  {
+    id: '05',
+    title: 'Testing',
+    description:
+      'Conducting rigorous QA, bug fixing, and performance optimization testing.',
+    icon: ShieldCheck,
+  },
+  {
+    id: '06',
+    title: 'Deployment',
+    description:
+      'Deploying applications securely on cloud and production-ready environments.',
+    icon: Rocket,
+  },
+  {
+    id: '07',
+    title: 'Support',
+    description:
+      'Providing ongoing maintenance, monitoring, updates, and reliable technical support.',
+    icon: Headphones,
+  },
 ];
 
 export default function TechnologyProcess() {
 return ( <section className="relative overflow-hidden bg-[#f8fafc] py-14">
 {/* Background Effects */} <div className="absolute inset-0 overflow-hidden"> <div className="absolute left-0 top-20 h-80 w-80 rounded-full bg-blue-500/10 blur-[140px]" /> <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-cyan-500/10 blur-[180px]" /> </div>
 
-```
   <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
     {/* Header */}
     <div className="mx-auto max-w-3xl text-center">
       <span className="inline-flex rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-600">
-        Development Process
+       Software Development Process
       </span>
 
-      <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-5xl">
+      <h2 className="mt-6 text-3xl font-bold text-slate-900 md:text-4xl">
         Our Proven
         <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-violet-500 bg-clip-text text-transparent">
-          Development Workflow
+          Software Development Workflow
         </span>
       </h2>
 
       <p className="mt-6 text-lg text-slate-600">
-        We follow a structured and transparent development process that
-        ensures quality, efficiency, and successful project delivery.
+        As a leading software development company, we follow a structured, transparent process that ensures quality and successful delivery.
       </p>
     </div>
 

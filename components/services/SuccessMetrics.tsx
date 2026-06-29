@@ -151,14 +151,14 @@ export default function SuccessMetrics() {
             <h2
               className="
                 mt-6
-                text-4xl
+                text-3xl
                 font-bold
                 text-slate-900
-                md:text-5xl
-                xl:text-6xl
+                md:text-4xl
+                xl:text-5xl
               "
             >
-              Delivering
+              Delivering Proven
 
               <span
                 className="
@@ -171,7 +171,7 @@ export default function SuccessMetrics() {
                   text-transparent
                 "
               >
-                Measurable Results
+                Measurable Business Results
               </span>
             </h2>
 
@@ -185,10 +185,10 @@ export default function SuccessMetrics() {
                 text-slate-600
               "
             >
-              Every solution we create is designed
-              to generate tangible business outcomes,
-              improve operational efficiency, and
-              support sustainable growth.
+              Every solution we engineer is purpose-built to create
+              tangible business value, drive operational efficiency,
+              and fuel sustainable long-term growth.
+
             </p>
           </div>
 

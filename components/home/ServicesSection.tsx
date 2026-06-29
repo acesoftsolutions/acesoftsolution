@@ -38,20 +38,21 @@ export default function ServicesSection() {
         {/* Header */}
         <AnimatedSection className="text-center">
           <span className="inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700">
-            Our Services
+            What We Offer
           </span>
 
-          <h2 className="mx-auto mt-6 max-w-4xl font-poppins text-4xl font-bold leading-tight text-slate-900 md:text-5xl xl:text-6xl">
-            Digital Solutions Designed
+          <h2 className="mx-auto mt-6 max-w-4xl font-poppins text-3xl font-bold leading-tight text-slate-900 md:text-4xl xl:text-5xl">
+            End-to-End Tech Solutions Built
             <span className="block bg-gradient-to-r from-blue-700 via-cyan-500 to-teal-500 bg-clip-text text-transparent">
-              To Accelerate Growth
+              To Drive Business Growth
             </span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
-            We help startups, enterprises, and growing businesses build scalable
-            digital products through software development, AI automation, mobile
-            applications, digital marketing, and cloud solutions.
+            We partner with startups, enterprises, and scaling businesses to
+            deliver industry-ready software development, AI automation, mobile
+            apps, digital marketing, and cloud solutions that drive measurable
+            results.
           </p>
         </AnimatedSection>
 
@@ -62,9 +63,9 @@ export default function ServicesSection() {
               "Web Development",
               "Mobile Apps",
               "ERP Solutions",
-              "AI Automation",
+              "AI & Automation ",
               "Digital Marketing",
-              "Cloud Services",
+              "Cloud & DevOps ",
             ].map((item) => (
               <span
                 key={item}

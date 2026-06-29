@@ -102,13 +102,7 @@ export default function IndustryChallenges() {
                   text-slate-600
                 "
               >
-                Every industry faces unique
-                operational, technological,
-                and customer-related challenges.
-                Our expertise helps organizations
-                overcome obstacles, modernize
-                systems, and achieve sustainable
-                digital growth.
+              Every industry faces unique operational, technological, and customer-related challenges. Our software development expertise helps organizations overcome obstacles, modernize systems, and achieve sustainable growth.
               </p>
 
               <div className="mt-10 rounded-[28px] border border-slate-200 bg-slate-50 p-6">

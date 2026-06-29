@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
   ShieldCheck,
   Layers3,
@@ -9,61 +9,59 @@ import {
   Clock3,
   TrendingUp,
   Sparkles,
-} from 'lucide-react';
+} from "lucide-react";
 
-import AnimatedSection from '@/components/shared/AnimatedSection';
+import AnimatedSection from "@/components/shared/AnimatedSection";
 
 const reasons = [
   {
     icon: ShieldCheck,
-    title: 'Enterprise Quality',
+    title: "Enterprise Quality",
     description:
-      'Every solution is built using scalable architecture, security-first development practices, and industry standards.',
-    size: 'large',
+      "Every solution is built using scalable architecture, security-first development practices, and industry standards.",
+    size: "large",
   },
 
   {
     icon: Layers3,
-    title: 'Modern Technologies',
+    title: "Modern Technologies",
     description:
-      'Leveraging the latest frameworks, cloud platforms, and development tools for future-ready solutions.',
-    size: 'small',
+      "Leveraging the latest frameworks, cloud platforms, and development tools for future-ready solutions.",
+    size: "small",
   },
 
   {
     icon: Rocket,
-    title: 'Fast Delivery',
+    title: "Fast Delivery",
     description:
-      'Agile workflows and streamlined processes ensure rapid project execution without sacrificing quality.',
-    size: 'small',
+      "Agile workflows and streamlined processes ensure rapid project execution without sacrificing quality.",
+    size: "small",
   },
 
   {
     icon: Users,
-    title: 'Dedicated Team',
+    title: "Dedicated Team",
     description:
-      'A collaborative team committed to understanding your goals and delivering long-term success.',
-    size: 'small',
+      "A collaborative team committed to understanding your goals and delivering long-term success.",
+    size: "small",
   },
 
   {
     icon: Clock3,
-    title: 'Ongoing Support',
+    title: "Ongoing Support",
     description:
-      'Continuous monitoring, maintenance, updates, and optimization after launch.',
-    size: 'small',
+      "Continuous monitoring, maintenance, updates, and optimization after launch.",
+    size: "small",
   },
 
   {
     icon: TrendingUp,
-    title: 'Growth Focused',
+    title: "Growth Focused",
     description:
-      'Every solution is aligned with measurable business objectives and sustainable growth.',
-    size: 'large',
+      "Every solution is aligned with measurable business objectives and sustainable growth.",
+    size: "large",
   },
 ];
-
-
 
 export default function WhyChooseUs() {
   return (
@@ -104,15 +102,15 @@ export default function WhyChooseUs() {
             <h2
               className="
                 mt-6
-                text-4xl
-                md:text-5xl
-                xl:text-6xl
+                text-3xl
+                md:text-4xl
+                xl:text-5xl
                 font-bold
                 tracking-tight
                 text-slate-900
               "
             >
-              A Strategic Technology Partner
+              Your Strategic Technology Partner
               <span
                 className="
                   block
@@ -124,7 +122,7 @@ export default function WhyChooseUs() {
                   text-transparent
                 "
               >
-                For Ambitious Businesses
+                For High-Growth Businesses
               </span>
             </h2>
 
@@ -136,20 +134,17 @@ export default function WhyChooseUs() {
                 text-slate-600
               "
             >
-              We combine engineering excellence,
-              modern technologies, and business
-              strategy to deliver digital solutions
-              that create measurable impact and
-              sustainable growth.
+              We combine engineering excellence, cutting-edge technologies, and
+              proven business strategy to deliver tailored digital solutions
+              that create measurable impact and drive sustainable, long-term
+              growth.
             </p>
           </div>
-
-        
 
           {/* Bento Grid */}
 
           <div className="mt-16 grid gap-6 lg:grid-cols-12">
-                        {/* Enterprise Quality */}
+            {/* Enterprise Quality */}
 
             <motion.div
               initial={{
@@ -189,19 +184,17 @@ export default function WhyChooseUs() {
                 </div>
 
                 <div>
-                  <span className="text-sm font-medium text-blue-600">
-                    01
-                  </span>
+                  <span className="text-sm font-medium text-blue-600">01</span>
 
                   <h3 className="mt-2 text-3xl font-bold text-slate-900">
-                    Enterprise Quality
+                    Enterprise-Grade Quality
                   </h3>
 
                   <p className="mt-5 max-w-xl text-slate-600 leading-relaxed">
-                    Every solution is engineered with
-                    enterprise-grade architecture, security
-                    standards, scalability, and performance
-                    optimization to support long-term growth.
+                    Every solution we engineer is built on enterprise-grade
+                    architecture, robust security standards, horizontal
+                    scalability, and continuous performance optimization —
+                    designed to support reliable, long-term business growth.
                   </p>
                 </div>
               </div>
@@ -237,13 +230,13 @@ export default function WhyChooseUs() {
               </span>
 
               <h3 className="mt-2 text-xl font-bold text-slate-900">
-                Modern Technologies
+                Cutting-Edge Technology Stack
               </h3>
 
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Leveraging the latest frameworks,
-                cloud platforms, AI tools, and
-                development practices.
+                We leverage the latest frameworks, enterprise cloud platforms,
+                advanced AI tools, and modern development practices to build
+                solutions that stay ahead of the technology curve
               </p>
             </motion.div>
 
@@ -277,12 +270,13 @@ export default function WhyChooseUs() {
               </span>
 
               <h3 className="mt-2 text-xl font-bold text-slate-900">
-                Fast Delivery
+                Fast, On-Time Delivery
               </h3>
 
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Agile execution and efficient workflows
-                help accelerate project delivery.
+                Our agile execution model and streamlined workflows ensure
+                rapid, on-schedule project delivery without compromising
+                quality.
               </p>
             </motion.div>
 
@@ -316,12 +310,13 @@ export default function WhyChooseUs() {
               </span>
 
               <h3 className="mt-2 text-xl font-bold text-slate-900">
-                Dedicated Team
+                Dedicated Expert Team
               </h3>
 
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Designers, developers, and strategists
-                working together toward your goals.
+                Expert designers, developers, and strategists assigned
+                exclusively to your project - fully aligned with your vision and
+                business goals.
               </p>
             </motion.div>
 
@@ -355,12 +350,13 @@ export default function WhyChooseUs() {
               </span>
 
               <h3 className="mt-2 text-xl font-bold text-slate-900">
-                Ongoing Support
+                24/7 Ongoing Support
               </h3>
 
               <p className="mt-4 text-slate-600 leading-relaxed">
-                Continuous updates, maintenance,
-                monitoring, and optimization.
+                Round-the-clock updates, proactive maintenance, real-time
+                monitoring, and continuous performance optimization - long after
+                your product launches.
               </p>
             </motion.div>
 
@@ -408,18 +404,18 @@ export default function WhyChooseUs() {
                     </span>
 
                     <h3 className="mt-2 text-3xl font-bold text-slate-900">
-                      Business Growth Focused
+                      Results-Driven Business Growth
                     </h3>
 
                     <p className="mt-5 max-w-3xl text-slate-600 leading-relaxed">
-                      Every solution is strategically aligned
-                      with measurable business outcomes,
-                      helping improve operational efficiency,
-                      customer engagement, and revenue growth.
+                      Every solution we deliver is strategically aligned with
+                      your measurable business outcomes - driving operational
+                      efficiency, stronger customer engagement, and sustainable
+                      revenue growth.
                     </p>
                   </div>
                 </div>
-                                <div
+                <div
                   className="
                     flex
                     flex-wrap
@@ -427,10 +423,10 @@ export default function WhyChooseUs() {
                   "
                 >
                   {[
-                    'Business Strategy',
-                    'Scalable Architecture',
-                    'Digital Innovation',
-                    'Growth Optimization',
+                    "Business Strategy",
+                    "Scalable Architecture",
+                    "Digital Innovation",
+                    "Revenue Growth Optimization ",
                   ].map((item) => (
                     <div
                       key={item}
@@ -510,7 +506,7 @@ export default function WhyChooseUs() {
                       backdrop-blur-xl
                     "
                   >
-                    Let's Build Something Great
+                    Let's Build Something Exceptional
                   </span>
 
                   <h3
@@ -522,7 +518,7 @@ export default function WhyChooseUs() {
                       text-white
                     "
                   >
-                    More Than A Development Company
+                    More Than Just A Development Company
                   </h3>
 
                   <p
@@ -533,10 +529,10 @@ export default function WhyChooseUs() {
                       text-slate-300
                     "
                   >
-                    We work as an extension of your team,
-                    helping transform ideas into scalable
-                    digital products that create long-term
-                    business value, innovation, and growth.
+                    We work as a true extension of your team — transforming
+                    ideas into high-performance digital products that deliver
+                    long-term business value, continuous innovation, and
+                    scalable growth.
                   </p>
 
                   <div
@@ -580,7 +576,7 @@ export default function WhyChooseUs() {
                         hover:bg-white/10
                       "
                     >
-                      Schedule Consultation
+                      Schedule a Free Consultation 
                     </button>
                   </div>
 
@@ -595,33 +591,21 @@ export default function WhyChooseUs() {
                     "
                   >
                     <div>
-                      <h4 className="text-2xl font-bold text-white">
-                        50+
-                      </h4>
+                      <h4 className="text-2xl font-bold text-white">250+</h4>
 
-                      <p className="mt-1 text-slate-400">
-                        Projects Delivered
-                      </p>
+                      <p className="mt-1 text-slate-400">Projects Delivered</p>
                     </div>
 
                     <div>
-                      <h4 className="text-2xl font-bold text-white">
-                        98%
-                      </h4>
+                      <h4 className="text-2xl font-bold text-white">98%</h4>
 
-                      <p className="mt-1 text-slate-400">
-                        Client Satisfaction
-                      </p>
+                      <p className="mt-1 text-slate-400">Client Satisfaction Rate</p>
                     </div>
 
                     <div>
-                      <h4 className="text-2xl font-bold text-white">
-                        24/7
-                      </h4>
+                      <h4 className="text-2xl font-bold text-white">24/7</h4>
 
-                      <p className="mt-1 text-slate-400">
-                        Technical Support
-                      </p>
+                      <p className="mt-1 text-slate-400">Dedicated Technical Support</p>
                     </div>
                   </div>
                 </div>

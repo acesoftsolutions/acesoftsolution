@@ -1,222 +1,219 @@
-'use client';
+"use client";
 
-import React, { useMemo, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useMemo, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
-Brain,
-Monitor,
-Server,
-Smartphone,
-Database,
-Cloud,
-} from 'lucide-react';
+  Brain,
+  Monitor,
+  Server,
+  Smartphone,
+  Database,
+  Cloud,
+} from "lucide-react";
 
-import AnimatedSection from '@/components/shared/AnimatedSection';
+import AnimatedSection from "@/components/shared/AnimatedSection";
 
 const categories = [
-{
-id: 'ai',
-label: 'AI',
-icon: Brain,
-},
-{
-id: 'frontend',
-label: 'Frontend',
-icon: Monitor,
-},
-{
-id: 'backend',
-label: 'Backend',
-icon: Server,
-},
-{
-id: 'mobile',
-label: 'Mobile',
-icon: Smartphone,
-},
-{
-id: 'database',
-label: 'Database',
-icon: Database,
-},
-{
-id: 'cloud',
-label: 'Cloud',
-icon: Cloud,
-},
+  {
+    id: "ai",
+    label: "AI & ML ",
+    icon: Brain,
+  },
+  {
+    id: "frontend",
+    label: "Frontend",
+    icon: Monitor,
+  },
+  {
+    id: "backend",
+    label: "Backend",
+    icon: Server,
+  },
+  {
+    id: "mobile",
+    label: "Mobile",
+    icon: Smartphone,
+  },
+  {
+    id: "database",
+    label: "Database",
+    icon: Database,
+  },
+  {
+    id: "cloud",
+    label: "Cloud & DevOps",
+    icon: Cloud,
+  },
 ];
 
 const technologies = [
-// AI
-{
-name: 'OpenAI GPT-4',
-category: 'ai',
-},
-{
-name: 'Claude AI',
-category: 'ai',
-},
-{
-name: 'LangChain',
-category: 'ai',
-},
-{
-name: 'Pinecone',
-category: 'ai',
-},
-{
-name: 'Hugging Face',
-category: 'ai',
-},
-{
-name: 'TensorFlow',
-category: 'ai',
-},
-{
-name: 'LlamaIndex',
-category: 'ai',
-},
-{
-name: 'Vector DB',
-category: 'ai',
-},
+  // AI
+  {
+    name: "OpenAI GPT-4",
+    category: "ai",
+  },
+  {
+    name: "Claude AI",
+    category: "ai",
+  },
+  {
+    name: "LangChain",
+    category: "ai",
+  },
+  {
+    name: "Pinecone",
+    category: "ai",
+  },
+  {
+    name: "Hugging Face",
+    category: "ai",
+  },
+  {
+    name: "TensorFlow",
+    category: "ai",
+  },
+  {
+    name: "LlamaIndex",
+    category: "ai",
+  },
+  {
+    name: "Vector DB",
+    category: "ai",
+  },
 
-// Frontend
-{
-name: 'React',
-category: 'frontend',
-},
-{
-name: 'Next.js',
-category: 'frontend',
-},
-{
-name: 'TypeScript',
-category: 'frontend',
-},
-{
-name: 'Tailwind CSS',
-category: 'frontend',
-},
-{
-name: 'Redux',
-category: 'frontend',
-},
-{
-name: 'Framer Motion',
-category: 'frontend',
-},
+  // Frontend
+  {
+    name: "React",
+    category: "frontend",
+  },
+  {
+    name: "Next.js",
+    category: "frontend",
+  },
+  {
+    name: "TypeScript",
+    category: "frontend",
+  },
+  {
+    name: "Tailwind CSS",
+    category: "frontend",
+  },
+  {
+    name: "Redux",
+    category: "frontend",
+  },
+  {
+    name: "Framer Motion",
+    category: "frontend",
+  },
 
-// Backend
-{
-name: 'Node.js',
-category: 'backend',
-},
-{
-name: 'NestJS',
-category: 'backend',
-},
-{
-name: 'Python',
-category: 'backend',
-},
-{
-name: 'Express.js',
-category: 'backend',
-},
-{
-name: 'FastAPI',
-category: 'backend',
-},
-{
-name: 'GraphQL',
-category: 'backend',
-},
+  // Backend
+  {
+    name: "Node.js",
+    category: "backend",
+  },
+  {
+    name: "NestJS",
+    category: "backend",
+  },
+  {
+    name: "Python",
+    category: "backend",
+  },
+  {
+    name: "Express.js",
+    category: "backend",
+  },
+  {
+    name: "FastAPI",
+    category: "backend",
+  },
+  {
+    name: "GraphQL",
+    category: "backend",
+  },
 
-// Mobile
-{
-name: 'Flutter',
-category: 'mobile',
-},
-{
-name: 'React Native',
-category: 'mobile',
-},
-{
-name: 'Swift',
-category: 'mobile',
-},
-{
-name: 'Kotlin',
-category: 'mobile',
-},
+  // Mobile
+  {
+    name: "Flutter",
+    category: "mobile",
+  },
+  {
+    name: "React Native",
+    category: "mobile",
+  },
+  {
+    name: "Swift",
+    category: "mobile",
+  },
+  {
+    name: "Kotlin",
+    category: "mobile",
+  },
 
-// Database
-{
-name: 'MongoDB',
-category: 'database',
-},
-{
-name: 'PostgreSQL',
-category: 'database',
-},
-{
-name: 'MySQL',
-category: 'database',
-},
-{
-name: 'Redis',
-category: 'database',
-},
+  // Database
+  {
+    name: "MongoDB",
+    category: "database",
+  },
+  {
+    name: "PostgreSQL",
+    category: "database",
+  },
+  {
+    name: "MySQL",
+    category: "database",
+  },
+  {
+    name: "Redis",
+    category: "database",
+  },
 
-// Cloud
-{
-name: 'AWS',
-category: 'cloud',
-},
-{
-name: 'Azure',
-category: 'cloud',
-},
-{
-name: 'Docker',
-category: 'cloud',
-},
-{
-name: 'Kubernetes',
-category: 'cloud',
-},
-{
-name: 'CI/CD',
-category: 'cloud',
-},
-{
-name: 'Terraform',
-category: 'cloud',
-},
+  // Cloud
+  {
+    name: "AWS",
+    category: "cloud",
+  },
+  {
+    name: "Azure",
+    category: "cloud",
+  },
+  {
+    name: "Docker",
+    category: "cloud",
+  },
+  {
+    name: "Kubernetes",
+    category: "cloud",
+  },
+  {
+    name: "CI/CD",
+    category: "cloud",
+  },
+  {
+    name: "Terraform",
+    category: "cloud",
+  },
 ];
 
 export default function TechStackSection() {
-const [activeCategory, setActiveCategory] =
-useState('ai');
+  const [activeCategory, setActiveCategory] = useState("ai");
 
-const filteredTechnologies = useMemo(
-() =>
-technologies.filter(
-(tech) =>
-tech.category === activeCategory
-),
-[activeCategory]
-);
+  const filteredTechnologies = useMemo(
+    () => technologies.filter((tech) => tech.category === activeCategory),
+    [activeCategory],
+  );
 
-return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-auto max-w-7xl px-5 lg:px-8">
-{/* Header */}
+  return (
+    <section className="bg-[#F8FAFC] py-14 lg:py-12">
+      {" "}
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        {/* Header */}
 
-```
-    <AnimatedSection>
-      <div className="mx-auto max-w-4xl text-center">
-        <span
-          className="
+        <AnimatedSection>
+          <div className="mx-auto max-w-4xl text-center">
+            <span
+              className="
             inline-flex
             items-center
             rounded-full
@@ -229,24 +226,24 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
             font-semibold
             text-blue-700
           "
-        >
-          Technology Ecosystem
-        </span>
+            >
+              Our Technology Ecosystem
+            </span>
 
-        <h2
-          className="
+            <h2
+              className="
             mt-6
-            text-4xl
+            text-3xl
             font-bold
             leading-tight
             text-slate-900
-            md:text-5xl
-            xl:text-6xl
+            md:text-4xl
+            xl:text-5xl
           "
-        >
-          Built With
-          <span
-            className="
+            >
+              Built With
+              <span
+                className="
               block
               bg-gradient-to-r
               from-blue-700
@@ -255,13 +252,13 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
               bg-clip-text
               text-transparent
             "
-          >
-            Industry-Leading Technologies
-          </span>
-        </h2>
+              >
+                Industry-Leading Technologies
+              </span>
+            </h2>
 
-        <p
-          className="
+            <p
+              className="
             mx-auto
             mt-6
             max-w-3xl
@@ -269,21 +266,17 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
             leading-relaxed
             text-slate-600
           "
-        >
-          We leverage modern frameworks,
-          enterprise-grade cloud platforms,
-          AI technologies and scalable
-          architectures to build future-ready
-          digital products.
-        </p>
-      </div>
-    </AnimatedSection>
-
-    {/* Category Tabs */}
-
-    <AnimatedSection>
-      <div
-        className="
+            >
+              We leverage cutting-edge frameworks, enterprise-grade cloud
+              platforms, advanced AI technologies, and scalable architectures to
+              build secure, future-ready, and high-performance digital products.
+            </p>
+          </div>
+        </AnimatedSection>
+        {/* Category Tabs */}
+        <AnimatedSection>
+          <div
+            className="
           mt-16
           flex
           flex-wrap
@@ -293,19 +286,15 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
           border-slate-200
           pb-8
         "
-      >
-        {categories.map((category) => {
-          const Icon = category.icon;
+          >
+            {categories.map((category) => {
+              const Icon = category.icon;
 
-          return (
-            <button
-              key={category.id}
-              onClick={() =>
-                setActiveCategory(
-                  category.id
-                )
-              }
-              className={`
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`
                 flex
                 items-center
                 gap-2
@@ -317,8 +306,7 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
                 duration-300
 
                 ${
-                  activeCategory ===
-                  category.id
+                  activeCategory === category.id
                     ? `
                       bg-blue-50
                       text-blue-700
@@ -335,38 +323,36 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
                     `
                 }
               `}
-            >
-              <Icon className="h-4 w-4" />
+                >
+                  <Icon className="h-4 w-4" />
 
-              {category.label}
-            </button>
-          );
-        })}
-      </div>
-    </AnimatedSection>
-
-    {/* Technology Grid */}
-
-    <div className="mt-14">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeCategory}
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          exit={{
-            opacity: 0,
-            y: -20,
-          }}
-          transition={{
-            duration: 0.3,
-          }}
-          className="
+                  {category.label}
+                </button>
+              );
+            })}
+          </div>
+        </AnimatedSection>
+        {/* Technology Grid */}
+        <div className="mt-14">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeCategory}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{
+                opacity: 0,
+                y: -20,
+              }}
+              transition={{
+                duration: 0.3,
+              }}
+              className="
             grid
             grid-cols-2
             gap-5
@@ -374,18 +360,14 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
             lg:grid-cols-4
             xl:grid-cols-5
           "
-        >
-          {filteredTechnologies.map(
-            (tech, index) => (
-              <AnimatedSection
-                key={tech.name}
-                delay={index * 0.03}
-              >
-                <motion.div
-                  whileHover={{
-                    y: -6,
-                  }}
-                  className="
+            >
+              {filteredTechnologies.map((tech, index) => (
+                <AnimatedSection key={tech.name} delay={index * 0.03}>
+                  <motion.div
+                    whileHover={{
+                      y: -6,
+                    }}
+                    className="
                     group
                     flex
                     h-full
@@ -404,9 +386,9 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
                     duration-300
                     hover:shadow-xl
                   "
-                >
-                  <div
-                    className="
+                  >
+                    <div
+                      className="
                       flex
                       h-16
                       w-16
@@ -422,37 +404,30 @@ return ( <section className="bg-[#F8FAFC] py-14 lg:py-12"> <div className="mx-au
                       group-hover:bg-blue-50
                       group-hover:text-blue-700
                     "
-                  >
-                    {tech.name
-                      .split(' ')
-                      .map(
-                        (word) =>
-                          word[0]
-                      )
-                      .slice(0, 2)
-                      .join('')}
-                  </div>
+                    >
+                      {tech.name
+                        .split(" ")
+                        .map((word) => word[0])
+                        .slice(0, 2)
+                        .join("")}
+                    </div>
 
-                  <h3
-                    className="
+                    <h3
+                      className="
                       mt-5
                       font-semibold
                       text-slate-900
                     "
-                  >
-                    {tech.name}
-                  </h3>
-                </motion.div>
-              </AnimatedSection>
-            )
-          )}
-        </motion.div>
-      </AnimatePresence>
-    </div>
-
-  </div>
-</section>
-
-
-);
+                    >
+                      {tech.name}
+                    </h3>
+                  </motion.div>
+                </AnimatedSection>
+              ))}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+    </section>
+  );
 }

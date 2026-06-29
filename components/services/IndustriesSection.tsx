@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   HeartPulse,
@@ -10,61 +10,60 @@ import {
   Truck,
   Laptop,
   ArrowUpRight,
-} from 'lucide-react';
+} from "lucide-react";
 
-import AnimatedSection from '@/components/shared/AnimatedSection';
+import AnimatedSection from "@/components/shared/AnimatedSection";
 
 const industries = [
   {
     icon: HeartPulse,
-    title: 'Healthcare',
+    title: "Healthcare Technology",
     description:
-      'Patient portals, healthcare management systems, telemedicine, and digital healthcare solutions.',
+      "Patient portals, healthcare management systems, telemedicine platforms, EHR integration, and HIPAA-compliant digital health solutions.",
   },
   {
     icon: Landmark,
-    title: 'Finance',
+    title: "Finance & FinTech",
     description:
-      'FinTech platforms, investment dashboards, reporting systems, and secure financial applications.',
+      "FinTech platforms, investment dashboards, real-time reporting systems, secure financial applications, and PCI-DSS compliant payment solutions.",
   },
   {
     icon: GraduationCap,
-    title: 'Education',
+    title: "Education & EdTech",
     description:
-      'Learning management systems, e-learning platforms, and student engagement solutions.',
+      "Learning management systems (LMS), e-learning platforms, virtual classrooms, student engagement tools, and AI-powered adaptive learning solutions.",
   },
   {
     icon: Building2,
-    title: 'Real Estate',
+    title: "Real Estate & PropTech",
     description:
-      'Property portals, CRM systems, virtual tours, and lead management platforms.',
+      "Property listing portals, real estate CRM systems, 3D virtual tours, AI-powered lead management, and PropTech platforms for agents and developers.",
   },
   {
     icon: ShoppingBag,
-    title: 'E-Commerce',
+    title: "E-Commerce & Retail Tech",
     description:
-      'Online marketplaces, retail platforms, inventory management, and digital commerce.',
+      "Custom online marketplaces, headless e-commerce platforms, inventory management systems, payment gateway integration, and omnichannel retail solutions.",
   },
   {
     icon: Factory,
-    title: 'Manufacturing',
+    title: "Manufacturing & Industry 4.0",
     description:
-      'ERP systems, workflow automation, inventory tracking, and operational efficiency solutions.',
+      "Custom ERP systems, smart workflow automation, real-time inventory tracking, predictive maintenance, and Industry 4.0 operational efficiency solutions.",
   },
   {
     icon: Truck,
-    title: 'Logistics',
+    title: "Logistics & Supply Chain",
     description:
-      'Fleet management, shipment tracking, logistics automation, and supply chain visibility.',
+      "Fleet management systems, real-time shipment tracking, last-mile delivery automation, supply chain visibility, and AI-powered logistics optimization.",
   },
   {
     icon: Laptop,
-    title: 'SaaS & Startups',
+    title: "SaaS & Tech Startups",
     description:
-      'Scalable SaaS platforms, MVP development, product engineering, and growth solutions.',
+      "Scalable SaaS platform development, rapid MVP builds, product engineering, go-to-market strategy, and full-cycle startup growth solutions.",
   },
 ];
-
 export default function IndustriesSection() {
   return (
     <section className="py-14 bg-white">
@@ -76,16 +75,14 @@ export default function IndustriesSection() {
               Industries We Serve
             </span>
 
-            <h2 className="mt-6 text-4xl md:text-5xl font-bold text-slate-900">
-              Delivering Solutions Across
-              Diverse Industries
+            <h2 className="mt-6 text-3xl md:text-4xl font-bold text-slate-900">
+              Tailored Digital Solutions Across Every Industry We Serve
             </h2>
 
             <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-              Every industry has unique challenges.
-              We create tailored digital solutions
-              designed to improve efficiency,
-              customer experiences, and business growth.
+              Every industry has unique challenges and specific digital needs.
+              We build industry-tailored solutions that improve operational
+              efficiency, elevate customer experiences, and accelerate growth.
             </p>
           </div>
 
@@ -131,40 +128,42 @@ export default function IndustriesSection() {
           </div>
 
           {/* Bottom Section */}
-          <div className="mt-16 rounded-[36px] overflow-hidden bg-gradient-to-r from-blue-600 via-cyan-500 to-violet-600">
+          <div className="mt-16 overflow-hidden rounded-[36px] bg-gradient-to-r from-blue-600 via-cyan-500 to-violet-600">
             <div className="px-10 py-14 md:px-16">
-              <div className="grid lg:grid-cols-2 gap-10 items-center">
+              <div className="grid items-center gap-10 lg:grid-cols-2">
+                {/* Left Content */}
                 <div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white">
-                    Industry-Specific Expertise
+                  <h3 className="text-3xl font-bold text-white md:text-4xl">
+                    Proven Industry-Specific Expertise
                   </h3>
 
-                  <p className="mt-5 text-white/80 text-lg">
-                    We combine deep technical knowledge
-                    with industry insights to create
-                    solutions that solve real business
-                    challenges and accelerate growth.
+                  <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
+                    We combine deep technical expertise with domain-specific
+                    industry insights to build digital solutions that solve real
+                    business challenges, reduce operational costs, improve
+                    efficiency, and accelerate long-term business growth.
                   </p>
                 </div>
 
+                {/* Right Stats */}
                 <div className="grid grid-cols-2 gap-5">
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6">
-                    <h4 className="text-3xl font-bold text-white">
-                      8+
-                    </h4>
+                  <div className="rounded-2xl bg-white/10 p-7 backdrop-blur-md">
+                    <h4 className="text-4xl font-bold text-white">12+</h4>
 
-                    <p className="text-white/80 mt-2">
-                      Industries Served
+                    <p className="mt-3 text-base leading-relaxed text-white/80">
+                      Industry Verticals
+                      <br />
+                      Served
                     </p>
                   </div>
 
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6">
-                    <h4 className="text-3xl font-bold text-white">
-                      50+
-                    </h4>
+                  <div className="rounded-2xl bg-white/10 p-7 backdrop-blur-md">
+                    <h4 className="text-4xl font-bold text-white">250+</h4>
 
-                    <p className="text-white/80 mt-2">
-                      Projects Delivered
+                    <p className="mt-3 text-base leading-relaxed text-white/80">
+                      Projects
+                      <br />
+                      Successfully Delivered
                     </p>
                   </div>
                 </div>

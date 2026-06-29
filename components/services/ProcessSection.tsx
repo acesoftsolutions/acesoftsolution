@@ -21,15 +21,15 @@ const processSteps = [
   {
     number: '01',
     icon: Search,
-    title: 'Discovery',
+    title: 'Discovery & Requirements Analysis',
     description:
-      'Understanding business objectives, user expectations, market opportunities, and project requirements to establish a strong project foundation.',
+      "We conduct in-depth discovery to understand your business objectives, user expectations, market opportunities, competitive landscape, and technical requirements—establishing a strategy-aligned foundation for every decision ahead.",
 
     deliverables: [
-      'Business Analysis',
+      'Business & Competitor Analysis',
       'Stakeholder Workshops',
-      'Requirement Gathering',
-      'Project Scope Definition',
+      'Detailed Requirement Gathering',
+      'Project Scope & Feasibility',
     ],
 
     gradient: 'from-blue-600 via-cyan-500 to-violet-600',
@@ -38,15 +38,15 @@ const processSteps = [
   {
     number: '02',
     icon: ClipboardCheck,
-    title: 'Strategy',
+    title: 'Strategy & Project Planning',
     description:
-      'Defining the technical roadmap, architecture, priorities, and execution strategy to ensure successful project delivery.',
+      'We define a comprehensive technical roadmap, scalable architecture, sprint priorities, and a phased implementation strategy—built to ensure predictable, on-time execution and full alignment with your business objectives.',
 
     deliverables: [
-      'Technical Architecture',
-      'Roadmap Planning',
-      'Technology Selection',
-      'Project Timeline',
+      'Technical Architecture Design',
+      'Product Roadmap Planning',
+      'Technology Stack Selection',
+      'Detailed Project Timeline',
     ],
 
     gradient: 'from-cyan-500 via-blue-500 to-indigo-600',
@@ -55,14 +55,14 @@ const processSteps = [
   {
     number: '03',
     icon: PenTool,
-    title: 'Design',
+    title: 'UI/UX Design & Prototyping',
     description:
-      'Crafting intuitive user experiences and visually engaging interfaces that align with user behavior and business goals.',
+      'We craft intuitive user experiences and visually compelling interfaces, validated through user research and interactive prototyping—designed to maximize usability and drive measurable business outcomes.',
 
     deliverables: [
-      'Wireframes',
-      'UI Design',
-      'UX Research',
+      'Low & High-Fidelity Wireframes',
+      'UI Design Systems',
+      'UX Research & User Testing',
       'Interactive Prototypes',
     ],
 
@@ -72,15 +72,15 @@ const processSteps = [
   {
     number: '04',
     icon: Code2,
-    title: 'Development',
+    title: 'Agile Development & Engineering',
     description:
-      'Building scalable, secure, and high-performance digital solutions using modern technologies and engineering best practices.',
+      'We build scalable, secure, and high-performance digital products using modern tech stacks, clean code principles, and agile sprint cycles aligned with your business goals.',
 
     deliverables: [
       'Frontend Development',
       'Backend Development',
-      'API Integrations',
-      'Performance Optimization',
+      'Third-Party API Integration',
+      'Code & Performance Optimization',
     ],
 
     gradient: 'from-emerald-500 via-green-500 to-teal-500',
@@ -89,15 +89,15 @@ const processSteps = [
   {
     number: '05',
     icon: ShieldCheck,
-    title: 'Testing',
+    title: 'Quality Assurance & Testing',
     description:
-      'Ensuring reliability, performance, security, and quality through comprehensive validation and quality assurance.',
+      'We rigorously validate functionality, security, performance, and reliability across all devices and environments—ensuring a flawless, bug-free user experience before launch.',
 
     deliverables: [
-      'Quality Assurance',
-      'Security Testing',
-      'Performance Testing',
-      'Bug Resolution',
+      'Quality Assurance (QA)',
+      'Security & Penetration Testing',
+      'Performance Load Testing',
+      'Bug Detection & Resolution',
     ],
 
     gradient: 'from-orange-500 via-amber-500 to-yellow-500',
@@ -106,15 +106,15 @@ const processSteps = [
   {
     number: '06',
     icon: Rocket,
-    title: 'Deployment',
+    title: 'Production Deployment & Launch',
     description:
-      'Launching products with optimized infrastructure, monitoring systems, and deployment workflows for seamless delivery.',
+      'We launch your solution using optimized cloud infrastructure, automated CI/CD deployment pipelines, and real-time monitoring systems—ensuring a seamless, zero-downtime go-live.',
 
     deliverables: [
       'Production Release',
-      'Infrastructure Setup',
-      'Monitoring Configuration',
-      'Launch Support',
+      'Cloud Infrastructure Setup',
+      'Real-Time Monitoring',
+      'Go-Live Launch Support',
     ],
 
     gradient: 'from-sky-500 via-cyan-500 to-blue-600',
@@ -123,21 +123,20 @@ const processSteps = [
   {
     number: '07',
     icon: Headphones,
-    title: 'Support',
+    title: 'Ongoing Support & Maintenance',
     description:
-      'Providing ongoing maintenance, monitoring, feature enhancements, and technical assistance for long-term success.',
+      'Delivering continuous maintenance, proactive updates, real-time performance monitoring, and dedicated long-term technical support for your live product.',
 
     deliverables: [
-      'Maintenance',
+      'Proactive Maintenance',
       'Feature Enhancements',
-      'Monitoring',
-      'Technical Support',
+      'Real-Time Monitoring',
+      '24/7 Technical Support',
     ],
 
     gradient: 'from-rose-500 via-pink-500 to-purple-600',
   },
 ];
-
 export default function ProcessSection() {
   const [activeStep, setActiveStep] = useState(
     processSteps[0]
@@ -179,21 +178,21 @@ export default function ProcessSection() {
               "
             >
               <Sparkles size={16} />
-              Our Delivery Framework
+              Our Process
             </div>
 
             <h2
               className="
                 mt-6
-                text-4xl
+                text-3xl
                 font-bold
                 tracking-tight
                 text-slate-900
-                md:text-5xl
-                xl:text-6xl
+                md:text-4xl
+                xl:text-5xl
               "
             >
-              How We Transform Ideas
+              How We Transform Ideas              
 
               <span
                 className="
@@ -206,7 +205,7 @@ export default function ProcessSection() {
                   text-transparent
                 "
               >
-                Into Digital Success
+                Into Measurable Digital Success     
               </span>
             </h2>
 
