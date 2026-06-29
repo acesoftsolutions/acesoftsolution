@@ -208,62 +208,42 @@ export default function Footer() {
             </div>
 
             {/* Contact */}
-            <div>
-              <h4 className="text-white font-semibold text-lg mb-6">
-                Contact Us
-              </h4>
+        {/* Contact */}
+<div>
+  <h4 className="text-white font-semibold text-lg mb-6">
+    Contact Us
+  </h4>
 
-              <div className="space-y-5">
-                <a
-                  href="mailto:info@acesoftsolution.com"
-                  className="
-                    flex
-                    items-start
-                    gap-3
-                    text-muted
-                    hover:text-white
-                    transition-colors
-                  "
-                >
-                  <Mail className="w-5 h-5 text-primary mt-0.5" />
+  <div className="space-y-5">
+    <a
+      href="mailto:info@acesoftsolution.com"
+      className="flex items-start gap-3 text-muted hover:text-white transition-colors"
+    >
+      <Mail className="w-5 h-5 text-[#0E4DB7] mt-0.5" />
 
-                  <span>info@acesoftsolution.com</span>
-                </a>
+      <span>info@acesoftsolution.com</span>
+    </a>
 
-                <a
-                  href="tel:+919999999999"
-                  className="
-                    flex
-                    items-start
-                    gap-3
-                    text-muted
-                    hover:text-white
-                    transition-colors
-                  "
-                >
-                  <Phone className="w-5 h-5 text-primary mt-0.5" />
+    <a
+      href="tel:+919999999999"
+      className="flex items-start gap-3 text-muted hover:text-white transition-colors"
+    >
+      <Phone className="w-5 h-5 text-[#0E4DB7] mt-0.5" />
 
-                  <span>+91 99999 89999</span>
-                </a>
+      <span>+91 99999 89999</span>
+    </a>
 
-                <div
-                  className="
-                    flex
-                    items-start
-                    gap-3
-                    text-muted
-                  "
-                >
-                  <MapPin className="w-5 h-5 text-primary mt-0.5" />
+    <div className="flex items-start gap-3 text-muted">
+      <MapPin className="w-5 h-5 text-[#0E4DB7] mt-0.5" />
 
-                  <span>
-                    Ahmedabad,
-                    <br />
-                    Gujarat, India
-                  </span>
-                </div>
-              </div>
-            </div>
+      <span>
+        Ahmedabad,
+        <br />
+        Gujarat, India
+      </span>
+    </div>
+  </div>
+</div>
           </div>
         </div>
 
