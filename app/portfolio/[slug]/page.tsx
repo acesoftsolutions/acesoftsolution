@@ -35,7 +35,7 @@ export default function PortfolioDetailPage() {
     <>
       <ScrollProgress />
 
-      <main className="bg-dark overflow-hidden">
+      <main className="bg-white overflow-hidden">
         <CaseStudyHero portfolio={portfolio} />
 
         <ProjectOverview portfolio={portfolio} />
