@@ -246,13 +246,7 @@ export default function ServicesHero() {
                   <p className="text-sm text-slate-500">Industries Served</p>
                 </div>
 
-                <div>
-                  <p className="text-2xl font-bold text-white">24/7</p>
-
-                  <p className="text-sm text-slate-500">
-                    Dedicated Support & Maintenance
-                  </p>
-                </div>
+                
               </div>
             </motion.div>
           </div>

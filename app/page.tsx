@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <ScrollProgress />
 
-      <main className="overflow-hidden">
+      <main className="overflow-hidden ">
         <HeroSection />
 
         <ServicesSection />

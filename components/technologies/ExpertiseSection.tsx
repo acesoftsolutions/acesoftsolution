@@ -1,43 +1,41 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Briefcase,
-  Building2,
-  CheckCircle2,
-  Code2,
-  Award,
-} from 'lucide-react';
-
+import React from "react";
+import { motion } from "framer-motion";
+import { Briefcase, Building2, CheckCircle2, Code2, Award } from "lucide-react";
+import AnimatedCounter from "@/components/shared/AnimatedCounter";
 const stats = [
   {
-    number: '20+',
-    label: 'Technologies Stack',
+    value: 20,
+    suffix: "+",
+    label: "Technologies Stack",
     icon: Code2,
   },
   {
-    number: '250+',
-    label: 'Projects Delivered  ',
+    value: 250,
+    suffix: "+",
+    label: "Projects Delivered",
     icon: Briefcase,
   },
   {
-    number: '15+',
-    label: 'Industries Served   ',
+    value: 15,
+    suffix: "+",
+    label: "Industries Served",
     icon: Building2,
   },
   {
-    number: '98%',
-    label: 'Client Satisfaction Rate',
+    value: 98,
+    suffix: "%",
+    label: "Client Satisfaction Rate",
     icon: Award,
   },
 ];
 
 const expertisePoints = [
-  'Enterprise Web Applications',
-  'Mobile Apps (iOS & Android)',
-  'Cloud-Native Solutions',
-  'API Design & Development',
+  "Enterprise Web Applications",
+  "Mobile Apps (iOS & Android)",
+  "Cloud-Native Solutions",
+  "API Design & Development",
 ];
 
 export default function ExpertiseSection() {
@@ -77,7 +75,6 @@ export default function ExpertiseSection() {
 
             <h2 className="mt-6 text-3xl font-bold text-slate-900 md:text-4xl">
               Engineering Reliable
-
               <span
                 className="
                   block
@@ -89,35 +86,27 @@ export default function ExpertiseSection() {
                   text-transparent
                 "
               >
-               High-Performance Digital Solutions
+                High-Performance Digital Solutions
               </span>
             </h2>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
-              We combine cutting-edge technologies and industry-proven
-              best practices to engineer secure, scalable, and
-              high-performance digital products built to exceed
-              business expectations.
-
-
+              We combine cutting-edge technologies and industry-proven best
+              practices to engineer secure, scalable, and high-performance
+              digital products built to exceed business expectations.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {expertisePoints.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-3"
-                >
+                <div key={item} className="flex items-center gap-3">
                   <CheckCircle2 className="h-5 w-5 text-cyan-500" />
 
-                  <span className="text-slate-700">
-                    {item}
-                  </span>
+                  <span className="text-slate-700">{item}</span>
                 </div>
               ))}
             </div>
           </motion.div>
-                    {/* Right Stats */}
+          {/* Right Stats */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -169,21 +158,22 @@ export default function ExpertiseSection() {
 
                     <h3
                       className="
-                        bg-gradient-to-r
-                        from-blue-600
-                        to-cyan-500
-                        bg-clip-text
-                        text-4xl
-                        font-bold
-                        text-transparent
-                      "
+    bg-gradient-to-r
+    from-blue-600
+    to-cyan-500
+    bg-clip-text
+    text-4xl
+    font-bold
+    text-transparent
+  "
                     >
-                      {item.number}
+                      <AnimatedCounter
+                        value={item.value}
+                        suffix={item.suffix}
+                      />
                     </h3>
 
-                    <p className="mt-2 text-slate-600">
-                      {item.label}
-                    </p>
+                    <p className="mt-2 text-slate-600">{item.label}</p>
                   </motion.div>
                 );
               })}

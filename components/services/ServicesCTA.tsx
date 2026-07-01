@@ -6,7 +6,7 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 
 export default function ServicesCTA() {
   return (
-    <section className="relative overflow-hidden bg-white py-12 lg:py-16">
+    <section className="relative overflow-hidden bg-white py-12 lg:py-14">
       {/* Grid Background */}
 
       <div
@@ -79,10 +79,10 @@ export default function ServicesCTA() {
     text-[#020617]
     text-[40px]
     leading-[0.9]
-    sm:text-[52px]
-    md:text-[68px]
-    lg:text-[84px]
-    xl:text-[100px]
+    sm:text-[30px]
+    md:text-[48px]
+    lg:text-[64px]
+    xl:text-[88px]
   "
           >
             READY TO BUILD
@@ -94,7 +94,7 @@ export default function ServicesCTA() {
 
           {/* CTA Link */}
 
-          <div className="mt-10 lg:mt-14">
+          <div className="mt-6 lg:mt-8">
             <Link
               href="/contact"
               className="
@@ -105,10 +105,10 @@ export default function ServicesCTA() {
                 font-black
                 uppercase
                 tracking-tight
-                text-[28px]
-                sm:text-[36px]
-                md:text-[48px]
-                lg:text-[64px]
+                text-[24px]
+                sm:text-[32px]
+                md:text-[40px]
+                lg:text-[48px]
               "
             >
               <span
@@ -159,22 +159,7 @@ export default function ServicesCTA() {
             products that create measurable business impact.
           </p>
 
-          {/* Secondary Link */}
-
-          <div className="mt-8">
-            <Link
-              href="/portfolio"
-              className="
-                text-sm
-                font-semibold
-                text-slate-600
-                transition-colors
-                hover:text-blue-600
-              "
-            >
-              View Our Work →
-            </Link>
-          </div>
+       
         </motion.div>
       </div>
     </section>

@@ -89,27 +89,6 @@ const techCategories = [
   },
 ];
 
-const stats = [
-  {
-    value: "20+",
-    label: "Technologies",
-  },
-
-  {
-    value: "100%",
-    label: "Scalable Solutions",
-  },
-
-  {
-    value: "Cloud",
-    label: "Native Architecture",
-  },
-
-  {
-    value: "Enterprise",
-    label: "Security Standards",
-  },
-];
 
 export default function TechnologyExpertise() {
   return (
@@ -204,44 +183,7 @@ export default function TechnologyExpertise() {
             </div>
           </div>
 
-          {/* Statistics */}
-
-          <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {stats.map((item) => (
-              <motion.div
-                key={item.label}
-                whileHover={{
-                  y: -6,
-                }}
-                className="
-                  rounded-[28px]
-                  border
-                  border-slate-200
-                  bg-white
-                  p-6
-                  text-center
-                  shadow-[0_10px_40px_rgba(0,0,0,0.04)]
-                "
-              >
-                <h3
-                  className="
-                    text-3xl
-                    font-bold
-                    bg-gradient-to-r
-                    from-blue-600
-                    via-cyan-500
-                    to-violet-600
-                    bg-clip-text
-                    text-transparent
-                  "
-                >
-                  {item.value}
-                </h3>
-
-                <p className="mt-2 text-slate-600">{item.label}</p>
-              </motion.div>
-            ))}
-          </div>
+       
 
           {/* Technology Cards */}
 

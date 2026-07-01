@@ -72,15 +72,15 @@ export default function CTASection() {
               mt-10
               max-w-6xl
               text-center
-              text-6xl
+              text-3xl
               font-black
               uppercase
               leading-[0.95]
               tracking-tight
               text-slate-950
-              md:text-7xl
-              lg:text-8xl
-              xl:text-[8rem]
+              md:text-4xl
+              lg:text-5xl
+              xl:text-[6rem]
             "
           >
             READY TO BUILD
@@ -108,12 +108,12 @@ export default function CTASection() {
                 via-cyan-500
                 to-emerald-500
                 bg-clip-text
-                text-5xl
+                text-3xl
                 font-black
                 uppercase
                 text-transparent
-                md:text-6xl
-                lg:text-7xl
+                md:text-4xl
+                lg:text-5xl
               "
             >
               LET'S CONNECT
@@ -161,60 +161,10 @@ export default function CTASection() {
               Start Your Project
             </button>
 
-            <button
-              className="
-                rounded-full
-                border
-                border-slate-300
-                px-8
-                py-4
-                text-lg
-                font-semibold
-                text-slate-900
-                transition-all
-                duration-300
-                hover:border-slate-900
-              "
-            >
-              Book Consultation
-            </button>
+            
           </div>
 
-          {/* Bottom Contact */}
-          <div
-            className="
-              mt-16
-              flex
-              flex-col
-              items-center
-              justify-center
-              gap-6
-              text-center
-              md:flex-row
-            "
-          >
-            <div>
-              <p className="text-sm uppercase tracking-widest text-slate-400">
-                Email
-              </p>
-
-              <p className="mt-2 font-semibold text-slate-900">
-                info@acesoftsolution.com
-              </p>
-            </div>
-
-            <div className="hidden h-10 w-px bg-slate-200 md:block" />
-
-            <div>
-              <p className="text-sm uppercase tracking-widest text-slate-400">
-                Phone
-              </p>
-
-              <p className="mt-2 font-semibold text-slate-900">
-                +91 XXXXX XXXXX
-              </p>
-            </div>
-          </div>
+     
         </motion.div>
       </div>
     </section>

@@ -420,27 +420,7 @@ export default function FeaturedServices() {
                     <ArrowRight size={18} />
                   </Link>
 
-                  <Link
-                    href="/services"
-                    className="
-                      inline-flex
-                      items-center
-                      gap-2
-                      rounded-2xl
-                      border
-                      border-white/10
-                      bg-white/5
-                      px-8
-                      py-4
-                      font-semibold
-                      text-white
-                      transition-all
-                      duration-300
-                      hover:bg-white/10
-                    "
-                  >
-                    Explore Services
-                  </Link>
+                  
                 </div>
               </div>
             </div>

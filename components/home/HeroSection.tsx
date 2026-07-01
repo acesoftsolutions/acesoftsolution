@@ -5,24 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const stats = [
-  {
-    value: "150+",
-    label: "Clients Worldwide",
-  },
-  {
-    value: "250+",
-    label: "Projects Delivered",
-  },
-  {
-    value: "98%",
-    label: "Success Rate",
-  },
-  {
-    value: "10+",
-    label: "Years Experience",
-  },
-];
+
 
 // Lines "typed" into the console panel — kept short so the animation reads
 // at a glance instead of asking the visitor to actually read code.
@@ -344,36 +327,10 @@ text-white/70
                 <ArrowRight className="h-5 w-5" />
               </Link>
 
-              <Link
-                href="/portfolio"
-                className="
-                  inline-flex
-                  items-center
-                  rounded-xl
-                  border
-                  border-white/10
-                  px-7
-                  py-4
-                  font-semibold
-                  text-white
-                  transition-colors
-                  hover:bg-white/5
-                "
-              >
-                Explore Our Work
-              </Link>
+            
             </div>
 
-            {/* Trust Points */}
-
-            <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-white/70">
-              <div>✓ Custom Software Development</div>
-              <div>✓ Mobile App Development</div>
-              <div>✓ ERP & Business Automation </div>
-              <div>✓ AI & Machine Learning</div>
-              <div>✓ Cloud Infrastructure & DevOps</div>
-              <div>✓ Digital Transformation</div>
-            </div>
+         
           </motion.div>
 
           {/* RIGHT CONTENT — animated console replaces the static image */}
@@ -421,37 +378,6 @@ text-white/70
 
             <ConsolePanel />
 
-            {/* Statistics Bar */}
-
-            <div
-              className="
-                mt-6
-                grid
-                grid-cols-2
-                gap-4
-                md:grid-cols-4
-              "
-            >
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="
-                    rounded-2xl
-                    border
-                    border-white/10
-                    bg-white/[0.03]
-                    p-5
-                    text-center
-                  "
-                >
-                  <h3 className="text-3xl font-bold text-white">
-                    {stat.value}
-                  </h3>
-
-                  <p className="mt-1 text-sm text-white/60">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>

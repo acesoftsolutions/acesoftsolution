@@ -67,111 +67,256 @@ const industries = [
 export default function IndustriesSection() {
   return (
     <section className="py-14 bg-white">
-      <div className="max-w-[1280px] mx-auto px-6">
-        <AnimatedSection>
-          {/* Header */}
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-flex px-4 py-2 rounded-full bg-cyan-50 border border-cyan-100 text-cyan-700 text-sm font-medium">
-              Industries We Serve
+    <div className="relative max-w-[1280px] mx-auto px-6">
+
+  {/* Background Decoration */}
+  <div className="absolute inset-0 -z-10 overflow-hidden">
+    <div className="absolute -top-32 left-0 w-72 h-72 bg-cyan-200/30 blur-[120px] rounded-full" />
+    <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-200/30 blur-[140px] rounded-full" />
+  </div>
+
+  <AnimatedSection>
+
+    {/* ================= HEADER ================= */}
+
+    <div className="max-w-4xl mx-auto text-center">
+
+      <span className="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-white px-5 py-2 text-sm font-semibold text-cyan-700 shadow-sm">
+        <span className="h-2 w-2 rounded-full bg-cyan-500 animate-pulse" />
+        Industries We Serve
+      </span>
+
+      <h2 className="mt-7 text-4xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
+        Tailored Digital Solutions
+        <br />
+        For Every Industry
+      </h2>
+
+      <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-slate-600">
+        Every business has different operational challenges and growth goals.
+        Our industry-focused software solutions are designed to improve
+        efficiency, streamline workflows, enhance customer experiences, and
+        accelerate digital transformation.
+      </p>
+
+    </div>
+
+    {/* ================= GRID ================= */}
+
+    <div className="grid gap-7 mt-20 md:grid-cols-2 xl:grid-cols-4">
+
+      {industries.map((industry) => {
+
+        const Icon = industry.icon;
+
+        return (
+
+          <div
+            key={industry.title}
+            className="
+            group
+            relative
+            overflow-hidden
+            rounded-[30px]
+            border
+            border-slate-200
+            bg-white
+            p-8
+            transition-all
+            duration-500
+            hover:-translate-y-3
+            hover:rotate-[0.5deg]
+            hover:border-cyan-200
+            hover:shadow-[0_30px_70px_rgba(15,23,42,0.12)]
+          "
+          >
+
+            {/* Top Gradient Line */}
+
+            <div className="absolute left-0 top-0 h-1 w-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 transition-all duration-500 group-hover:w-full" />
+
+            {/* Glow */}
+
+            <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-cyan-100 opacity-0 blur-3xl transition duration-500 group-hover:opacity-100" />
+
+            {/* Icon */}
+
+            <div className="relative flex items-center justify-between">
+
+              <div
+                className="
+                flex
+                h-16
+                w-16
+                items-center
+                justify-center
+                rounded-3xl
+                bg-gradient-to-br
+                from-cyan-50
+                to-blue-100
+                shadow-inner
+                transition-all
+                duration-500
+                group-hover:scale-110
+                group-hover:rotate-6
+              "
+              >
+                <Icon className="h-8 w-8 text-blue-600 transition-transform duration-500 group-hover:scale-110" />
+              </div>
+
+              <ArrowUpRight
+                className="
+                h-5
+                w-5
+                text-slate-400
+                transition-all
+                duration-500
+                group-hover:translate-x-1
+                group-hover:-translate-y-1
+                group-hover:text-blue-600
+              "
+              />
+
+            </div>
+
+            {/* Content */}
+
+            <h3 className="mt-9 text-xl font-bold text-slate-900 transition-colors group-hover:text-blue-700">
+              {industry.title}
+            </h3>
+
+            <p className="mt-5 leading-7 text-slate-600">
+              {industry.description}
+            </p>
+
+            {/* Learn More */}
+
+            <div className="mt-8 flex items-center gap-2 text-sm font-semibold text-blue-600 opacity-0 transition-all duration-500 group-hover:opacity-100">
+
+              Learn More
+
+              <ArrowUpRight className="h-4 w-4" />
+
+            </div>
+
+          </div>
+
+        );
+
+      })}
+
+    </div>
+
+    {/* ================= CTA ================= */}
+
+    <div className="relative mt-24 overflow-hidden rounded-[40px] bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-800">
+
+      {/* Background */}
+
+      <div className="absolute inset-0">
+
+        <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-cyan-400/20 blur-[120px]" />
+
+        <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-violet-500/20 blur-[140px]" />
+
+      </div>
+
+      <div className="relative px-10 py-16 md:px-16">
+
+        <div className="grid items-center gap-14 lg:grid-cols-2">
+
+          {/* Left */}
+
+          <div>
+
+            <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-cyan-200 backdrop-blur">
+              Trusted Across Multiple Industries
             </span>
 
-            <h2 className="mt-6 text-3xl md:text-4xl font-bold text-slate-900">
-              Tailored Digital Solutions Across Every Industry We Serve
-            </h2>
+            <h3 className="mt-6 text-4xl font-bold leading-tight text-white">
+              Proven Industry
+              <br />
+              Expertise That Delivers
+            </h3>
 
-            <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-              Every industry has unique challenges and specific digital needs.
-              We build industry-tailored solutions that improve operational
-              efficiency, elevate customer experiences, and accelerate growth.
+            <p className="mt-6 max-w-xl text-lg leading-8 text-white/80">
+              From startups to large enterprises, we combine deep technical
+              expertise with industry knowledge to build scalable software,
+              automate business processes, improve efficiency, and create
+              measurable business growth.
             </p>
+
           </div>
 
-          {/* Industries Grid */}
-          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-16">
-            {industries.map((industry) => {
-              const Icon = industry.icon;
+          {/* Right */}
 
-              return (
-                <div
-                  key={industry.title}
-                  className="
-                    group
-                    bg-white
-                    border
-                    border-slate-200
-                    rounded-[28px]
-                    p-8
-                    hover:border-blue-200
-                    hover:shadow-xl
-                    transition-all
-                    duration-300
-                  "
-                >
-                  <div className="flex items-center justify-between mb-8">
-                    <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center">
-                      <Icon className="w-7 h-7 text-blue-600" />
-                    </div>
+          <div className="grid grid-cols-2 gap-6">
 
-                    <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 transition-colors" />
-                  </div>
+            <div
+              className="
+              rounded-3xl
+              border
+              border-white/10
+              bg-white/10
+              p-8
+              backdrop-blur-xl
+              transition
+              duration-500
+              hover:-translate-y-2
+              hover:bg-white/15
+            "
+            >
 
-                  <h3 className="text-xl font-semibold text-slate-900">
-                    {industry.title}
-                  </h3>
-
-                  <p className="mt-4 text-slate-600 leading-relaxed">
-                    {industry.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Bottom Section */}
-          <div className="mt-16 overflow-hidden rounded-[36px] bg-gradient-to-r from-blue-600 via-cyan-500 to-violet-600">
-            <div className="px-10 py-14 md:px-16">
-              <div className="grid items-center gap-10 lg:grid-cols-2">
-                {/* Left Content */}
-                <div>
-                  <h3 className="text-3xl font-bold text-white md:text-4xl">
-                    Proven Industry-Specific Expertise
-                  </h3>
-
-                  <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/85">
-                    We combine deep technical expertise with domain-specific
-                    industry insights to build digital solutions that solve real
-                    business challenges, reduce operational costs, improve
-                    efficiency, and accelerate long-term business growth.
-                  </p>
-                </div>
-
-                {/* Right Stats */}
-                <div className="grid grid-cols-2 gap-5">
-                  <div className="rounded-2xl bg-white/10 p-7 backdrop-blur-md">
-                    <h4 className="text-4xl font-bold text-white">12+</h4>
-
-                    <p className="mt-3 text-base leading-relaxed text-white/80">
-                      Industry Verticals
-                      <br />
-                      Served
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl bg-white/10 p-7 backdrop-blur-md">
-                    <h4 className="text-4xl font-bold text-white">250+</h4>
-
-                    <p className="mt-3 text-base leading-relaxed text-white/80">
-                      Projects
-                      <br />
-                      Successfully Delivered
-                    </p>
-                  </div>
-                </div>
+              <div className="text-5xl font-bold text-white">
+                12+
               </div>
+
+              <p className="mt-4 leading-7 text-white/80">
+                Industry
+                <br />
+                Verticals Served
+              </p>
+
             </div>
+
+            <div
+              className="
+              rounded-3xl
+              border
+              border-white/10
+              bg-white/10
+              p-8
+              backdrop-blur-xl
+              transition
+              duration-500
+              hover:-translate-y-2
+              hover:bg-white/15
+            "
+            >
+
+              <div className="text-5xl font-bold text-white">
+                250+
+              </div>
+
+              <p className="mt-4 leading-7 text-white/80">
+                Successful
+                <br />
+                Projects Delivered
+              </p>
+
+            </div>
+
           </div>
-        </AnimatedSection>
+
+        </div>
+
       </div>
+
+    </div>
+
+  </AnimatedSection>
+
+</div>
     </section>
   );
 }

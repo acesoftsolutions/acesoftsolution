@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Search,
   ClipboardCheck,
@@ -13,134 +13,132 @@ import {
   Sparkles,
   CheckCircle2,
   ArrowRight,
-} from 'lucide-react';
+} from "lucide-react";
 
-import AnimatedSection from '@/components/shared/AnimatedSection';
+import AnimatedSection from "@/components/shared/AnimatedSection";
 
 const processSteps = [
   {
-    number: '01',
+    number: "01",
     icon: Search,
-    title: 'Discovery & Requirements Analysis',
+    title: "Discovery & Requirements Analysis",
     description:
       "We conduct in-depth discovery to understand your business objectives, user expectations, market opportunities, competitive landscape, and technical requirements—establishing a strategy-aligned foundation for every decision ahead.",
 
     deliverables: [
-      'Business & Competitor Analysis',
-      'Stakeholder Workshops',
-      'Detailed Requirement Gathering',
-      'Project Scope & Feasibility',
+      "Business & Competitor Analysis",
+      "Stakeholder Workshops",
+      "Detailed Requirement Gathering",
+      "Project Scope & Feasibility",
     ],
 
-    gradient: 'from-blue-600 via-cyan-500 to-violet-600',
+    gradient: "from-blue-600 via-cyan-500 to-violet-600",
   },
 
   {
-    number: '02',
+    number: "02",
     icon: ClipboardCheck,
-    title: 'Strategy & Project Planning',
+    title: "Strategy & Project Planning",
     description:
-      'We define a comprehensive technical roadmap, scalable architecture, sprint priorities, and a phased implementation strategy—built to ensure predictable, on-time execution and full alignment with your business objectives.',
+      "We define a comprehensive technical roadmap, scalable architecture, sprint priorities, and a phased implementation strategy—built to ensure predictable, on-time execution and full alignment with your business objectives.",
 
     deliverables: [
-      'Technical Architecture Design',
-      'Product Roadmap Planning',
-      'Technology Stack Selection',
-      'Detailed Project Timeline',
+      "Technical Architecture Design",
+      "Product Roadmap Planning",
+      "Technology Stack Selection",
+      "Detailed Project Timeline",
     ],
 
-    gradient: 'from-cyan-500 via-blue-500 to-indigo-600',
+    gradient: "from-cyan-500 via-blue-500 to-indigo-600",
   },
 
   {
-    number: '03',
+    number: "03",
     icon: PenTool,
-    title: 'UI/UX Design & Prototyping',
+    title: "UI/UX Design & Prototyping",
     description:
-      'We craft intuitive user experiences and visually compelling interfaces, validated through user research and interactive prototyping—designed to maximize usability and drive measurable business outcomes.',
+      "We craft intuitive user experiences and visually compelling interfaces, validated through user research and interactive prototyping—designed to maximize usability and drive measurable business outcomes.",
 
     deliverables: [
-      'Low & High-Fidelity Wireframes',
-      'UI Design Systems',
-      'UX Research & User Testing',
-      'Interactive Prototypes',
+      "Low & High-Fidelity Wireframes",
+      "UI Design Systems",
+      "UX Research & User Testing",
+      "Interactive Prototypes",
     ],
 
-    gradient: 'from-violet-600 via-purple-500 to-fuchsia-500',
+    gradient: "from-violet-600 via-purple-500 to-fuchsia-500",
   },
 
   {
-    number: '04',
+    number: "04",
     icon: Code2,
-    title: 'Agile Development & Engineering',
+    title: "Agile Development & Engineering",
     description:
-      'We build scalable, secure, and high-performance digital products using modern tech stacks, clean code principles, and agile sprint cycles aligned with your business goals.',
+      "We build scalable, secure, and high-performance digital products using modern tech stacks, clean code principles, and agile sprint cycles aligned with your business goals.",
 
     deliverables: [
-      'Frontend Development',
-      'Backend Development',
-      'Third-Party API Integration',
-      'Code & Performance Optimization',
+      "Frontend Development",
+      "Backend Development",
+      "Third-Party API Integration",
+      "Code & Performance Optimization",
     ],
 
-    gradient: 'from-emerald-500 via-green-500 to-teal-500',
+    gradient: "from-emerald-500 via-green-500 to-teal-500",
   },
 
   {
-    number: '05',
+    number: "05",
     icon: ShieldCheck,
-    title: 'Quality Assurance & Testing',
+    title: "Quality Assurance & Testing",
     description:
-      'We rigorously validate functionality, security, performance, and reliability across all devices and environments—ensuring a flawless, bug-free user experience before launch.',
+      "We rigorously validate functionality, security, performance, and reliability across all devices and environments—ensuring a flawless, bug-free user experience before launch.",
 
     deliverables: [
-      'Quality Assurance (QA)',
-      'Security & Penetration Testing',
-      'Performance Load Testing',
-      'Bug Detection & Resolution',
+      "Quality Assurance (QA)",
+      "Security & Penetration Testing",
+      "Performance Load Testing",
+      "Bug Detection & Resolution",
     ],
 
-    gradient: 'from-orange-500 via-amber-500 to-yellow-500',
+    gradient: "from-orange-500 via-amber-500 to-yellow-500",
   },
 
   {
-    number: '06',
+    number: "06",
     icon: Rocket,
-    title: 'Production Deployment & Launch',
+    title: "Production Deployment & Launch",
     description:
-      'We launch your solution using optimized cloud infrastructure, automated CI/CD deployment pipelines, and real-time monitoring systems—ensuring a seamless, zero-downtime go-live.',
+      "We launch your solution using optimized cloud infrastructure, automated CI/CD deployment pipelines, and real-time monitoring systems—ensuring a seamless, zero-downtime go-live.",
 
     deliverables: [
-      'Production Release',
-      'Cloud Infrastructure Setup',
-      'Real-Time Monitoring',
-      'Go-Live Launch Support',
+      "Production Release",
+      "Cloud Infrastructure Setup",
+      "Real-Time Monitoring",
+      "Go-Live Launch Support",
     ],
 
-    gradient: 'from-sky-500 via-cyan-500 to-blue-600',
+    gradient: "from-sky-500 via-cyan-500 to-blue-600",
   },
 
   {
-    number: '07',
+    number: "07",
     icon: Headphones,
-    title: 'Ongoing Support & Maintenance',
+    title: "Ongoing Support & Maintenance",
     description:
-      'Delivering continuous maintenance, proactive updates, real-time performance monitoring, and dedicated long-term technical support for your live product.',
+      "Delivering continuous maintenance, proactive updates, real-time performance monitoring, and dedicated long-term technical support for your live product.",
 
     deliverables: [
-      'Proactive Maintenance',
-      'Feature Enhancements',
-      'Real-Time Monitoring',
-      '24/7 Technical Support',
+      "Proactive Maintenance",
+      "Feature Enhancements",
+      "Real-Time Monitoring",
+      "24/7 Technical Support",
     ],
 
-    gradient: 'from-rose-500 via-pink-500 to-purple-600',
+    gradient: "from-rose-500 via-pink-500 to-purple-600",
   },
 ];
 export default function ProcessSection() {
-  const [activeStep, setActiveStep] = useState(
-    processSteps[0]
-  );
+  const [activeStep, setActiveStep] = useState(processSteps[0]);
 
   const ActiveIcon = activeStep.icon;
 
@@ -192,8 +190,7 @@ export default function ProcessSection() {
                 xl:text-5xl
               "
             >
-              How We Transform Ideas              
-
+              How We Transform Ideas
               <span
                 className="
                   block
@@ -205,7 +202,7 @@ export default function ProcessSection() {
                   text-transparent
                 "
               >
-                Into Measurable Digital Success     
+                Into Measurable Digital Success
               </span>
             </h2>
 
@@ -219,10 +216,9 @@ export default function ProcessSection() {
                 text-slate-600
               "
             >
-              Our structured process ensures complete
-              transparency, seamless collaboration,
-              predictable delivery timelines, and
-              long-term business success.
+              Our structured process ensures complete transparency, seamless
+              collaboration, predictable delivery timelines, and long-term
+              business success.
             </p>
           </div>
 
@@ -333,7 +329,7 @@ export default function ProcessSection() {
                     </div>
 
                     {/* Deliverables + Insight will continue in Part 2 */}
-                                        {/* Deliverables + Insight */}
+                    {/* Deliverables + Insight */}
 
                     <div className="mt-10 grid gap-6 lg:grid-cols-2">
                       {/* Deliverables */}
@@ -370,14 +366,13 @@ export default function ProcessSection() {
                         </div>
 
                         <div className="mt-6 space-y-4">
-                          {activeStep.deliverables.map(
-                            (item) => (
-                              <motion.div
-                                key={item}
-                                whileHover={{
-                                  x: 6,
-                                }}
-                                className="
+                          {activeStep.deliverables.map((item) => (
+                            <motion.div
+                              key={item}
+                              whileHover={{
+                                x: 6,
+                              }}
+                              className="
                                   flex
                                   items-center
                                   gap-3
@@ -388,15 +383,14 @@ export default function ProcessSection() {
                                   px-4
                                   py-4
                                 "
-                              >
-                                <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-500" />
+                            >
+                              <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-500" />
 
-                                <span className="font-medium text-slate-700">
-                                  {item}
-                                </span>
-                              </motion.div>
-                            )
-                          )}
+                              <span className="font-medium text-slate-700">
+                                {item}
+                              </span>
+                            </motion.div>
+                          ))}
                         </div>
                       </div>
 
@@ -434,13 +428,11 @@ export default function ProcessSection() {
                         </div>
 
                         <p className="mt-6 leading-relaxed text-slate-600">
-                          Every phase of our delivery
-                          framework is carefully planned to
-                          minimize project risks, improve
-                          communication, maintain
-                          transparency, and ensure business
-                          objectives remain aligned with
-                          technical execution.
+                          Every phase of our delivery framework is carefully
+                          planned to minimize project risks, improve
+                          communication, maintain transparency, and ensure
+                          business objectives remain aligned with technical
+                          execution.
                         </p>
 
                         <div
@@ -476,121 +468,203 @@ export default function ProcessSection() {
                         </div>
                       </div>
                     </div>
-
-                
                   </div>
                 </motion.div>
               </AnimatePresence>
             </div>
 
-            {/* Right Navigation Starts Here */}
-                        <div className="lg:col-span-4">
+            {/* ================= Right Navigation ================= */}
+
+            <div className="lg:col-span-4">
               <div
                 className="
-                  sticky
-                  top-28
-                  rounded-[40px]
-                  border
-                  border-slate-200
-                  bg-white
-                  p-6
-                  shadow-[0_20px_60px_rgba(0,0,0,0.06)]
-                "
+      sticky
+      top-28
+      rounded-[32px]
+      border
+      border-slate-200
+      bg-white
+      p-5
+      shadow-[0_15px_40px_rgba(15,23,42,0.06)]
+    "
               >
-                <div className="mb-6">
-                  <h3 className="text-xl font-bold text-slate-900">
+                {/* Header */}
+
+                <div className="mb-5">
+                  <span
+                    className="
+          inline-flex
+          rounded-full
+          bg-blue-50
+          px-3
+          py-1
+          text-[11px]
+          font-semibold
+          tracking-[0.18em]
+          text-blue-700
+        "
+                  >
+                    DELIVERY FLOW
+                  </span>
+
+                  <h3 className="mt-3 text-2xl font-bold text-slate-900">
                     Project Journey
                   </h3>
 
-                  <p className="mt-2 text-sm text-slate-600">
-                    Explore each phase of our proven
-                    delivery process.
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    Navigate through every stage of our delivery process.
                   </p>
                 </div>
 
-                <div className="grid gap-3">
+                {/* Steps */}
+
+                <div className="space-y-3">
                   {processSteps.map((step) => {
                     const Icon = step.icon;
 
-                    const isActive =
-                      activeStep.number ===
-                      step.number;
+                    const isActive = activeStep.number === step.number;
 
                     return (
                       <motion.button
                         key={step.number}
                         whileHover={{
-                          x: 6,
+                          x: 4,
                         }}
                         whileTap={{
                           scale: 0.98,
                         }}
-                        onMouseEnter={() =>
-                          setActiveStep(step)
-                        }
-                        onClick={() =>
-                          setActiveStep(step)
-                        }
-                        className="w-full text-left"
+                        onMouseEnter={() => setActiveStep(step)}
+                        onClick={() => setActiveStep(step)}
+                        className="group w-full text-left"
                       >
                         <div
                           className={`
-                            relative
-                            overflow-hidden
-                            rounded-3xl
-                            border
-                            transition-all
-                            duration-300
-                            ${
-                              isActive
-                                ? `border-transparent bg-gradient-to-r ${step.gradient} text-white shadow-lg`
-                                : 'border-slate-200 bg-slate-50 hover:bg-slate-100'
-                            }
-                          `}
+                relative
+                overflow-hidden
+                rounded-2xl
+                border
+                transition-all
+                duration-300
+
+                ${
+                  isActive
+                    ? `
+                      border-transparent
+                      bg-gradient-to-r
+                      ${step.gradient}
+                      text-white
+                      shadow-lg
+                    `
+                    : `
+                      border-slate-200
+                      bg-white
+                      hover:border-blue-200
+                      hover:bg-blue-50/40
+                      hover:shadow-md
+                    `
+                }
+              `}
                         >
-                          <div className="flex items-center gap-4 p-4">
+                          {/* Hover Accent */}
+
+                          {!isActive && (
+                            <div
+                              className="
+                    absolute
+                    left-0
+                    top-0
+                    h-full
+                    w-1
+                    origin-top
+                    scale-y-0
+                    bg-gradient-to-b
+                    from-blue-600
+                    to-cyan-500
+                    transition-transform
+                    duration-300
+                    group-hover:scale-y-100
+                  "
+                            />
+                          )}
+
+                          <div className="flex items-center gap-3 px-4 py-3">
+                            {/* Icon */}
+
                             <div
                               className={`
-                                flex
-                                h-12
-                                w-12
-                                items-center
-                                justify-center
-                                rounded-2xl
-                                ${
-                                  isActive
-                                    ? 'bg-white/20'
-                                    : 'bg-white'
-                                }
-                              `}
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    rounded-xl
+                    transition-all
+                    duration-300
+
+                    ${
+                      isActive
+                        ? "bg-white/20"
+                        : "bg-gradient-to-br from-blue-50 to-cyan-100 group-hover:scale-105"
+                    }
+                  `}
                             >
-                              <Icon className="h-5 w-5" />
+                              <Icon
+                                className={`
+                      h-5
+                      w-5
+
+                      ${isActive ? "text-white" : "text-blue-600"}
+                    `}
+                              />
                             </div>
+
+                            {/* Content */}
 
                             <div className="flex-1">
                               <p
                                 className={`
-                                  text-xs
-                                  font-semibold
-                                  tracking-[0.2em]
-                                  ${
-                                    isActive
-                                      ? 'text-white/70'
-                                      : 'text-slate-400'
-                                  }
-                                `}
+                      text-[10px]
+                      font-bold
+                      tracking-[0.22em]
+
+                      ${isActive ? "text-white/70" : "text-slate-400"}
+                    `}
                               >
                                 STEP {step.number}
                               </p>
 
-                              <h4 className="mt-1 font-semibold">
+                              <h4
+                                className={`
+                      mt-1
+                      text-[15px]
+                      font-semibold
+                      leading-5
+
+                      ${
+                        isActive
+                          ? "text-white"
+                          : "text-slate-900 group-hover:text-blue-700"
+                      }
+                    `}
+                              >
                                 {step.title}
                               </h4>
                             </div>
 
-                            {isActive && (
-                              <ArrowRight className="h-5 w-5" />
-                            )}
+                            <ArrowRight
+                              className={`
+                    h-4
+                    w-4
+                    transition-all
+                    duration-300
+
+                    ${
+                      isActive
+                        ? "text-white"
+                        : "translate-x-1 opacity-0 text-blue-600 group-hover:translate-x-0 group-hover:opacity-100"
+                    }
+                  `}
+                            />
                           </div>
                         </div>
                       </motion.button>
@@ -600,10 +674,6 @@ export default function ProcessSection() {
               </div>
             </div>
           </div>
-
-      
-
-     
         </AnimatedSection>
       </div>
     </section>

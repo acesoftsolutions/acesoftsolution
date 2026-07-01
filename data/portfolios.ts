@@ -238,7 +238,7 @@ export const portfolios: Portfolio[] = [
     slug: "real-estate-platform",
 
     description:
-      "A custom real estate platform developed to simplify property buying, selling, renting, and management through an intuitive digital experience. The solution enables property listings, advanced search, virtual property tours, lead management, agent collaboration, and real-time property inquiries within a secure and scalable platform.",
+      "A custom real estate platform developed to simplify property buying, selling, renting, and management through an intuitive digital experience. ",
 
     shortDescription:
       "Custom real estate platform for property listings, lead management, and digital property transactions.",

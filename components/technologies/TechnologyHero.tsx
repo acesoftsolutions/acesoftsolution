@@ -23,24 +23,7 @@ const technologies = [
   "Tailwind CSS",
 ];
 
-const stats = [
-  {
-    number: "20+",
-    label: "Technologies",
-  },
-  {
-    number: "250+",
-    label: "Projects Delivered",
-  },
-  {
-    number: "15+",
-    label: "Industries Served",
-  },
-  {
-    number: "98%",
-    label: "Client Satisfaction",
-  },
-];
+
 
 const stackData = [
   {
@@ -395,61 +378,14 @@ export default function TechnologyHero() {
                 lg:block
               "
             >
-              <p className="text-3xl font-bold text-white">500+</p>
+              <p className="text-3xl font-bold text-white">250+</p>
 
               <p className="text-sm text-slate-400">Projects Delivered</p>
             </motion.div>
           </motion.div>
         </div>
 
-        {/* Stats */}
-        <div className="mt-24 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((item, index) => (
-            <motion.div
-              key={item.label}
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                delay: index * 0.1,
-              }}
-              whileHover={{
-                y: -5,
-              }}
-              className="
-                rounded-2xl
-                border
-                border-white/10
-                bg-white/[0.03]
-                p-6
-                text-center
-                backdrop-blur-xl
-                transition-all
-                duration-300
-              "
-            >
-              <h3
-                className="
-                  text-4xl
-                  font-bold
-                  text-white
-                "
-              >
-                {item.number}
-              </h3>
-
-              <p className="mt-2 text-slate-400">{item.label}</p>
-            </motion.div>
-          ))}
-        </div>
+       
       </div>
     </section>
   );
