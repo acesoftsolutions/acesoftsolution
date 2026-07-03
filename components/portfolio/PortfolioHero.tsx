@@ -154,24 +154,6 @@ export default function PortfolioHero() {
                 <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
               </button>
 
-              <button
-                className="
-              rounded-2xl
-              border
-              border-slate-200
-              bg-white
-              px-8
-              py-4
-              font-semibold
-              text-slate-900
-              transition-all
-              duration-300
-              hover:border-blue-200
-              hover:bg-blue-50
-            "
-              >
-                Start Your Project
-              </button>
             </div>
           </motion.div>
 

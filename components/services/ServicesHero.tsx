@@ -470,30 +470,6 @@ export default function ServicesHero() {
                 </div>
                 {/* Enterprise Footer Card */}
 
-                <div
-                  className="
-                    mt-6
-                    rounded-3xl
-                    border
-                    border-white/10
-                    bg-gradient-to-r
-                    from-blue-600/15
-                    via-cyan-500/10
-                    to-violet-600/15
-                    p-6
-                  "
-                >
-                  <p className="text-xs uppercase tracking-[0.3em] text-cyan-400">
-                    Trusted Technology Partner
-                  </p>
-
-                  <p className="mt-3 text-base leading-relaxed text-slate-300">
-                    We help startups, SMEs, and enterprises build scalable
-                    digital products, automate core business processes, and
-                    accelerate innovation through cutting-edge, future-proof
-                    technologies.
-                  </p>
-                </div>
               </motion.div>
 
               {/* Floating Tech Badges */}

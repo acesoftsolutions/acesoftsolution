@@ -131,38 +131,6 @@ export default function CTASection() {
           </div>
       
 
-          {/* Buttons */}
-          <div
-            className="
-              mt-12
-              flex
-              flex-col
-              items-center
-              justify-center
-              gap-5
-              sm:flex-row
-            "
-          >
-            <button
-              className="
-                group
-                rounded-full
-                bg-slate-950
-                px-8
-                py-4
-                text-lg
-                font-semibold
-                text-white
-                transition-all
-                duration-300
-                hover:scale-105
-              "
-            >
-              Start Your Project
-            </button>
-
-            
-          </div>
 
      
         </motion.div>

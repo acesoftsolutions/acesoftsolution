@@ -273,57 +273,8 @@ export default function AboutSection() {
 
               {/* Floating Circle */}
 
-              <motion.div
-                animate={{
-                  y: [-12, 12, -12],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="
-                  absolute
-                  -left-8
-                  top-20
-                  flex
-                  h-16
-                  w-16
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-white
-                  shadow-xl
-                "
-              >
-                <Globe2 className="h-8 w-8 text-cyan-600" />
-              </motion.div>
+            
 
-              <motion.div
-                animate={{
-                  y: [10, -10, 10],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="
-                  absolute
-                  -right-8
-                  top-8
-                  flex
-                  h-16
-                  w-16
-                  items-center
-                  justify-center
-                  rounded-2xl
-                  bg-white
-                  shadow-xl
-                "
-              >
-                <BrainCircuit className="h-8 w-8 text-blue-600" />
-              </motion.div>
 
               <motion.div
                 animate={{
@@ -505,46 +456,7 @@ export default function AboutSection() {
 
               </motion.div>
 
-              {/* Experience Badge */}
-
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  scale: .8,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                whileHover={{
-                  scale: 1.05,
-                }}
-                viewport={{
-                  once: true,
-                }}
-                className="
-                  absolute
-                  -bottom-6
-                  left-6
-                  rounded-3xl
-                  border
-                  border-white/50
-                  bg-white
-                  px-6
-                  py-5
-                  shadow-xl
-                "
-              >
-
-                <div className="text-3xl font-bold text-blue-700">
-                  10+
-                </div>
-
-                <div className="text-sm text-slate-500">
-                  Years Experience
-                </div>
-
-              </motion.div>
+          
 
             </div>
 

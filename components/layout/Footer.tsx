@@ -13,6 +13,7 @@ import {
   ArrowRight,
   ArrowUp,
   Send,
+  CheckCircle2,
 } from "lucide-react";
 
 const services = [
@@ -56,12 +57,12 @@ const companyLinks = [
     href: "/careers",
   },
   {
-    name: "Privacy Policy",
-    href: "/privacy",
+    name: "Technologies",
+    href: "/technologies",
   },
   {
-    name: "Terms & Conditions",
-    href: "/terms",
+    name: "Industry",
+    href: "/industry",
   },
 ];
 
@@ -102,6 +103,28 @@ const socialLinks = [
   },
 ];
 
+// TODO: replace with your real office details
+const offices = [
+  {
+    city: "Ahmedabad",
+    tag: "Head Office",
+    address: "SG Highway, Ahmedabad, Gujarat, India – 380015",
+    phone: "+91 99999 89999",
+  },
+  {
+    city: "Surat",
+    tag: "Branch Office",
+    address: "Adajan, Surat, Gujarat, India – 395009",
+    phone: "+91 99999 12345",
+  },
+  {
+    city: "Rajkot",
+    tag: "Branch Office",
+    address: "150 Feet Ring Road, Rajkot, Gujarat, India – 360005",
+    phone: "+91 99999 54321",
+  },
+];
+
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
@@ -119,59 +142,48 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-dark-light">
+    <footer className="relative overflow-hidden border-t border-slate-200 bg-gradient-to-b from-white via-slate-50 to-slate-100">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-1/4 top-0 h-96 w-96 -translate-y-1/2 rounded-full bg-blue-600/10 blur-3xl" />
-        <div className="absolute right-1/4 top-0 h-96 w-96 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
+        <div className="absolute left-1/4 top-0 h-96 w-96 -translate-y-1/2 rounded-full bg-blue-300/20 blur-3xl" />
+        <div className="absolute right-1/4 top-0 h-96 w-96 -translate-y-1/2 rounded-full bg-cyan-300/20 blur-3xl" />
       </div>
+
+      {/* Subtle grid texture */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          opacity-[0.035]
+          [background-image:linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)]
+          [background-size:64px_64px]
+        "
+      />
 
       <div className="relative max-w-[1280px] mx-auto px-5 lg:px-8">
         {/* ================= CTA banner ================= */}
-        <div className="pt-16 lg:pt-20">
-          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-r from-blue-700 via-cyan-600 to-teal-500 p-8 lg:p-12">
-            <div className="pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full bg-white/10 blur-2xl" />
-            <div className="pointer-events-none absolute -bottom-16 left-1/3 h-56 w-56 rounded-full bg-white/10 blur-2xl" />
-
-            <div className="relative flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-white lg:text-3xl">
-                  Have a project in mind?
-                </h3>
-                <p className="mt-2 max-w-xl text-white/80">
-                  Let's talk about how we can help you build scalable
-                  software that drives real business growth.
-                </p>
-              </div>
-
-              <Link
-                href="/contact"
-                className="group inline-flex shrink-0 items-center gap-2 rounded-2xl bg-white px-7 py-4 font-semibold text-slate-900 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
-              >
-                Start a Conversation
-                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
-        </div>
+   
 
         {/* ================= Main Footer ================= */}
-        <div className="py-16 lg:py-20">
-          <div className="grid gap-14 lg:grid-cols-[1.5fr_0.9fr_0.9fr_1.1fr]">
+        <div className="py-12 lg:py-14">
+          <div className="grid gap-14 lg:grid-cols-[1.4fr_0.9fr_0.9fr_1.1fr]">
             {/* Brand */}
             <div>
               <Link href="/" className="inline-flex items-center gap-4 mb-6">
-                <Image
-                  src="/logo.png"
-                  alt="Ace Soft Solution"
-                  width={165}
-                  height={60}
-                  priority
-                  className="rounded-sm"
-                />
+                <div className="rounded-2xl border border-slate-200 bg-white p-2 shadow-sm">
+                  <Image
+                    src="/logo.png"
+                    alt="Ace Soft Solution"
+                    width={150}
+                    height={54}
+                    priority
+                    className="rounded-sm"
+                  />
+                </div>
               </Link>
 
-              <p className="text-muted max-w-md leading-relaxed mb-8">
+              <p className="max-w-md leading-relaxed text-slate-600 mb-8">
                 Ace Soft Solution is a trusted software development company
                 helping startups, SMEs, and enterprises build custom software,
                 mobile apps, ERP systems, AI-powered solutions, and scalable
@@ -186,7 +198,7 @@ export default function Footer() {
                     href={social.href}
                     whileHover={{ y: -3 }}
                     whileTap={{ scale: 0.95 }}
-                    className="h-11 w-11 rounded-xl border border-white/10 bg-white/[0.03] flex items-center justify-center text-white hover:border-cyan-400/30 hover:text-cyan-400 transition-all"
+                    className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition-all hover:border-cyan-400/50 hover:text-cyan-600"
                     aria-label={social.label}
                   >
                     <social.icon className="h-5 w-5" />
@@ -197,7 +209,7 @@ export default function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="text-white font-semibold text-lg mb-6">
+              <h4 className="mb-6 text-lg font-semibold text-slate-900">
                 Services
               </h4>
 
@@ -206,9 +218,9 @@ export default function Footer() {
                   <li key={service.name}>
                     <Link
                       href={service.href}
-                      className="group inline-flex items-center gap-2 text-muted hover:text-white transition-colors"
+                      className="group inline-flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-900"
                     >
-                      <ArrowRight className="h-3.5 w-3.5 -translate-x-1 text-cyan-400 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
+                      <ArrowRight className="h-3.5 w-3.5 -translate-x-1 text-cyan-500 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
                       {service.name.trim()}
                     </Link>
                   </li>
@@ -218,7 +230,7 @@ export default function Footer() {
 
             {/* Company */}
             <div>
-              <h4 className="text-white font-semibold text-lg mb-6">
+              <h4 className="mb-6 text-lg font-semibold text-slate-900">
                 Company
               </h4>
 
@@ -227,9 +239,9 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="group inline-flex items-center gap-2 text-muted hover:text-white transition-colors"
+                      className="group inline-flex items-center gap-2 text-slate-600 transition-colors hover:text-slate-900"
                     >
-                      <ArrowRight className="h-3.5 w-3.5 -translate-x-1 text-cyan-400 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
+                      <ArrowRight className="h-3.5 w-3.5 -translate-x-1 text-cyan-500 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100" />
                       {link.name}
                     </Link>
                   </li>
@@ -239,47 +251,37 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h4 className="text-white font-semibold text-lg mb-6">
+              <h4 className="mb-6 text-lg font-semibold text-slate-900">
                 Contact Us
               </h4>
 
               <div className="space-y-5">
                 <a
                   href="mailto:info@acesoftsolution.com"
-                  className="group flex items-start gap-3 text-muted hover:text-white transition-colors"
+                  className="group flex items-start gap-3 text-slate-600 transition-colors hover:text-slate-900"
                 >
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 text-cyan-400 transition-colors group-hover:from-blue-600/30 group-hover:to-cyan-500/30">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/10 to-cyan-500/10 text-cyan-600 transition-colors group-hover:from-blue-600/20 group-hover:to-cyan-500/20">
                     <Mail className="h-4 w-4" />
                   </span>
                   <span className="pt-1.5">info@acesoftsolution.com</span>
                 </a>
 
                 <a
-                  href="tel:+919999999999"
-                  className="group flex items-start gap-3 text-muted hover:text-white transition-colors"
+                  href="tel:+919999989999"
+                  className="group flex items-start gap-3 text-slate-600 transition-colors hover:text-slate-900"
                 >
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 text-cyan-400 transition-colors group-hover:from-blue-600/30 group-hover:to-cyan-500/30">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/10 to-cyan-500/10 text-cyan-600 transition-colors group-hover:from-blue-600/20 group-hover:to-cyan-500/20">
                     <Phone className="h-4 w-4" />
                   </span>
                   <span className="pt-1.5">+91 99999 89999</span>
                 </a>
 
-                <div className="flex items-start gap-3 text-muted">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 text-cyan-400">
+                <div className="flex items-start gap-3 text-slate-600">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/10 to-cyan-500/10 text-cyan-600">
                     <MapPin className="h-4 w-4" />
                   </span>
                   <span className="pt-1.5">
-                    Ahmedabad,
-                    <br />
-                    Gujarat, India
-                  </span>
-                </div>
-                <div className="flex items-start gap-3 text-muted">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 text-cyan-400">
-                    <MapPin className="h-4 w-4" />
-                  </span>
-                  <span className="pt-1.5">
-                    Ahmedabad,
+                    Head Office — Ahmedabad,
                     <br />
                     Gujarat, India
                   </span>
@@ -287,14 +289,56 @@ export default function Footer() {
               </div>
             </div>
           </div>
+
+          {/* ================= Offices ================= */}
+          <div className="mt-6 border-t border-slate-200 pt-6">
+            <h4 className="mb-8 text-lg font-semibold text-slate-900">
+              Our Offices
+            </h4>
+
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {offices.map((office) => (
+                <div
+                  key={office.city}
+                  className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-900/5"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white">
+                      <MapPin className="h-4.5 w-4.5" />
+                    </span>
+                    <div>
+                      <p className="font-semibold text-slate-900">
+                        {office.city}
+                      </p>
+                      <p className="text-xs font-medium uppercase tracking-wide text-cyan-600">
+                        {office.tag}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                    {office.address}
+                  </p>
+
+                  <a
+                    href={`tel:${office.phone.replace(/\s/g, "")}`}
+                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition-colors hover:text-cyan-600"
+                  >
+                    <Phone className="h-3.5 w-3.5" />
+                    {office.phone}
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* ================= Bottom Bar ================= */}
-        <div className="border-t border-white/10 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted text-center md:text-left">
+        <div className="border-t border-slate-200 py-2z">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <p className="text-center text-sm text-slate-500 md:text-left">
               © {new Date().getFullYear()} Ace Soft Solution. All Rights
-              Reserved. 
+              Reserved.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-6">
@@ -302,7 +346,7 @@ export default function Footer() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-sm text-muted hover:text-white transition-colors"
+                  className="text-sm text-slate-500 transition-colors hover:text-slate-900"
                 >
                   {link.name}
                 </Link>
@@ -314,7 +358,7 @@ export default function Footer() {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Back to top"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white hover:border-cyan-400/30 hover:text-cyan-400 transition-all"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition-all hover:border-cyan-400/50 hover:text-cyan-600"
               >
                 <ArrowUp className="h-4 w-4" />
               </motion.button>

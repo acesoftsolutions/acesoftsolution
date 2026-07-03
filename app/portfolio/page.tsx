@@ -7,7 +7,7 @@ import ScrollProgress from '@/components/shared/ScrollProgress';
 import PortfolioHero from '@/components/portfolio/PortfolioHero';
 import FeaturedCaseStudy from '@/components/portfolio/FeaturedCaseStudy';
 import ResultsSection from '@/components/portfolio/ResultsSection';
-import TestimonialsSection from '@/components/portfolio/TestimonialsSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
 import PortfolioCTA from '@/components/portfolio/WorkCTA';
 
 export default function PortfolioPage() {

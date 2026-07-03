@@ -119,7 +119,7 @@ export default function FeaturedServices() {
 
           {/* Services Grid */}
 
-          <div className="mt-20 grid gap-6 lg:grid-cols-3">
+          <div className="mt-20 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service, index) => {
               const Icon =
                 iconMap[service.icon as keyof typeof iconMap] || Globe;
@@ -140,34 +140,40 @@ export default function FeaturedServices() {
                   }}
                   transition={{
                     duration: 0.5,
-                    delay: index * 0.1,
+                    delay: index * 0.08,
                   }}
                   whileHover={{
-                    y: -8,
+                    y: -6,
                   }}
                   className="
                   group
                   relative
+                  flex
+                  flex-col
                   overflow-hidden
-                  rounded-[36px]
+                  rounded-[28px]
                   border
-                  border-white/10
-                  bg-white/[0.03]
+                  border-white/15
+                  bg-white/[0.06]
                   backdrop-blur-xl
+                  transition-colors
+                  duration-500
+                  hover:border-white/25
                 "
                 >
-                  {/* Gradient Glow */}
+                  {/* Tinted Gradient Wash (always-on, brightens on hover) */}
 
                   <div
                     className={`
+                    pointer-events-none
                     absolute
                     inset-0
                     bg-gradient-to-br
                     ${service.gradient}
-                    opacity-0
-                    transition-all
+                    opacity-[0.14]
+                    transition-opacity
                     duration-500
-                    group-hover:opacity-[0.08]
+                    group-hover:opacity-[0.22]
                   `}
                   />
 
@@ -182,45 +188,44 @@ export default function FeaturedServices() {
                   `}
                   />
 
-                  <div className="relative z-10 p-8">
-                    {/* Service Number */}
+                  <div className="relative z-10 flex flex-1 flex-col p-6">
+                    {/* Icon + Number Row */}
 
-                    <span
-                      className="
-                      text-sm
-                      font-semibold
-                      tracking-[0.2em]
-                      text-slate-500
-                    "
-                    >
-                      {service.id}
-                    </span>
+                    <div className="flex items-center justify-between">
+                      <div
+                        className={`
+                        flex
+                        h-12
+                        w-12
+                        items-center
+                        justify-center
+                        rounded-2xl
+                        bg-gradient-to-br
+                        ${service.gradient}
+                        shadow-lg
+                      `}
+                      >
+                        <Icon className="h-6 w-6 text-white" />
+                      </div>
 
-                    {/* Icon */}
-
-                    <div
-                      className={`
-                      mt-6
-                      flex
-                      h-16
-                      w-16
-                      items-center
-                      justify-center
-                      rounded-3xl
-                      bg-gradient-to-br
-                      ${service.gradient}
-                      shadow-lg
-                    `}
-                    >
-                      <Icon className="h-8 w-8 text-white" />
+                      <span
+                        className="
+                        text-xs
+                        font-semibold
+                        tracking-[0.2em]
+                        text-slate-400
+                      "
+                      >
+                        {service.id}
+                      </span>
                     </div>
 
                     {/* Title */}
 
                     <h3
                       className="
-                      mt-6
-                      text-2xl
+                      mt-5
+                      text-lg
                       font-bold
                       text-white
                     "
@@ -232,71 +237,36 @@ export default function FeaturedServices() {
 
                     <p
                       className="
-                      mt-4
+                      mt-2
+                      line-clamp-2
+                      text-sm
                       leading-relaxed
-                      text-slate-400
+                      text-slate-300
                     "
                     >
                       {service.shortDescription}
                     </p>
 
-                    {/* Technology Preview */}
+                    {/* Technology Preview (condensed) */}
 
-                    <div className="mt-8 flex flex-wrap gap-2">
-                      {service.technologies.slice(0, 4).map((tech) => (
+                    <div className="mt-4 flex flex-wrap gap-1.5">
+                      {service.technologies.slice(0, 2).map((tech) => (
                         <span
                           key={tech}
                           className="
                             rounded-full
                             border
-                            border-white/10
-                            bg-white/5
-                            px-3
-                            py-1.5
-                            text-xs
+                            border-white/15
+                            bg-white/10
+                            px-2.5
+                            py-1
+                            text-[11px]
                             font-medium
-                            text-slate-300
+                            text-slate-200
                           "
                         >
                           {tech}
                         </span>
-                      ))}
-                    </div>
-
-                    {/* Divider */}
-
-                    <div className="my-8 h-px bg-white/10" />
-
-                    {/* Features Preview */}
-
-                    <div className="space-y-3">
-                      {service.features.slice(0, 3).map((feature) => (
-                        <div
-                          key={feature.title}
-                          className="
-                            flex
-                            items-center
-                            gap-3
-                          "
-                        >
-                          <div
-                            className="
-                              h-2
-                              w-2
-                              rounded-full
-                              bg-cyan-400
-                            "
-                          />
-
-                          <span
-                            className="
-                              text-sm
-                              text-slate-300
-                            "
-                          >
-                            {feature.title}
-                          </span>
-                        </div>
                       ))}
                     </div>
 
@@ -306,17 +276,18 @@ export default function FeaturedServices() {
                       href={`/services/${service.slug}`}
                       className="
                       group/link
-                      mt-8
+                      mt-5
                       inline-flex
                       items-center
                       gap-2
+                      text-sm
                       font-semibold
                       text-cyan-300
                     "
                     >
                       Learn More
                       <ArrowRight
-                        size={18}
+                        size={16}
                         className="
                         transition-transform
                         duration-300
@@ -330,7 +301,7 @@ export default function FeaturedServices() {
             })}
           </div>
 
-          {/* Bottom CTA Starts In Part 3 */}
+          {/* Bottom CTA */}
           <div className="mt-20">
             <div
               className="
