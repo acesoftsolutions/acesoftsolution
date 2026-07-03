@@ -13,6 +13,7 @@ import {
   MapPin,
   ArrowRight,
   ArrowUp,
+  Twitter,
   Send,
   CheckCircle2,
 } from "lucide-react";
@@ -88,19 +89,32 @@ const legalLinks = [
 
 const socialLinks = [
   {
-    icon: Facebook,
-    href: "#",
     label: "Facebook",
+    href: "#",
+    icon: Facebook,
+    color: "text-[#1877F2]",
+    bg: "hover:bg-[#1877F2]",
   },
   {
-    icon: Instagram,
-    href: "#",
     label: "Instagram",
+    href: "#",
+    icon: Instagram,
+    color: "text-[#E4405F]",
+    bg: "hover:bg-gradient-to-br hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF]",
   },
   {
-    icon: Linkedin,
-    href: "#",
     label: "LinkedIn",
+    href: "#",
+    icon: Linkedin,
+    color: "text-[#0A66C2]",
+    bg: "hover:bg-[#0A66C2]",
+  },
+  {
+    label: "Twitter",
+    href: "#",
+    icon: Twitter,
+    color: "text-[#1DA1F2]",
+    bg: "hover:bg-[#1DA1F2]",
   },
 ];
 
@@ -117,7 +131,7 @@ const offices = [
   {
     country: "Belgium",
     code: "BE",
-    tag: "Branch Office",
+    tag: "",
     address: "Boesbergstraat 4, Sterrebeek, Belgium",
     phone: "+91 99999 12345",
     gradient: "from-black via-yellow-400 to-red-500",
@@ -125,7 +139,7 @@ const offices = [
   {
     country: "United Kingdom",
     code: "GB",
-    tag: "Branch Office",
+    tag: "",
     address: "40b Scarle Rd, Wembley HA0 4SN",
     phone: "+91 99999 54321",
     gradient: "from-blue-700 via-white to-red-600",
@@ -198,7 +212,7 @@ export default function Footer() {
 
             {/* Services */}
             <div>
-              <h4 className="mb-6 text-lg font-semibold text-slate-900">
+              <h4 className="mb-6 mx-4 text-lg font-semibold text-slate-900">
                 Services
               </h4>
 
@@ -219,7 +233,7 @@ export default function Footer() {
 
             {/* Company */}
             <div>
-              <h4 className="mb-6 text-lg font-semibold text-slate-900">
+              <h4 className="mb-6 mx-4 text-lg font-semibold text-slate-900">
                 Company
               </h4>
 
@@ -264,29 +278,64 @@ export default function Footer() {
                   </span>
                   <span className="pt-1.5">+91 99999 89999</span>
                 </a>
-
-                <div className="flex items-start gap-3 text-slate-600">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/10 to-cyan-500/10 text-cyan-600">
-                    <MapPin className="h-4 w-4" />
-                  </span>
-                  <span className="pt-1.5">
-                    Head Office — Ahmedabad,
-                    <br />
-                    Gujarat, India
-                  </span>
-                </div>
               </div>
-              <div className="flex gap-3 mt-4">
+              <div className="mt-4 flex gap-3">
                 {socialLinks.map((social) => (
                   <motion.a
                     key={social.label}
                     href={social.href}
-                    whileHover={{ y: -3 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition-all hover:border-cyan-400/50 hover:text-cyan-600"
+                    whileHover={{
+                      y: -5,
+                      scale: 1.08,
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                    }}
+                    className={`
+        group
+        relative
+        flex
+        h-12
+        w-12
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-2xl
+        border
+        border-slate-200
+        bg-white
+        shadow-md
+        transition-all
+        duration-300
+        ${social.bg}
+      `}
                     aria-label={social.label}
                   >
-                    <social.icon className="h-5 w-5" />
+                    <social.icon
+                      className={`
+          h-5
+          w-5
+          ${social.color}
+          transition-all
+          duration-300
+          group-hover:scale-110
+          group-hover:text-white
+        `}
+                    />
+
+                    <div
+                      className="
+          absolute
+          inset-0
+          rounded-2xl
+          opacity-0
+          transition-opacity
+          duration-300
+          group-hover:opacity-100
+          ring-2
+          ring-white/20
+        "
+                    />
                   </motion.a>
                 ))}
               </div>
@@ -451,18 +500,6 @@ export default function Footer() {
                         <Phone className="h-4 w-4" />
                         {office.phone}
                       </a>
-
-                      <ArrowRight
-                        className="
-            h-5
-            w-5
-            text-slate-400
-            transition-all
-            duration-300
-            group-hover:translate-x-1
-            group-hover:text-cyan-600
-          "
-                      />
                     </div>
                   </div>
                 </motion.div>
