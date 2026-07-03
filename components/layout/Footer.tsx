@@ -106,21 +106,21 @@ const socialLinks = [
 // TODO: replace with your real office details
 const offices = [
   {
-    city: "Ahmedabad",
+    city: "India",
     tag: "Head Office",
-    address: "SG Highway, Ahmedabad, Gujarat, India – 380015",
+    address: "2144, Diamond Park, Sachin-394230, Surat",
     phone: "+91 99999 89999",
   },
   {
-    city: "Surat",
+    city: "Belgium",
     tag: "Branch Office",
-    address: "Adajan, Surat, Gujarat, India – 395009",
+    address: "Boesbergstraat 4, Sterrebeek, Belgium",
     phone: "+91 99999 12345",
   },
   {
-    city: "Rajkot",
+    city: "London",
     tag: "Branch Office",
-    address: "150 Feet Ring Road, Rajkot, Gujarat, India – 360005",
+    address: "40b Scarle Rd, Wembley HA0 4SN, United Kingdom",
     phone: "+91 99999 54321",
   },
 ];
@@ -191,20 +191,7 @@ export default function Footer() {
               </p>
 
 
-              <div className="flex gap-3">
-                {socialLinks.map((social) => (
-                  <motion.a
-                    key={social.label}
-                    href={social.href}
-                    whileHover={{ y: -3 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition-all hover:border-cyan-400/50 hover:text-cyan-600"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="h-5 w-5" />
-                  </motion.a>
-                ))}
-              </div>
+             
             </div>
 
             {/* Services */}
@@ -286,6 +273,20 @@ export default function Footer() {
                     Gujarat, India
                   </span>
                 </div>
+              </div>
+               <div className="flex gap-3 mt-4">
+                {socialLinks.map((social) => (
+                  <motion.a
+                    key={social.label}
+                    href={social.href}
+                    whileHover={{ y: -3 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-600 shadow-sm transition-all hover:border-cyan-400/50 hover:text-cyan-600"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="h-5 w-5" />
+                  </motion.a>
+                ))}
               </div>
             </div>
           </div>
