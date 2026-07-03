@@ -3,6 +3,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import ReactCountryFlag from "react-country-flag";
 import {
   Facebook,
   Instagram,
@@ -106,25 +107,30 @@ const socialLinks = [
 // TODO: replace with your real office details
 const offices = [
   {
-    city: "India",
+    country: "India",
+    code: "IN",
     tag: "Head Office",
     address: "2144, Diamond Park, Sachin-394230, Surat",
     phone: "+91 99999 89999",
+    gradient: "from-orange-500 via-white to-green-500",
   },
   {
-    city: "Belgium",
+    country: "Belgium",
+    code: "BE",
     tag: "Branch Office",
     address: "Boesbergstraat 4, Sterrebeek, Belgium",
     phone: "+91 99999 12345",
+    gradient: "from-black via-yellow-400 to-red-500",
   },
   {
-    city: "London",
+    country: "United Kingdom",
+    code: "GB",
     tag: "Branch Office",
-    address: "40b Scarle Rd, Wembley HA0 4SN, United Kingdom",
+    address: "40b Scarle Rd, Wembley HA0 4SN",
     phone: "+91 99999 54321",
+    gradient: "from-blue-700 via-white to-red-600",
   },
 ];
-
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
@@ -163,7 +169,6 @@ export default function Footer() {
 
       <div className="relative max-w-[1280px] mx-auto px-5 lg:px-8">
         {/* ================= CTA banner ================= */}
-   
 
         {/* ================= Main Footer ================= */}
         <div className="py-12 lg:py-14">
@@ -189,9 +194,6 @@ export default function Footer() {
                 mobile apps, ERP systems, AI-powered solutions, and scalable
                 digital products that drive measurable business growth.
               </p>
-
-
-             
             </div>
 
             {/* Services */}
@@ -274,7 +276,7 @@ export default function Footer() {
                   </span>
                 </div>
               </div>
-               <div className="flex gap-3 mt-4">
+              <div className="flex gap-3 mt-4">
                 {socialLinks.map((social) => (
                   <motion.a
                     key={social.label}
@@ -297,38 +299,173 @@ export default function Footer() {
               Our Offices
             </h4>
 
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {offices.map((office) => (
-                <div
-                  key={office.city}
-                  className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-900/5"
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {offices.map((office, index) => (
+                <motion.div
+                  key={office.country}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.12,
+                  }}
+                  viewport={{ once: true }}
+                  whileHover={{
+                    y: -8,
+                  }}
+                  className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-md transition-all duration-500 hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white">
-                      <MapPin className="h-4.5 w-4.5" />
-                    </span>
-                    <div>
-                      <p className="font-semibold text-slate-900">
-                        {office.city}
-                      </p>
-                      <p className="text-xs font-medium uppercase tracking-wide text-cyan-600">
-                        {office.tag}
+                  {/* Gradient Border */}
+
+                  <div
+                    className={`h-1 w-full bg-gradient-to-r ${office.gradient}`}
+                  />
+
+                  {/* Glow */}
+
+                  <div
+                    className="
+        absolute
+        -right-20
+        -top-20
+        h-40
+        w-40
+        rounded-full
+        bg-cyan-400/10
+        blur-3xl
+        opacity-0
+        transition-all
+        duration-500
+        group-hover:opacity-100
+      "
+                  />
+
+                  <div className="relative p-7">
+                    {/* Header */}
+
+                    <div className="flex items-start justify-between">
+                      <div className="flex items-center gap-4">
+                        {/* Flag */}
+
+                        <div
+                          className="
+    flex
+    h-16
+    w-16
+    items-center
+    justify-center
+    rounded-2xl
+    bg-gradient-to-br
+    from-slate-50
+    to-white
+    shadow-lg
+    ring-1
+    ring-slate-200
+    transition-all
+    duration-300
+    group-hover:scale-110
+    group-hover:-rotate-6
+  "
+                        >
+                          <ReactCountryFlag
+                            countryCode={office.code}
+                            svg
+                            style={{
+                              width: "42px",
+                              height: "42px",
+                            }}
+                            title={office.country}
+                          />
+                        </div>
+
+                        <div>
+                          <h3 className="text-xl font-bold text-slate-900">
+                            {office.country}
+                          </h3>
+
+                          <span
+                            className="
+                mt-1
+                inline-flex
+                rounded-full
+                bg-cyan-50
+                px-3
+                py-1
+                text-xs
+                font-semibold
+                uppercase
+                tracking-wider
+                text-cyan-700
+              "
+                          >
+                            {office.tag}
+                          </span>
+                        </div>
+                      </div>
+
+                      <div
+                        className="
+            rounded-xl
+            bg-gradient-to-br
+            from-cyan-500
+            to-blue-600
+            p-3
+            text-white
+            shadow-lg
+          "
+                      >
+                        <MapPin className="h-5 w-5" />
+                      </div>
+                    </div>
+
+                    {/* Address */}
+
+                    <div className="mt-6">
+                      <p className="text-sm leading-7 text-slate-600">
+                        {office.address}
                       </p>
                     </div>
+
+                    {/* Bottom */}
+
+                    <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-5">
+                      <a
+                        href={`tel:${office.phone.replace(/\s/g, "")}`}
+                        className="
+            inline-flex
+            items-center
+            gap-2
+            rounded-full
+            bg-slate-100
+            px-4
+            py-2
+            text-sm
+            font-semibold
+            text-slate-700
+            transition-all
+            duration-300
+            hover:bg-cyan-500
+            hover:text-white
+          "
+                      >
+                        <Phone className="h-4 w-4" />
+                        {office.phone}
+                      </a>
+
+                      <ArrowRight
+                        className="
+            h-5
+            w-5
+            text-slate-400
+            transition-all
+            duration-300
+            group-hover:translate-x-1
+            group-hover:text-cyan-600
+          "
+                      />
+                    </div>
                   </div>
-
-                  <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                    {office.address}
-                  </p>
-
-                  <a
-                    href={`tel:${office.phone.replace(/\s/g, "")}`}
-                    className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition-colors hover:text-cyan-600"
-                  >
-                    <Phone className="h-3.5 w-3.5" />
-                    {office.phone}
-                  </a>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
