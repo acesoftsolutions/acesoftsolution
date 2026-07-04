@@ -158,7 +158,7 @@ export default function FeaturedCaseStudy() {
             </div>
 
             {/* Metrics */}
-            <div className="mt-8 grid grid-cols-2 gap-4">
+            {/* <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="rounded-2xl bg-slate-50 p-5">
                 <TrendingUp className="h-6 w-6 text-cyan-600" />
                 <h4 className="mt-3 text-4xl font-black leading-none text-slate-900">
@@ -178,12 +178,12 @@ export default function FeaturedCaseStudy() {
                   {study.metrics.secondary.label}
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* ================= Image ================= */}
           <div
-            className={`relative min-h-[320px] lg:min-h-full ${
+            className={`relative h-[360px] lg:h-[660px] ${
               isReversed ? "lg:order-1" : "lg:order-2"
             }`}
           >

@@ -80,7 +80,7 @@ export const caseStudies: CaseStudy[] = [
       "A rapidly growing enterprise needed a centralized CRM platform to replace multiple disconnected spreadsheets and legacy tools. The objective was to improve customer relationship management, automate repetitive business processes, provide real-time reporting, and create a scalable solution capable of supporting future business growth.",
 
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600",
+      "/Case-Study/enterprise-crm.png",
 
     projectGallery: [
       "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600",
@@ -207,7 +207,7 @@ export const caseStudies: CaseStudy[] = [
       "A growing healthcare organization required a centralized digital platform to manage patient records, appointments, billing, laboratory reports, and daily hospital operations. The goal was to reduce administrative workload, improve patient experience, and digitize healthcare workflows with a secure, scalable solution.",
 
     image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600",
+      "/Case-Study/healthcare-management.png",
 
     projectGallery: [
       "https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1600",
@@ -334,7 +334,7 @@ export const caseStudies: CaseStudy[] = [
       "A fast-growing retail business wanted to launch a modern multi-vendor marketplace where vendors could independently manage their stores while customers enjoyed a smooth shopping experience. The platform required secure payment processing, inventory management, vendor dashboards, order tracking, and a scalable architecture capable of supporting future growth.",
 
     image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600",
+      "/Case-Study/ecommerce-marketplace.png",
 
     projectGallery: [
       "https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=1600",
@@ -461,7 +461,7 @@ export const caseStudies: CaseStudy[] = [
       "An EdTech company required a scalable Learning Management System to support online education, instructor-led training, and corporate learning programs. The platform needed to provide course management, live classes, assessments, certifications, learner analytics, and a seamless experience across web and mobile devices.",
 
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
+      "/Case-Study/learning-management.png",
 
     projectGallery: [
       "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600",
@@ -589,7 +589,7 @@ export const caseStudies: CaseStudy[] = [
       "A growing real estate company required a modern digital platform to manage residential and commercial property listings, automate lead management, simplify agent workflows, and deliver an engaging property search experience for buyers, sellers, landlords, and tenants. The platform was designed to improve operational efficiency while supporting long-term business growth.",
 
     image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600",
+      "/Case-Study/real-estate-platform.png",
 
     projectGallery: [
       "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1600",
@@ -716,7 +716,7 @@ export const caseStudies: CaseStudy[] = [
       "A digital financial services company required a centralized dashboard to monitor transactions, customer activity, revenue, and operational performance across multiple financial products. The objective was to replace fragmented reporting tools with a secure, data-driven platform that supports faster decision-making and business growth.",
 
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600",
+      "/Case-Study/fintech-dashboard.png",
 
     projectGallery: [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600",

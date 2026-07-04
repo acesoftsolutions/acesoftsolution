@@ -19,53 +19,14 @@ import {
 import AnimatedSection from "@/components/shared/AnimatedSection";
 import { portfolios } from "@/data/portfolios";
 
-const DUMMY_PROJECTS = [
-  {
-    _id: "dummy-1",
-    slug: "smart-manufacturing-erp",
-    title: "Smart Manufacturing ERP",
-    category: "ERP Solution",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1600",
-    shortDescription:
-      "A complete ERP ecosystem designed for manufacturing companies to manage production, inventory, procurement, finance, and workforce operations from a unified platform.",
-    technologies: [
-      "React",
-      "Node.js",
-      "PostgreSQL",
-      "AWS",
-      "Docker",
-      "Power BI",
-    ],
-    result: "45% Faster Operations",
-  },
-  {
-    _id: "dummy-2",
-    slug: "ai-support-platform",
-    title: "AI Customer Support Platform",
-    category: "AI Automation",
-    image:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600",
-    shortDescription:
-      "AI-powered customer service ecosystem with intelligent chat automation, ticket prioritization, sentiment analysis, and knowledge base integration.",
-    technologies: [
-      "Next.js",
-      "OpenAI",
-      "LangChain",
-      "Pinecone",
-      "Node.js",
-      "MongoDB",
-    ],
-    result: "60% Support Cost Reduction",
-  },
-];
+
 
 const AUTOPLAY_DELAY = 5000;
 
 export default function PortfolioShowcase() {
   // Stable array reference — computed once, not re-created every render
-  const featuredProjects = useRef([...portfolios.slice(0, 3), ...DUMMY_PROJECTS]).current;
-
+  const featuredProjects = useRef(portfolios).current;
+  
   // Autoplay plugin must be a stable ref, not useMemo, or Embla will
   // silently re-init the plugin on every render and cause micro-stutters.
   const autoplayRef = useRef(
@@ -245,7 +206,7 @@ export default function PortfolioShowcase() {
                     <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
                       {/* ================= Left Image ================= */}
                       <div className="relative overflow-hidden">
-                        <div className="group relative h-full min-h-[420px] lg:min-h-[620px]">
+                        <div className="group relative h-full min-h-[380px] lg:min-h-[520px]">
                           {/* Image */}
                           <img
                             src={project.image}
@@ -297,22 +258,7 @@ export default function PortfolioShowcase() {
                             </div>
                           </div>
 
-                          {/* Result Badge */}
-                          {"result" in project && (
-                            <div className="absolute left-6 bottom-8 hidden rounded-2xl border border-white/20 bg-gradient-to-r from-blue-700 via-cyan-500 to-teal-500 px-6 py-4 text-white shadow-2xl lg:block">
-                              <div className="flex items-center gap-3">
-                                <TrendingUp className="h-5 w-5" />
-                                <div>
-                                  <div className="text-xs uppercase tracking-[0.2em] text-white/80">
-                                    Results
-                                  </div>
-                                  <div className="font-bold">
-                                    {project.result}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          )}
+                 
 
                           {/* Bottom Info */}
                           <div className="absolute inset-x-0 bottom-0 p-8 lg:p-10">
@@ -340,15 +286,6 @@ export default function PortfolioShowcase() {
                           <p className="mt-6 text-lg leading-8 text-slate-600">
                             {project.shortDescription}
                           </p>
-
-                          {"result" in project && (
-                            <div className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-emerald-200 bg-emerald-50 px-5 py-4">
-                              <TrendingUp className="h-5 w-5 text-emerald-600" />
-                              <span className="font-semibold text-emerald-700">
-                                {project.result}
-                              </span>
-                            </div>
-                          )}
 
                           <div className="mt-10">
                             <div className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">

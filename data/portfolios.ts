@@ -19,7 +19,7 @@ export const portfolios: Portfolio[] = [
     industry: "Enterprise Software",
 
     image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600",
+      "/Case-Study/enterprise-crm.png",
 
     images: [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1600",
@@ -75,7 +75,7 @@ export const portfolios: Portfolio[] = [
     industry: "Healthcare",
 
     image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600",
+      "/Case-Study/healthcare-management.png",
 
     images: [
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600",
@@ -132,7 +132,7 @@ export const portfolios: Portfolio[] = [
     industry: "Retail & eCommerce",
 
     image:
-      "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600",
+      "/Case-Study/ecommerce-marketplace.png",
 
     images: [
       "https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1600",
@@ -190,7 +190,7 @@ export const portfolios: Portfolio[] = [
     industry: "Education",
 
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
+      "/Case-Study/learning-management.png",
 
     images: [
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600",
@@ -248,7 +248,7 @@ export const portfolios: Portfolio[] = [
     industry: "Real Estate",
 
     image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600",
+      "/Case-Study/real-estate-platform.png",
 
     images: [
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600",
@@ -306,7 +306,7 @@ export const portfolios: Portfolio[] = [
     industry: "FinTech",
 
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600",
+      "/Case-Study/fintech-dashboard.png",
 
     images: [
       "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1600",

@@ -38,7 +38,7 @@ const caseStudies = [
     ],
 
     image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400',
+      '/Case-Study/enterprise-crm.png',
   },
 
   {
@@ -69,7 +69,7 @@ const caseStudies = [
     ],
 
     image:
-      'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?q=80&w=1400',
+      '/Case-Study/healthcare-management.png',
   },
 
   {
@@ -100,7 +100,7 @@ const caseStudies = [
     ],
 
     image:
-      'https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=1400',
+      '/Case-Study/ecommerce-marketplace.png',
   },
 ];
 
