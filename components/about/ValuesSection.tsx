@@ -1,12 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import {
-  Target,
-  Heart,
-  Shield,
-  Lightbulb,
-} from 'lucide-react';
+import { Target, Heart, Shield, Lightbulb } from 'lucide-react';
 
 import AnimatedSection from '@/components/shared/AnimatedSection';
 
@@ -14,142 +9,98 @@ const values = [
   {
     icon: Target,
     title: 'Excellence',
+    label: 'Quality First',
     description:
-      'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.',
+      'We deliver thoughtful, reliable and high-performing solutions with a strong focus on detail, usability and long-term value.',
   },
   {
     icon: Heart,
     title: 'Client Success',
+    label: 'Partnership',
     description:
-      'Our clients are at the center of every decision we make. Their growth is our greatest achievement.',
+      'We align every decision with our clients’ business goals, helping them grow faster, operate smarter and serve customers better.',
   },
   {
     icon: Shield,
     title: 'Integrity',
+    label: 'Trust',
     description:
-      'We build trust through transparency, honesty and accountability in every partnership.',
+      'We build lasting relationships through honest communication, transparent delivery and accountable decision-making.',
   },
   {
     icon: Lightbulb,
     title: 'Innovation',
+    label: 'Future Ready',
     description:
-      'We embrace emerging technologies and creative thinking to solve complex business challenges.',
+      'We use modern technologies, creative thinking and practical strategy to solve complex business challenges with confidence.',
   },
 ];
 
 export default function ValuesSection() {
   return (
-    <section className="bg-white py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section className="relative overflow-hidden bg-white py-10 sm:py-12 lg:py-14">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#E0F7FF_0%,transparent_36%)]" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-200 to-transparent" />
+
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <AnimatedSection>
           <div className="mx-auto max-w-3xl text-center">
-            <span
-              className="
-                inline-flex
-                rounded-full
-                border
-                border-cyan-100
-                bg-cyan-50
-                px-5
-                py-2
-                text-sm
-                font-semibold
-                text-cyan-700
-              "
-            >
+            <span className="inline-flex rounded-md border border-cyan-100 bg-cyan-50 px-5 py-2 text-sm font-bold uppercase tracking-wide text-cyan-700">
               Our Core Values
             </span>
 
-            <h2
-              className="
-                mt-6
-                text-4xl
-                font-bold
-                text-slate-900
-                md:text-5xl
-              "
-            >
-              The Principles Behind
-              <span
-                className="
-                  block
-                  bg-gradient-to-r
-                  from-[#0E4DB7]
-                  via-[#3CC8F5]
-                  to-[#12C7B5]
-                  bg-clip-text
-                  text-transparent
-                "
-              >
-                Every Solution We Build
+            <h2 className="mt-6 text-4xl font-black leading-tight tracking-tight text-slate-950 md:text-5xl">
+              The principles behind every{' '}
+              <span className="bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] bg-clip-text text-transparent">
+                solution we build
               </span>
             </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+              Our values shape how we think, communicate and deliver technology
+              that creates measurable business impact.
+            </p>
           </div>
         </AnimatedSection>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {values.map((value, index) => {
             const Icon = value.icon;
 
             return (
-              <AnimatedSection
-                key={value.title}
-                delay={index * 0.08}
-              >
+              <AnimatedSection key={value.title} delay={index * 0.08}>
                 <motion.div
-                  whileHover={{
-                    y: -8,
-                  }}
-                  className="
-                    h-full
-                    rounded-[32px]
-                    bg-white
-                    p-8
-                    shadow-sm
-                    ring-1
-                    ring-slate-200
-                    transition-all
-                    duration-300
-                    hover:shadow-xl
-                  "
+                  whileHover={{ y: -8 }}
+                  transition={{ duration: 0.25, ease: 'easeOut' }}
+                  className="group relative flex h-full min-h-[360px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/60 transition duration-300 hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-100 sm:p-7"
                 >
-                  <div
-                    className="
-                      flex
-                      h-16
-                      w-16
-                      items-center
-                      justify-center
-                      rounded-2xl
-                      bg-gradient-to-br
-                      from-[#0E4DB7]
-                      via-[#3CC8F5]
-                      to-[#12C7B5]
-                    "
-                  >
-                    <Icon className="h-8 w-8 text-white" />
+                  <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5]" />
+                  <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-cyan-100 opacity-0 blur-3xl transition duration-300 group-hover:opacity-100" />
+
+                  <div className="relative flex items-center justify-between gap-4">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] shadow-lg shadow-cyan-200">
+                      <Icon className="h-7 w-7 text-white" />
+                    </div>
+
+                    <span className="rounded-md bg-slate-50 px-3 py-2 text-xs font-bold uppercase tracking-wide text-slate-500 ring-1 ring-slate-200">
+                      {value.label}
+                    </span>
                   </div>
 
-                  <h3
-                    className="
-                      mt-6
-                      text-2xl
-                      font-bold
-                      text-slate-900
-                    "
-                  >
+                  <h3 className="relative mt-7 text-2xl font-black tracking-tight text-slate-950">
                     {value.title}
                   </h3>
 
-                  <p
-                    className="
-                      mt-4
-                      leading-relaxed
-                      text-slate-600
-                    "
-                  >
+                  <p className="relative mt-4 text-base leading-7 text-slate-600">
                     {value.description}
                   </p>
+
+                  <div className="relative mt-auto pt-8">
+                    <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
+                    <p className="mt-4 text-sm font-semibold text-slate-500">
+                      Built into every engagement.
+                    </p>
+                  </div>
                 </motion.div>
               </AnimatedSection>
             );

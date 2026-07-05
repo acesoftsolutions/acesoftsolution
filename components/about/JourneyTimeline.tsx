@@ -37,156 +37,84 @@ const milestones = [
 
 export default function JourneyTimeline() {
   return (
-    <section className="bg-[#F8FAFC] py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
+    <section className="relative overflow-hidden bg-[#F8FAFC] py-10 sm:py-12 lg:py-16">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#E2E8F0_1px,transparent_1px),linear-gradient(to_bottom,#E2E8F0_1px,transparent_1px)] bg-[size:76px_76px] opacity-30" />
+      <div className="absolute left-1/2 top-0 h-[420px] w-[780px] -translate-x-1/2 rounded-full bg-cyan-100/70 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <AnimatedSection>
           <div className="mx-auto max-w-3xl text-center">
-            <span
-              className="
-                inline-flex
-                rounded-full
-                border
-                border-cyan-100
-                bg-cyan-50
-                px-5
-                py-2
-                text-sm
-                font-semibold
-                text-cyan-700
-              "
-            >
+            <span className="inline-flex rounded-md border border-cyan-100 bg-white px-5 py-2 text-sm font-bold uppercase tracking-wide text-cyan-700 shadow-sm">
               Our Journey
             </span>
 
-            <h2
-              className="
-                mt-6
-                text-4xl
-                font-bold
-                text-slate-900
-                md:text-5xl
-              "
-            >
-              A Decade Of
-              <span
-                className="
-                  block
-                  bg-gradient-to-r
-                  from-[#0E4DB7]
-                  via-[#3CC8F5]
-                  to-[#12C7B5]
-                  bg-clip-text
-                  text-transparent
-                "
-              >
-                Innovation & Growth
+            <h2 className="mt-6 text-4xl font-black leading-tight tracking-tight text-slate-950 md:text-5xl">
+              A decade of innovation, delivery and{' '}
+              <span className="bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] bg-clip-text text-transparent">
+                consistent growth
               </span>
             </h2>
+
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+              From a focused software team to a trusted technology partner, our
+              journey has been shaped by practical innovation and measurable
+              client outcomes.
+            </p>
           </div>
         </AnimatedSection>
 
-        <div className="relative mt-20">
-          <div
-            className="
-              absolute
-              left-4
-              top-0
-              h-full
-              w-px
-              bg-gradient-to-b
-              from-[#0E4DB7]
-              via-[#3CC8F5]
-              to-[#12C7B5]
-              md:left-1/2
-            "
-          />
+        <div className="relative mx-auto mt-16 max-w-6xl lg:mt-20">
+          <div className="absolute left-5 top-0 h-full w-px bg-gradient-to-b from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] md:left-1/2" />
 
-          <div className="space-y-12">
-            {milestones.map((item, index) => (
-              <AnimatedSection
-                key={item.year}
-                delay={index * 0.08}
-              >
-                <div
-                  className={`
-                    relative
-                    flex
-                    ${
-                      index % 2 === 0
-                        ? 'md:justify-start'
-                        : 'md:justify-end'
-                    }
-                  `}
-                >
+          <div className="space-y-6 md:space-y-10">
+            {milestones.map((item, index) => {
+              const isLeft = index % 2 === 0;
+
+              return (
+                <AnimatedSection key={item.year} delay={index * 0.08}>
                   <div
-                    className="
-                      ml-12
-                      w-full
-                      md:ml-0
-                      md:w-[45%]
-                    "
+                    className={`relative flex ${
+                      isLeft ? 'md:justify-start' : 'md:justify-end'
+                    }`}
                   >
-                    <div
-                      className="
-                        rounded-[28px]
-                        bg-white
-                        p-8
-                        shadow-sm
-                        ring-1
-                        ring-slate-200
-                      "
-                    >
-                      <span
-                        className="
-                          text-sm
-                          font-bold
-                          text-cyan-600
-                        "
-                      >
-                        {item.year}
-                      </span>
+                    <div className="ml-14 w-[calc(100%-3.5rem)] md:ml-0 md:w-[46%]">
+                      <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-xl shadow-slate-200/60 transition duration-300 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-100 sm:p-7 lg:p-8">
+                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5]" />
+                        <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-cyan-100 opacity-0 blur-3xl transition group-hover:opacity-100" />
 
-                      <h3
-                        className="
-                          mt-2
-                          text-2xl
-                          font-bold
-                          text-slate-900
-                        "
-                      >
-                        {item.title}
-                      </h3>
+                        <div className="relative flex items-start justify-between gap-5">
+                          <span className="inline-flex rounded-md bg-cyan-50 px-3 py-2 text-sm font-black text-cyan-700 ring-1 ring-cyan-100">
+                            {item.year}
+                          </span>
 
-                      <p
-                        className="
-                          mt-4
-                          text-slate-600
-                          leading-relaxed
-                        "
-                      >
-                        {item.description}
-                      </p>
+                          <span className="text-sm font-bold text-slate-300">
+                            0{index + 1}
+                          </span>
+                        </div>
+
+                        <h3 className="relative mt-5 text-2xl font-black tracking-tight text-slate-950">
+                          {item.title}
+                        </h3>
+
+                        <p className="relative mt-4 text-base leading-7 text-slate-600">
+                          {item.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div
-                    className="
-                      absolute
-                      left-4
-                      top-8
-                      h-4
-                      w-4
-                      rounded-full
-                      bg-cyan-500
-                      ring-4
-                      ring-white
-                      md:left-1/2
-                      md:-translate-x-1/2
-                    "
-                  />
-                </div>
-              </AnimatedSection>
-            ))}
+                    <div className="absolute left-5 top-8 h-5 w-5 -translate-x-1/2 rounded-full border-4 border-white bg-[#12C7B5] shadow-lg shadow-cyan-300/60 ring-4 ring-cyan-100 md:left-1/2" />
+
+                    <div
+                      className={`absolute top-10 hidden h-px w-[8%] bg-gradient-to-r from-cyan-200 to-transparent md:block ${
+                        isLeft
+                          ? 'left-[46%]'
+                          : 'right-[46%] rotate-180'
+                      }`}
+                    />
+                  </div>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </div>

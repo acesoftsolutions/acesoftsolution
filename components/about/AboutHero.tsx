@@ -2,167 +2,147 @@
 
 import AnimatedSection from '@/components/shared/AnimatedSection';
 
+const stats = [
+  {
+    value: '500+',
+    label: 'Projects Delivered',
+    detail: 'Across web, mobile, ERP and cloud platforms',
+  },
+  {
+    value: '150+',
+    label: 'Happy Clients',
+    detail: 'Startups, SMEs and enterprise teams',
+  },
+  {
+    value: '10+',
+    label: 'Years Experience',
+    detail: 'Building reliable digital products since 2014',
+  },
+];
+
+const highlights = [
+  'Custom Software Development',
+  'AI Automation',
+  'ERP Solutions',
+  'Cloud Technologies',
+];
+
 export default function AboutHero() {
   return (
-    <section className="relative overflow-hidden bg-[#F8FAFC] pt-36 pb-24 lg:pt-44 lg:pb-32">
+    <section className="relative isolate overflow-hidden bg-[#F8FAFC] pt-12 pb-20 lg:pt-18 lg:pb-12">
       {/* Background */}
-
-      <div className="absolute inset-0 overflow-hidden">
-        <div
-          className="
-            absolute
-            left-[-120px]
-            top-[-120px]
-            h-[450px]
-            w-[450px]
-            rounded-full
-            bg-[#3CC8F5]/10
-            blur-[120px]
-          "
-        />
-
-        <div
-          className="
-            absolute
-            bottom-[-120px]
-            right-[-120px]
-            h-[450px]
-            w-[450px]
-            rounded-full
-            bg-[#12C7B5]/10
-            blur-[120px]
-          "
-        />
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#CBD5E1_1px,transparent_1px),linear-gradient(to_bottom,#CBD5E1_1px,transparent_1px)] bg-[size:80px_80px] opacity-25" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300 to-transparent" />
+        <div className="absolute left-0 top-0 h-full w-full bg-[radial-gradient(circle_at_top,#E0F7FF_0%,transparent_38%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <AnimatedSection>
-          <div className="mx-auto max-w-5xl text-center">
-            <span
-              className="
-                inline-flex
-                items-center
-                rounded-full
-                border
-                border-cyan-100
-                bg-white
-                px-5
-                py-2
-                text-sm
-                font-semibold
-                text-cyan-700
-                shadow-sm
-              "
-            >
-              About ACE SOFT SOLUTION
-            </span>
-
-            <h1
-              className="
-                mt-8
-                text-5xl
-                font-black
-                leading-[0.95]
-                tracking-tight
-                text-slate-900
-                md:text-7xl
-                xl:text-[5.8rem]
-              "
-            >
-              Building Digital
-              <br />
-
-              <span
-                className="
-                  bg-gradient-to-r
-                  from-[#0E4DB7]
-                  via-[#3CC8F5]
-                  to-[#12C7B5]
-                  bg-clip-text
-                  text-transparent
-                "
-              >
-                Products That Scale
+          <div className="grid items-center gap-14 lg:grid-cols-[1.08fr_0.92fr]">
+            {/* Content */}
+            <div>
+              <span className="inline-flex items-center rounded-md border border-cyan-100 bg-white px-4 py-2 text-sm font-semibold text-cyan-700 shadow-sm">
+                About ACE SOFT SOLUTION
               </span>
-            </h1>
 
-            <p
-              className="
-                mx-auto
-                mt-8
-                max-w-3xl
-                text-lg
-                leading-relaxed
-                text-slate-600
-              "
-            >
-              Since 2014, we've helped startups,
-              SMEs and enterprises transform ideas
-              into scalable digital products through
-              custom software development, AI
-              automation, ERP solutions and modern
-              cloud technologies.
-            </p>
-          </div>
-        </AnimatedSection>
+              <h1 className="mt-7 max-w-4xl text-5xl font-black leading-[0.98] tracking-tight text-slate-950 md:text-6xl xl:text-[5.4rem]">
+                Building digital products that are made to{' '}
+                <span className="bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] bg-clip-text text-transparent">
+                  scale
+                </span>
+              </h1>
 
-        {/* Trust Cards */}
+              <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
+                Since 2014, we have helped startups, SMEs and enterprises turn
+                ambitious ideas into secure, scalable and high-performing
+                digital products through modern software engineering.
+              </p>
 
-        <AnimatedSection>
-          <div
-            className="
-              mt-16
-              grid
-              gap-6
-              md:grid-cols-3
-            "
-          >
-            {[
-              {
-                value: '500+',
-                label: 'Projects Delivered',
-              },
-              {
-                value: '150+',
-                label: 'Happy Clients',
-              },
-              {
-                value: '10+',
-                label: 'Years Experience',
-              },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="
-                  rounded-[28px]
-                  bg-white
-                  p-8
-                  text-center
-                  shadow-sm
-                  ring-1
-                  ring-slate-200
-                "
-              >
-                <h3
-                  className="
-                    text-4xl
-                    font-black
-                    bg-gradient-to-r
-                    from-[#0E4DB7]
-                    via-[#3CC8F5]
-                    to-[#12C7B5]
-                    bg-clip-text
-                    text-transparent
-                  "
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="/contact"
+                  className="inline-flex h-12 items-center justify-center rounded-md bg-slate-950 px-7 text-sm font-bold text-white shadow-lg shadow-slate-900/15 transition hover:-translate-y-0.5 hover:bg-[#0E4DB7]"
                 >
-                  {item.value}
-                </h3>
+                  Start a Project
+                </a>
 
-                <p className="mt-2 text-slate-500">
-                  {item.label}
-                </p>
+                <a
+                  href="/services"
+                  className="inline-flex h-12 items-center justify-center rounded-md border border-slate-200 bg-white px-7 text-sm font-bold text-slate-800 shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-300 hover:text-cyan-700"
+                >
+                  Explore Services
+                </a>
               </div>
-            ))}
+
+              <div className="mt-9 grid max-w-2xl gap-3 sm:grid-cols-2">
+                {highlights.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-3 rounded-md border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 shadow-sm"
+                  >
+                    <span className="h-2 w-2 rounded-full bg-[#12C7B5]" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Professional Info Panel */}
+            <div className="relative">
+              <div className="rounded-lg border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/80">
+                <div className="rounded-md border border-slate-100 bg-slate-50 p-5">
+                  <div className="flex items-center justify-between border-b border-slate-200 pb-5">
+                    <div>
+                      <p className="text-sm font-semibold text-slate-500">
+                        Company Snapshot
+                      </p>
+                      <h2 className="mt-1 text-2xl font-black text-slate-950">
+                        Trusted Technology Partner
+                      </h2>
+                    </div>
+
+                    <div className="rounded-md bg-emerald-50 px-3 py-2 text-sm font-bold text-emerald-700 ring-1 ring-emerald-100">
+                      Active
+                    </div>
+                  </div>
+
+                  <div className="mt-5 space-y-4">
+                    {stats.map((item) => (
+                      <div
+                        key={item.label}
+                        className="rounded-md border border-slate-200 bg-white p-5 shadow-sm transition hover:border-cyan-200 hover:shadow-md"
+                      >
+                        <div className="flex items-start justify-between gap-5">
+                          <div>
+                            <h3 className="text-base font-bold text-slate-900">
+                              {item.label}
+                            </h3>
+                            <p className="mt-1 text-sm leading-6 text-slate-500">
+                              {item.detail}
+                            </p>
+                          </div>
+
+                          <p className="bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] bg-clip-text text-4xl font-black text-transparent">
+                            {item.value}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-5 rounded-md bg-slate-950 p-5">
+                    <p className="text-sm font-semibold text-cyan-300">
+                      Our Focus
+                    </p>
+                    <p className="mt-2 text-lg font-bold leading-snug text-white">
+                      Designing reliable digital systems that help businesses
+                      work faster, scale smarter and grow with confidence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </AnimatedSection>
       </div>
