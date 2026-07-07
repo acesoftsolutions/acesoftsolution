@@ -132,12 +132,12 @@ const navLinks = [
   },
   {
     name: "Company",
-    href: "/company",
+    href: "#",
     dropdown: companyDropdown,
   },
   {
     name: "Insights",
-    href: "/blog",
+    href: "#",
   },
 ];
 

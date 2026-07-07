@@ -22,7 +22,7 @@ const teamMembers = [
     role: 'Founder',
     icon: Brain,
     image:
-      '/Team/vivek.png',
+      '/Team/Vivek.png',
     expertise: 'Company Vision',
     description:
       "Passionate about building innovative digital solutions and fostering long-term client relationships. Vivek leads the company's vision, growth strategy, and business innovation.",
@@ -32,7 +32,7 @@ const teamMembers = [
     role: 'Co-Founder, CEO & Head of Digital Marketing',
     icon: BarChart3,
     image:
-      '/Team/pankaj.png',
+      '/Team/Pankaj.png',
     expertise: 'Digital Growth',
     description:
       "Drives business growth through data-driven marketing strategies, digital transformation, and customer acquisition while leading the company's overall operations.",
@@ -62,7 +62,7 @@ const teamMembers = [
     role: 'Head of Sales & Marketing',
     icon: Headphones,
     image:
-      '/Team/vishal.jpeg',
+      '/Team/VIshal.jpeg',
     expertise: 'Sales Strategy',
     description:
       'Leads sales strategy and client engagement, helping businesses discover digital solutions that accelerate growth and maximize business opportunities.',
@@ -112,7 +112,7 @@ const teamMembers = [
     role: 'Senior Mobile App Developer',
     icon: Smartphone,
     image:
-      '/Team/ajinkay.png',
+      '/Team/Ajinkay.png',
     expertise: 'Mobile Apps',
     description:
       'Builds robust, scalable, and user-friendly Android and iOS applications that help businesses connect with customers on every device.',
