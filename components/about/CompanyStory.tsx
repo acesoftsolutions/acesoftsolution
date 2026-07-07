@@ -18,10 +18,10 @@ const milestones = [
 ];
 
 const capabilities = [
-  'Custom software platforms',
-  'ERP and business automation',
-  'AI-powered digital workflows',
-  'Cloud-ready product architecture',
+  'Custom software platforms tailored to your business processes',
+  'ERP systems and end-to-end business automation ',
+  'AI-powered digital workflows and intelligent automation',
+  'Cloud-ready product architecture built for scale and security',
 ];
 
 export default function CompanyStory() {
@@ -37,7 +37,7 @@ export default function CompanyStory() {
             <div className="flex h-full min-h-[620px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/70">
               <div className="relative min-h-[330px] flex-1">
                 <img
-                  src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  src="/aboutimage.png"
                   alt="ACE SOFT SOLUTION team collaborating on digital products"
                   className="absolute inset-0 h-full w-full object-cover"
                 />
@@ -47,14 +47,13 @@ export default function CompanyStory() {
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="max-w-sm rounded-xl border border-white/15 bg-white/95 p-5 shadow-xl backdrop-blur">
                     <p className="text-sm font-bold uppercase tracking-wide text-cyan-700">
-                      Since 2014
+                      Since 2016
                     </p>
                     <h3 className="mt-1 text-2xl font-black text-slate-950">
-                      Delivering innovation with clarity
+                      Technology With Purpose, Built For Measurable Impact
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-slate-600">
-                      We help businesses move from idea to scalable digital
-                      product with confidence.
+                      Ace Soft Solution was founded in 2014 with a clear, focused mission: helping businesses harness the power of technology to grow faster, operate smarter, and deliver better customer experiences.
                     </p>
                   </div>
                 </div>
@@ -86,17 +85,15 @@ export default function CompanyStory() {
               </span>
 
               <h2 className="mt-6 text-4xl font-black leading-tight tracking-tight text-slate-950 sm:text-5xl">
-                Technology with purpose, built for{' '}
+                From a Focused Software Team to a Trusted  {" "}
                 <span className="bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] bg-clip-text text-transparent">
-                  measurable impact
+                 Global Technology Partner
                 </span>
               </h2>
 
               <div className="mt-6 space-y-5 text-base leading-8 text-slate-600 sm:text-lg">
                 <p>
-                  ACE SOFT SOLUTION was founded with a simple mission: helping
-                  businesses use technology to grow faster, operate smarter and
-                  deliver better customer experiences.
+                  Over the past decade, we have delivered 500+ projects spanning custom web applications, mobile apps, SaaS platforms, enterprise ERP systems, AI-powered workflows, and cloud-ready architectures. Every solution we build is driven by one question: does it create measurable business value? This commitment to outcome-first engineering is what separates Ace Soft Solution from traditional software vendors - and why 98% of our clients stay with us long term.
                 </p>
 
                 
@@ -125,8 +122,7 @@ export default function CompanyStory() {
                     What drives us
                   </p>
                   <p className="mt-2 text-lg font-bold leading-7 text-white">
-                    Building reliable digital systems that help teams work
-                    better, scale faster and grow with confidence.
+                    Building reliable software systems that help teams work better, scale faster, and grow with confidence.
                   </p>
                 </div>
               </div>

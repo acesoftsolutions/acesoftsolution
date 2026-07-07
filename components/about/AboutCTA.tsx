@@ -6,9 +6,9 @@ import { ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
 import AnimatedSection from '@/components/shared/AnimatedSection';
 
 const highlights = [
-  'Free project consultation',
-  'Clear roadmap and timeline',
-  'Scalable product strategy',
+  'Free project consultation with a senior engineer',
+  'Clear technical roadmap and realistic timeline',
+  'Scalable product strategy tailored to your budget and goals',
 ];
 
 export default function AboutCTA() {
@@ -38,9 +38,7 @@ export default function AboutCTA() {
                 </h2>
 
                 <p className="mt-6 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">
-                  Whether you are launching a startup, scaling operations,
-                  implementing AI or building enterprise software, our team is
-                  ready to help you move with clarity and confidence.
+                  Whether you are launching a startup and need a robust MVP, scaling operations and need enterprise-grade software, implementing AI automation, or modernizing a legacy system - our team is ready to help you move with clarity, speed, and confidence.
                 </p>
 
                 <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -72,8 +70,7 @@ export default function AboutCTA() {
                   </h3>
 
                   <p className="mt-3 text-sm leading-6 text-slate-600">
-                    We understand your goals, identify the right technical path
-                    and help you define a practical execution plan.
+                   We listen, we understand your goals, and we map out the right technical path forward - no generic proposals, no pressure.
                   </p>
 
                   <div className="mt-6 grid gap-3">
@@ -92,8 +89,7 @@ export default function AboutCTA() {
 
                   <div className="mt-6 rounded-xl bg-slate-950 p-4">
                     <p className="text-sm font-semibold leading-6 text-white">
-                      From idea to launch, we help turn complex requirements
-                      into reliable digital products.
+                      From idea to launch, we help turn complex requirements into reliable, scalable software products that drive real business growth. 
                     </p>
                   </div>
                 </div>

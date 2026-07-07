@@ -1,44 +1,44 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import { Users, Trophy, Award, Clock } from 'lucide-react';
+import { useEffect, useRef, useState } from "react";
+import { Users, Trophy, Award, Clock } from "lucide-react";
 
-import AnimatedSection from '@/components/shared/AnimatedSection';
+import AnimatedSection from "@/components/shared/AnimatedSection";
 
 const stats = [
   {
     icon: Users,
     value: 150,
-    suffix: '+',
-    label: 'Happy Clients',
-    description: 'Trusted by growing businesses and enterprise teams.',
+    suffix: "+",
+    label: "Happy Clients",
+    description: "Trusted by growing businesses and enterprise teams.",
   },
   {
     icon: Trophy,
-    value: 500,
-    suffix: '+',
-    label: 'Projects Delivered',
-    description: 'Successful web, mobile, ERP, AI and cloud solutions.',
+    value: 250,
+    suffix: "+",
+    label: "Projects Delivered",
+    description: "Successful web, mobile, ERP, AI and cloud solutions.",
   },
   {
     icon: Award,
     value: 50,
-    suffix: '+',
-    label: 'Technology Experts',
-    description: 'Skilled professionals across modern technology stacks.',
+    suffix: "+",
+    label: "Technology Experts",
+    description: "Skilled professionals across modern technology stacks.",
   },
   {
     icon: Clock,
     value: 10,
-    suffix: '+',
-    label: 'Years Experience',
-    description: 'A decade of consistent innovation and delivery.',
+    suffix: "+",
+    label: "Years Experience",
+    description: "A decade of consistent innovation and delivery.",
   },
 ];
 
 function Counter({
   value,
-  suffix = '',
+  suffix = "",
   duration = 1800,
 }: {
   value: number;
@@ -60,7 +60,7 @@ function Counter({
 
         hasStarted.current = true;
 
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
           setCount(value);
           return;
         }
@@ -86,7 +86,7 @@ function Counter({
       },
       {
         threshold: 0.35,
-      }
+      },
     );
 
     observer.observe(element);
@@ -122,15 +122,18 @@ export default function StatsSection() {
                 </span>
 
                 <h2 className="mt-6 text-4xl font-black leading-tight tracking-tight text-white md:text-5xl">
-                  Numbers that reflect{' '}
+                  Numbers that reflect{" "}
                   <span className="bg-gradient-to-r from-cyan-200 via-white to-emerald-200 bg-clip-text text-transparent">
                     excellence
                   </span>
                 </h2>
 
                 <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg">
-                  Our commitment to innovation, quality and client success has
-                  helped us deliver measurable results for businesses worldwide.
+                  Our commitment to innovation, engineering quality, and genuine
+                  client success has produced a track record that speaks
+                  clearly. These are not vanity metrics - each number reflects a
+                  real client, a delivered project, or a long-term relationship
+                  built on trust and results.
                 </p>
               </div>
             </AnimatedSection>

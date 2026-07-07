@@ -4,7 +4,7 @@ import AnimatedSection from '@/components/shared/AnimatedSection';
 
 const stats = [
   {
-    value: '500+',
+    value: '250+',
     label: 'Projects Delivered',
     detail: 'Across web, mobile, ERP and cloud platforms',
   },
@@ -46,17 +46,15 @@ export default function AboutHero() {
                 About ACE SOFT SOLUTION
               </span>
 
-              <h1 className="mt-7 max-w-4xl text-5xl font-black leading-[0.98] tracking-tight text-slate-950 md:text-6xl xl:text-[5.4rem]">
-                Building digital products that are made to{' '}
+              <h1 className="mt-7 max-w-4xl text-3xl font-black leading-[0.98] tracking-tight text-slate-950 md:text-4xl xl:text-[2.9rem]">
+                Ace Soft Solution - A Software Development Company Built on a Decade of Delivering
                 <span className="bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] bg-clip-text text-transparent">
-                  scale
+                   Real Business Impact
                 </span>
               </h1>
 
               <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl">
-                Since 2014, we have helped startups, SMEs and enterprises turn
-                ambitious ideas into secure, scalable and high-performing
-                digital products through modern software engineering.
+                Since 2016, We help startups, SMEs, and enterprises move from idea to scalable, secure digital product with speed, precision, and confidence - backed by 10+ years of engineering excellence.
               </p>
 
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">

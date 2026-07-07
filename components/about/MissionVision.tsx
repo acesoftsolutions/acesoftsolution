@@ -15,22 +15,22 @@ const cards = [
     title: 'Our Mission',
     icon: Target,
     description:
-      'To empower businesses through innovative software, intelligent automation and scalable digital solutions that accelerate growth and create lasting competitive advantage.',
+      'To empower businesses through innovative software development, intelligent automation, and scalable digital solutions that accelerate growth and create lasting competitive advantage.',
     points: [
-      'Build solutions that solve real business problems',
-      'Improve operational speed through automation',
-      'Deliver reliable products ready for long-term scale',
+      'Build custom software solutions that directly solve real, measurable business problems',
+      'Improve operational speed and efficiency through intelligent process automation',
+      'Deliver reliable, production-ready digital products built for sustainable long-term scale',
     ],
   },
   {
     title: 'Our Vision',
     icon: Eye,
     description:
-      'To become a globally trusted technology partner known for innovation, reliability and delivering transformative digital experiences that shape the future of business.',
+      'To become a globally trusted software development company known for innovation, reliability, and delivering transformative digital experiences that define the future of business.',
     points: [
-      'Be a long-term partner for digital transformation',
-      'Create future-ready technology ecosystems',
-      'Set higher standards for quality and reliability',
+      'Be the long-term technology partner for businesses navigating digital transformation',
+      'Create future-ready software ecosystems that grow and adapt with our clients',
+      'Set consistently higher standards for software quality, security, and delivery reliability',
     ],
   },
 ];
@@ -56,9 +56,7 @@ export default function MissionVision() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-              Our mission defines how we deliver value today, while our vision
-              guides the kind of technology partner we are building for the
-              future.
+              Our mission defines how we deliver value today. Our vision guides the kind of software development company we are building for tomorrow. Together, they shape every decision we make - from how we architect a system to how we communicate with a client.
             </p>
           </div>
         </AnimatedSection>

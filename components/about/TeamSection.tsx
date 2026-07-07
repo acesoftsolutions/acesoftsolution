@@ -18,84 +18,104 @@ import AnimatedSection from '@/components/shared/AnimatedSection';
 
 const teamMembers = [
   {
-    name: 'Aarav Sharma',
-    role: 'Lead Software Engineer',
-    icon: Code2,
-    image:
-      'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'Web Platforms',
-  },
-  {
-    name: 'Priya Mehta',
-    role: 'AI Automation Specialist',
+    name: 'Vivek Modh',
+    role: 'Founder',
     icon: Brain,
     image:
-      'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'AI Workflows',
+      '/Team/vivek.png',
+    expertise: 'Company Vision',
+    description:
+      "Passionate about building innovative digital solutions and fostering long-term client relationships. Vivek leads the company's vision, growth strategy, and business innovation.",
   },
   {
-    name: 'Rohan Verma',
-    role: 'UI/UX Designer',
-    icon: Palette,
-    image:
-      'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'Product Design',
-  },
-  {
-    name: 'Sneha Kapoor',
-    role: 'Solution Architect',
-    icon: Network,
-    image:
-      'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'Architecture',
-  },
-  {
-    name: 'Karan Malhotra',
-    role: 'Mobile App Developer',
-    icon: Smartphone,
-    image:
-      'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'iOS & Android',
-  },
-  {
-    name: 'Neha Iyer',
-    role: 'ERP Consultant',
-    icon: Database,
-    image:
-      'https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'Business Systems',
-  },
-  {
-    name: 'Vikram Singh',
-    role: 'Cloud Engineer',
-    icon: Cloud,
-    image:
-      'https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'Cloud Infrastructure',
-  },
-  {
-    name: 'Ananya Rao',
-    role: 'QA & Security Analyst',
-    icon: ShieldCheck,
-    image:
-      'https://images.pexels.com/photos/3760854/pexels-photo-3760854.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'Quality Assurance',
-  },
-  {
-    name: 'Dev Patel',
-    role: 'Business Analyst',
+    name: 'Pankaj Kumar',
+    role: 'Co-Founder, CEO & Head of Digital Marketing',
     icon: BarChart3,
     image:
-      'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'Product Strategy',
+      '/Team/pankaj.png',
+    expertise: 'Digital Growth',
+    description:
+      "Drives business growth through data-driven marketing strategies, digital transformation, and customer acquisition while leading the company's overall operations.",
   },
   {
-    name: 'Meera Nair',
-    role: 'Client Success Manager',
+    name: 'Sweety Modh',
+    role: 'Head of Finance',
+    icon: Database,
+    image:
+      '/Team/Sweety.jpeg',
+    expertise: 'Finance',
+    description:
+      'Oversees financial planning, budgeting, and business operations to ensure sustainable growth and financial excellence across the organization.',
+  },
+  {
+    name: 'Sapna Sharma',
+    role: 'Head of Human Resources',
+    icon: Network,
+    image:
+      'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=900',
+    expertise: 'People & Culture',
+    description:
+      'Dedicated to building a strong workplace culture by attracting top talent, supporting employee development, and strengthening team collaboration.',
+  },
+  {
+    name: 'Vishal Kushwaha',
+    role: 'Head of Sales & Marketing',
     icon: Headphones,
     image:
-      'https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=900',
-    expertise: 'Client Delivery',
+      '/Team/vishal.jpeg',
+    expertise: 'Sales Strategy',
+    description:
+      'Leads sales strategy and client engagement, helping businesses discover digital solutions that accelerate growth and maximize business opportunities.',
+  },
+  {
+    name: 'Chirag Parihar',
+    role: 'Head of Technical Operations',
+    icon: Cloud,
+    image:
+      '/Team/chirag.png',
+    expertise: 'Technical Delivery',
+    description:
+      'Manages project execution and technical delivery, ensuring every solution meets the highest standards of quality, performance, and scalability.',
+  },
+  {
+    name: 'Vaibhav Kushwaha',
+    role: 'Head of QA Engineer',
+    icon: ShieldCheck,
+    image:
+      '/Team/Vaibhav.jpeg',
+    expertise: 'Quality Assurance',
+    description:
+      'Ensures every application is thoroughly tested, secure, reliable, and delivers a seamless user experience before deployment.',
+  },
+  {
+    name: 'Sourav Panchal',
+    role: 'Senior Front-End Developer',
+    icon: Code2,
+    image:
+      '/Team/sourav.png',
+    expertise: 'Front-End Development',
+    description:
+      'Specializes in creating responsive, high-performance web interfaces with modern technologies that deliver exceptional user experiences.',
+  },
+  {
+    name: 'Vijay Panchal',
+    role: 'Senior UI/UX Designer',
+    icon: Palette,
+    image:
+      '/Team/vijay.png',
+    expertise: 'UI/UX Design',
+    description:
+      'Designs intuitive and visually engaging digital experiences that combine creativity with usability to enhance customer satisfaction.',
+  },
+  {
+    name: 'Ajinkya Panwar',
+    role: 'Senior Mobile App Developer',
+    icon: Smartphone,
+    image:
+      '/Team/ajinkay.png',
+    expertise: 'Mobile Apps',
+    description:
+      'Builds robust, scalable, and user-friendly Android and iOS applications that help businesses connect with customers on every device.',
   },
 ];
 
@@ -113,16 +133,16 @@ export default function TeamSection() {
             </span>
 
             <h2 className="mt-6 text-4xl font-black leading-tight tracking-tight text-slate-950 md:text-5xl">
-              Meet the experts behind every{' '}
+              Meet the Experts Behind Every{' '}
               <span className="bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] bg-clip-text text-transparent">
-                successful project
+                Successful Project
               </span>
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-              A multidisciplinary team of engineers, designers, AI specialists
-              and consultants working together to deliver reliable digital
-              solutions.
+              Our multidisciplinary team of strategists, developers, designers,
+              marketers, and business leaders works together to build innovative
+              digital solutions that help businesses grow and succeed.
             </p>
           </div>
         </AnimatedSection>
@@ -136,7 +156,7 @@ export default function TeamSection() {
                 <motion.div
                   whileHover={{ y: -8 }}
                   transition={{ duration: 0.25, ease: 'easeOut' }}
-                  className="group relative flex h-full min-h-[390px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60 transition duration-300 hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-100"
+                  className="group relative flex h-full min-h-[430px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60 transition duration-300 hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-100"
                 >
                   <div className="relative aspect-[4/4.35] overflow-hidden bg-slate-100">
                     <img
@@ -167,8 +187,7 @@ export default function TeamSection() {
                       </p>
 
                       <p className="mt-4 text-sm leading-6 text-slate-600">
-                        Focused on building practical, scalable and
-                        business-ready digital solutions.
+                        {member.description}
                       </p>
                     </div>
 

@@ -125,24 +125,25 @@ const offices = [
     code: "IN",
     tag: "Head Office",
     address: "2144, Diamond Park, Sachin-394230, Surat",
-    phone: "+91 99999 89999",
+    phone: "+91 76963 73145",
     gradient: "from-orange-500 via-white to-green-500",
   },
-  {
-    country: "Belgium",
-    code: "BE",
-    tag: "",
-    address: "Boesbergstraat 4, Sterrebeek, Belgium",
-    phone: "+91 99999 12345",
-    gradient: "from-black via-yellow-400 to-red-500",
-  },
+
   {
     country: "United Kingdom",
     code: "GB",
     tag: "",
     address: "40b Scarle Rd, Wembley HA0 4SN",
-    phone: "+91 99999 54321",
+    phone: "+44 7551 781254",
     gradient: "from-blue-700 via-white to-red-600",
+  },
+    {
+    country: "Belgium",
+    code: "BE",
+    tag: "",
+    address: "Boesbergstraat 4, Sterrebeek, Belgium",
+    phone: "+32 486 52 14 09",
+    gradient: "from-black via-yellow-400 to-red-500",
   },
 ];
 export default function Footer() {
@@ -276,7 +277,7 @@ export default function Footer() {
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600/10 to-cyan-500/10 text-cyan-600 transition-colors group-hover:from-blue-600/20 group-hover:to-cyan-500/20">
                     <Phone className="h-4 w-4" />
                   </span>
-                  <span className="pt-1.5">+91 99999 89999</span>
+                  <span className="pt-1.5">+91 76963 73145</span>
                 </a>
               </div>
               <div className="mt-4 flex gap-3">
@@ -343,159 +344,69 @@ export default function Footer() {
           </div>
 
           {/* ================= Offices ================= */}
-          <div className="mt-6 border-t border-slate-200 pt-6">
-            <h4 className="mb-8 text-lg font-semibold text-slate-900">
+          {/* ================= Offices ================= */}
+          <div className="mt-5 border-t border-slate-200 pt-5">
+            <h4 className="mb-5 text-lg font-semibold text-slate-900">
               Our Offices
             </h4>
 
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {offices.map((office, index) => (
                 <motion.div
                   key={office.country}
-                  initial={{ opacity: 0, y: 40 }}
+                  initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{
-                    duration: 0.5,
-                    delay: index * 0.12,
+                    duration: 0.45,
+                    delay: index * 0.1,
                   }}
                   viewport={{ once: true }}
-                  whileHover={{
-                    y: -8,
-                  }}
-                  className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-md transition-all duration-500 hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  whileHover={{ y: -4 }}
+                  className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:border-cyan-200 hover:shadow-lg"
                 >
-                  {/* Gradient Border */}
-
                   <div
                     className={`h-1 w-full bg-gradient-to-r ${office.gradient}`}
                   />
 
-                  {/* Glow */}
-
-                  <div
-                    className="
-        absolute
-        -right-20
-        -top-20
-        h-40
-        w-40
-        rounded-full
-        bg-cyan-400/10
-        blur-3xl
-        opacity-0
-        transition-all
-        duration-500
-        group-hover:opacity-100
-      "
-                  />
-
-                  <div className="relative p-7">
-                    {/* Header */}
-
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-center gap-4">
-                        {/* Flag */}
-
-                        <div
-                          className="
-    flex
-    h-16
-    w-16
-    items-center
-    justify-center
-    rounded-2xl
-    bg-gradient-to-br
-    from-slate-50
-    to-white
-    shadow-lg
-    ring-1
-    ring-slate-200
-    transition-all
-    duration-300
-    group-hover:scale-110
-    group-hover:-rotate-6
-  "
-                        >
+                  <div className="relative p-5">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-slate-50 shadow-sm ring-1 ring-slate-200 transition-all duration-300 group-hover:scale-105">
                           <ReactCountryFlag
                             countryCode={office.code}
                             svg
                             style={{
-                              width: "42px",
-                              height: "42px",
+                              width: "32px",
+                              height: "32px",
                             }}
                             title={office.country}
                           />
                         </div>
 
                         <div>
-                          <h3 className="text-xl font-bold text-slate-900">
+                          <h3 className="text-base font-bold text-slate-900">
                             {office.country}
                           </h3>
 
-                          <span
-                            className="
-                mt-1
-                inline-flex
-                rounded-full
-                bg-cyan-50
-                px-3
-                py-1
-                text-xs
-                font-semibold
-                uppercase
-                tracking-wider
-                text-cyan-700
-              "
-                          >
+                          <span className="mt-1 inline-flex rounded-full bg-cyan-50 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-cyan-700">
                             {office.tag}
                           </span>
                         </div>
                       </div>
 
-                      <div
-                        className="
-            rounded-xl
-            bg-gradient-to-br
-            from-cyan-500
-            to-blue-600
-            p-3
-            text-white
-            shadow-lg
-          "
-                      >
-                        <MapPin className="h-5 w-5" />
+                      <div className="rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 p-2 text-white shadow-sm">
+                        <MapPin className="h-4 w-4" />
                       </div>
                     </div>
 
-                    {/* Address */}
+                    <p className="mt-4 text-sm leading-6 text-slate-600">
+                      {office.address}
+                    </p>
 
-                    <div className="mt-6">
-                      <p className="text-sm leading-7 text-slate-600">
-                        {office.address}
-                      </p>
-                    </div>
-
-                    {/* Bottom */}
-
-                    <div className="mt-6 flex items-center justify-between border-t border-slate-100 pt-5">
+                    <div className="mt-4 border-t border-slate-100 pt-4">
                       <a
                         href={`tel:${office.phone.replace(/\s/g, "")}`}
-                        className="
-            inline-flex
-            items-center
-            gap-2
-            rounded-full
-            bg-slate-100
-            px-4
-            py-2
-            text-sm
-            font-semibold
-            text-slate-700
-            transition-all
-            duration-300
-            hover:bg-cyan-500
-            hover:text-white
-          "
+                        className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3.5 py-2 text-sm font-semibold text-slate-700 transition-all duration-300 hover:bg-cyan-500 hover:text-white"
                       >
                         <Phone className="h-4 w-4" />
                         {office.phone}

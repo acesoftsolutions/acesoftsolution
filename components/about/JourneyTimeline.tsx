@@ -4,34 +4,34 @@ import AnimatedSection from '@/components/shared/AnimatedSection';
 
 const milestones = [
   {
-    year: '2014',
+    year: '2016',
     title: 'Company Founded',
     description:
-      'Started with a vision to help businesses embrace digital transformation.',
-  },
-  {
-    year: '2017',
-    title: '100+ Projects Delivered',
-    description:
-      'Successfully delivered solutions across multiple industries.',
+      'Company Founded Ace Soft Solution was established in Ahmedabad, India, with a clear vision: to help businesses of all sizes embrace digital transformation through custom-built, purpose-driven software solutions. We started small, focused, and client-obsessed.',
   },
   {
     year: '2020',
-    title: 'Enterprise Expansion',
+    title: '100+ Projects Delivered',
     description:
-      'Expanded services to enterprise software and ERP systems.',
+      '100+ Projects Delivered Within three years, we had successfully delivered over 100 projects across web development, mobile applications, and business software — expanding our expertise across healthcare, logistics, retail, and fintech verticals.',
   },
   {
-    year: '2023',
+    year: '2022',
+    title: 'Enterprise Expansion',
+    description:
+      'Enterprise Expansion We formally expanded our service offering to include enterprise software development, ERP system implementation, and large-scale business process automation — serving enterprise clients with complex, multi-system integration requirements.',
+  },
+  {
+    year: '2024',
     title: 'AI Solutions Launch',
     description:
-      'Introduced AI automation and intelligent business solutions.',
+      'AI Solutions Launch Ace Soft Solution introduced a dedicated AI & automation practice, offering AI-powered workflows, intelligent data processing, machine-learning integrations, and automation-first product development for forward-thinking businesses.',
   },
   {
     year: '2025',
     title: 'Global Growth',
     description:
-      'Serving clients across multiple countries and industries.',
+      'Global Growth Today, Ace Soft Solution serves clients across multiple countries including the United States, UAE, Canada, Australia, and the United Kingdom — delivering software solutions that meet global standards for security, compliance, and performance.',
   },
 ];
 
@@ -56,9 +56,7 @@ export default function JourneyTimeline() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-              From a focused software team to a trusted technology partner, our
-              journey has been shaped by practical innovation and measurable
-              client outcomes.
+              From a lean, focused software team to a full-service technology partner — our journey has been defined by practical innovation, industry expansion, and an unwavering commitment to measurable client outcomes. Here is how we got here.
             </p>
           </div>
         </AnimatedSection>

@@ -57,8 +57,7 @@ export default function ValuesSection() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-              Our values shape how we think, communicate and deliver technology
-              that creates measurable business impact.
+              Our core values are not aspirational posters on a wall - they are the operating principles embedded into how we scope projects, write code, communicate with clients, and measure success. Every engagement at Ace Soft Solution is shaped by these four commitments.
             </p>
           </div>
         </AnimatedSection>
