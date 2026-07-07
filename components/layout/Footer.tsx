@@ -90,28 +90,28 @@ const legalLinks = [
 const socialLinks = [
   {
     label: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/acesoftsolution/",
     icon: Facebook,
     color: "text-[#1877F2]",
     bg: "hover:bg-[#1877F2]",
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/acesoftsolution/",
     icon: Instagram,
     color: "text-[#E4405F]",
     bg: "hover:bg-gradient-to-br hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF]",
   },
   {
     label: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/company/acesoftsolution/",
     icon: Linkedin,
     color: "text-[#0A66C2]",
     bg: "hover:bg-[#0A66C2]",
   },
   {
     label: "Twitter",
-    href: "#",
+    href: "https://x.com/AceSoftSolution",
     icon: Twitter,
     color: "text-[#1DA1F2]",
     bg: "hover:bg-[#1DA1F2]",
