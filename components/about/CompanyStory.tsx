@@ -4,7 +4,7 @@ import AnimatedSection from '@/components/shared/AnimatedSection';
 
 const milestones = [
   {
-    value: '2014',
+    value: '2016',
     label: 'Founded',
   },
   {
@@ -53,7 +53,7 @@ export default function CompanyStory() {
                       Technology With Purpose, Built For Measurable Impact
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-slate-600">
-                      Ace Soft Solution was founded in 2014 with a clear, focused mission: helping businesses harness the power of technology to grow faster, operate smarter, and deliver better customer experiences.
+                      Ace Soft Solution was founded in 2016 with a clear, focused mission: helping businesses harness the power of technology to grow faster, operate smarter, and deliver better customer experiences.
                     </p>
                   </div>
                 </div>
