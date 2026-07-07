@@ -25,7 +25,7 @@ const teamMembers = [
       '/Team/Vivek.png',
     expertise: 'Company Vision',
     description:
-      "Passionate about building innovative digital solutions and fostering long-term client relationships. Vivek leads the company's vision, growth strategy, and business innovation.",
+      "Passionate about driving innovation, business growth, and digital transformation. Leads the company's vision, strategic direction, and the delivery of impactful technology solutions.",
   },
   {
     name: 'Pankaj Kumar',
@@ -35,7 +35,7 @@ const teamMembers = [
       '/Team/Pankaj.png',
     expertise: 'Digital Growth',
     description:
-      "Drives business growth through data-driven marketing strategies, digital transformation, and customer acquisition while leading the company's overall operations.",
+      "Builds strong client relationships by understanding business goals, delivering strategic solutions, and ensuring long-term success through effective communication and exceptional service.",
   },
   {
     name: 'Sweety Modh',
