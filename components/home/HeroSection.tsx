@@ -254,7 +254,7 @@ font-medium
 text-cyan-300
               "
             >
-              Award-Winning Software Development Company
+              Trusted Software Development Company
             </div>
 
             {/* Heading */}
