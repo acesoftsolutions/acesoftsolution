@@ -1,11 +1,15 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   Sparkles,
-} from 'lucide-react';
+  CheckCircle2,
+  ShieldCheck,
+  Layers3,
+  Headphones,
+} from "lucide-react";
 
 export default function ServiceCTA() {
   return (
@@ -108,15 +112,14 @@ export default function ServiceCTA() {
                 text-slate-400
               "
             >
-              From strategy and design to development,
-              deployment, and long-term support, we help
-              businesses launch scalable digital solutions
-              that drive measurable growth.
+              From strategy and design to development, deployment, and long-term
+              support, we help businesses launch scalable digital solutions that
+              drive measurable growth.
             </p>
 
             {/* Buttons */}
 
-            <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/contact"
                 className="
@@ -135,53 +138,52 @@ export default function ServiceCTA() {
                 "
               >
                 Start Your Project
-
                 <ArrowRight size={18} />
-              </Link>
-
-              <Link
-                href="/contact"
-                className="
-                  inline-flex
-                  items-center
-                  gap-2
-                  rounded-2xl
-                  border
-                  border-white/10
-                  bg-white/5
-                  px-8
-                  py-4
-                  font-semibold
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:bg-white/10
-                "
-              >
-                Schedule Consultation
               </Link>
             </div>
 
-            {/* Mini Trust Bar */}
+            {/* Trust Features */}
 
-            <div
-              className="
-                mt-16
-                flex
-                flex-wrap
-                justify-center
-                gap-8
-                text-sm
-                text-slate-500
-              "
-            >
-              <span>Custom Development</span>
+            <div className="mt-8 flex justify-center">
+              <div className="inline-flex flex-wrap overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                {[
+                  {
+                    icon: CheckCircle2,
+                    title: "Custom Development",
+                  },
+                  {
+                    icon: ShieldCheck,
+                    title: "Enterprise Solutions",
+                  },
+                  {
+                    icon: Layers3,
+                    title: "Scalable Architecture",
+                  },
+                  {
+                    icon: Headphones,
+                    title: "Dedicated Support",
+                  },
+                ].map((item, index) => {
+                  const Icon = item.icon;
 
-              <span>Enterprise Solutions</span>
+                  return (
+                    <div
+                      key={item.title}
+                      className={`group flex items-center gap-3 px-5 py-4 transition-all duration-300 hover:bg-blue-50 ${
+                        index !== 3 ? "border-r border-slate-200" : ""
+                      }`}
+                    >
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 transition-all duration-300 group-hover:bg-blue-600">
+                        <Icon className="h-5 w-5 text-blue-600 transition-all duration-300 group-hover:text-white" />
+                      </div>
 
-              <span>Dedicated Support</span>
-
-              <span>Scalable Architecture</span>
+                      <span className="text-sm font-semibold whitespace-nowrap text-slate-700">
+                        {item.title}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </motion.div>

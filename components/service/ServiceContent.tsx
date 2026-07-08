@@ -40,564 +40,144 @@ export default function ServiceContent({ service }: ServiceContentProps) {
   ];
 
   return (
-    <section className="bg-white py-12 lg:py-16">
+    <section className="bg-white py-10 lg:py-12">
       <div className="mx-auto max-w-[1280px] px-6">
-        {/* Overview Section */}
+        {/* Overview Section - Professional & Compact */}
 
-        <div className="relative grid gap-16 lg:grid-cols-12 lg:items-center">
-          {/* Background Effects */}
-
-          <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-blue-100/50 blur-3xl" />
-          <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-cyan-100/50 blur-3xl" />
-
-          {/* Left Content */}
-
-          <div className="relative lg:col-span-7">
-            <span
-              className="
-        inline-flex
-        items-center
-        gap-2
-        rounded-full
-        border
-        border-blue-200
-        bg-gradient-to-r
-        from-blue-50
-        to-cyan-50
-        px-5
-        py-2.5
-        text-sm
-        font-semibold
-        text-blue-700
-        shadow-sm
-      "
-            >
-              <Sparkles size={15} />
-              Service Overview
-            </span>
-
-            <h2
-              className="
-        mt-6
-        max-w-4xl
-        text-4xl
-        font-bold
-        leading-tight
-        text-slate-900
-        md:text-5xl
-        xl:text-6xl
-      "
-            >
-              Delivering Technology Solutions
-              <span
-                className="
-          block
-          bg-gradient-to-r
-          from-blue-600
-          via-cyan-500
-          to-blue-700
-          bg-clip-text
-          text-transparent
-        "
-              >
-                That Drive Business Growth
-              </span>
-            </h2>
-
-            <p
-              className="
-        mt-6
-        text-lg
-        leading-relaxed
-        text-slate-600
-      "
-            >
-              {service.description}
-            </p>
-
-            <p
-              className="
-        mt-5
-        text-lg
-        leading-relaxed
-        text-slate-600
-      "
-            >
-              We help businesses transform ideas into scalable digital products
-              through strategic planning, modern technologies, and expert
-              engineering practices.
-            </p>
-
-            {/* Features */}
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              {[
-                "Enterprise Ready",
-                "Scalable Solutions",
-                "Agile Delivery",
-                "Dedicated Support",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="
-            group
-            flex
-            items-center
-            gap-3
-            rounded-2xl
-            border
-            border-slate-200
-            bg-white
-            px-5
-            py-4
-            shadow-sm
-            transition-all
-            duration-300
-            hover:-translate-y-1
-            hover:border-blue-200
-            hover:shadow-xl
-          "
-                >
-                  <div
-                    className="
-              flex
-              h-10
-              w-10
-              items-center
-              justify-center
-              rounded-xl
-              bg-emerald-50
-              transition-all
-              duration-300
-              group-hover:bg-emerald-500
-            "
-                  >
-                    <CheckCircle2
-                      className="
-                h-5
-                w-5
-                text-emerald-500
-                group-hover:text-white
-              "
-                    />
-                  </div>
-
-                  <span
-                    className="
-              font-medium
-              text-slate-700
-            "
-                  >
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Card */}
-
-          <div className="relative lg:col-span-5">
-            <div
-              className="
-        group
-        relative
-        overflow-hidden
-        rounded-[36px]
-        border
-        border-white/50
-        bg-white/80
-        p-8
-        shadow-[0_25px_80px_rgba(15,23,42,0.08)]
-        backdrop-blur-xl
-        transition-all
-        duration-500
-        hover:-translate-y-2
-        hover:shadow-[0_35px_100px_rgba(37,99,235,0.15)]
-      "
-            >
-              {/* Decorative Gradient */}
-
-              <div
-                className="
-          absolute
-          inset-0
-          bg-gradient-to-br
-          from-blue-50
-          via-transparent
-          to-cyan-50
-          opacity-70
-        "
-              />
-
-              <div className="relative z-10">
-                <span
-                  className="
-            text-sm
-            font-semibold
-            uppercase
-            tracking-[0.2em]
-            text-blue-600
-          "
-                >
-                  Business Outcomes
+        <div className="relative">
+          <div className="mx-auto max-w-screen-2xl px-6 lg:px-12">
+            <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+              {/* Left Content */}
+              <div className="lg:col-span-7">
+                <span className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-5 py-2 text-sm font-semibold text-slate-700">
+                  <Sparkles size={16} />
+                  Service Overview
                 </span>
 
-                <h3
-                  className="
-            mt-3
-            text-3xl
-            font-bold
-            text-slate-900
-          "
-                >
-                  Results That Matter
-                </h3>
+                <h2 className="mt-6 text-3xl font-semibold leading-tight tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
+                  Delivering Technology Solutions That Drive
+                  <span className="block bg-gradient-to-r from-blue-600 to-slate-800 bg-clip-text text-transparent">
+                    Business Growth
+                  </span>
+                </h2>
 
-                {/* Outcomes */}
+                <div className="mt-8 space-y-5 text-lg leading-relaxed text-slate-600">
+                  <p>{service.description}</p>
+                  <p>
+                    We help businesses transform ideas into scalable digital
+                    products through strategic planning, modern technologies,
+                    and expert engineering practices.
+                  </p>
+                </div>
 
-                <div className="mt-8 space-y-4">
-                  {service.outcomes.map((outcome: string) => (
+                {/* Features */}
+                <div className="mt-10 grid gap-4 sm:grid-cols-2">
+                  {[
+                    "Enterprise Ready",
+                    "Scalable Solutions",
+                    "Agile Delivery",
+                    "Dedicated Support",
+                  ].map((item) => (
                     <div
-                      key={outcome}
-                      className="
-                  flex
-                  items-start
-                  gap-4
-                  rounded-2xl
-                  border
-                  border-slate-100
-                  bg-white/80
-                  p-4
-                  transition-all
-                  duration-300
-                  hover:border-blue-200
-                  hover:shadow-lg
-                "
+                      key={item}
+                      className="flex items-center gap-4 rounded-2xl border border-slate-100 bg-white px-6 py-5 shadow-sm transition-all hover:border-blue-200 hover:shadow-md"
                     >
-                      <div
-                        className="
-                    flex
-                    h-10
-                    w-10
-                    shrink-0
-                    items-center
-                    justify-center
-                    rounded-xl
-                    bg-gradient-to-br
-                    from-emerald-500
-                    to-green-600
-                  "
-                      >
-                        <CheckCircle2
-                          className="
-                      h-5
-                      w-5
-                      text-white
-                    "
-                        />
+                      <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-100">
+                        <CheckCircle2 className="h-5 w-5 text-emerald-600" />
                       </div>
-
-                      <span
-                        className="
-                    leading-relaxed
-                    text-slate-700
-                  "
-                      >
-                        {outcome}
-                      </span>
+                      <span className="font-medium text-slate-800">{item}</span>
                     </div>
                   ))}
                 </div>
+              </div>
 
-                {/* Stats */}
+              {/* Right Card - Professional */}
+              <div className="lg:col-span-5">
+                <div className="rounded-3xl border border-slate-100 bg-white p-8 shadow-lg">
+                  <span className="text-sm font-semibold uppercase tracking-widest text-blue-600">
+                    Business Outcomes
+                  </span>
 
-                <div
-                  className="
-            mt-10
-            grid
-            grid-cols-3
-            gap-4
-            border-t
-            border-slate-200
-            pt-8
-          "
-                >
-                  {[
-                    {
-                      value: "100+",
-                      label: "Projects",
-                    },
-                    {
-                      value: "50+",
-                      label: "Clients",
-                    },
-                    {
-                      value: "98%",
-                      label: "Retention",
-                    },
-                  ].map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="
-                rounded-2xl
-                bg-gradient-to-br
-                from-slate-50
-                to-white
-                p-4
-                text-center
-                transition-all
-                duration-300
-                hover:-translate-y-1
-                hover:shadow-lg
-              "
-                    >
-                      <h4
-                        className="
-                  text-3xl
-                  font-bold
-                  text-slate-900
-                "
+                  <h3 className="mt-4 text-3xl font-semibold text-slate-900">
+                    Results That Matter
+                  </h3>
+
+                  {/* Outcomes */}
+                  <div className="mt-8 space-y-5">
+                    {service.outcomes.map((outcome: string) => (
+                      <div
+                        key={outcome}
+                        className="flex gap-4 rounded-2xl border border-slate-100 bg-slate-50 p-5 transition-all hover:border-emerald-200"
                       >
-                        {stat.value}
-                      </h4>
-
-                      <p
-                        className="
-                  mt-1
-                  text-sm
-                  text-slate-500
-                "
-                      >
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
+                        <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-emerald-600">
+                          <CheckCircle2 className="h-4 w-4 text-white" />
+                        </div>
+                        <p className="text-slate-700">{outcome}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Why Choose This Service */}
+        {/* Why Choose This Service - Professional Company Style */}
 
-        <div className="relative mt-28">
-          {/* Background Effects */}
-
-          <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-blue-100/40 blur-3xl" />
-          <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-cyan-100/40 blur-3xl" />
-
-          {/* Section Header */}
-
-          <div className="relative max-w-3xl">
-            <span
-              className="
-        inline-flex
-        items-center
-        rounded-full
-        border
-        border-blue-200
-        bg-gradient-to-r
-        from-blue-50
-        to-cyan-50
-        px-5
-        py-2
-        text-sm
-        font-semibold
-        text-blue-700
-      "
-            >
-              Why Choose Us
-            </span>
-
-            <h2
-              className="
-        mt-6
-        text-4xl
-        font-bold
-        leading-tight
-        text-slate-900
-        md:text-5xl
-      "
-            >
-              Why Businesses
-              <span
-                className="
-          block
-          bg-gradient-to-r
-          from-blue-600
-          via-cyan-500
-          to-blue-700
-          bg-clip-text
-          text-transparent
-        "
-              >
-                Choose This Service
+        <section className="w-full bg-gray-100 py-14">
+          <div className="mx-auto max-w-screen-2xl px-6 lg:px-12">
+            {/* Section Header */}
+            <div className="max-w-3xl">
+              <span className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-6 py-2.5 text-sm font-semibold text-slate-700">
+                WHY CHOOSE US
               </span>
-            </h2>
 
-            <p
-              className="
-        mt-5
-        text-lg
-        leading-relaxed
-        text-slate-600
-      "
-            >
-              Designed to help organizations improve efficiency, accelerate
-              growth, and stay competitive in an increasingly digital world.
-            </p>
-          </div>
+              <h2 className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-slate-900 md:text-5xl">
+                Why Businesses
+                <span className="block bg-gradient-to-r from-blue-700 to-slate-800 bg-clip-text text-transparent">
+                  Choose This Service
+                </span>
+              </h2>
 
-          {/* Cards */}
+              <p className="mt-6 text-lg leading-relaxed text-slate-600">
+                Designed to help organizations improve efficiency, accelerate
+                growth, and stay competitive in an increasingly digital world.
+              </p>
+            </div>
 
-          <div className="relative mt-14 grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-            {serviceHighlights.map((item, index) => {
-              const Icon = item.icon;
+            {/* Highlights Grid */}
+            <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+              {serviceHighlights.map((item, index) => {
+                const Icon = item.icon;
 
-              return (
-                <div
-                  key={item.title}
-                  className="
-            group
-            relative
-            overflow-hidden
-            rounded-[32px]
-            border
-            border-slate-200
-            bg-white/80
-            p-8
-            shadow-[0_10px_40px_rgba(15,23,42,0.05)]
-            backdrop-blur-sm
-            transition-all
-            duration-500
-            hover:-translate-y-3
-            hover:border-blue-200
-            hover:shadow-[0_25px_80px_rgba(37,99,235,0.12)]
-          "
-                >
-                  {/* Top Gradient Line */}
-
+                return (
                   <div
-                    className="
-              absolute
-              left-0
-              top-0
-              h-1
-              w-0
-              bg-gradient-to-r
-              from-blue-600
-              via-cyan-500
-              to-blue-600
-              transition-all
-              duration-500
-              group-hover:w-full
-            "
-                  />
-
-                  {/* Number */}
-
-                  <span
-                    className="
-              absolute
-              right-6
-              top-6
-              text-6xl
-              font-bold
-              text-slate-100
-              transition-all
-              duration-500
-              group-hover:text-blue-50
-            "
+                    key={item.title}
+                    className="group relative rounded-3xl border border-slate-100 bg-white p-8 transition-all hover:border-slate-200 hover:shadow-lg"
                   >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                    {/* Number */}
+                    <span className="absolute right-8 top-8 text-6xl font-bold text-slate-100 transition-colors group-hover:text-slate-50">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
 
-                  {/* Icon */}
+                    {/* Icon */}
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-100 transition-colors group-hover:bg-blue-50">
+                      <Icon className="h-8 w-8 text-slate-600 transition-colors group-hover:text-blue-600" />
+                    </div>
 
-                  <div
-                    className="
-              relative
-              flex
-              h-16
-              w-16
-              items-center
-              justify-center
-              rounded-2xl
-              bg-gradient-to-br
-              from-blue-50
-              to-cyan-50
-              transition-all
-              duration-500
-              group-hover:scale-110
-              group-hover:rotate-3
-              group-hover:from-blue-600
-              group-hover:to-cyan-500
-            "
-                  >
-                    <Icon
-                      className="
-                h-8
-                w-8
-                text-blue-600
-                transition-all
-                duration-500
-                group-hover:text-white
-              "
-                    />
+                    <h3 className="mt-8 text-2xl font-semibold text-slate-900">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-4 text-[17px] leading-relaxed text-slate-600">
+                      {item.description}
+                    </p>
                   </div>
-
-                  {/* Content */}
-
-                  <h3
-                    className="
-              mt-7
-              text-2xl
-              font-bold
-              text-slate-900
-              transition-colors
-              duration-300
-            "
-                  >
-                    {item.title}
-                  </h3>
-
-                  <p
-                    className="
-              mt-4
-              leading-relaxed
-              text-slate-600
-            "
-                  >
-                    {item.description}
-                  </p>
-
-                  {/* Hover Arrow */}
-
-                  <div
-                    className="
-              mt-8
-              flex
-              items-center
-              gap-2
-              text-sm
-              font-semibold
-              text-blue-600
-              opacity-0
-              transition-all
-              duration-500
-              group-hover:translate-x-1
-              group-hover:opacity-100
-            "
-                  >
-                    Learn More
-                    <span>→</span>
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        </div>
+        </section>
         {/* Core Capabilities */}
 
         <div className="relative mt-32">
