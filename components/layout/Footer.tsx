@@ -60,11 +60,11 @@ const companyLinks = [
   },
   {
     name: "Technologies",
-    href: "/technologies",
+    href: "/technology",
   },
   {
     name: "Industry",
-    href: "/industry",
+    href: "/industries",
   },
 ];
 
