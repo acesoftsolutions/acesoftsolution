@@ -1,5 +1,5 @@
 "use client";
-
+import Link from 'next/link';
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -22,8 +22,6 @@ const technologies = [
   "Docker",
   "Tailwind CSS",
 ];
-
-
 
 const stackData = [
   {
@@ -50,7 +48,7 @@ const stackData = [
 
 export default function TechnologyHero() {
   return (
-    <section className="relative overflow-hidden bg-[#070B14] pt-12 pb-28">
+    <section className="relative overflow-hidden bg-[#070B14] pt-12 pb-12">
       {/* Background */}
       <div className="absolute inset-0">
         <div
@@ -126,46 +124,55 @@ export default function TechnologyHero() {
 
             {/* Buttons */}
             <div className="mt-10 flex flex-wrap gap-4">
-              <button
-                className="
-                  group
-                  inline-flex
-                  items-center
-                  gap-2
-                  rounded-xl
-                  bg-blue-600
-                  px-7
-                  py-4
-                  font-semibold
-                  text-white
-                  transition-all
-                  duration-300
-                  hover:bg-blue-500
-                  hover:shadow-[0_10px_30px_rgba(37,99,235,0.35)]
-                "
+              {/* First Button - Technology / Tech Stack */}
+              <Link
+                href="/technology" // Change this if your tech stack page has a different URL
+                className="group inline-flex"
               >
-                Explore Our Teck Stack
-                <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-              </button>
+                <button
+                  className="
+        group
+        inline-flex
+        items-center
+        gap-2
+        rounded-xl
+        bg-blue-600
+        px-7
+        py-4
+        font-semibold
+        text-white
+        transition-all
+        duration-300
+        hover:bg-blue-500
+        hover:shadow-[0_10px_30px_rgba(37,99,235,0.35)]
+      "
+                >
+                  Explore Our Tech Stack
+                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+              </Link>
 
-              <button
-                className="
-                  rounded-xl
-                  border
-                  border-white/10
-                  bg-white/5
-                  px-7
-                  py-4
-                  font-semibold
-                  text-white
-                  backdrop-blur-xl
-                  transition-all
-                  duration-300
-                  hover:bg-white/10
-                "
-              >
-                Get a Free Consultation
-              </button>
+              {/* Second Button - Contact */}
+              <Link href="/contact" className="inline-flex">
+                <button
+                  className="
+        rounded-xl
+        border
+        border-white/10
+        bg-white/5
+        px-7
+        py-4
+        font-semibold
+        text-white
+        backdrop-blur-xl
+        transition-all
+        duration-300
+        hover:bg-white/10
+      "
+                >
+                  Get a Free Consultation
+                </button>
+              </Link>
             </div>
 
             {/* Technology Chips */}
@@ -352,40 +359,8 @@ export default function TechnologyHero() {
                 </div>
               </div>
             </div>
-
-            {/* Floating Project Card */}
-            <motion.div
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="
-                absolute
-                -bottom-8
-                -left-8
-                hidden
-                rounded-2xl
-                border
-                border-white/10
-                bg-[#0f172a]
-                p-5
-                backdrop-blur-xl
-                shadow-xl
-                lg:block
-              "
-            >
-              <p className="text-3xl font-bold text-white">250+</p>
-
-              <p className="text-sm text-slate-400">Projects Delivered</p>
-            </motion.div>
           </motion.div>
         </div>
-
-       
       </div>
     </section>
   );

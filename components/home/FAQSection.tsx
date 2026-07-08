@@ -472,7 +472,7 @@ export default function FAQSection() {
           "
             >
               Find detailed answers about our services, technology stack,
-              development process, AI solutions, pricing, and ongoing support —
+              development process, AI solutions, pricing, and ongoing support,  
               everything you need to make a confident decision.
             </p>
           </div>

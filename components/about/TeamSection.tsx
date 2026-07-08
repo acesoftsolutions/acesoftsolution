@@ -173,11 +173,11 @@ export default function TeamSection() {
                   </div>
 
                   <div className="relative flex flex-1 flex-col p-5">
-                    <div className="absolute -top-7 left-5 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] shadow-lg shadow-cyan-200 ring-4 ring-white">
+                    <div className="absolute -top-2 left-5 flex h-8 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] shadow-lg shadow-cyan-200 ring-4 ring-white">
                       <Icon className="h-7 w-7 text-white" />
                     </div>
 
-                    <div className="pt-8">
+                    <div className="pt-4">
                       <h3 className="text-xl font-black tracking-tight text-slate-950">
                         {member.name}
                       </h3>

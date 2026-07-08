@@ -1,5 +1,5 @@
 "use client";
-
+import Link from 'next/link';
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -11,7 +11,13 @@ import {
   TrendingUp,
   ArrowRight,
   CheckCircle2,
-  Sparkles,FolderKanban,Users,Briefcase,Headphones,Cpu,ShieldCheck
+  Sparkles,
+  FolderKanban,
+  Users,
+  Briefcase,
+  Headphones,
+  Cpu,
+  ShieldCheck,
 } from "lucide-react";
 
 import AnimatedSection from "@/components/shared/AnimatedSection";
@@ -159,7 +165,7 @@ const services = [
 
 const stats = [
   {
-    value: 50,
+    value: 250,
     suffix: "+",
     label: "Projects Delivered",
     icon: FolderKanban,
@@ -173,7 +179,7 @@ const stats = [
     color: "from-emerald-500 to-teal-500",
   },
   {
-    value: 10,
+    value: 15,
     suffix: "+",
     label: "Industries Served",
     icon: Briefcase,
@@ -549,29 +555,31 @@ export default function ServicesOverview() {
                                 </p>
                               </div>
 
-                              <motion.button
-                                whileHover={{
-                                  scale: 1.05,
-                                }}
-                                whileTap={{
-                                  scale: 0.98,
-                                }}
-                                className="
-                                  inline-flex
-                                  items-center
-                                  gap-2
-                                  rounded-2xl
-                                  bg-white
-                                  px-6
-                                  py-4
-                                  font-semibold
-                                  text-slate-900
-                                  shadow-lg
-                                "
+                              <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.98 }}
                               >
-                                Start Your Project
-                                <ArrowRight className="h-5 w-5" />
-                              </motion.button>
+                                <Link
+                                  href="/contact"
+                                  className="
+      inline-flex
+      items-center
+      gap-2
+      rounded-2xl
+      bg-white
+      px-6
+      py-4
+      font-semibold
+      text-slate-900
+      shadow-lg
+      transition-all
+      hover:bg-cyan-50
+    "
+                                >
+                                  Start Your Project
+                                  <ArrowRight className="h-5 w-5" />
+                                </Link>
+                              </motion.div>
                             </div>
                           </div>
                         </div>

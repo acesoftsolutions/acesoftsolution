@@ -235,7 +235,7 @@ export default function ServicesHero() {
                 </div>
 
                 <div>
-                  <p className="text-2xl font-bold text-white">500+</p>
+                  <p className="text-2xl font-bold text-white">250+</p>
 
                   <p className="text-sm text-slate-500">Projects Delivered</p>
                 </div>

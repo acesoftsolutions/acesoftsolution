@@ -13,13 +13,13 @@ const milestones = [
     year: '2020',
     title: '100+ Projects Delivered',
     description:
-      '100+ Projects Delivered Within three years, we had successfully delivered over 100 projects across web development, mobile applications, and business software — expanding our expertise across healthcare, logistics, retail, and fintech verticals.',
+      '100+ Projects Delivered Within three years, we had successfully delivered over 100 projects across web development, mobile applications, and business software, expanding our expertise across healthcare, logistics, retail, and fintech verticals.',
   },
   {
     year: '2022',
     title: 'Enterprise Expansion',
     description:
-      'Enterprise Expansion We formally expanded our service offering to include enterprise software development, ERP system implementation, and large-scale business process automation — serving enterprise clients with complex, multi-system integration requirements.',
+      'Enterprise Expansion We formally expanded our service offering to include enterprise software development, ERP system implementation, and large-scale business process automation, serving enterprise clients with complex, multi-system integration requirements.',
   },
   {
     year: '2024',
@@ -31,7 +31,7 @@ const milestones = [
     year: '2025',
     title: 'Global Growth',
     description:
-      'Global Growth Today, Ace Soft Solution serves clients across multiple countries including the United States, UAE, Canada, Australia, and the United Kingdom — delivering software solutions that meet global standards for security, compliance, and performance.',
+      'Global Growth Today, Ace Soft Solution serves clients across multiple countries including the United States, UAE, Canada, Australia, and the United Kingdom, delivering software solutions that meet global standards for security, compliance, and performance.',
   },
 ];
 

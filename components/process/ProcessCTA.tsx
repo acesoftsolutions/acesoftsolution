@@ -92,7 +92,7 @@ export default function ProcessCTA() {
                   </div>
 
                   <div className="font-medium text-white">
-                    +91 XXXXX XXXXX
+                    +91 76963 73145
                   </div>
                 </div>
               </div>
@@ -108,7 +108,7 @@ export default function ProcessCTA() {
                   </div>
 
                   <div className="font-medium text-white">
-                    hello@acesoftsolution.com
+                    info@acesoftsolution.com
                   </div>
                 </div>
               </div>

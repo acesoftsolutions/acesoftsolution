@@ -47,7 +47,7 @@ export default function AboutHero() {
               </span>
 
               <h1 className="mt-7 max-w-4xl text-3xl font-black leading-[0.98] tracking-tight text-slate-950 md:text-4xl xl:text-[2.9rem]">
-                Ace Soft Solution - Building Software That Drives Business Growth
+                Ace Soft Solution - Building Software That Drives {" "}
                 <span className="bg-gradient-to-r from-[#0E4DB7] via-[#3CC8F5] to-[#12C7B5] bg-clip-text text-transparent">
                    Business Growth
                 </span>

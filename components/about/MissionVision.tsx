@@ -119,14 +119,6 @@ export default function MissionVision() {
                       </div>
                     ))}
                   </div>
-
-                  <div className="relative mt-auto pt-8">
-                    <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
-                    <p className="mt-5 text-sm font-semibold leading-6 text-slate-500">
-                      Built on clarity, accountability and measurable business
-                      value.
-                    </p>
-                  </div>
                 </div>
               </AnimatedSection>
             );

@@ -1,10 +1,10 @@
-
 'use client';
 
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import { Info } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
@@ -13,10 +13,15 @@ const contactSchema = z.object({
   name: z.string().min(2, 'Please enter your name'),
   email: z.string().email('Please enter a valid email'),
   phone: z.string().min(8, 'Please enter your phone number'),
-  company: z.string().optional(),
-  service: z.string().min(1, 'Please select a service'),
-  budget: z.string().optional(),
+  company: z.string().min(1, 'Please enter your company name or website'),
   message: z.string().min(10, 'Please describe your project'),
+  needsNDA: z.enum(['yes', 'no'], {
+    required_error: 'Please let us know if you need an NDA',
+  }),
+  marketingConsent: z.boolean().optional(),
+  notRobot: z.boolean().refine((val) => val === true, {
+    message: 'Please confirm you are not a robot',
+  }),
 });
 
 type ContactFormData = z.infer<typeof contactSchema>;
@@ -60,23 +65,19 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="bg-white pt-32 pb-24 lg:pt-40 lg:pb-32">
+    <main className="bg-white pt-12 pb-14 lg:pt-14 lg:pb-12">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-5xl">
-          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-600">
-            Contact Us
-          </span>
-
-          <h1 className="mt-4 text-5xl font-bold leading-none text-slate-900 md:text-7xl">
-            Have a Project?
-            <span className="block text-cyan-600">
-              Let's Talk.
+          <h1 className="text-5xl font-bold leading-none text-slate-900 md:text-7xl">
+            You have an Idea.{' '}
+            <span className="text-[#12C7B5]">
+              Let&apos;s Talk.
             </span>
           </h1>
 
           <p className="mt-6 max-w-4xl text-lg leading-relaxed text-slate-600">
-            Share a few details and we'll start with a
+            Share a few details and we will start with a
             short conversation to understand your goals,
             timelines, and expectations before any next
             steps.
@@ -92,13 +93,13 @@ export default function ContactPage() {
             {/* Name */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                What's Your Name? *
+                What&apos;s Your Name? <span className="text-red-500">*</span>
               </label>
 
               <input
                 {...register('name')}
                 type="text"
-                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-cyan-600"
+                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
               />
 
               {errors.name && (
@@ -111,13 +112,13 @@ export default function ContactPage() {
             {/* Email */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                Email *
+                Email <span className="text-red-500">*</span>
               </label>
 
               <input
                 {...register('email')}
                 type="email"
-                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-cyan-600"
+                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
               />
 
               {errors.email && (
@@ -130,13 +131,13 @@ export default function ContactPage() {
             {/* Phone */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                Phone Number *
+                Phone Number <span className="text-red-500">*</span>
               </label>
 
               <input
                 {...register('phone')}
                 type="tel"
-                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-cyan-600"
+                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
               />
 
               {errors.phone && (
@@ -149,103 +150,100 @@ export default function ContactPage() {
             {/* Company */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                Company Name Or Website
+                Company Name Or Website <span className="text-red-500">*</span>
               </label>
 
               <input
                 {...register('company')}
                 type="text"
-                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-cyan-600"
+                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
               />
-            </div>
 
-            {/* Service */}
-            <div>
-              <label className="mb-3 block text-lg font-medium text-slate-900">
-                Service Required *
-              </label>
-
-              <select
-                {...register('service')}
-                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-cyan-600"
-              >
-                <option value="">
-                  Select Service
-                </option>
-                <option value="web-development">
-                  Web Development
-                </option>
-                <option value="mobile-app">
-                  Mobile App Development
-                </option>
-                <option value="ui-ux">
-                  UI/UX Design
-                </option>
-                <option value="software">
-                  Custom Software
-                </option>
-                <option value="marketing">
-                  Digital Marketing
-                </option>
-              </select>
-
-              {errors.service && (
+              {errors.company && (
                 <p className="mt-2 text-sm text-red-500">
-                  {errors.service.message}
+                  {errors.company.message}
                 </p>
               )}
             </div>
 
-            {/* Budget */}
+            {/* Project Brief */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                Estimated Budget
+                Project Brief <span className="text-red-500">*</span>
               </label>
 
-              <select
-                {...register('budget')}
-                className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-cyan-600"
-              >
-                <option value="">
-                  Select Budget
-                </option>
-                <option value="under-1000">
-                  Under $1,000
-                </option>
-                <option value="1000-5000">
-                  $1,000 - $5,000
-                </option>
-                <option value="5000-10000">
-                  $5,000 - $10,000
-                </option>
-                <option value="10000-plus">
-                  $10,000+
-                </option>
-              </select>
+              <textarea
+                {...register('message')}
+                rows={1}
+                className="w-full resize-none border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
+              />
+
+              {errors.message && (
+                <p className="mt-2 text-sm text-red-500">
+                  {errors.message.message}
+                </p>
+              )}
+            </div>
+
+            {/* NDA + Marketing consent */}
+            <div className="flex flex-col gap-8">
+              <div>
+                <label className="mb-3 block text-lg font-medium text-slate-900">
+                  Need a copy of our NDA?
+                </label>
+
+                <div className="flex items-center gap-8">
+                  <label className="flex cursor-pointer items-center gap-2 text-lg text-slate-900">
+                    <input
+                      {...register('needsNDA')}
+                      type="radio"
+                      value="yes"
+                      className="h-5 w-5 accent-emerald-500"
+                    />
+                    Yes
+                  </label>
+
+                  <label className="flex cursor-pointer items-center gap-2 text-lg text-slate-900">
+                    <input
+                      {...register('needsNDA')}
+                      type="radio"
+                      value="no"
+                      className="h-5 w-5 accent-emerald-500"
+                    />
+                    No
+                  </label>
+                </div>
+
+                {errors.needsNDA && (
+                  <p className="mt-2 text-sm text-red-500">
+                    {errors.needsNDA.message}
+                  </p>
+                )}
+              </div>
+
+              <label className="flex cursor-pointer items-start gap-2 text-base text-slate-700">
+                <input
+                  {...register('marketingConsent')}
+                  type="checkbox"
+                  className="mt-1 h-4 w-4 accent-emerald-500"
+                />
+                I agree to receive marketing updates from Ace Soft Solution.{' '}
+                <Info className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
+              </label>
             </div>
           </div>
 
-          {/* Message */}
-          <div className="mt-12">
-            <label className="mb-3 block text-lg font-medium text-slate-900">
-              Project Brief *
+          {/* Not a robot + Submit */}
+          <div className="mt-16 flex flex-wrap items-center gap-8">
+            <label className="flex cursor-pointer items-center gap-3 border border-slate-300 px-4 py-3">
+              <input
+                {...register('notRobot')}
+                type="checkbox"
+                className="h-5 w-5 accent-emerald-500"
+              />
+              <span className="text-base text-slate-700">I&apos;m not a robot</span>
             </label>
 
-            <textarea
-              {...register('message')}
-              rows={6}
-              className="w-full resize-none border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-cyan-600"
-            />
-
-            {errors.message && (
-              <p className="mt-2 text-sm text-red-500">
-                {errors.message.message}
-              </p>
-            )}
-          </div>
-
-          {/* Submit */}
-          <div className="mt-16">
             <Button
               type="submit"
               disabled={isSubmitting}
@@ -273,9 +271,14 @@ export default function ContactPage() {
                 : 'Submit'}
             </Button>
           </div>
+
+          {errors.notRobot && (
+            <p className="mt-2 text-sm text-red-500">
+              {errors.notRobot.message}
+            </p>
+          )}
         </form>
       </div>
     </main>
   );
 }
-

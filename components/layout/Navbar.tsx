@@ -19,8 +19,8 @@ const servicesDropdown = [
     href: "/services/mobile-app-development",
   },
   {
-    name: "AI Solutions",
-    href: "/services/ai-solutions",
+    name: "AI & Machine Learning Solutions",
+    href: "/services/ai-machine-learning-solutions",
   },
   {
     name: "UI/UX Design",
@@ -31,16 +31,16 @@ const servicesDropdown = [
     href: "/services/digital-marketing",
   },
   {
-    name: "ERP Software",
-    href: "/services/erp-software",
+    name: "ERP Software Solutions",
+    href: "/services/erp-software-solutions",
   },
   {
-    name: "SEO Optimization",
-    href: "/services/seo-optimization",
+    name: "SEO & AI Search Optimization",
+    href: "/services/seo-ai-search-optimization",
   },
   {
     name: "E-Commerce Development",
-    href: "/services/ecommerce-development",
+    href: "/services/e-commerce-development",
   },
 ];
 
@@ -102,7 +102,7 @@ const companyDropdown = [
   },
   {
     name: "Careers",
-    href: "/careers",
+    href: "#",
   },
 
 ];

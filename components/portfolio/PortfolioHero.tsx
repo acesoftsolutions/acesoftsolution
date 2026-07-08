@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -12,12 +12,12 @@ import {
 
 const stats = [
   {
-    value: "50+",
+    value: "250+",
     label: "Projects Delivered",
     icon: BriefcaseBusiness,
   },
   {
-    value: "10+",
+    value: "15+",
     label: "Industries Served",
     icon: Trophy,
   },
@@ -122,38 +122,47 @@ export default function PortfolioHero() {
             text-slate-600
           "
             >
-              As a software development company, we've delivered enterprise platforms, SaaS products, mobile apps, and e-commerce solutions that help businesses accelerate growth, boost efficiency, and achieve measurable outcomes.
+              As a software development company, we've delivered enterprise
+              platforms, SaaS products, mobile apps, and e-commerce solutions
+              that help businesses accelerate growth, boost efficiency, and
+              achieve measurable outcomes.
             </p>
 
             {/* CTA Buttons */}
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <button
-                className="
-              group
-              inline-flex
-              items-center
-              justify-center
-              gap-2
-              rounded-2xl
-              bg-gradient-to-r
-              from-blue-600
-              via-cyan-500
-              to-violet-500
-              px-8
-              py-4
-              font-semibold
-              text-white
-              shadow-lg
-              transition-all
-              duration-300
-              hover:-translate-y-1
-              hover:shadow-[0_20px_40px_rgba(37,99,235,0.25)]
-            "
+              <Link
+                href="/services" // ← Change to /projects if you prefer
+                className="group inline-flex w-full sm:w-auto"
               >
-                Explore Projects
-                <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-              </button>
-
+                <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.97 }}
+                  className="
+        w-full sm:w-auto
+        inline-flex
+        items-center
+        justify-center
+        gap-2
+        rounded-2xl
+        bg-gradient-to-r
+        from-blue-600
+        via-cyan-500
+        to-violet-500
+        px-8
+        py-4
+        font-semibold
+        text-white
+        shadow-lg
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:shadow-[0_20px_40px_rgba(37,99,235,0.25)]
+      "
+                >
+                  Explore Services
+                  <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
 
@@ -204,7 +213,8 @@ export default function PortfolioHero() {
                 </h3>
 
                 <p className="mt-3 text-slate-600">
-                  A scalable software ecosystem built to automate workflows, improve collaboration, and accelerate business operations.
+                  A scalable software ecosystem built to automate workflows,
+                  improve collaboration, and accelerate business operations.
                 </p>
               </div>
             </div>
