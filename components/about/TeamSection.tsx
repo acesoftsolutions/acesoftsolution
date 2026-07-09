@@ -29,7 +29,7 @@ const teamMembers = [
   },
   {
     name: 'Pankaj Kumar',
-    role: 'Co-Founder, CEO & Head of Digital Marketing',
+    role: 'Co-Founder, CEO',
     icon: BarChart3,
     image:
       '/Team/Pankaj.png',
