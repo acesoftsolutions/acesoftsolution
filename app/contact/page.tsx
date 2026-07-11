@@ -1,26 +1,27 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { Info } from 'lucide-react';
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Info } from "lucide-react";
 
-import { Button } from '@/components/ui/button';
-import { useToast } from '@/hooks/use-toast';
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const contactSchema = z.object({
-  name: z.string().min(2, 'Please enter your name'),
-  email: z.string().email('Please enter a valid email'),
-  phone: z.string().min(8, 'Please enter your phone number'),
-  company: z.string().min(1, 'Please enter your company name or website'),
-  message: z.string().min(10, 'Please describe your project'),
-  needsNDA: z.enum(['yes', 'no'], {
-    required_error: 'Please let us know if you need an NDA',
+  name: z.string().min(2, "Please enter your name"),
+  email: z.string().email("Please enter a valid email"),
+  phone: z.string().min(8, "Please enter your phone number"),
+  company: z.string().min(1, "Please enter your company name or website"),
+  message: z.string().min(10, "Please describe your project"),
+  needsNDA: z.enum(["yes", "no"], {
+    required_error: "Please let us know if you need an NDA",
   }),
   marketingConsent: z.boolean().optional(),
   notRobot: z.boolean().refine((val) => val === true, {
-    message: 'Please confirm you are not a robot',
+    message: "Please confirm you are not a robot",
   }),
 });
 
@@ -30,6 +31,7 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { toast } = useToast();
+  const router = useRouter();
 
   const {
     register,
@@ -39,26 +41,55 @@ export default function ContactPage() {
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
-
   const onSubmit = async (data: ContactFormData) => {
     try {
       setIsSubmitting(true);
 
-      console.log(data);
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
 
-      await new Promise((resolve) =>
-        setTimeout(resolve, 1500)
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            company: data.company,
+            message: data.message,
+            needsNDA: data.needsNDA,
+            marketingConsent: data.marketingConsent ?? false,
+          }),
+        },
       );
 
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Failed to submit enquiry.");
+      }
+
       toast({
-        title: 'Message Sent Successfully',
-        description:
-          'Our team will contact you shortly.',
+        title: "Message Sent Successfully 🎉",
+        description: "Thank you! We have received your enquiry.",
       });
 
       reset();
+
+      setTimeout(() => {
+        router.push("/thank-you");
+      }, 1200);
     } catch (error) {
       console.error(error);
+
+      toast({
+        variant: "destructive",
+        title: "Submission Failed",
+        description:
+          error instanceof Error ? error.message : "Something went wrong.",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -70,25 +101,19 @@ export default function ContactPage() {
         {/* Header */}
         <div className="max-w-5xl">
           <h1 className="text-5xl font-bold leading-none text-slate-900 md:text-7xl">
-            You have an Idea.{' '}
-            <span className="text-[#12C7B5]">
-              Let&apos;s Talk.
-            </span>
+            You have an Idea.{" "}
+            <span className="text-[#12C7B5]">Let&apos;s Talk.</span>
           </h1>
 
           <p className="mt-6 max-w-4xl text-lg leading-relaxed text-slate-600">
-            Share a few details and we will start with a
-            short conversation to understand your goals,
-            timelines, and expectations before any next
+            Share a few details and we will start with a short conversation to
+            understand your goals, timelines, and expectations before any next
             steps.
           </p>
         </div>
 
         {/* Form */}
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="mt-20"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-20">
           <div className="grid gap-x-12 gap-y-12 lg:grid-cols-2">
             {/* Name */}
             <div>
@@ -97,7 +122,7 @@ export default function ContactPage() {
               </label>
 
               <input
-                {...register('name')}
+                {...register("name")}
                 type="text"
                 className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
               />
@@ -116,7 +141,7 @@ export default function ContactPage() {
               </label>
 
               <input
-                {...register('email')}
+                {...register("email")}
                 type="email"
                 className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
               />
@@ -135,7 +160,7 @@ export default function ContactPage() {
               </label>
 
               <input
-                {...register('phone')}
+                {...register("phone")}
                 type="tel"
                 className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
               />
@@ -154,7 +179,7 @@ export default function ContactPage() {
               </label>
 
               <input
-                {...register('company')}
+                {...register("company")}
                 type="text"
                 className="w-full border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
               />
@@ -173,7 +198,7 @@ export default function ContactPage() {
               </label>
 
               <textarea
-                {...register('message')}
+                {...register("message")}
                 rows={1}
                 className="w-full resize-none border-0 border-b border-slate-300 bg-transparent px-0 py-4 text-lg outline-none transition-colors focus:border-emerald-500"
               />
@@ -195,7 +220,7 @@ export default function ContactPage() {
                 <div className="flex items-center gap-8">
                   <label className="flex cursor-pointer items-center gap-2 text-lg text-slate-900">
                     <input
-                      {...register('needsNDA')}
+                      {...register("needsNDA")}
                       type="radio"
                       value="yes"
                       className="h-5 w-5 accent-emerald-500"
@@ -205,7 +230,7 @@ export default function ContactPage() {
 
                   <label className="flex cursor-pointer items-center gap-2 text-lg text-slate-900">
                     <input
-                      {...register('needsNDA')}
+                      {...register("needsNDA")}
                       type="radio"
                       value="no"
                       className="h-5 w-5 accent-emerald-500"
@@ -223,11 +248,11 @@ export default function ContactPage() {
 
               <label className="flex cursor-pointer items-start gap-2 text-base text-slate-700">
                 <input
-                  {...register('marketingConsent')}
+                  {...register("marketingConsent")}
                   type="checkbox"
                   className="mt-1 h-4 w-4 accent-emerald-500"
                 />
-                I agree to receive marketing updates from Ace Soft Solution.{' '}
+                I agree to receive marketing updates from Ace Soft Solution.{" "}
                 <Info className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
               </label>
             </div>
@@ -237,11 +262,13 @@ export default function ContactPage() {
           <div className="mt-16 flex flex-wrap items-center gap-8">
             <label className="flex cursor-pointer items-center gap-3 border border-slate-300 px-4 py-3">
               <input
-                {...register('notRobot')}
+                {...register("notRobot")}
                 type="checkbox"
                 className="h-5 w-5 accent-emerald-500"
               />
-              <span className="text-base text-slate-700">I&apos;m not a robot</span>
+              <span className="text-base text-slate-700">
+                I&apos;m not a robot
+              </span>
             </label>
 
             <Button
@@ -266,9 +293,33 @@ export default function ContactPage() {
                 hover:shadow-none
               "
             >
-              {isSubmitting
-                ? 'Submitting...'
-                : 'Submit'}
+              {isSubmitting ? (
+                <div className="flex items-center gap-3">
+                  <svg
+                    className="h-5 w-5 animate-spin"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      opacity=".25"
+                    />
+
+                    <path
+                      d="M22 12a10 10 0 0 1-10 10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                  Sending...
+                </div>
+              ) : (
+                "Submit"
+              )}
             </Button>
           </div>
 
