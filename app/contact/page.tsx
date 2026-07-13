@@ -1,99 +1,98 @@
-"use client";
+  "use client";
 
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { Info } from "lucide-react";
+  import React, { useState } from "react";
+  import { useRouter } from "next/navigation";
+  import { useForm } from "react-hook-form";
+  import { zodResolver } from "@hookform/resolvers/zod";
+  import * as z from "zod";
+  import { Info } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
+  import { Button } from "@/components/ui/button";
+  import { useToast } from "@/hooks/use-toast";
 
-const contactSchema = z.object({
-  name: z.string().min(2, "Please enter your name"),
-  email: z.string().email("Please enter a valid email"),
-  phone: z.string().min(8, "Please enter your phone number"),
-  company: z.string().min(1, "Please enter your company name or website"),
-  message: z.string().min(10, "Please describe your project"),
-  needsNDA: z.enum(["yes", "no"], {
-    required_error: "Please let us know if you need an NDA",
-  }),
-  marketingConsent: z.boolean().optional(),
-  notRobot: z.boolean().refine((val) => val === true, {
-    message: "Please confirm you are not a robot",
-  }),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
-
-export default function ContactPage() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const { toast } = useToast();
-  const router = useRouter();
-
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
+  const contactSchema = z.object({
+    name: z.string().min(2, "Please enter your name"),
+    email: z.string().email("Please enter a valid email"),
+    phone: z.string().min(8, "Please enter your phone number"),
+    company: z.string().min(1, "Please enter your company name or website"),
+    message: z.string().min(10, "Please describe your project"),
+    needsNDA: z.enum(["yes", "no"], {
+      required_error: "Please let us know if you need an NDA",
+    }),
+    marketingConsent: z.boolean().optional(),
+    notRobot: z.boolean().refine((val) => val === true, {
+      message: "Please confirm you are not a robot",
+    }),
   });
-  const onSubmit = async (data: ContactFormData) => {
-    try {
-      setIsSubmitting(true);
 
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/contact`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+  type ContactFormData = z.infer<typeof contactSchema>;
 
-          body: JSON.stringify({
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            company: data.company,
-            message: data.message,
-            needsNDA: data.needsNDA,
-            marketingConsent: data.marketingConsent ?? false,
-          }),
-        },
-      );
+  export default function ContactPage() {
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-      const result = await response.json();
+    const { toast } = useToast();
+    const router = useRouter();
 
-      if (!response.ok) {
-        throw new Error(result.message || "Failed to submit enquiry.");
+    const {
+      register,
+      handleSubmit,
+      reset,
+      formState: { errors },
+    } = useForm<ContactFormData>({
+      resolver: zodResolver(contactSchema),
+    });
+    const onSubmit = async (data: ContactFormData) => {
+      try {
+        setIsSubmitting(true);
+
+     const response = await fetch(
+  `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+  {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        company: data.company,
+        message: data.message,
+        needsNDA: data.needsNDA,
+        marketingConsent: data.marketingConsent ?? false,
+    }),
+  }
+);
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.message || "Failed to submit enquiry.");
+        }
+
+        toast({
+          title: "Message Sent Successfully 🎉",
+          description: "Thank you! We have received your enquiry.",
+        });
+
+        reset();
+
+        setTimeout(() => {
+          router.push("/thank-you");
+        }, 1200);
+      } catch (error) {
+        console.error(error);
+
+        toast({
+          variant: "destructive",
+          title: "Submission Failed",
+          description:
+            error instanceof Error ? error.message : "Something went wrong.",
+        });
+      } finally {
+        setIsSubmitting(false);
       }
-
-      toast({
-        title: "Message Sent Successfully 🎉",
-        description: "Thank you! We have received your enquiry.",
-      });
-
-      reset();
-
-      setTimeout(() => {
-        router.push("/thank-you");
-      }, 1200);
-    } catch (error) {
-      console.error(error);
-
-      toast({
-        variant: "destructive",
-        title: "Submission Failed",
-        description:
-          error instanceof Error ? error.message : "Something went wrong.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+    };
 
   return (
     <main className="bg-white pt-12 pb-14 lg:pt-14 lg:pb-12">
