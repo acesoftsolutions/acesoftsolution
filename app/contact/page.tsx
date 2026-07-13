@@ -1,98 +1,98 @@
-  "use client";
+"use client";
 
-  import React, { useState } from "react";
-  import { useRouter } from "next/navigation";
-  import { useForm } from "react-hook-form";
-  import { zodResolver } from "@hookform/resolvers/zod";
-  import * as z from "zod";
-  import { Info } from "lucide-react";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Info } from "lucide-react";
 
-  import { Button } from "@/components/ui/button";
-  import { useToast } from "@/hooks/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
-  const contactSchema = z.object({
-    name: z.string().min(2, "Please enter your name"),
-    email: z.string().email("Please enter a valid email"),
-    phone: z.string().min(8, "Please enter your phone number"),
-    company: z.string().min(1, "Please enter your company name or website"),
-    message: z.string().min(10, "Please describe your project"),
-    needsNDA: z.enum(["yes", "no"], {
-      required_error: "Please let us know if you need an NDA",
-    }),
-    marketingConsent: z.boolean().optional(),
-    notRobot: z.boolean().refine((val) => val === true, {
-      message: "Please confirm you are not a robot",
-    }),
+const contactSchema = z.object({
+  name: z.string().min(2, "Please enter your name"),
+  email: z.string().email("Please enter a valid email"),
+  phone: z.string().min(8, "Please enter your phone number"),
+  company: z.string().min(1, "Please enter your company name or website"),
+  message: z.string().min(10, "Please describe your project"),
+  needsNDA: z.enum(["yes", "no"], {
+    required_error: "Please let us know if you need an NDA",
+  }),
+  marketingConsent: z.boolean().optional(),
+  notRobot: z.boolean().refine((val) => val === true, {
+    message: "Please confirm you are not a robot",
+  }),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
+
+export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const { toast } = useToast();
+  const router = useRouter();
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
   });
 
-  type ContactFormData = z.infer<typeof contactSchema>;
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      setIsSubmitting(true);
 
-  export default function ContactPage() {
-    const [isSubmitting, setIsSubmitting] = useState(false);
-
-    const { toast } = useToast();
-    const router = useRouter();
-
-    const {
-      register,
-      handleSubmit,
-      reset,
-      formState: { errors },
-    } = useForm<ContactFormData>({
-      resolver: zodResolver(contactSchema),
-    });
-    const onSubmit = async (data: ContactFormData) => {
-      try {
-        setIsSubmitting(true);
-
-     const response = await fetch(
-  `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
-  {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        company: data.company,
-        message: data.message,
-        needsNDA: data.needsNDA,
-        marketingConsent: data.marketingConsent ?? false,
-    }),
-  }
-);
-
-        const result = await response.json();
-
-        if (!response.ok) {
-          throw new Error(result.message || "Failed to submit enquiry.");
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            company: data.company,
+            message: data.message,
+            needsNDA: data.needsNDA,
+            marketingConsent: data.marketingConsent ?? false,
+          }),
         }
+      );
 
-        toast({
-          title: "Message Sent Successfully 🎉",
-          description: "Thank you! We have received your enquiry.",
-        });
+      const result = await response.json();
 
-        reset();
-
-        setTimeout(() => {
-          router.push("/thank-you");
-        }, 1200);
-      } catch (error) {
-        console.error(error);
-
-        toast({
-          variant: "destructive",
-          title: "Submission Failed",
-          description:
-            error instanceof Error ? error.message : "Something went wrong.",
-        });
-      } finally {
-        setIsSubmitting(false);
+      if (!response.ok) {
+        throw new Error(result.message || "Failed to submit enquiry.");
       }
-    };
+
+      toast({
+        title: "Message Sent Successfully 🎉",
+        description: "Thank you! We have received your enquiry.",
+      });
+
+      reset();
+
+      setTimeout(() => {
+        router.push("/thank-you");
+      }, 1200);
+    } catch (error) {
+      console.error(error);
+
+      toast({
+        variant: "destructive",
+        title: "Submission Failed",
+        description:
+          error instanceof Error ? error.message : "Something went wrong.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <main className="bg-white pt-12 pb-14 lg:pt-14 lg:pb-12">
@@ -257,20 +257,28 @@
             </div>
           </div>
 
-          {/* Not a robot + Submit */}
+          {/* Not a robot + Submit Button */}
           <div className="mt-16 flex flex-wrap items-center gap-8">
-            <label className="flex cursor-pointer items-center gap-3 border border-slate-300 px-4 py-3">
-              <input
-                {...register("notRobot")}
-                type="checkbox"
-                className="h-5 w-5 accent-emerald-500"
-              />
-              <span className="text-base text-slate-700">
-                I&apos;m not a robot
+                {/* Robot Verification - Clean Version */}
+          <label className="group flex cursor-pointer items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/70 px-7 py-5 hover:bg-white hover:border-emerald-200 transition-all">
+            <input
+              {...register("notRobot")}
+              type="checkbox"
+              className="h-6 w-6 accent-emerald-600 cursor-pointer ring-1 ring-slate-300"
+            />
+            
+            <div>
+              <span className="font-medium text-slate-700 text-[17px]">
+                I am not a robot
               </span>
-            </label>
+              <p className="text-sm text-slate-500 mt-0.5">
+                Help us keep our form secure
+              </p>
+            </div>
+          </label>
 
-            <Button
+            {/* Replaced Button component with normal button */}
+            <button
               type="submit"
               disabled={isSubmitting}
               className="
@@ -290,6 +298,8 @@
                 hover:translate-x-1
                 hover:translate-y-1
                 hover:shadow-none
+                disabled:opacity-70
+                disabled:cursor-not-allowed
               "
             >
               {isSubmitting ? (
@@ -307,7 +317,6 @@
                       strokeWidth="4"
                       opacity=".25"
                     />
-
                     <path
                       d="M22 12a10 10 0 0 1-10 10"
                       stroke="currentColor"
@@ -317,9 +326,9 @@
                   Sending...
                 </div>
               ) : (
-                "Submit"
+                "Submit Enquiry"
               )}
-            </Button>
+            </button>
           </div>
 
           {errors.notRobot && (
