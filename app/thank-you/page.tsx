@@ -123,11 +123,11 @@ export default function ThankYouPage() {
                 <p className="text-slate-500 mb-4">Need faster response?</p>
                 
                 <div className="space-y-4">
-                  <a href="mailto:acesoftsolutionofficial@gmail.com" className="flex items-center gap-3 text-slate-700 hover:text-cyan-600 transition-colors">
+                  <a href="mailto:info@acedsoftsolution.com" className="flex items-center gap-3 text-slate-700 hover:text-cyan-600 transition-colors">
                     <Mail className="h-5 w-5" />
                     <span>info@acedsoftsolution.com</span>
                   </a>
-                  <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-3 text-slate-700 hover:text-emerald-600 transition-colors">
+                  <a href="tel:+917696373145" className="flex items-center gap-3 text-slate-700 hover:text-emerald-600 transition-colors">
                     <Phone className="h-5 w-5" />
                     <span>+91 76963 73145</span>
                   </a>
