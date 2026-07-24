@@ -9,15 +9,6 @@ import { Info } from "lucide-react";
 
 import { useToast } from "@/hooks/use-toast";
 
-// ======================================================
-// DATA LAYER TYPE DECLARATION
-// ======================================================
-declare global {
-  interface Window {
-    dataLayer: Record<string, unknown>[];
-  }
-}
-
 const contactSchema = z.object({
   name: z.string().min(2, "Please enter your name"),
   email: z.string().email("Please enter a valid email"),
@@ -78,7 +69,7 @@ export default function ContactPage() {
             needsNDA: data.needsNDA,
             marketingConsent: data.marketingConsent ?? false,
           }),
-        }
+        },
       );
 
       const result = await response.json();
@@ -88,20 +79,17 @@ export default function ContactPage() {
       }
 
       // ==================================================
-      // DATA LAYER - SUCCESSFUL CONTACT ENQUIRY
+      // SAVE SUCCESSFUL SUBMISSION FOR THANK YOU PAGE
       // ==================================================
-      if (typeof window !== "undefined") {
-        window.dataLayer = window.dataLayer || [];
-
-        window.dataLayer.push({
-          event: "generate_lead",
+      sessionStorage.setItem(
+        "contact_submission_success",
+        JSON.stringify({
           form_name: "contact_form",
           form_location: "contact_page",
-          page_path: window.location.pathname,
           needs_nda: data.needsNDA,
           marketing_consent: data.marketingConsent ?? false,
-        });
-      }
+        }),
+      );
 
       // ==================================================
       // SUCCESS MESSAGE
@@ -134,16 +122,13 @@ export default function ContactPage() {
   return (
     <main className="bg-white pt-12 pb-14 lg:pt-14 lg:pb-12">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
-
         {/* ==================================================
             HEADER
         ================================================== */}
         <div className="max-w-5xl">
           <h1 className="text-5xl font-bold leading-none text-slate-900 md:text-7xl">
             You have an Idea.{" "}
-            <span className="text-[#12C7B5]">
-              Let&apos;s Talk.
-            </span>
+            <span className="text-[#12C7B5]">Let&apos;s Talk.</span>
           </h1>
 
           <p className="mt-6 max-w-4xl text-lg leading-relaxed text-slate-600">
@@ -156,17 +141,12 @@ export default function ContactPage() {
         {/* ==================================================
             CONTACT FORM
         ================================================== */}
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="mt-20"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-20">
           <div className="grid gap-x-12 gap-y-12 lg:grid-cols-2">
-
             {/* ================= NAME ================= */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                What&apos;s Your Name?{" "}
-                <span className="text-red-500">*</span>
+                What&apos;s Your Name? <span className="text-red-500">*</span>
               </label>
 
               <input
@@ -185,8 +165,7 @@ export default function ContactPage() {
             {/* ================= EMAIL ================= */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                Email{" "}
-                <span className="text-red-500">*</span>
+                Email <span className="text-red-500">*</span>
               </label>
 
               <input
@@ -205,8 +184,7 @@ export default function ContactPage() {
             {/* ================= PHONE ================= */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                Phone Number{" "}
-                <span className="text-red-500">*</span>
+                Phone Number <span className="text-red-500">*</span>
               </label>
 
               <input
@@ -225,8 +203,7 @@ export default function ContactPage() {
             {/* ================= COMPANY ================= */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                Company Name Or Website{" "}
-                <span className="text-red-500">*</span>
+                Company Name Or Website <span className="text-red-500">*</span>
               </label>
 
               <input
@@ -245,8 +222,7 @@ export default function ContactPage() {
             {/* ================= PROJECT BRIEF ================= */}
             <div>
               <label className="mb-3 block text-lg font-medium text-slate-900">
-                Project Brief{" "}
-                <span className="text-red-500">*</span>
+                Project Brief <span className="text-red-500">*</span>
               </label>
 
               <textarea
@@ -261,9 +237,8 @@ export default function ContactPage() {
                 </p>
               )}
             </div>
-                        {/* ================= NDA + MARKETING ================= */}
+            {/* ================= NDA + MARKETING ================= */}
             <div className="flex flex-col gap-8">
-
               {/* NDA */}
               <div>
                 <label className="mb-3 block text-lg font-medium text-slate-900">
@@ -271,7 +246,6 @@ export default function ContactPage() {
                 </label>
 
                 <div className="flex items-center gap-8">
-
                   <label className="flex cursor-pointer items-center gap-2 text-lg text-slate-900">
                     <input
                       {...register("needsNDA")}
@@ -291,7 +265,6 @@ export default function ContactPage() {
                     />
                     No
                   </label>
-
                 </div>
 
                 {errors.needsNDA && (
@@ -303,21 +276,15 @@ export default function ContactPage() {
 
               {/* Marketing Consent */}
               <label className="flex cursor-pointer items-start gap-2 text-base text-slate-700">
-
                 <input
                   {...register("marketingConsent")}
                   type="checkbox"
                   className="mt-1 h-4 w-4 accent-emerald-500"
                 />
-
                 I agree to receive marketing updates from Ace Soft Solution.
-
                 <Info className="mt-0.5 h-4 w-4 shrink-0 text-slate-400" />
-
               </label>
-
             </div>
-
           </div>
 
           {/* ==================================================
@@ -325,10 +292,8 @@ export default function ContactPage() {
           ================================================== */}
 
           <div className="mt-16 flex flex-wrap items-center gap-8">
-
             {/* Robot Verification */}
             <label className="group flex cursor-pointer items-center gap-4 rounded-2xl border border-slate-200 bg-slate-50/70 px-7 py-5 transition-all hover:border-emerald-200 hover:bg-white">
-
               <input
                 {...register("notRobot")}
                 type="checkbox"
@@ -344,7 +309,6 @@ export default function ContactPage() {
                   Help us keep our form secure
                 </p>
               </div>
-
             </label>
 
             {/* ================= SUBMIT BUTTON ================= */}
@@ -372,10 +336,8 @@ export default function ContactPage() {
                 disabled:opacity-70
               "
             >
-
               {isSubmitting ? (
                 <div className="flex items-center gap-3">
-
                   <svg
                     className="h-5 w-5 animate-spin"
                     viewBox="0 0 24 24"
@@ -396,16 +358,12 @@ export default function ContactPage() {
                       strokeWidth="4"
                     />
                   </svg>
-
                   Sending...
-
                 </div>
               ) : (
                 "Submit Enquiry"
               )}
-
             </button>
-
           </div>
 
           {/* Robot Error */}
@@ -414,9 +372,7 @@ export default function ContactPage() {
               {errors.notRobot.message}
             </p>
           )}
-
         </form>
-
       </div>
     </main>
   );
