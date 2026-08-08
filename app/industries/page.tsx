@@ -8,10 +8,14 @@ import IndustryStats from '@/components/industries/IndustryStats';
 import IndustryCTA from '@/components/industries/IndustryCTA';
 
 export const metadata: Metadata = {
-  title:
-    'Industries We Serve | Ace Soft Solution',
+  title: 'Industries We Serve | Ace Soft Solution',
+
   description:
     'Explore the industries we serve with custom software development, AI solutions, cloud applications, SaaS platforms, and digital transformation services.',
+
+  alternates: {
+    canonical: 'https://www.acesoftsolution.com/industries',
+  },
 };
 
 export default function IndustriesPage() {

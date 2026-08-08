@@ -11,8 +11,10 @@ import ProcessCTA from '@/components/process/ProcessCTA';
 
 export const metadata: Metadata = {
   title: 'Our Process | Ace Soft Solution',
+
   description:
     'Discover Ace Soft Solution’s proven development process. From discovery and planning to deployment and support, we deliver scalable digital solutions with transparency and quality.',
+
   keywords: [
     'software development process',
     'web development workflow',
@@ -23,24 +25,28 @@ export const metadata: Metadata = {
     'agile development company',
     'software development lifecycle',
   ],
+
   openGraph: {
     title: 'Our Process | Ace Soft Solution',
+
     description:
       'Explore our structured development process designed to deliver high-quality digital solutions efficiently and transparently.',
-    url: 'https://acesoftsolution.com/process',
+
+    url: 'https://www.acesoftsolution.com/process',
+
     siteName: 'Ace Soft Solution',
+
     type: 'website',
   },
+
   alternates: {
-    canonical: 'https://acesoftsolution.com/process',
+    canonical: 'https://www.acesoftsolution.com/process',
   },
 };
 
 export default function ProcessPage() {
   return (
     <>
-      <ScrollProgress />
-
       <main className="overflow-hidden bg-slate-950">
         <ProcessHero />
 

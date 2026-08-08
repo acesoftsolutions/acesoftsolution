@@ -1,4 +1,4 @@
-'use client';
+import type { Metadata } from 'next';
 
 import ScrollProgress from '@/components/shared/ScrollProgress';
 
@@ -11,6 +11,12 @@ import ProcessSection from '@/components/services/ProcessSection';
 import TechnologyExpertise from '@/components/services/TechnologyExpertise';
 import SuccessMetrics from '@/components/services/SuccessMetrics';
 import ServicesCTA from '@/components/services/ServicesCTA';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.acesoftsolution.com/services',
+  },
+};
 
 export default function ServicesPage() {
   return (
