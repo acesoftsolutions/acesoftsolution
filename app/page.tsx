@@ -1,6 +1,4 @@
-'use client';
-
-import React from 'react';
+import type { Metadata } from 'next';
 
 import ScrollProgress from '@/components/shared/ScrollProgress';
 import BackToTop from '@/components/shared/FloatingElements';
@@ -17,12 +15,16 @@ import TechStackSection from '@/components/home/TechStackSection';
 import FAQSection from '@/components/home/FAQSection';
 import CTASection from '@/components/home/CTASection';
 
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://acesoftsolution.com/',
+  },
+};
+
 export default function Home() {
   return (
     <>
-      <ScrollProgress />
-
-      <main className="overflow-hidden ">
+      <main className="overflow-hidden">
         <HeroSection />
 
         <ServicesSection />

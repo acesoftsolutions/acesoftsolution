@@ -22,9 +22,9 @@ const servicesDropdown = [
 const industriesDropdown = [
   { name: "Retail & eCommerce", href: "/industries/retail-ecommerce" },
   { name: "Transportation & Logistics", href: "/industries/logistics" },
-  { name: "EdTech", href: "/industries/edtech" },
+  { name: "EdTech", href: "/industries/education" },
   { name: "Automotive", href: "/industries/automotive" },
-  { name: "Travel & Hospitality", href: "/industries/travel" },
+  { name: "Travel & Hospitality", href: "/industries/travel-hospitality" },
   { name: "On Demand", href: "/industries/on-demand" },
   { name: "Fintech", href: "/industries/fintech" },
   { name: "Enterprises", href: "/industries/enterprise" },

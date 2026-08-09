@@ -1,4 +1,6 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+
 import { services } from "@/data/services";
 
 import ServiceHero from "@/components/service/ServiceHero";
@@ -19,6 +21,46 @@ interface PageProps {
     slug: string;
   }>;
 }
+
+// ======================================================
+// DYNAMIC SEO METADATA + CANONICAL
+// ======================================================
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+
+  const service = services.find(
+    (item) => item.slug === slug
+  );
+
+  if (!service) {
+    return {};
+  }
+
+  const canonicalUrl = `https://acesoftsolution.com/services/${service.slug}`;
+
+  return {
+    title: service.title,
+    description: service.shortDescription,
+
+    alternates: {
+      canonical: canonicalUrl,
+    },
+
+    openGraph: {
+      title: service.title,
+      description: service.shortDescription,
+      url: canonicalUrl,
+      type: "website",
+    },
+  };
+}
+
+// ======================================================
+// SERVICE PAGE
+// ======================================================
 
 export default async function ServicePage({
   params,

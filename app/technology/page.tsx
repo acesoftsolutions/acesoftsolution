@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'Explore the technologies, frameworks, and tools used by Ace Soft Solution to build scalable web, mobile, and cloud applications.',
 
   alternates: {
-    canonical: 'https://www.acesoftsolution.com/technologies',
+    canonical: 'https://www.acesoftsolution.com/technology',
   },
 };
 
