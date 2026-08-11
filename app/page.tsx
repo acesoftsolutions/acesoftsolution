@@ -17,7 +17,7 @@ import CTASection from '@/components/home/CTASection';
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://acesoftsolution.com/',
+    canonical: 'https://www.acesoftsolution.com/',
   },
 };
 
